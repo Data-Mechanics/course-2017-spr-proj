@@ -238,6 +238,4 @@ def distanceKm(pt,add):
     return c * r
 
 	
-
-calcfoodacc.execute()
 ## eof

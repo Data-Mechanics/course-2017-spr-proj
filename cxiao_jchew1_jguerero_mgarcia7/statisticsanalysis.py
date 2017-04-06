@@ -47,7 +47,7 @@ class statisticsanalysis(dml.Algorithm):
 			if x is None:
 				idx_to_delete = idx
 
-		n = np.delete(observations,(3),axis=1)
+		n = np.delete(observations,(idx),axis=1)
 
 		# linear regression
 		n = n.astype(float)
@@ -107,6 +107,4 @@ class statisticsanalysis(dml.Algorithm):
 		return doc
 
 	
-
-statisticsanalysis.execute()
 ## eof

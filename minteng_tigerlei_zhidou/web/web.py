@@ -40,6 +40,10 @@ def get_map():
 def static_analysis():
     return render_template('static-analysis.html')
 
+@app.route("/report/")
+def report():
+    return render_template('report.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

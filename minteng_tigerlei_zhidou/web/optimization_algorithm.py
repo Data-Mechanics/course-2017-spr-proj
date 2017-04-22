@@ -1,7 +1,8 @@
 import json
 # import dml
 import pymongo
-import datetime 
+import datetime
+import os, json
 
 def get_result(f,t,s,r):
 	client = pymongo.MongoClient()
@@ -46,17 +47,32 @@ def get_result(f,t,s,r):
 
 	#return top fitted
 	result=sorted(res, key=lambda x: x['rating'], reverse=True)
+	top5 = result[0:5]
+
 	for i in range(5):
-		result[i]['rank'] = i
+		top5[i]['rank'] = i
 
 	# get crime num
-	
+	crimeCount=[]
+	b=repo['minteng_tigerlei_zhidou.crimeCount'].find()
+	for i in b:
+		for j in top5:
+			if (j['box'] == i['box']):
+				temp = {}
+				temp['crimeNum'] = i['crimeNum']
+				temp['rank'] = j['rank']
+				crimeCount.append(temp)
 
+	current_dir = os.getcwd()
 
+	# Create datadir if does not exist
+	if not os.path.exists(os.path.join(current_dir, 'top5.json')):
+		with open('top5.json', 'w') as f:
+			json.dump(crimeCount,f)
 
 	# for mapping
-	# for i in result:
-	# 	i['center']=[(i['box'][0][0]+i['box'][1][0])/2,(i['box'][0][1]+i['box'][1][1])/2]
+	for i in result:
+		i['center']=[(i['box'][0][0]+i['box'][1][0])/2,(i['box'][0][1]+i['box'][1][1])/2]
 
 	for i in result:
 		i['leftdown']=[i['box'][0][0],i['box'][0][1]]
@@ -66,4 +82,4 @@ def get_result(f,t,s,r):
 
 	return result
 
-get_result(3,4,3,4)
+#print(get_result(3,4,3,4)[0])

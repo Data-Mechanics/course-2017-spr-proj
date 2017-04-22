@@ -6,11 +6,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
 
 <style type="text/css">
-#map { height: 1000px; }
+#map { height: 1000px; z-index: 5;}
 .legend {
     line-height: 18px;
     color: #555;
     width: 200px;
+    z-index: 1;
 }
 .legend i {
     width: 20px;
@@ -27,6 +28,7 @@
     background: rgba(255,255,255,0.5);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
+}
 }
 </style>
 </head>

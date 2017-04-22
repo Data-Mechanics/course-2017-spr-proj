@@ -58,6 +58,8 @@ class optimization(dml.Algorithm):
 
 		#return top fitted
 		result=sorted(res, key=lambda x: x['rating'], reverse=True)
+		for i in range(5):
+			result[i]['rank'] = i
 
 		print('Top fitted areas:')
 		top=5

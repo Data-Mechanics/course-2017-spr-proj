@@ -1,16 +1,9 @@
-import urllib.request
 import json
 # import dml
 import pymongo
-import prov.model
 import datetime 
-import uuid
-import time
 
 def get_result(f,t,s,r):
-	contributor = 'minteng_tigerlei_zhidou'
-	reads = ['minteng_tigerlei_zhidou.box_count']
-	writes = ['minteng_tigerlei_zhidou.optimization_result']
 	client = pymongo.MongoClient()
 	repo = client.repo
 	repo.authenticate('minteng_tigerlei_zhidou', 'minteng_tigerlei_zhidou')
@@ -53,17 +46,18 @@ def get_result(f,t,s,r):
 
 	#return top fitted
 	result=sorted(res, key=lambda x: x['rating'], reverse=True)
+	for i in range(5):
+		result[i]['rank'] = i
 
-	for i in result:
-		i['center']=[(i['box'][0][0]+i['box'][1][0])/2,(i['box'][0][1]+i['box'][1][1])/2]
+	# get crime num
+	
 
-	# print('Top fitted areas:')
-	# top=5
-	# for i in range(top):
-	# 	print("Center:",result[i]['center'])
-	# 	print("Bound:",result[i]['box'])
-	# 	print("Area:",result[i]['area'],result[i]['postal_code'],"   Avg rent:",result[i]['avg_rent'])
-	# 	print("Grades:",result[i]['grade'],'\n')
+
+
+	# for mapping
+	# for i in result:
+	# 	i['center']=[(i['box'][0][0]+i['box'][1][0])/2,(i['box'][0][1]+i['box'][1][1])/2]
+
 	for i in result:
 		i['leftdown']=[i['box'][0][0],i['box'][0][1]]
 		i['leftup']=[i['box'][0][0],i['box'][1][1]]

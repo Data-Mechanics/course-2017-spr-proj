@@ -38,10 +38,12 @@ class assignStudents(dml.Algorithm):
             students.append({'_id': item['_id'],
                              'latitude': item['geometry']['coordinates'][0][1],
                              'longitude': item['geometry']['coordinates'][0][0],
-                             'school': item['properties']['school']})
+                             'school': item['properties']['school'],
+                             'school_lat': item['geometry']['coordinates'][1][1],
+                             'school_lon': item['geometry']['coordinates'][1][0]})
 
         # group the student belongs to the same school
-        project_students = assignStudents.project(students, lambda t: (t['school'], [t['_id'], t['latitude'], t['longitude']]))
+        project_students = assignStudents.project(students, lambda t: (t['school'], [t['_id'], t['latitude'], t['longitude'], t['school_lat'], t['school_lon']]))
         school_students = assignStudents.aggregate(project_students, assignStudents.porj_students)
 
         # Trial mode: randomly choose students from k schools
@@ -51,6 +53,10 @@ class assignStudents(dml.Algorithm):
         results = []
         for item in school_students:
             school = item[0]
+            school_lat = item[1][0][0][3]
+            school_lon = item[1][0][0][4]
+            school_location = (school_lat, school_lon)
+
             num_students = len(item[1][0])
             num_buses = math.ceil(num_students / bus_capacity)
             students_points = [(student[1], student[2], student[0]) for student in item[1][0]]
@@ -59,8 +65,7 @@ class assignStudents(dml.Algorithm):
             if num_buses == 1:
                 means = [assignStudents.cal_centroid(students_points)]
             else:
-                # initialize random points for k-means
-                # random_points = [assignStudents.cal_centroid(students_points[i * num_buses: (i + 1) * num_buses]) for i in range(num_buses)]
+                # initialize random points for k-means in a bound region
                 lat = [x for (x, y, z) in students_points]
                 lon = [y for (x, y, z) in students_points]
                 lower_lat, upper_lat = min(lat), max(lat)
@@ -69,10 +74,8 @@ class assignStudents(dml.Algorithm):
 
                 # k-means clustering algorithm for k = num_buses
                 means = assignStudents.k_means(random_points, students_points, lower_lat, upper_lat, lower_lon, upper_lon)
-                # print("k-means:", means)
-                # print("k-means size:", len(means))
 
-            final = assignStudents.assign_students(means, students_points)
+            final = assignStudents.assign_students(means, students_points, school, school_location)
             results.append(final)
 
         # stores the means and their corresponding students in the collection
@@ -181,18 +184,17 @@ class assignStudents(dml.Algorithm):
             M = [assignStudents.scale(t, c) for ((m, t), (m2, c)) in assignStudents.product(MT, MC) if m == m2]
             M = sorted(M)
 
-            # If some mean points merge together, add random points into the list of mean points
+            # If some mean points merge together, add new randomed points into the list of mean points
             if (len(M) != num_means):
                 # print("Mean point merged!")
                 diff = num_means - len(M)
                 for i in range(diff):
                     random_points=[(random.uniform(lower_lat, upper_lat), random.uniform(lower_lon, upper_lon))]
                     M = M + random_points
-            # print("M:", M)
         return sorted(M)
 
     @staticmethod
-    def assign_students(M, P):
+    def assign_students(M, P, s, loc):
         # [Issue] K-means algorithm does not assign students to each mean evenly.
         # Although we have set the bus capacity, the actual assignment of students might overflow the capacity
 
@@ -213,8 +215,10 @@ class assignStudents(dml.Algorithm):
                     # students_count += 1
                     # print(students_count)
             final.append({
-                'aggregated_points': [mean],
-                'points': result})
+                'mean': list(mean),
+                'school': s,
+                'location': list(loc),
+                'students': result})
         return final
 
     @staticmethod

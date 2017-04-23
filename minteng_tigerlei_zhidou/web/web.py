@@ -28,8 +28,15 @@ def optimize_result():
         i['grade']=[i['grade']['food'],i['grade']['transport'],i['grade']['safety'],i['grade']['rent']]
     global info
     info=res
-    # print(res)
-    return render_template('optimize-result.html',f=food,t=transport,s=safe,r=rent,res=res)
+    data = []
+    for item in res:
+        temp = {}
+        temp['area'] = item['area']
+        temp['postal_code'] = item['postal_code']
+        temp['grade'] = item['grade']
+        data.append(temp)
+    # print(temp)
+    return render_template('optimize-result.html',f=food,t=transport,s=safe,r=rent,res=res, data=data)
 
 @app.route("/map/")
 def get_map():

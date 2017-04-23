@@ -34,14 +34,14 @@ def get_result(f,t,s,r):
 	res=[]    
 	a=repo['minteng_tigerlei_zhidou.box_count'].find()
 	for i in a:
-		grade=[i['grade']['transport'],i['grade']['food'],i['grade']['safety'],i['grade']['rent']]
-		if if_fitted(grade,[transport,food,safety,rent]):
+		grade1=[i['grade']['transport'],i['grade']['food'],i['grade']['safety'],i['grade']['rent']]
+		if if_fitted(grade1,[transport,food,safety,rent]):
 			temp=i
 			temp['rating']=sum(i['grade'].values())
 			res.append(temp)
 		else:
 			temp=i
-			temp['rating']=get_dist(grade,[transport,food,safety,rent])*-1
+			temp['rating']=get_dist(grade1,[transport,food,safety,rent])*-1
 			res.append(temp)
 
 

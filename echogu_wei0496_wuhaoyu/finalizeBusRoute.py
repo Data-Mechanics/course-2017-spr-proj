@@ -28,45 +28,51 @@ class finalizBusRoute(dml.Algorithm):
         repo.authenticate('echogu_wei0496_wuhaoyu', 'echogu_wei0496_wuhaoyu')
 
         # loads the collection
-        raw_bus_route = repo['echogu_wei0496_wuhaoyu.bus_route'].find()
-        bus_route = list(raw_bus_route)
+        bus_route = repo['echogu_wei0496_wuhaoyu.bus_route'].find()
+        # bus_route = [{'school': item['school'],
+        #               'school location': item['school location'],
+        #               'bus yard': item['bus yard'],
+        #               'yard location': item['yard location'],
+        #               'yard address': item['yard address'],
+        #               'pickup_sequence': item['pickup_sequence']} for item in raw_bus_route]
 
         # convert to geojson
         features = []
         for r in bus_route:
             properties = {'school': r['school'],
-                          'school location': r['school location'],
+                          'school location': tuple(reversed(r['school location'])),
                           'bus yard': r['bus yard'],
-                          'yard location': r['yard location'],
+                          'yard location': tuple(reversed(r['yard location'])),
                           'yard address': r['yard address']}
 
             sequence = r['pickup_sequence']
             route = []
-
             # from bus yard to first student
-            yard = tuple(r['yard location'])
-            start = (sequence[0]['latitude'], sequence[0]['longitude'])
+            yard = tuple(reversed(r['yard location']))
+            start = tuple((sequence[0]['longitude'], sequence[0]['latitude']))
             route += [yard, start]
 
             # from the first student to the last student
             if len(sequence) > 1:
                 for i in range(len(sequence) - 1):
-                    s1 = (sequence[i]['latitude'], sequence[i]['longitude'])
-                    s2 = ([sequence[i + 1]['latitude'], sequence[i + 1]['longitude']])
+                    s1 = tuple((sequence[i]['longitude'], sequence[i]['latitude']))
+                    s2 = tuple(([sequence[i + 1]['longitude'], sequence[i + 1]['latitude']]))
                     route += [s1, s2]
 
                 # from the last student to school
-                end = (sequence[-1]['latitude'], sequence[-1]['longitude'])
-                school = tuple(r['school location'])
+                end = (sequence[-1]['longitude'], sequence[-1]['latitude'])
+                school = tuple(reversed(r['school location']))
                 route += [end, school]
 
             else:
-                student = (sequence[0]['latitude'], sequence[0]['longitude'])
-                school = tuple(r['school location'])
+                student = (sequence[0]['longitude'], sequence[0]['latitude'])
+                school = tuple(reversed(r['school location']))
                 route += [student, school]
 
-            geometry = geojson.MultiLineString(route)
+            geometry = geojson.LineString(route)
             features.append(geojson.Feature(geometry=geometry, properties=properties))
+
+        open('echogu_wei0496_wuhaoyu/visualizations/bus_route.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features), indent=2))
 
         # store bus route into database in geojson format
         repo.dropCollection('bus_route_final')

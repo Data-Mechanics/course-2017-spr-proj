@@ -5,9 +5,8 @@
 {% block body %}
   <section>
     <div class="opt-res">
-
-
       <form class="res">
+      
       <h3><strong>Your requirements of each aspect:</strong></h3>
       <p></p>
       <table border="6">
@@ -21,11 +20,12 @@
       <table border="6">
         <tr><th>Center</th><th>Area</th><th>Zipcode</th><th>Avg Rent</th><th>Grades</th></tr>
         {% for rr in res %}
-        <tr><td>{{rr.center}}</td><td>{{rr.area}}</td><td>{{rr.postal_code}}</td><td>{{rr.avg_rent}}</td><td>{{rr.grade}}</td></tr>
+        <tr><td>{{rr.center}}</td><td>{{rr.area}}</td><td>{{rr.postal_code}}</td><td>{{rr.avg_rent}}</td><td>{{rr.grade}}<grade></td></tr>
         {% endfor %}
       </table>  
 
       </form>
+
     <a href="/map/" target="_blank" class="button">View on map <i class="icon-chevron-right"></i></a>
     <a href="/" class="button">Home Page <i class="icon-chevron-right"></i></a> 
 

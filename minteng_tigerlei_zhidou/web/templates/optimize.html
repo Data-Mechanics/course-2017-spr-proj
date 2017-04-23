@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
     <link href="/static/style.css" rel="stylesheet">
   </head>
 
-  <body> -->
+  <body> 
 {% extends "base.html" %}
 
 {% block title %}Optimization{% endblock %}
@@ -23,14 +23,12 @@
         
     <div class="opt">
 
-      <p><a href="/">&#8592; Back</a></p>
       <br>
-      <h3 style="color: black;font-size: 30px; text-align: center;">Optimization</h3>
-      <p>.............</p>
-      <p><strong>Input your ratings</strong></p>
-      
+      <h3 style="text-align: center;">Please select your personal desired ratings for each aspect:</h3>
+
+        <p></p>
       <form class="ratings" action="/optimize-result/" method="GET">
-        <p>Select ratings for every factors, the rating is 1 - 5, the higher the better......</p>
+        <p></p>
         
         <p style="text-align: left;"><span style="color:red">Food</span>:
         <select class="select" name="Food" >
@@ -71,6 +69,9 @@
         <input type="submit" value="Research">
       </form>
     </div>
+
+    <!-- Home Page Button -->
+    <a href="/" class="button">Home Page <i class="icon-chevron-right"></i></a>
     
     <div class="my-container">
 
@@ -81,4 +82,4 @@
 
 {% endblock %}
 <!--   </body>
-</html> -->
+</html>

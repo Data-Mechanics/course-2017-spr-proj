@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Obesity and Healthy Locations Map</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="neighborhoods.js"></script>
+    <script src="obesity.js"></script>
+    <script src="health.js"></script>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <script>
+    // our code will go here
+    var width = 700,
+        height = 580;
+
+    var svg = d3.select( "body" )
+        .append( "svg" )
+        .attr( "width", width )
+        .attr( "height", height );
+
+    var tooltip = d3.select("body")
+        .append( "div" )
+        .style("position", "absolute")
+        .style("text-align", "center")
+        .style("height", "28px")
+        .style("font", "12px sans-serif")
+        .style("background", "lightsteelblue")
+        .style("border", "0px")
+        .style("border-radius", "8px")
+        .style("pointer-events", "none")
+        .style("opacity", "0")
+        .text("a simple tooltip");
+
+    var g = svg.append( "g" );
+
+    var albersProjection = d3.geo.albers()
+        .scale( 190000 )
+        .rotate( [71.057,0] )
+        .center( [0, 42.313] )
+        .translate( [width/2,height/2] );
+
+    var geoPath = d3.geo.path()
+        .projection( albersProjection )
+        .pointRadius( function(d) { if ("percentage" in d.properties) {return d.properties.percentage / 3.0;} else { return 4.5} });
+
+    g.selectAll( "path" )
+        .data( neighborhoods_json.features )
+        .enter()
+        .append( "path" )
+        .attr( "fill", "#999fa8" )
+        .attr( "d", geoPath );
+
+    var obesity = svg.append( "g" );
+
+    obesity.selectAll("path")
+        .data(obesity_json.features)
+        .enter()
+        .append("path")
+        .attr( "fill", "#ffe66b" )
+        .attr( "stroke", "#000000" )
+        .attr("opacity", "0.5")
+        .attr( "d", geoPath )
+        .on("mouseover", function(d) {
+            d3.select(this).attr("opacity", "1.0");
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            tooltip.html(d.properties.percentage + "% obese<br/>" + d.properties.population_size + " people")
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px")
+                .style("width", "80px")
+        })
+        .on("mouseout", function(d) {
+            d3.select(this).attr("opacity", "0.5");
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
+
+    var health = svg.append( "g" );
+
+    health.selectAll( "path" )
+        .data( health_json.features )
+        .enter()
+        .append( "path" )
+        .attr( "fill", "#34773f" )
+        .attr( "stroke", "#000000" )
+        .attr("opacity", "0.5")
+        .attr( "d", geoPath )
+        .on("mouseover", function(d) {
+            d3.select(this).attr("opacity", "1.0");
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            var healthy_type = "";
+            if (d.properties.type == "prog") {
+                healthy_type = "Healthy Program";
+            } else if (d.properties.type == "store") {
+                healthy_type = "Healthy Store";
+            } else {
+                healthy_type = "Urban Orchard";
+            }
+            tooltip.html(healthy_type)
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px")
+                .style("width", "60px");
+        })
+        .on("mouseout", function(d) {
+            d3.select(this).attr("opacity", "0.5");
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
+    </script>
+</body>
+</html>

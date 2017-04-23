@@ -9,7 +9,7 @@ Our project seeks to explore the relationship between food accessibility, obesit
 4. **Corner Markets**: This dataset contains information about Corner Markets in Boston. (cornermarkets.py)
 5. **Supermarkets**: This dataset contains information about the supermarkets in Boston. (supermarkets.py)
 6. **Boston Neighborhood Shapefiles**: This dataset contains the geographic coordinates of the neighborhoods in Boston. (neighborhood.py)
-7. **Master Address List**: [INSERT TEXT HERE] 
+7. **Master Address List**: This dataset contains all the residential addresses in the neighborhoods of Boston.
 
 # Transformations
 
@@ -61,13 +61,15 @@ After finding these values for each house in the neighborhood, we calculated the
 
 \* *Within walking distance of a residence, which we defined to be < 1km*
 
-As you can see from the table above, 
+The composite Z-score is what we are considering our food accessibility score per neighborhood. A high, positive score denotes that the food accessibility is better in that neighborhood compared to other neighborhoods in Boston.  In our case, the best neighborhood in regards to food accessibility belongs is Back Bay, whereas the worst is West Roxbury. 
 
-### Determining Correlation: ###
-[INSERT TEXT HERE]
-[[ 1.         -0.0243795  -0.41433783]
- [-0.0243795   1.         -0.54327576]
- [-0.41433783 -0.54327576  1.        ]]
+### Determining Correlation: Our Coefficient Correlation Array ###
+
+|       | Food Score |   Income |   Obesity |
+|:----------------------------|-------------------------:|-------------------------------------------:|---------------------------:|
+|**Food Score** | 1.0         |   -0.0243795  |  -0.41433783  |                       
+|**Income** | -0.0243795  |   1.0         |  -0.54327576  |                       
+|**Obesity** | -0.41433783 |   -0.54327576 |  1.0          |
 
 Shown above is our coefficient correlation array
 for our three variables containing data from foodscore, 
@@ -81,21 +83,17 @@ own self. The variables' own coefficient correlation with itself
 irrefutably lies on the positive line of best fit representing a 
 positive correlation. 
 
-Within our linear regression model we equated our variable on obesity 
-as the dependent variable as shown as the output of our function. Since we
-set our dependent variable as obesity, we wanted to use linear regression
-to further calculate the correlation it has with our independent variables
-as represented by x which were on income and food score. With the given 
-equation y = a1x1 + a2x2, we were also given predictor values that would
-provide or "predict" the outcome of our calculation on the relationship
-between our dependent variables on our independent variable, obesity.
+Specfically, the correlation coefficient array shows that there is a relatively strong negative correlation between obesity and income, as well as between the food accessibility score and obesity. However, there doesn't seem to be any correlation between the food accessbility score and the income. 
+
+We also decided to create a linear regression model in order to give us an idea of how related the independent variables (food accessbility and income) were to the dependent variable (obesity). 
 
 # Required libraries and tools
-The libraries pyshp, shapely, geopy, numpy will need to be installed before the program can be executed. They can be installed with these pip3 commands:
-@EVERYONE: Make sure to include the libraries here you used that don't come packaged with Python
+The libraries pyshp, shapely, geopy, numpy, pickle, sklearn will need to be installed before the program can be executed. They can be installed with these pip3 commands:
 ```
 pip3 install pyshp
 pip3 install shapely
 pip3 install geopy
 pip3 install numpy
+pip3 install pickle
+pip3 install sklearn
 ```

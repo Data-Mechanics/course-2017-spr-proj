@@ -178,6 +178,7 @@ class statistical(dml.Algorithm):
             return crime_zip
 
         crime_zipcode = crime_zipcode()
+        print(crime_zipcode)
 
 
         # function of calculating average price in each zipcode
@@ -185,6 +186,7 @@ class statistical(dml.Algorithm):
             zipcode_price = {}
             for zipcode in property_zipcode:
                 zipcode_price[zipcode] = sum(property_zipcode[zipcode])/len(property_zipcode[zipcode])
+                #print("The amount of properties in zipcode" + zipcode + "is: ", sum(property_zipcode[zipcode]))
 
             return zipcode_price
 

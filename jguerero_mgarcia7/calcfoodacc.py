@@ -9,6 +9,7 @@ import uuid
 import numpy as np
 from collections import defaultdict
 import pickle
+from sklearn.preprocessing import minmax_scale
 
 
 class calcfoodacc(dml.Algorithm):
@@ -136,18 +137,17 @@ class calcfoodacc(dml.Algorithm):
 
 		zscore_metrics = np.apply_along_axis(computeZscore,axis=0,arr=avg_metrics)
 
-		# Compute a composite score for each neighborhood
+		# Compute a composite score for each neighborhood and scale them to be between 0 and 100
 		weights = np.array([1,-1,1]) # Weight = 1 if it's a good thing to have a high value, -1 otherwise
 		scores = np.sum(weights*zscore_metrics,axis=1)
-		print(scores)
+		scores = minmax_scale(scores,feature_range=(0,100))
 
 		newd = {"Neighborhoods":nbs, "Scores":scores, "Zscore_metrics":zscore_metrics, "Avg_metrics":avg_metrics}
 		pickle.dump(newd, open('info.p','wb'))
 
 		# Create list of tuples that can be used to update a dictionary
 		info = dict([(nb,score) for nb, score in zip(nbs,scores)])
-	#	print(nbs)
-	#	print(info)
+
 
 		# Insert food accessbility score in the repo
 		nstats = repo['jguerero_mgarcia7.neighborhoodstatistics'].find()

@@ -331,7 +331,7 @@ class OptimalHospitals(dml.Algorithm):
 
         return doc
 
-OptimalHospitals.execute()
+#OptimalHospitals.execute()
 #doc = OptimalHospitals.provenance()
 #print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

@@ -8,6 +8,8 @@ import datetime
 import uuid
 import math
 import random
+import geojson
+#import xlsxwriter
 
 class finalizBusRoute(dml.Algorithm):
     contributor = 'echogu_wei0496_wuhaoyu'
@@ -26,9 +28,55 @@ class finalizBusRoute(dml.Algorithm):
         repo.authenticate('echogu_wei0496_wuhaoyu', 'echogu_wei0496_wuhaoyu')
 
         # loads the collection
-        # raw_pickup_sequence = repo['echogu_wei0496_wuhaoyu.pickup_sequence'].find()
+        raw_bus_route = repo['echogu_wei0496_wuhaoyu.bus_route'].find()
+        bus_route = list(raw_bus_route)
 
-        # clean up datasets to geojson files
+        # convert to geojson
+        features = []
+        for r in bus_route:
+            properties = {'school': r['school'],
+                          'school location': r['school location'],
+                          'bus yard': r['bus yard'],
+                          'yard location': r['yard location'],
+                          'yard address': r['yard address']}
+
+            sequence = r['pickup_sequence']
+            route = []
+
+            # from bus yard to first student
+            yard = tuple(r['yard location'])
+            start = (sequence[0]['latitude'], sequence[0]['longitude'])
+            route += [yard, start]
+
+            # from the first student to the last student
+            if len(sequence) > 1:
+                for i in range(len(sequence) - 1):
+                    s1 = (sequence[i]['latitude'], sequence[i]['longitude'])
+                    s2 = ([sequence[i + 1]['latitude'], sequence[i + 1]['longitude']])
+                    route += [s1, s2]
+
+                # from the last student to school
+                end = (sequence[-1]['latitude'], sequence[-1]['longitude'])
+                school = tuple(r['school location'])
+                route += [end, school]
+
+            else:
+                student = (sequence[0]['latitude'], sequence[0]['longitude'])
+                school = tuple(r['school location'])
+                route += [student, school]
+
+            geometry = geojson.MultiLineString(route)
+            features.append(geojson.Feature(geometry=geometry, properties=properties))
+
+        # store bus route into database in geojson format
+        repo.dropCollection('bus_route_final')
+        repo.createCollection('bus_route_final')
+        repo['echogu_wei0496_wuhaoyu.bus_route_final'].insert_many(features)
+        repo['echogu_wei0496_wuhaoyu.bus_route_final'].metadata({'complete': True})
+        print(repo['echogu_wei0496_wuhaoyu.bus_route_final'].metadata(), "Saved Bus Route")
+
+        endTime = datetime.datetime.now()
+
         return {"start": startTime, "end": endTime}
 
     @staticmethod
@@ -70,7 +118,7 @@ class finalizBusRoute(dml.Algorithm):
 
         return doc
 
-# finalizBusRoute.execute()
+finalizBusRoute.execute()
 # doc = finalizeBusRoute.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

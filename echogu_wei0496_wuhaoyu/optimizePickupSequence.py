@@ -40,15 +40,8 @@ class optimizePickupSequence(dml.Algorithm):
             else:
                 assigned_students = random.choices(assigned_students, k = 1)
 
-        # loads the bus yard information
-        # raw_buses = repo['echogu_wei0496_wuhaoyu.buses'].find()
-        # buses = []
-        # for item in raw_buses:
-        #     buses.append({'coordinates': item['geometry']["coordinates"]})
-
         # utilize TSP solver to find bus route
         result = optimizePickupSequence.tsp_solver(assigned_students)
-        #print(result[0:1])
 
         # store the pickup sequence in database
         repo.dropCollection('pickup_sequence')

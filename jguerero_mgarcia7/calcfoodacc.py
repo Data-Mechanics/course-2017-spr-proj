@@ -92,6 +92,7 @@ class calcfoodacc(dml.Algorithm):
 			#walking distance metric 
 
 			for row in range(len(distance)):	#i in row of distance = addresses
+				total = 0
 				for i in range(len(distance[row])): #i in column of distance = food source
 					if distance[row][i] < 1.0: 
 						total += 1

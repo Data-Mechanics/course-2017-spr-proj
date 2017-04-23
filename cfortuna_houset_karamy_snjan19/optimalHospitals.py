@@ -20,6 +20,7 @@ import sklearn.metrics as metrics
 from scipy.cluster.vq import kmeans2
 import urllib
 import time
+from bson import json_util
 
 class optimalHospitals(dml.Algorithm):
     contributor = 'cfortuna_houset_karamy_snjan19'
@@ -48,20 +49,20 @@ class optimalHospitals(dml.Algorithm):
         #df = pd.read_json('cfortuna_houset_karamy_snjan19.BostonHospitalsData')
         #df.set_index('name', inplace=True)  
 
-        url = 'http://data.cityofboston.gov/resource/u6fv-m8v4.json'
-        response = urllib.request.urlopen(url).read().decode("utf-8")
-        r = json.loads(response)
-        s = json.dumps(r, sort_keys=True, indent=2)
+        #url = 'http://data.cityofboston.gov/resource/u6fv-m8v4.json'
+        #response = urllib.request.urlopen(url).read().decode("utf-8")
+        #r = json.loads(response)
+        #s = json.dumps(r, sort_keys=True, indent=2, default=json_util)
 
-        df = pd.read_json(s)
+        df = pd.DataFrame(list(hospitals)) #pd.read_json(s)
 
         df.set_index('name', inplace=True)
 
         # reading the hospital locations into a pandas dataframe  
         # adjusting to proper format of x and y coordinate data
 
-        df['xcoord'] = df['xcoord'].apply(lambda x: x*-0.000001)
-        df['ycoord'] = df['ycoord'].apply(lambda x: x*0.000001)
+        df['xcoord'] = df['xcoord'].apply(lambda x: float(x)*-0.000001)
+        df['ycoord'] = df['ycoord'].apply(lambda x: float(x)*0.000001)
 
         df['long_lat'] = list(zip(df.xcoord, df.ycoord))
 
@@ -95,12 +96,12 @@ class optimalHospitals(dml.Algorithm):
                                            'long_lat'])
 
         # Car Crashes
-        url = 'http://datamechanics.io/data/cfortuna_houset_karamy_snjan19/CarCrashData.json'
-        response = urllib.request.urlopen(url).read().decode("utf-8")
-        r = json.loads(response)
-        s = json.dumps(r, sort_keys=True, indent=2)
+        #url = 'http://datamechanics.io/data/cfortuna_houset_karamy_snjan19/CarCrashData.json'
+        #response = urllib.request.urlopen(url).read().decode("utf-8")
+        #r = json.loads(response)
+        #s = json.dumps(r, sort_keys=True, indent=2)
 
-        df2 = pd.read_json(s)
+        df2 = pd.DataFrame(list(accidents)) #pd.read_json(s)
 
 
         # getting rid of null values in the the crash data
@@ -331,7 +332,7 @@ class optimalHospitals(dml.Algorithm):
 
         return doc
 
-#OptimalHospitals.execute()
+optimalHospitals.execute()
 #doc = OptimalHospitals.provenance()
 #print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

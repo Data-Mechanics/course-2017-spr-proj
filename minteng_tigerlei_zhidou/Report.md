@@ -1,8 +1,9 @@
-# Find the best place of living in Boston area and corresponding analysis
+# Find the best living area in Boston and corresponding analysis
 
  *by Minteng Xie, Yue Lei, Zhi Dou*
 
 ## 1. Introduction
+The City of Boston has performed a significant effort on collecting data over different services and other public information. The diversity of these publicly available datasets allows us to explore various areas in Boston. Particularly, in this project we are focusing on finding the best living area in Boston and . 
 
 We want to find a best office location for a new company. The first factor we consider is the rent of the location, so we find the data of average rent for different cities in Greater-Boston. The second factor is convenient transportation, then we fetch the MBTA data, and we assume that the location will be more convenient if there are more stops around this location. The third factor is food, we think the location is better if there are many restaurants around it. Similarly, the fourth factor is safety, we do not want too many crimes appeared near the location. The last factor is salary, we may add some fuctions related to different types of jobs.
 

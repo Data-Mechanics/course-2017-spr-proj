@@ -115,20 +115,18 @@ class calcfoodacc(dml.Algorithm):
 			for row in range(len(m)):
 				before = [1*((m[row][0])/t), (2/3)*((m[row][1])/t), (1/3)*((m[row][2])/t)]
 				mat[2][row] = sum(before)
-			print (mat)
 
 			return mat
 
 		# Get the average metric score per neighborhood
 		nbs = list(set(fs_per_nb.keys()).intersection(set(add_per_nb.keys())))
-		print(nbs)
 
 		avg_metrics = np.zeros((len(nbs), 3), dtype=np.float64)
 
 		for idx,nb in enumerate(nbs):
 			distanceMat = createDistanceMatrix(add_per_nb[nb], fs_per_nb[nb])
 			metricMatrix = createMetricsMatrix(add_per_nb[nb], fs_per_nb[nb], distanceMat)
-			avg_metrics[idx] = np.mean(metricMatrix,axis=1, dtype=np.float64)
+			avg_metrics[idx] = np.mean(metricMatrix,axis=1, dtype=np.float64).T
 
 		# Compute the z-scores for each metric (to standardize)
 		def computeZscore(arr):
@@ -141,6 +139,7 @@ class calcfoodacc(dml.Algorithm):
 		# Compute a composite score for each neighborhood
 		weights = np.array([1,-1,1]) # Weight = 1 if it's a good thing to have a high value, -1 otherwise
 		scores = np.sum(weights*zscore_metrics,axis=1)
+		print(scores)
 
 		newd = {"Neighborhoods":nbs, "Scores":scores, "Zscore_metrics":zscore_metrics, "Avg_metrics":avg_metrics}
 		pickle.dump(newd, open('info.p','wb'))

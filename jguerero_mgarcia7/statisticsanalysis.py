@@ -47,15 +47,12 @@ class statisticsanalysis(dml.Algorithm):
 			if x is None:
 				idx_to_delete = idx
 
-		n = np.delete(observations,(idx),axis=1)
+		n = np.delete(observations,(idx_to_delete),axis=1)
 
 		# linear regression
 		n = n.astype(float)
 		x = n[:2,:].T
 		y = n[2,:].T
-
-		print(x.shape)
-		print(y.shape)
 
 		clf = linear_model.LinearRegression()
 		clf.fit(x,y)
@@ -105,6 +102,4 @@ class statisticsanalysis(dml.Algorithm):
 		repo.logout()
 				  
 		return doc
-
-	
 ## eof

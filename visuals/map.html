@@ -8,9 +8,7 @@
 </head>
 
 <style>
-.bubble {
-  stroke: #fff;
-}
+
 </style>
 
 <body>
@@ -44,27 +42,22 @@
 
     var obesity = svg.append( "g" );
 
-    obesity.selectAll( "path" )
-        .data( obesity_json.features )
-        .enter()
-        .append( "path" )
-        .attr( "fill", "#ffe66b" )
-        .attr( "stroke", "#000000" )
-        .attr( "d", geoPath );
-        // .attr("transform", function(d) { return "translate(" + geoPath.centroid(d) + ")"; })
-        // .attr("r", function(d) { return radius(d.properties.percentage); });
-
     var radius = d3.scale.sqrt()
         .domain([0, 1e6])
         .range([0, 15]);
 
-    // svg.append("g")
-    //     .attr("class", "bubble")
-    //     .selectAll("path")
-    //     .data(obesity_json.features)
-    //     .enter().append("circle")
-    //     .attr("transform", function(d) { return "translate(" + geoPath.centroid(d) + ")"; })
-    //     .attr("r", function(d) { return radius(d.properties.percentage); });
+    svg.append("g")
+        .selectAll("path")
+        .data(obesity_json.features)
+        .enter()
+        .append("path")
+        .attr( "fill", "#ffe66b" )
+        .attr( "stroke", "#000000" )
+        .attr("opacity", "0.5")
+        .attr("r", function(d) { return radius(d.properties.percentage); })
+        .attr( "d", geoPath )
+        .on("mouseover", function(d) {d3.select(this).attr("opacity", "1.0")})
+        .on("mouseout", function(d) {d3.select(this).attr("opacity", "0.5")});
 
 
     var health = svg.append( "g" );
@@ -75,7 +68,10 @@
         .append( "path" )
         .attr( "fill", "#34773f" )
         .attr( "stroke", "#000000" )
-        .attr( "d", geoPath );
+        .attr("opacity", "0.5")
+        .attr( "d", geoPath )
+        .on("mouseover", function(d) {d3.select(this).attr("opacity", "1.0")})
+        .on("mouseout", function(d) {d3.select(this).attr("opacity", "0.5")});
 
     </script>
 </body>

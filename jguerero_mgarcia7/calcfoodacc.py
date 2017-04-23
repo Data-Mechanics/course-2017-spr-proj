@@ -12,9 +12,9 @@ import pickle
 
 
 class calcfoodacc(dml.Algorithm):
-	contributor = 'cxiao_jchew1_jguerero_mgarcia7'
-	reads = ['cxiao_jchew1_jguerero_mgarcia7.foodsources', 'cxiao_jchew1_jguerero_mgarcia7.masteraddress', 'cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics']
-	writes = ['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics']
+	contributor = 'jguerero_mgarcia7'
+	reads = ['jguerero_mgarcia7.foodsources', 'jguerero_mgarcia7.masteraddress', 'jguerero_mgarcia7.neighborhoodstatistics']
+	writes = ['jguerero_mgarcia7.neighborhoodstatistics']
 
 	@staticmethod
 	def execute(trial = False):
@@ -24,15 +24,15 @@ class calcfoodacc(dml.Algorithm):
 		# Set up the database connection
 		client = dml.pymongo.MongoClient()
 		repo = client.repo
-		repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+		repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 
 		# Data cursors
 		if trial == 'False':
-			foodsources_data_cursor = repo['cxiao_jchew1_jguerero_mgarcia7.foodsources'].find()
-			add_data_cursor = repo['cxiao_jchew1_jguerero_mgarcia7.masteraddress'].find()
+			foodsources_data_cursor = repo['jguerero_mgarcia7.foodsources'].find()
+			add_data_cursor = repo['jguerero_mgarcia7.masteraddress'].find()
 		else:
-			foodsources_data_cursor = repo['cxiao_jchew1_jguerero_mgarcia7.foodsources'].find().limit(200)
-			add_data_cursor = repo['cxiao_jchew1_jguerero_mgarcia7.masteraddress'].find().limit(800)
+			foodsources_data_cursor = repo['jguerero_mgarcia7.foodsources'].find().limit(200)
+			add_data_cursor = repo['jguerero_mgarcia7.masteraddress'].find().limit(800)
 
 		fs_per_nb = defaultdict(list)
 		add_per_nb = defaultdict(list)
@@ -143,7 +143,7 @@ class calcfoodacc(dml.Algorithm):
 		print(info)
 
 		# Insert food accessbility score in the repo
-		nstats = repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].find()
+		nstats = repo['jguerero_mgarcia7.neighborhoodstatistics'].find()
 		nstats = [row for row in nstats]
 		for item in nstats:
 			nb = item['Neighborhood']
@@ -151,9 +151,9 @@ class calcfoodacc(dml.Algorithm):
 
 		repo.dropCollection("neighborhoodstatistics")
 		repo.createCollection("neighborhoodstatistics")
-		repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].insert_many(nstats)
-		repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].metadata({'complete':True})
-		print(repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].metadata())
+		repo['jguerero_mgarcia7.neighborhoodstatistics'].insert_many(nstats)
+		repo['jguerero_mgarcia7.neighborhoodstatistics'].metadata({'complete':True})
+		print(repo['jguerero_mgarcia7.neighborhoodstatistics'].metadata())
 
 		repo.logout()
 		endTime = datetime.datetime.now()
@@ -171,13 +171,13 @@ class calcfoodacc(dml.Algorithm):
 		# Set up the database connection.
 		client = dml.pymongo.MongoClient()
 		repo = client.repo
-		repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+		repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 		doc.add_namespace('alg', 'http://datamechanics.io/algorithm/') # The scripts are in <folder>#<filename> format.
 		doc.add_namespace('dat', 'http://datamechanics.io/data/jguerero_mgarcia7') # The data sets are in <user>#<collection> format.
 		doc.add_namespace('ont', 'http://datamechanics.io/ontology#') # 'Extension', 'DataResource', 'DataSet', 'Retrieval', 'Query', or 'Computation'.
 		doc.add_namespace('log', 'http://datamechanics.io/log/') # The event log.
 
-		this_script = doc.agent('alg:cxiao_jchew1_jguerero_mgarcia7#calcfoodacc', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
+		this_script = doc.agent('alg:jguerero_mgarcia7#calcfoodacc', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
 		
 		foodsources_resource = doc.entity('dat:foodsources', {'prov:label':'Food Sources', prov.model.PROV_TYPE:'ont:DataSet'})
 		masteraddresses_resource = doc.entity('dat:masteraddresses', {'prov:label':'Master Addresses', prov.model.PROV_TYPE:'ont:DataSet'})
@@ -194,7 +194,7 @@ class calcfoodacc(dml.Algorithm):
 		  )
  
 		'''
-		foodsources = doc.entity('dat:cxiao_jchew1_jguerero_mgarcia7#calcfoodacc', {prov.model.PROV_LABEL:'Sources of food per neighborhood', prov.model.PROV_TYPE:'ont:DataSet'})
+		foodsources = doc.entity('dat:jguerero_mgarcia7#calcfoodacc', {prov.model.PROV_LABEL:'Sources of food per neighborhood', prov.model.PROV_TYPE:'ont:DataSet'})
 		doc.wasAttributedTo(foodsources, this_script)
 		doc.wasGeneratedBy(foodsources, computeScore, endTime)
 		doc.wasDerivedFrom(foodsources, supermarkets_resource, computeScore, computeScore, computeScore)

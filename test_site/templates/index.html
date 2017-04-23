@@ -1,17 +1,64 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style> /* this is css code*/
-.line{
-    fill: none
-    stroke: steelblue
-    stroke-width: 2px;
+<html>
+<title>Our CS591 L1 Final Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.gallery-text {
+    float: left;
+    width: 48%;
+    margin: 1%;
+}
+.gallery-text p {
+    word-break: break-all;
+}
+.bgimg {
+    background-image: url('/static/nature.png'); 
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 0px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
 }
 </style>
-
 <body>
-    <script src="https://d3js.org/d3.v4.min.js">/*this is the d3 load code*/
-    </script>
-    <p>Hello World</p>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Max Mesirow, Amalia Safer, Ann Sambors, Viviana Yee
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">CS591 L1 Project</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <div id="gallery-text">
+    	<div class="gallery-text">
+      	    <div class="transbox">
+    			<p class="w3-large w3-center"><a href="/map">MAP</a></p>
+    		</div>
+    	</div>
+    	<div class="gallery-text">
+    		<div class="transbox">
+    			<p class="w3-large w3-center"><a href="/plot">PLOT</a></p>
+    		</div>
+    	</div>
+    </div>
+</div>
+
 </body>
-
-
+</html>

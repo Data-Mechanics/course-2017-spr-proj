@@ -51,9 +51,9 @@ class calcfoodacc(dml.Algorithm):
 		'''
 
 
-		def createDistanceMatrix(address,food):
-			empty = [0] * len(food)
-			mat = np.array([empty]*len(address), dtype=float)
+		def createDistanceMatrix(address,food):	#row = addresses, #length = food
+			empty = [0] * len(food)	#make an array of size of all the foods
+			mat = np.array([empty]*len(address), dtype=float)	#make a metrix of address * food
 			address = np.array(address)
 			food = np.array(food)
 
@@ -73,9 +73,11 @@ class calcfoodacc(dml.Algorithm):
 				mat[:,idx] = np.apply_along_axis(distanceKm, 0, fs, address)
 			return mat
 
-		def createMetricsMatrix(address, food, distance): #metrics = rows and then columns is food
-			empty = [0.000] * len(address)
-			mat = np.array([empty]*3)
+		def createMetricsMatrix(address, food, distance): #metrics = rows and then columns = address
+			empty = [0.000] * len(address)	#array of length address
+			mat = np.array([empty]*3)	#matrix of metrics * address
+
+		#	print (mat)
 
 			e = [0] * 3
 			m = np.array([e]*len(address))
@@ -85,9 +87,11 @@ class calcfoodacc(dml.Algorithm):
 			fm = 0
 			sm = 0
 			cs = 0
+
 			#walking distance metric 
-			for row in range(len(distance)):
-				for i in range(len(distance[row])):
+
+			for row in range(len(distance)):	#i in row of distance = addresses
+				for i in range(len(distance[row])): #i in column of distance = food source
 					if distance[row][i] < 1.0: 
 						total += 1
 						if food[i][2] == 'Farmers Market':
@@ -98,16 +102,20 @@ class calcfoodacc(dml.Algorithm):
 							m[row][2] += 1
 						
 				mat[0][row] = total
+			#print (mat)
 
 			#distance of closest
 			for row in range(len(distance)):
 				mat[1][row] = min(distance[row])
+
+			#print (mat)
 
 			#quality of food source
 			t = len(food)	
 			for row in range(len(m)):
 				before = [1*((m[row][0])/t), (2/3)*((m[row][1])/t), (1/3)*((m[row][2])/t)]
 				mat[2][row] = sum(before)
+			print (mat)
 
 			return mat
 
@@ -139,8 +147,8 @@ class calcfoodacc(dml.Algorithm):
 
 		# Create list of tuples that can be used to update a dictionary
 		info = dict([(nb,score) for nb, score in zip(nbs,scores)])
-		print(nbs)
-		print(info)
+	#	print(nbs)
+	#	print(info)
 
 		# Insert food accessbility score in the repo
 		nstats = repo['jguerero_mgarcia7.neighborhoodstatistics'].find()
@@ -238,4 +246,5 @@ def distanceKm(pt,add):
     return c * r
 
 	
+calcfoodacc.execute()
 ## eof

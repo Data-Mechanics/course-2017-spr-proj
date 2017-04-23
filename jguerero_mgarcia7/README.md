@@ -88,7 +88,7 @@ Specfically, the correlation coefficient array shows that there is a relatively 
 We also decided to create a linear regression model in order to give us an idea of how related the independent variables (food accessbility and income) were to the dependent variable (obesity). 
 
 # Required libraries and tools
-The libraries pyshp, shapely, geopy, numpy, pickle, sklearn will need to be installed before the program can be executed. They can be installed with these pip3 commands:
+The libraries pyshp, shapely, geopy, numpy, pickle, scipy, sklearn will need to be installed before the program can be executed. They can be installed with these pip3 commands:
 ```
 pip3 install pyshp
 pip3 install shapely

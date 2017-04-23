@@ -20,7 +20,6 @@ import sklearn.metrics as metrics
 from scipy.cluster.vq import kmeans2
 import urllib
 import time
-from bson import json_util
 
 class optimalHospitals(dml.Algorithm):
     contributor = 'cfortuna_houset_karamy_snjan19'
@@ -45,16 +44,8 @@ class optimalHospitals(dml.Algorithm):
         # Creating a New repo to store the data in
         repo.dropCollection("OptimalHospitals")
         repo.createCollection("OptimalHospitals")
-        
-        #df = pd.read_json('cfortuna_houset_karamy_snjan19.BostonHospitalsData')
-        #df.set_index('name', inplace=True)  
 
-        #url = 'http://data.cityofboston.gov/resource/u6fv-m8v4.json'
-        #response = urllib.request.urlopen(url).read().decode("utf-8")
-        #r = json.loads(response)
-        #s = json.dumps(r, sort_keys=True, indent=2, default=json_util)
-
-        df = pd.DataFrame(list(hospitals)) #pd.read_json(s)
+        df = pd.DataFrame(list(hospitals))
 
         df.set_index('name', inplace=True)
 
@@ -81,8 +72,6 @@ class optimalHospitals(dml.Algorithm):
                          'long_lat'])
             size = len(data)
             cutoff = round(size*0.1)
-            #     print(size)
-            #     print(cutoff)
             trial_data = data[:cutoff]
             df = pd.DataFrame(trial_data, columns=[':@computed_region_aywg_kpfh',
                                            'ad',
@@ -95,14 +84,7 @@ class optimalHospitals(dml.Algorithm):
                                            'zipcode',
                                            'long_lat'])
 
-        # Car Crashes
-        #url = 'http://datamechanics.io/data/cfortuna_houset_karamy_snjan19/CarCrashData.json'
-        #response = urllib.request.urlopen(url).read().decode("utf-8")
-        #r = json.loads(response)
-        #s = json.dumps(r, sort_keys=True, indent=2)
-
-        df2 = pd.DataFrame(list(accidents)) #pd.read_json(s)
-
+        df2 = pd.DataFrame(list(accidents))
 
         # getting rid of null values in the the crash data
 
@@ -140,8 +122,6 @@ class optimalHospitals(dml.Algorithm):
                                   'long_lat'])
             size = len(data)
             cutoff = round(size*0.1)
-            #     print(size)
-            #     print(cutoff)
             trial_data = data[:cutoff]
             df2 = pd.DataFrame(trial_data, columns=['Ambient Light',
                                                    'At Roadway Intersection',
@@ -244,7 +224,6 @@ class optimalHospitals(dml.Algorithm):
 
         def getDistanceMatrix(origin, destination):
             result = {}
-        #     url = 'http://maps.googleapis.com/maps/api/directions/json?origin={}&destination={}'
             url = 'https://maps.googleapis.com/maps/api/distancematrix/json?origin={}&destination={}'
             request = url.format(origin, destination)
             data = requests.get(request).json()
@@ -256,7 +235,6 @@ class optimalHospitals(dml.Algorithm):
         df_centroids.drop('lat',axis=1,inplace=True)
         df_centroids.drop('json_response',axis=1,inplace=True)
 
-        #df_centroids.to_csv('optimalHospitalLocations.csv')
         df_centroids.to_json('optimalHospitalLocations.json')
 
         with open('optimalHospitalLocations.json') as data_file:    
@@ -302,11 +280,9 @@ class optimalHospitals(dml.Algorithm):
         getBostonHospitalsData = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
         getOptimalHospitals = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
 
-
         doc.wasAssociatedWith(getCarCrashData, this_script)
         doc.wasAssociatedWith(getBostonHospitalsData, this_script)
         doc.wasAssociatedWith(getOptimalHospitals, this_script)
-
 
         doc.usage(getCarCrashData, carCrashResource, startTime, None, {prov.model.PROV_TYPE:'ont:Retrieval'})
         doc.usage(getBostonHospitalsData, hospitalsResource, startTime, None,{prov.model.PROV_TYPE:'ont:Retrieval',})
@@ -322,7 +298,6 @@ class optimalHospitals(dml.Algorithm):
         doc.wasGeneratedBy(BostonHospitalsData, getBostonHospitalsData, endTime)
         doc.wasDerivedFrom(BostonHospitalsData, hospitalsResource, getBostonHospitalsData, getBostonHospitalsData, getBostonHospitalsData)
         repo.logout()
-
 
         OptimalHospitals = doc.entity('dat:cfortuna_houset_karamy_snjan19#OptimalHospitals', {prov.model.PROV_LABEL:'Optimal Hospitals', prov.model.PROV_TYPE:'ont:DataSet'})
         doc.wasAttributedTo(OptimalHospitals, this_script)

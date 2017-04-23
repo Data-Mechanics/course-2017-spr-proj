@@ -21,7 +21,7 @@ from scipy.cluster.vq import kmeans2
 import urllib
 import time
 
-class OptimalHospitals(dml.Algorithm):
+class optimalHospitals(dml.Algorithm):
     contributor = 'cfortuna_houset_karamy_snjan19'
     reads = ['cfortuna_houset_karamy_snjan19.CarCrashData','cfortuna_houset_karamy_snjan19.BostonHospitalsData']
     writes = ['cfortuna_houset_karamy_snjan19.OptimalHospitals']

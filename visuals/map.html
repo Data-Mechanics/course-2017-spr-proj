@@ -6,6 +6,13 @@
     <script src="obesity.js"></script>
     <script src="health.js"></script>
 </head>
+
+<style>
+.bubble {
+  stroke: #fff;
+}
+</style>
+
 <body>
     <script>
     // our code will go here
@@ -44,6 +51,21 @@
         .attr( "fill", "#ffe66b" )
         .attr( "stroke", "#000000" )
         .attr( "d", geoPath );
+        // .attr("transform", function(d) { return "translate(" + geoPath.centroid(d) + ")"; })
+        // .attr("r", function(d) { return radius(d.properties.percentage); });
+
+    var radius = d3.scale.sqrt()
+        .domain([0, 1e6])
+        .range([0, 15]);
+
+    // svg.append("g")
+    //     .attr("class", "bubble")
+    //     .selectAll("path")
+    //     .data(obesity_json.features)
+    //     .enter().append("circle")
+    //     .attr("transform", function(d) { return "translate(" + geoPath.centroid(d) + ")"; })
+    //     .attr("r", function(d) { return radius(d.properties.percentage); });
+
 
     var health = svg.append( "g" );
 

@@ -17,7 +17,7 @@ for o in obesity.find():
     if 'data_value' in o:
         geojson.write('"properties":{"percentage":"' + o['data_value'] + '"')
     else:
-        geojson.write('"properties":{"percentage":"N/A"')
+        geojson.write('"properties":{"percentage":"0"')
 
     geojson.write(', "population_size":"' + o['population2010'] + '"},')
     geojson.write('"geometry": {"type": "Point", "coordinates": [')

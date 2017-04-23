@@ -265,7 +265,9 @@
         ]
       },
       "properties": {
-        "school": "Conservatory Lab Hancock",
+        "title": "Conservatory Lab Hancock",
+        "marker_symbol": "bus-15",
+        "stroke": "#37gd68",
         "school location": [
           -71.0658083,
           42.3112403
@@ -910,7 +912,9 @@
         ]
       },
       "properties": {
-        "school": "Conservatory Lab Hancock",
+        "title": "Conservatory Lab Hancock",
+        "marker_symbol": "bus-15",
+        "stroke": "#3d7e49",
         "school location": [
           -71.0658083,
           42.3112403
@@ -1283,7 +1287,9 @@
         ]
       },
       "properties": {
-        "school": "Conservatory Lab Hancock",
+        "title": "Conservatory Lab Hancock",
+        "marker_symbol": "bus-15",
+        "stroke": "#7528ee",
         "school location": [
           -71.0658083,
           42.3112403
@@ -1368,7 +1374,9 @@
         ]
       },
       "properties": {
-        "school": "Conservatory Lab Hancock",
+        "title": "Conservatory Lab Hancock",
+        "marker_symbol": "bus-15",
+        "stroke": "#be1e46",
         "school location": [
           -71.0658083,
           42.3112403
@@ -1605,7 +1613,9 @@
         ]
       },
       "properties": {
-        "school": "Excel Acad 2 (EB)",
+        "title": "Excel Acad 2 (EB)",
+        "marker_symbol": "bus-15",
+        "stroke": "#a5a674",
         "school location": [
           -71.0298419,
           42.3785464
@@ -1666,7 +1676,9 @@
         ]
       },
       "properties": {
-        "school": "Kenny ES",
+        "title": "Kenny ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#61f6d7",
         "school location": [
           -71.05319154,
           42.28655025
@@ -2247,7 +2259,9 @@
         ]
       },
       "properties": {
-        "school": "Kenny ES",
+        "title": "Kenny ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8bef85",
         "school location": [
           -71.05319154,
           42.28655025
@@ -2956,7 +2970,9 @@
         ]
       },
       "properties": {
-        "school": "Kenny ES",
+        "title": "Kenny ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#426e9c",
         "school location": [
           -71.05319154,
           42.28655025
@@ -3281,7 +3297,9 @@
         ]
       },
       "properties": {
-        "school": "Kenny ES",
+        "title": "Kenny ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8f3137",
         "school location": [
           -71.05319154,
           42.28655025
@@ -3510,7 +3528,9 @@
         ]
       },
       "properties": {
-        "school": "Mason ES",
+        "title": "Mason ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8a97a9",
         "school location": [
           -71.07133141,
           42.32621703
@@ -3923,7 +3943,9 @@
         ]
       },
       "properties": {
-        "school": "Mason ES",
+        "title": "Mason ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#21f3ga",
         "school location": [
           -71.07133141,
           42.32621703
@@ -4336,7 +4358,9 @@
         ]
       },
       "properties": {
-        "school": "Mason ES",
+        "title": "Mason ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#d0706d",
         "school location": [
           -71.07133141,
           42.32621703
@@ -4381,7 +4405,9 @@
         ]
       },
       "properties": {
-        "school": "Bradley ES",
+        "title": "Bradley ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#3c223d",
         "school location": [
           -71.00504508,
           42.39161618
@@ -4418,7 +4444,9 @@
         ]
       },
       "properties": {
-        "school": "Bradley ES",
+        "title": "Bradley ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#3af594",
         "school location": [
           -71.00504508,
           42.39161618
@@ -4631,7 +4659,9 @@
         ]
       },
       "properties": {
-        "school": "Bradley ES",
+        "title": "Bradley ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a8bea2",
         "school location": [
           -71.00504508,
           42.39161618
@@ -5908,7 +5938,9 @@
         ]
       },
       "properties": {
-        "school": "Bradley ES",
+        "title": "Bradley ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#28a6bc",
         "school location": [
           -71.00504508,
           42.39161618
@@ -6097,7 +6129,9 @@
         ]
       },
       "properties": {
-        "school": "Excel HS",
+        "title": "Excel HS",
+        "marker_symbol": "bus-15",
+        "stroke": "#85gcga",
         "school location": [
           -71.04489058,
           42.33286867
@@ -6342,7 +6376,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Collegiate Lower",
+        "title": "Boston Collegiate Lower",
+        "marker_symbol": "bus-15",
+        "stroke": "#0190ff",
         "school location": [
           -71.0628483,
           42.3217541
@@ -6451,7 +6487,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Collegiate Lower",
+        "title": "Boston Collegiate Lower",
+        "marker_symbol": "bus-15",
+        "stroke": "#68f091",
         "school location": [
           -71.0628483,
           42.3217541
@@ -7144,7 +7182,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Collegiate Lower",
+        "title": "Boston Collegiate Lower",
+        "marker_symbol": "bus-15",
+        "stroke": "#edae48",
         "school location": [
           -71.0628483,
           42.3217541
@@ -7437,7 +7477,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Collegiate Lower",
+        "title": "Boston Collegiate Lower",
+        "marker_symbol": "bus-15",
+        "stroke": "#745485",
         "school location": [
           -71.0628483,
           42.3217541
@@ -7754,7 +7796,9 @@
         ]
       },
       "properties": {
-        "school": "Davis Leadership Acad",
+        "title": "Davis Leadership Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#03a6ea",
         "school location": [
           -71.0608867,
           42.3012901
@@ -7991,7 +8035,9 @@
         ]
       },
       "properties": {
-        "school": "Davis Leadership Acad",
+        "title": "Davis Leadership Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#41dd18",
         "school location": [
           -71.0608867,
           42.3012901
@@ -8444,7 +8490,9 @@
         ]
       },
       "properties": {
-        "school": "HENDERSON K-2",
+        "title": "HENDERSON K-2",
+        "marker_symbol": "bus-15",
+        "stroke": "#3ea202",
         "school location": [
           -71.06222064,
           42.29396673
@@ -8785,7 +8833,9 @@
         ]
       },
       "properties": {
-        "school": "HENDERSON K-2",
+        "title": "HENDERSON K-2",
+        "marker_symbol": "bus-15",
+        "stroke": "#91281a",
         "school location": [
           -71.06222064,
           42.29396673
@@ -8998,7 +9048,9 @@
         ]
       },
       "properties": {
-        "school": "HENDERSON K-2",
+        "title": "HENDERSON K-2",
+        "marker_symbol": "bus-15",
+        "stroke": "#f20398",
         "school location": [
           -71.06222064,
           42.29396673
@@ -9251,7 +9303,9 @@
         ]
       },
       "properties": {
-        "school": "Codman Acad Lower",
+        "title": "Codman Acad Lower",
+        "marker_symbol": "bus-15",
+        "stroke": "#f33b21",
         "school location": [
           -71.0742432,
           42.2894184
@@ -9840,7 +9894,9 @@
         ]
       },
       "properties": {
-        "school": "Codman Acad Lower",
+        "title": "Codman Acad Lower",
+        "marker_symbol": "bus-15",
+        "stroke": "#8fdeeg",
         "school location": [
           -71.0742432,
           42.2894184
@@ -10213,7 +10269,9 @@
         ]
       },
       "properties": {
-        "school": "Lyon K-8",
+        "title": "Lyon K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#da5b24",
         "school location": [
           -71.16150062,
           42.35107867
@@ -10274,7 +10332,9 @@
         ]
       },
       "properties": {
-        "school": "Clap ES",
+        "title": "Clap ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#156f9g",
         "school location": [
           -71.05819134,
           42.3231762
@@ -10823,7 +10883,9 @@
         ]
       },
       "properties": {
-        "school": "Clap ES",
+        "title": "Clap ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#959c9a",
         "school location": [
           -71.05819134,
           42.3231762
@@ -11124,7 +11186,9 @@
         ]
       },
       "properties": {
-        "school": "Clap ES",
+        "title": "Clap ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#25c981",
         "school location": [
           -71.05819134,
           42.3231762
@@ -11401,7 +11465,9 @@
         ]
       },
       "properties": {
-        "school": "Comm Acad Sci & Health",
+        "title": "Comm Acad Sci & Health",
+        "marker_symbol": "bus-15",
+        "stroke": "#b990b6",
         "school location": [
           -71.06172942,
           42.30112879
@@ -11750,7 +11816,9 @@
         ]
       },
       "properties": {
-        "school": "Comm Acad Sci & Health",
+        "title": "Comm Acad Sci & Health",
+        "marker_symbol": "bus-15",
+        "stroke": "#fb0d6g",
         "school location": [
           -71.06172942,
           42.30112879
@@ -12067,7 +12135,9 @@
         ]
       },
       "properties": {
-        "school": "Lee ES",
+        "title": "Lee ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#dfg6ec",
         "school location": [
           -71.08037542,
           42.2924381
@@ -12768,7 +12838,9 @@
         ]
       },
       "properties": {
-        "school": "Lee ES",
+        "title": "Lee ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#gb98gf",
         "school location": [
           -71.08037542,
           42.2924381
@@ -13765,7 +13837,9 @@
         ]
       },
       "properties": {
-        "school": "Lee ES",
+        "title": "Lee ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c919b0",
         "school location": [
           -71.08037542,
           42.2924381
@@ -14066,7 +14140,9 @@
         ]
       },
       "properties": {
-        "school": "Lee ES",
+        "title": "Lee ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#2c0721",
         "school location": [
           -71.08037542,
           42.2924381
@@ -14431,7 +14507,9 @@
         ]
       },
       "properties": {
-        "school": "Lee ES",
+        "title": "Lee ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#69526d",
         "school location": [
           -71.08037542,
           42.2924381
@@ -14524,7 +14602,9 @@
         ]
       },
       "properties": {
-        "school": "Lee ES",
+        "title": "Lee ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#658gba",
         "school location": [
           -71.08037542,
           42.2924381
@@ -14601,7 +14681,9 @@
         ]
       },
       "properties": {
-        "school": "Lee ES",
+        "title": "Lee ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#33fd9f",
         "school location": [
           -71.08037542,
           42.2924381
@@ -14894,7 +14976,9 @@
         ]
       },
       "properties": {
-        "school": "St John",
+        "title": "St John",
+        "marker_symbol": "bus-15",
+        "stroke": "#344c17",
         "school location": [
           -71.0548936,
           42.3639082
@@ -15251,7 +15335,9 @@
         ]
       },
       "properties": {
-        "school": "Beethoven ES",
+        "title": "Beethoven ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#fcga4c",
         "school location": [
           -71.15613062,
           42.26343865
@@ -15680,7 +15766,9 @@
         ]
       },
       "properties": {
-        "school": "Beethoven ES",
+        "title": "Beethoven ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#e5e0d9",
         "school location": [
           -71.15613062,
           42.26343865
@@ -15909,7 +15997,9 @@
         ]
       },
       "properties": {
-        "school": "Beethoven ES",
+        "title": "Beethoven ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#7d6a5a",
         "school location": [
           -71.15613062,
           42.26343865
@@ -16554,7 +16644,9 @@
         ]
       },
       "properties": {
-        "school": "Beethoven ES",
+        "title": "Beethoven ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#2g3g36",
         "school location": [
           -71.15613062,
           42.26343865
@@ -16735,7 +16827,9 @@
         ]
       },
       "properties": {
-        "school": "Beethoven ES",
+        "title": "Beethoven ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8fc514",
         "school location": [
           -71.15613062,
           42.26343865
@@ -17156,7 +17250,9 @@
         ]
       },
       "properties": {
-        "school": "Lyndon K-8",
+        "title": "Lyndon K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#f21cdc",
         "school location": [
           -71.15837062,
           42.28299866
@@ -17257,7 +17353,9 @@
         ]
       },
       "properties": {
-        "school": "Lyndon K-8",
+        "title": "Lyndon K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#ffb651",
         "school location": [
           -71.15837062,
           42.28299866
@@ -18574,7 +18672,9 @@
         ]
       },
       "properties": {
-        "school": "Lyndon K-8",
+        "title": "Lyndon K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#a460c4",
         "school location": [
           -71.15837062,
           42.28299866
@@ -18715,7 +18815,9 @@
         ]
       },
       "properties": {
-        "school": "Lyndon K-8",
+        "title": "Lyndon K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#22g608",
         "school location": [
           -71.15837062,
           42.28299866
@@ -18896,7 +18998,9 @@
         ]
       },
       "properties": {
-        "school": "Lyndon K-8",
+        "title": "Lyndon K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#3ag235",
         "school location": [
           -71.15837062,
           42.28299866
@@ -18949,7 +19053,9 @@
         ]
       },
       "properties": {
-        "school": "Lyndon K-8",
+        "title": "Lyndon K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#49ccef",
         "school location": [
           -71.15837062,
           42.28299866
@@ -19010,7 +19116,9 @@
         ]
       },
       "properties": {
-        "school": "Dever Elementary",
+        "title": "Dever Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#94f8ga",
         "school location": [
           -71.04274058,
           42.31762867
@@ -19567,7 +19675,9 @@
         ]
       },
       "properties": {
-        "school": "Dever Elementary",
+        "title": "Dever Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#b38af6",
         "school location": [
           -71.04274058,
           42.31762867
@@ -20004,7 +20114,9 @@
         ]
       },
       "properties": {
-        "school": "Dever Elementary",
+        "title": "Dever Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#f40g71",
         "school location": [
           -71.04274058,
           42.31762867
@@ -20377,7 +20489,9 @@
         ]
       },
       "properties": {
-        "school": "Dever Elementary",
+        "title": "Dever Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#e9556d",
         "school location": [
           -71.04274058,
           42.31762867
@@ -21150,7 +21264,9 @@
         ]
       },
       "properties": {
-        "school": "Dever Elementary",
+        "title": "Dever Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#b61d19",
         "school location": [
           -71.04274058,
           42.31762867
@@ -21675,7 +21791,9 @@
         ]
       },
       "properties": {
-        "school": "Dever Elementary",
+        "title": "Dever Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#489dd3",
         "school location": [
           -71.04274058,
           42.31762867
@@ -21904,7 +22022,9 @@
         ]
       },
       "properties": {
-        "school": "Dever Elementary",
+        "title": "Dever Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#gg84cc",
         "school location": [
           -71.04274058,
           42.31762867
@@ -22653,7 +22773,9 @@
         ]
       },
       "properties": {
-        "school": "Ohrenberger",
+        "title": "Ohrenberger",
+        "marker_symbol": "bus-15",
+        "stroke": "#c2fg21",
         "school location": [
           -71.14961061,
           42.26075865
@@ -22890,7 +23012,9 @@
         ]
       },
       "properties": {
-        "school": "Ohrenberger",
+        "title": "Ohrenberger",
+        "marker_symbol": "bus-15",
+        "stroke": "#62ee7d",
         "school location": [
           -71.14961061,
           42.26075865
@@ -23015,7 +23139,9 @@
         ]
       },
       "properties": {
-        "school": "Ohrenberger",
+        "title": "Ohrenberger",
+        "marker_symbol": "bus-15",
+        "stroke": "#9b51bf",
         "school location": [
           -71.14961061,
           42.26075865
@@ -24076,7 +24202,9 @@
         ]
       },
       "properties": {
-        "school": "Ohrenberger",
+        "title": "Ohrenberger",
+        "marker_symbol": "bus-15",
+        "stroke": "#01c19f",
         "school location": [
           -71.14961061,
           42.26075865
@@ -24185,7 +24313,9 @@
         ]
       },
       "properties": {
-        "school": "Ohrenberger",
+        "title": "Ohrenberger",
+        "marker_symbol": "bus-15",
+        "stroke": "#ggb363",
         "school location": [
           -71.14961061,
           42.26075865
@@ -24574,7 +24704,9 @@
         ]
       },
       "properties": {
-        "school": "Ohrenberger",
+        "title": "Ohrenberger",
+        "marker_symbol": "bus-15",
+        "stroke": "#ca763e",
         "school location": [
           -71.14961061,
           42.26075865
@@ -24619,7 +24751,9 @@
         ]
       },
       "properties": {
-        "school": "Ohrenberger",
+        "title": "Ohrenberger",
+        "marker_symbol": "bus-15",
+        "stroke": "#0cc9d3",
         "school location": [
           -71.14961061,
           42.26075865
@@ -24712,7 +24846,9 @@
         ]
       },
       "properties": {
-        "school": "Russell ES",
+        "title": "Russell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a3gfb6",
         "school location": [
           -71.05954941,
           42.32038241
@@ -25317,7 +25453,9 @@
         ]
       },
       "properties": {
-        "school": "Russell ES",
+        "title": "Russell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c7gffa",
         "school location": [
           -71.05954941,
           42.32038241
@@ -26010,7 +26148,9 @@
         ]
       },
       "properties": {
-        "school": "Russell ES",
+        "title": "Russell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a3af11",
         "school location": [
           -71.05954941,
           42.32038241
@@ -26255,7 +26395,9 @@
         ]
       },
       "properties": {
-        "school": "Russell ES",
+        "title": "Russell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#5774b4",
         "school location": [
           -71.05954941,
           42.32038241
@@ -26372,7 +26514,9 @@
         ]
       },
       "properties": {
-        "school": "Russell ES",
+        "title": "Russell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#360912",
         "school location": [
           -71.05954941,
           42.32038241
@@ -26801,7 +26945,9 @@
         ]
       },
       "properties": {
-        "school": "West Zone ELC",
+        "title": "West Zone ELC",
+        "marker_symbol": "bus-15",
+        "stroke": "#f4df35",
         "school location": [
           -71.10693577,
           42.32629276
@@ -27198,7 +27344,9 @@
         ]
       },
       "properties": {
-        "school": "Frederick MS",
+        "title": "Frederick MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#0agb60",
         "school location": [
           -71.07541082,
           42.30905402
@@ -27475,7 +27623,9 @@
         ]
       },
       "properties": {
-        "school": "Frederick MS",
+        "title": "Frederick MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#g5d97e",
         "school location": [
           -71.07541082,
           42.30905402
@@ -27584,7 +27734,9 @@
         ]
       },
       "properties": {
-        "school": "HENDERSON 3-12",
+        "title": "HENDERSON 3-12",
+        "marker_symbol": "bus-15",
+        "stroke": "#1602ca",
         "school location": [
           -71.06956993,
           42.28126173
@@ -27973,7 +28125,9 @@
         ]
       },
       "properties": {
-        "school": "HENDERSON 3-12",
+        "title": "HENDERSON 3-12",
+        "marker_symbol": "bus-15",
+        "stroke": "#ee13ab",
         "school location": [
           -71.06956993,
           42.28126173
@@ -28378,7 +28532,9 @@
         ]
       },
       "properties": {
-        "school": "HENDERSON 3-12",
+        "title": "HENDERSON 3-12",
+        "marker_symbol": "bus-15",
+        "stroke": "#e68ea2",
         "school location": [
           -71.06956993,
           42.28126173
@@ -29135,7 +29291,9 @@
         ]
       },
       "properties": {
-        "school": "HENDERSON 3-12",
+        "title": "HENDERSON 3-12",
+        "marker_symbol": "bus-15",
+        "stroke": "#9ae1g2",
         "school location": [
           -71.06956993,
           42.28126173
@@ -29268,7 +29426,9 @@
         ]
       },
       "properties": {
-        "school": "Edwards Middle",
+        "title": "Edwards Middle",
+        "marker_symbol": "bus-15",
+        "stroke": "#6gg4c9",
         "school location": [
           -71.06723124,
           42.37908036
@@ -29993,7 +30153,9 @@
         ]
       },
       "properties": {
-        "school": "Edwards Middle",
+        "title": "Edwards Middle",
+        "marker_symbol": "bus-15",
+        "stroke": "#95808g",
         "school location": [
           -71.06723124,
           42.37908036
@@ -30374,7 +30536,9 @@
         ]
       },
       "properties": {
-        "school": "Perry K-8",
+        "title": "Perry K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#fg997c",
         "school location": [
           -71.03019874,
           42.33212077
@@ -30827,7 +30991,9 @@
         ]
       },
       "properties": {
-        "school": "Perry K-8",
+        "title": "Perry K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1f3bd3",
         "school location": [
           -71.03019874,
           42.33212077
@@ -31008,7 +31174,9 @@
         ]
       },
       "properties": {
-        "school": "Madison Park HS",
+        "title": "Madison Park HS",
+        "marker_symbol": "bus-15",
+        "stroke": "#d17cd3",
         "school location": [
           -71.0902906,
           42.33175867
@@ -31293,7 +31461,9 @@
         ]
       },
       "properties": {
-        "school": "Madison Park HS",
+        "title": "Madison Park HS",
+        "marker_symbol": "bus-15",
+        "stroke": "#34ae43",
         "school location": [
           -71.0902906,
           42.33175867
@@ -31362,7 +31532,9 @@
         ]
       },
       "properties": {
-        "school": "King K-8",
+        "title": "King K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#de720a",
         "school location": [
           -71.07619659,
           42.31129966
@@ -31455,7 +31627,9 @@
         ]
       },
       "properties": {
-        "school": "King K-8",
+        "title": "King K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#ea8cg3",
         "school location": [
           -71.07619659,
           42.31129966
@@ -31940,7 +32114,9 @@
         ]
       },
       "properties": {
-        "school": "King K-8",
+        "title": "King K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#8ff5ce",
         "school location": [
           -71.07619659,
           42.31129966
@@ -32505,7 +32681,9 @@
         ]
       },
       "properties": {
-        "school": "King K-8",
+        "title": "King K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#970fg0",
         "school location": [
           -71.07619659,
           42.31129966
@@ -33118,7 +33296,9 @@
         ]
       },
       "properties": {
-        "school": "King K-8",
+        "title": "King K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#d2d87e",
         "school location": [
           -71.07619659,
           42.31129966
@@ -33379,7 +33559,9 @@
         ]
       },
       "properties": {
-        "school": "Neighborhood House",
+        "title": "Neighborhood House",
+        "marker_symbol": "bus-15",
+        "stroke": "#e47da9",
         "school location": [
           -71.0556393,
           42.2933291
@@ -34248,7 +34430,9 @@
         ]
       },
       "properties": {
-        "school": "Neighborhood House",
+        "title": "Neighborhood House",
+        "marker_symbol": "bus-15",
+        "stroke": "#9ga0e4",
         "school location": [
           -71.0556393,
           42.2933291
@@ -34397,7 +34581,9 @@
         ]
       },
       "properties": {
-        "school": "Neighborhood House",
+        "title": "Neighborhood House",
+        "marker_symbol": "bus-15",
+        "stroke": "#deg09d",
         "school location": [
           -71.0556393,
           42.2933291
@@ -35106,7 +35292,9 @@
         ]
       },
       "properties": {
-        "school": "Neighborhood House",
+        "title": "Neighborhood House",
+        "marker_symbol": "bus-15",
+        "stroke": "#b40293",
         "school location": [
           -71.0556393,
           42.2933291
@@ -35159,7 +35347,9 @@
         ]
       },
       "properties": {
-        "school": "Neighborhood House",
+        "title": "Neighborhood House",
+        "marker_symbol": "bus-15",
+        "stroke": "#410333",
         "school location": [
           -71.0556393,
           42.2933291
@@ -35828,7 +36018,9 @@
         ]
       },
       "properties": {
-        "school": "Mildred Ave K-8",
+        "title": "Mildred Ave K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#7eg772",
         "school location": [
           -71.0904296,
           42.27676066
@@ -36665,7 +36857,9 @@
         ]
       },
       "properties": {
-        "school": "Mildred Ave K-8",
+        "title": "Mildred Ave K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1dff90",
         "school location": [
           -71.0904296,
           42.27676066
@@ -36814,7 +37008,9 @@
         ]
       },
       "properties": {
-        "school": "Mildred Ave K-8",
+        "title": "Mildred Ave K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#45b06g",
         "school location": [
           -71.0904296,
           42.27676066
@@ -36971,7 +37167,9 @@
         ]
       },
       "properties": {
-        "school": "Mildred Ave K-8",
+        "title": "Mildred Ave K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#ea5e0f",
         "school location": [
           -71.0904296,
           42.27676066
@@ -37032,7 +37230,9 @@
         ]
       },
       "properties": {
-        "school": "Mildred Ave K-8",
+        "title": "Mildred Ave K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#86e00d",
         "school location": [
           -71.0904296,
           42.27676066
@@ -37333,7 +37533,9 @@
         ]
       },
       "properties": {
-        "school": "West Roxbury Academy",
+        "title": "West Roxbury Academy",
+        "marker_symbol": "bus-15",
+        "stroke": "#38417e",
         "school location": [
           -71.17434062,
           42.28226865
@@ -37786,7 +37988,9 @@
         ]
       },
       "properties": {
-        "school": "Tobin K-8",
+        "title": "Tobin K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#95d1e9",
         "school location": [
           -71.0982906,
           42.33301867
@@ -38327,7 +38531,9 @@
         ]
       },
       "properties": {
-        "school": "Tobin K-8",
+        "title": "Tobin K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#b3e2fg",
         "school location": [
           -71.0982906,
           42.33301867
@@ -38884,7 +39090,9 @@
         ]
       },
       "properties": {
-        "school": "Tobin K-8",
+        "title": "Tobin K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#d6cfd4",
         "school location": [
           -71.0982906,
           42.33301867
@@ -39001,7 +39209,9 @@
         ]
       },
       "properties": {
-        "school": "Tobin K-8",
+        "title": "Tobin K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#169c25",
         "school location": [
           -71.0982906,
           42.33301867
@@ -39142,7 +39352,9 @@
         ]
       },
       "properties": {
-        "school": "Tobin K-8",
+        "title": "Tobin K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#3g7162",
         "school location": [
           -71.0982906,
           42.33301867
@@ -39187,7 +39399,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#g010ga",
         "school location": [
           -71.16019062,
           42.34558867
@@ -39424,7 +39638,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#13598f",
         "school location": [
           -71.16019062,
           42.34558867
@@ -39477,7 +39693,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#d8f85e",
         "school location": [
           -71.16019062,
           42.34558867
@@ -39754,7 +39972,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#de10d2",
         "school location": [
           -71.16019062,
           42.34558867
@@ -39975,7 +40195,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#59dfe2",
         "school location": [
           -71.16019062,
           42.34558867
@@ -40252,7 +40474,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#d1823a",
         "school location": [
           -71.16019062,
           42.34558867
@@ -40745,7 +40969,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#758b3c",
         "school location": [
           -71.16019062,
           42.34558867
@@ -42758,7 +42984,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#abgb40",
         "school location": [
           -71.16019062,
           42.34558867
@@ -42987,7 +43215,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#506f24",
         "school location": [
           -71.16019062,
           42.34558867
@@ -43064,7 +43294,9 @@
         ]
       },
       "properties": {
-        "school": "Edison K-8",
+        "title": "Edison K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#fbe3g8",
         "school location": [
           -71.16019062,
           42.34558867
@@ -43165,7 +43397,9 @@
         ]
       },
       "properties": {
-        "school": "McCormack MS",
+        "title": "McCormack MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#d157eb",
         "school location": [
           -71.04350058,
           42.31802867
@@ -44082,7 +44316,9 @@
         ]
       },
       "properties": {
-        "school": "McCormack MS",
+        "title": "McCormack MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#f23407",
         "school location": [
           -71.04350058,
           42.31802867
@@ -44255,7 +44491,9 @@
         ]
       },
       "properties": {
-        "school": "McCormack MS",
+        "title": "McCormack MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#a5a7f2",
         "school location": [
           -71.04350058,
           42.31802867
@@ -44748,7 +44986,9 @@
         ]
       },
       "properties": {
-        "school": "Grew ES",
+        "title": "Grew ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#g9bcag",
         "school location": [
           -71.12732061,
           42.25676865
@@ -45233,7 +45473,9 @@
         ]
       },
       "properties": {
-        "school": "Grew ES",
+        "title": "Grew ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#ae6c46",
         "school location": [
           -71.12732061,
           42.25676865
@@ -45494,7 +45736,9 @@
         ]
       },
       "properties": {
-        "school": "Grew ES",
+        "title": "Grew ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#9b16gg",
         "school location": [
           -71.12732061,
           42.25676865
@@ -46227,7 +46471,9 @@
         ]
       },
       "properties": {
-        "school": "Tynan ES",
+        "title": "Tynan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f548g5",
         "school location": [
           -71.03841128,
           42.33487071
@@ -46640,7 +46886,9 @@
         ]
       },
       "properties": {
-        "school": "Tynan ES",
+        "title": "Tynan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f27e64",
         "school location": [
           -71.03841128,
           42.33487071
@@ -47189,7 +47437,9 @@
         ]
       },
       "properties": {
-        "school": "Tynan ES",
+        "title": "Tynan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#g042da",
         "school location": [
           -71.03841128,
           42.33487071
@@ -47330,7 +47580,9 @@
         ]
       },
       "properties": {
-        "school": "Tynan ES",
+        "title": "Tynan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#24abec",
         "school location": [
           -71.03841128,
           42.33487071
@@ -47399,7 +47651,9 @@
         ]
       },
       "properties": {
-        "school": "Tynan ES",
+        "title": "Tynan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8959f6",
         "school location": [
           -71.03841128,
           42.33487071
@@ -47764,7 +48018,9 @@
         ]
       },
       "properties": {
-        "school": "Timilty MS",
+        "title": "Timilty MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#e85157",
         "school location": [
           -71.0909706,
           42.33039867
@@ -48009,7 +48265,9 @@
         ]
       },
       "properties": {
-        "school": "Timilty MS",
+        "title": "Timilty MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#ca08g1",
         "school location": [
           -71.0909706,
           42.33039867
@@ -48086,7 +48344,9 @@
         ]
       },
       "properties": {
-        "school": "Mather ES",
+        "title": "Mather ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8gfd14",
         "school location": [
           -71.06101177,
           42.30839621
@@ -48747,7 +49007,9 @@
         ]
       },
       "properties": {
-        "school": "Mather ES",
+        "title": "Mather ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#38ddce",
         "school location": [
           -71.06101177,
           42.30839621
@@ -49280,7 +49542,9 @@
         ]
       },
       "properties": {
-        "school": "Mather ES",
+        "title": "Mather ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#9e4c9e",
         "school location": [
           -71.06101177,
           42.30839621
@@ -49773,7 +50037,9 @@
         ]
       },
       "properties": {
-        "school": "Mather ES",
+        "title": "Mather ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#869d3d",
         "school location": [
           -71.06101177,
           42.30839621
@@ -50490,7 +50756,9 @@
         ]
       },
       "properties": {
-        "school": "Mather ES",
+        "title": "Mather ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#22fa3g",
         "school location": [
           -71.06101177,
           42.30839621
@@ -50583,7 +50851,9 @@
         ]
       },
       "properties": {
-        "school": "Mather ES",
+        "title": "Mather ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#647638",
         "school location": [
           -71.06101177,
           42.30839621
@@ -50956,7 +51226,9 @@
         ]
       },
       "properties": {
-        "school": "TechBoston Academy",
+        "title": "TechBoston Academy",
+        "marker_symbol": "bus-15",
+        "stroke": "#2cb5g6",
         "school location": [
           -71.07679145,
           42.28779215
@@ -51681,7 +51953,9 @@
         ]
       },
       "properties": {
-        "school": "TechBoston Academy",
+        "title": "TechBoston Academy",
+        "marker_symbol": "bus-15",
+        "stroke": "#a680ac",
         "school location": [
           -71.07679145,
           42.28779215
@@ -51766,7 +52040,9 @@
         ]
       },
       "properties": {
-        "school": "TechBoston Academy",
+        "title": "TechBoston Academy",
+        "marker_symbol": "bus-15",
+        "stroke": "#67625a",
         "school location": [
           -71.07679145,
           42.28779215
@@ -51995,7 +52271,9 @@
         ]
       },
       "properties": {
-        "school": "Kennedy PJ ES",
+        "title": "Kennedy PJ ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f06281",
         "school location": [
           -71.03048029,
           42.3785453
@@ -52304,7 +52582,9 @@
         ]
       },
       "properties": {
-        "school": "Kennedy PJ ES",
+        "title": "Kennedy PJ ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#3ff919",
         "school location": [
           -71.03048029,
           42.3785453
@@ -52405,7 +52685,9 @@
         ]
       },
       "properties": {
-        "school": "Otis ES",
+        "title": "Otis ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f6a112",
         "school location": [
           -71.03389058,
           42.37527868
@@ -52938,7 +53220,9 @@
         ]
       },
       "properties": {
-        "school": "Otis ES",
+        "title": "Otis ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#34bc67",
         "school location": [
           -71.03389058,
           42.37527868
@@ -52991,7 +53275,9 @@
         ]
       },
       "properties": {
-        "school": "Trotter ES",
+        "title": "Trotter ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#38b219",
         "school location": [
           -71.08784105,
           42.31574003
@@ -53124,7 +53410,9 @@
         ]
       },
       "properties": {
-        "school": "Trotter ES",
+        "title": "Trotter ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#0b43c7",
         "school location": [
           -71.08784105,
           42.31574003
@@ -53569,7 +53857,9 @@
         ]
       },
       "properties": {
-        "school": "Trotter ES",
+        "title": "Trotter ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#1cfa8d",
         "school location": [
           -71.08784105,
           42.31574003
@@ -54342,7 +54632,9 @@
         ]
       },
       "properties": {
-        "school": "Trotter ES",
+        "title": "Trotter ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#0bca1f",
         "school location": [
           -71.08784105,
           42.31574003
@@ -54499,7 +54791,9 @@
         ]
       },
       "properties": {
-        "school": "Winship ES",
+        "title": "Winship ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#48e310",
         "school location": [
           -71.1553486,
           42.3476017
@@ -55192,7 +55486,9 @@
         ]
       },
       "properties": {
-        "school": "Winship ES",
+        "title": "Winship ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#2faa00",
         "school location": [
           -71.1553486,
           42.3476017
@@ -55413,7 +55709,9 @@
         ]
       },
       "properties": {
-        "school": "Gardner Pilot Acad",
+        "title": "Gardner Pilot Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#c1g343",
         "school location": [
           -71.13411062,
           42.36076867
@@ -55602,7 +55900,9 @@
         ]
       },
       "properties": {
-        "school": "Gardner Pilot Acad",
+        "title": "Gardner Pilot Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#c1835c",
         "school location": [
           -71.13411062,
           42.36076867
@@ -56519,7 +56819,9 @@
         ]
       },
       "properties": {
-        "school": "Gardner Pilot Acad",
+        "title": "Gardner Pilot Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#4e6g8b",
         "school location": [
           -71.13411062,
           42.36076867
@@ -56676,7 +56978,9 @@
         ]
       },
       "properties": {
-        "school": "Gardner Pilot Acad",
+        "title": "Gardner Pilot Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#28g24e",
         "school location": [
           -71.13411062,
           42.36076867
@@ -57073,7 +57377,9 @@
         ]
       },
       "properties": {
-        "school": "Horace Mann",
+        "title": "Horace Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#g1d7ee",
         "school location": [
           -71.13770062,
           42.35205867
@@ -57286,7 +57592,9 @@
         ]
       },
       "properties": {
-        "school": "Pope JP II Col Rd",
+        "title": "Pope JP II Col Rd",
+        "marker_symbol": "bus-15",
+        "stroke": "#6e9f36",
         "school location": [
           -71.0600473,
           42.3206748
@@ -57371,7 +57679,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8f9187",
         "school location": [
           -71.05215122,
           42.33802589
@@ -57592,7 +57902,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8a89a9",
         "school location": [
           -71.05215122,
           42.33802589
@@ -57821,7 +58133,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#2cb0g7",
         "school location": [
           -71.05215122,
           42.33802589
@@ -58218,7 +58532,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#90g7ge",
         "school location": [
           -71.05215122,
           42.33802589
@@ -58831,7 +59147,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#e5g07e",
         "school location": [
           -71.05215122,
           42.33802589
@@ -59060,7 +59378,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#048b3e",
         "school location": [
           -71.05215122,
           42.33802589
@@ -59697,7 +60017,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#5b4f40",
         "school location": [
           -71.05215122,
           42.33802589
@@ -60054,7 +60376,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#71egca",
         "school location": [
           -71.05215122,
           42.33802589
@@ -60803,7 +61127,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#67919g",
         "school location": [
           -71.05215122,
           42.33802589
@@ -61448,7 +61774,9 @@
         ]
       },
       "properties": {
-        "school": "Condon ES",
+        "title": "Condon ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#59a6ff",
         "school location": [
           -71.05215122,
           42.33802589
@@ -61501,7 +61829,9 @@
         ]
       },
       "properties": {
-        "school": "Blackstone ES",
+        "title": "Blackstone ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#343568",
         "school location": [
           -71.07246107,
           42.34073755
@@ -61578,7 +61908,9 @@
         ]
       },
       "properties": {
-        "school": "Blackstone ES",
+        "title": "Blackstone ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f4a925",
         "school location": [
           -71.07246107,
           42.34073755
@@ -62287,7 +62619,9 @@
         ]
       },
       "properties": {
-        "school": "Blackstone ES",
+        "title": "Blackstone ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#0e2b77",
         "school location": [
           -71.07246107,
           42.34073755
@@ -63148,7 +63482,9 @@
         ]
       },
       "properties": {
-        "school": "Blackstone ES",
+        "title": "Blackstone ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#6ga2f3",
         "school location": [
           -71.07246107,
           42.34073755
@@ -63233,7 +63569,9 @@
         ]
       },
       "properties": {
-        "school": "Blackstone ES",
+        "title": "Blackstone ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#7e1bf4",
         "school location": [
           -71.07246107,
           42.34073755
@@ -63878,7 +64216,9 @@
         ]
       },
       "properties": {
-        "school": "Blackstone ES",
+        "title": "Blackstone ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c3b8f5",
         "school location": [
           -71.07246107,
           42.34073755
@@ -64059,7 +64399,9 @@
         ]
       },
       "properties": {
-        "school": "Blackstone ES",
+        "title": "Blackstone ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#866gf1",
         "school location": [
           -71.07246107,
           42.34073755
@@ -64256,7 +64598,9 @@
         ]
       },
       "properties": {
-        "school": "McKinley Middle",
+        "title": "McKinley Middle",
+        "marker_symbol": "bus-15",
+        "stroke": "#567c63",
         "school location": [
           -71.10676061,
           42.34794867
@@ -64509,7 +64853,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #1 (RS)",
+        "title": "E BROOKE #1 (RS)",
+        "marker_symbol": "bus-15",
+        "stroke": "#9ba537",
         "school location": [
           -71.1238752,
           42.2818339
@@ -65074,7 +65420,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #1 (RS)",
+        "title": "E BROOKE #1 (RS)",
+        "marker_symbol": "bus-15",
+        "stroke": "#6c8d2e",
         "school location": [
           -71.1238752,
           42.2818339
@@ -65295,7 +65643,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #1 (RS)",
+        "title": "E BROOKE #1 (RS)",
+        "marker_symbol": "bus-15",
+        "stroke": "#de3gca",
         "school location": [
           -71.1238752,
           42.2818339
@@ -65804,7 +66154,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #1 (RS)",
+        "title": "E BROOKE #1 (RS)",
+        "marker_symbol": "bus-15",
+        "stroke": "#276dgc",
         "school location": [
           -71.1238752,
           42.2818339
@@ -66273,7 +66625,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #1 (RS)",
+        "title": "E BROOKE #1 (RS)",
+        "marker_symbol": "bus-15",
+        "stroke": "#07c3e7",
         "school location": [
           -71.1238752,
           42.2818339
@@ -66494,7 +66848,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #1 (RS)",
+        "title": "E BROOKE #1 (RS)",
+        "marker_symbol": "bus-15",
+        "stroke": "#353feg",
         "school location": [
           -71.1238752,
           42.2818339
@@ -67363,7 +67719,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #1 (RS)",
+        "title": "E BROOKE #1 (RS)",
+        "marker_symbol": "bus-15",
+        "stroke": "#cdcb4d",
         "school location": [
           -71.1238752,
           42.2818339
@@ -67568,7 +67926,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #1 (RS)",
+        "title": "E BROOKE #1 (RS)",
+        "marker_symbol": "bus-15",
+        "stroke": "#fe39a0",
         "school location": [
           -71.1238752,
           42.2818339
@@ -67661,7 +68021,9 @@
         ]
       },
       "properties": {
-        "school": "Baldwin ELC",
+        "title": "Baldwin ELC",
+        "marker_symbol": "bus-15",
+        "stroke": "#g03ef2",
         "school location": [
           -71.14051062,
           42.34203867
@@ -68274,7 +68636,9 @@
         ]
       },
       "properties": {
-        "school": "Baldwin ELC",
+        "title": "Baldwin ELC",
+        "marker_symbol": "bus-15",
+        "stroke": "#80bbe1",
         "school location": [
           -71.14051062,
           42.34203867
@@ -68887,7 +69251,9 @@
         ]
       },
       "properties": {
-        "school": "Young Achievers",
+        "title": "Young Achievers",
+        "marker_symbol": "bus-15",
+        "stroke": "#6f2ecc",
         "school location": [
           -71.09500233,
           42.28231466
@@ -69236,7 +69602,9 @@
         ]
       },
       "properties": {
-        "school": "Young Achievers",
+        "title": "Young Achievers",
+        "marker_symbol": "bus-15",
+        "stroke": "#4dg4cd",
         "school location": [
           -71.09500233,
           42.28231466
@@ -69489,7 +69857,9 @@
         ]
       },
       "properties": {
-        "school": "Young Achievers",
+        "title": "Young Achievers",
+        "marker_symbol": "bus-15",
+        "stroke": "#cd7cdb",
         "school location": [
           -71.09500233,
           42.28231466
@@ -70206,7 +70576,9 @@
         ]
       },
       "properties": {
-        "school": "Young Achievers",
+        "title": "Young Achievers",
+        "marker_symbol": "bus-15",
+        "stroke": "#437e11",
         "school location": [
           -71.09500233,
           42.28231466
@@ -70603,7 +70975,9 @@
         ]
       },
       "properties": {
-        "school": "Young Achievers",
+        "title": "Young Achievers",
+        "marker_symbol": "bus-15",
+        "stroke": "#4aaf38",
         "school location": [
           -71.09500233,
           42.28231466
@@ -70880,7 +71254,9 @@
         ]
       },
       "properties": {
-        "school": "Young Achievers",
+        "title": "Young Achievers",
+        "marker_symbol": "bus-15",
+        "stroke": "#gc37f3",
         "school location": [
           -71.09500233,
           42.28231466
@@ -71253,7 +71629,9 @@
         ]
       },
       "properties": {
-        "school": "Young Achievers",
+        "title": "Young Achievers",
+        "marker_symbol": "bus-15",
+        "stroke": "#489cf8",
         "school location": [
           -71.09500233,
           42.28231466
@@ -71330,7 +71708,9 @@
         ]
       },
       "properties": {
-        "school": "Young Achievers",
+        "title": "Young Achievers",
+        "marker_symbol": "bus-15",
+        "stroke": "#214g2d",
         "school location": [
           -71.09500233,
           42.28231466
@@ -71719,7 +72099,9 @@
         ]
       },
       "properties": {
-        "school": "Quincy Upper School",
+        "title": "Quincy Upper School",
+        "marker_symbol": "bus-15",
+        "stroke": "#265g17",
         "school location": [
           -71.06905025,
           42.34840829
@@ -72228,7 +72610,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / S BOSTON",
+        "title": "UP ACAD / S BOSTON",
+        "marker_symbol": "bus-15",
+        "stroke": "#b0dc59",
         "school location": [
           -71.05042966,
           42.33357372
@@ -72609,7 +72993,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / S BOSTON",
+        "title": "UP ACAD / S BOSTON",
+        "marker_symbol": "bus-15",
+        "stroke": "#a8156b",
         "school location": [
           -71.05042966,
           42.33357372
@@ -72846,7 +73232,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / S BOSTON",
+        "title": "UP ACAD / S BOSTON",
+        "marker_symbol": "bus-15",
+        "stroke": "#4145a3",
         "school location": [
           -71.05042966,
           42.33357372
@@ -73115,7 +73503,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / S BOSTON",
+        "title": "UP ACAD / S BOSTON",
+        "marker_symbol": "bus-15",
+        "stroke": "#63dg1g",
         "school location": [
           -71.05042966,
           42.33357372
@@ -73640,7 +74030,9 @@
         ]
       },
       "properties": {
-        "school": "Manning ES",
+        "title": "Manning ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#4dcecc",
         "school location": [
           -71.13149061,
           42.30558866
@@ -73741,7 +74133,9 @@
         ]
       },
       "properties": {
-        "school": "Manning ES",
+        "title": "Manning ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c2c347",
         "school location": [
           -71.13149061,
           42.30558866
@@ -74074,7 +74468,9 @@
         ]
       },
       "properties": {
-        "school": "Manning ES",
+        "title": "Manning ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c62a89",
         "school location": [
           -71.13149061,
           42.30558866
@@ -74431,7 +74827,9 @@
         ]
       },
       "properties": {
-        "school": "Bridge Boston 2-4",
+        "title": "Bridge Boston 2-4",
+        "marker_symbol": "bus-15",
+        "stroke": "#31099f",
         "school location": [
           -71.0875863,
           42.3013299
@@ -74812,7 +75210,9 @@
         ]
       },
       "properties": {
-        "school": "Bridge Boston 2-4",
+        "title": "Bridge Boston 2-4",
+        "marker_symbol": "bus-15",
+        "stroke": "#0cfe3f",
         "school location": [
           -71.0875863,
           42.3013299
@@ -75081,7 +75481,9 @@
         ]
       },
       "properties": {
-        "school": "Bridge Boston 2-4",
+        "title": "Bridge Boston 2-4",
+        "marker_symbol": "bus-15",
+        "stroke": "#455gaf",
         "school location": [
           -71.0875863,
           42.3013299
@@ -75462,7 +75864,9 @@
         ]
       },
       "properties": {
-        "school": "BCLA - Boston Comm Lead Acad",
+        "title": "BCLA - Boston Comm Lead Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#bacgg1",
         "school location": [
           -71.1375826,
           42.2777394
@@ -75803,7 +76207,9 @@
         ]
       },
       "properties": {
-        "school": "McKinley Elementary",
+        "title": "McKinley Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#e9983e",
         "school location": [
           -71.07352059,
           42.34436867
@@ -76144,7 +76550,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Prep",
+        "title": "Boston Prep",
+        "marker_symbol": "bus-15",
+        "stroke": "#3541be",
         "school location": [
           -71.1259805,
           42.2548081
@@ -76557,7 +76965,9 @@
         ]
       },
       "properties": {
-        "school": "Irving MS",
+        "title": "Irving MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#a16432",
         "school location": [
           -71.12493061,
           42.28363866
@@ -76674,7 +77084,9 @@
         ]
       },
       "properties": {
-        "school": "Irving MS",
+        "title": "Irving MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#0g182b",
         "school location": [
           -71.12493061,
           42.28363866
@@ -77071,7 +77483,9 @@
         ]
       },
       "properties": {
-        "school": "Irving MS",
+        "title": "Irving MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#3f61d5",
         "school location": [
           -71.12493061,
           42.28363866
@@ -77444,7 +77858,9 @@
         ]
       },
       "properties": {
-        "school": "Brighton HS",
+        "title": "Brighton HS",
+        "marker_symbol": "bus-15",
+        "stroke": "#67afda",
         "school location": [
           -71.14549062,
           42.34908867
@@ -77481,7 +77897,9 @@
         ]
       },
       "properties": {
-        "school": "East Boston EEC",
+        "title": "East Boston EEC",
+        "marker_symbol": "bus-15",
+        "stroke": "#296f38",
         "school location": [
           -71.03411995,
           42.36967602
@@ -78118,7 +78536,9 @@
         ]
       },
       "properties": {
-        "school": "East Boston EEC",
+        "title": "East Boston EEC",
+        "marker_symbol": "bus-15",
+        "stroke": "#fe440d",
         "school location": [
           -71.03411995,
           42.36967602
@@ -78811,7 +79231,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD - Holland ES",
+        "title": "UP ACAD - Holland ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#0792f1",
         "school location": [
           -71.07385902,
           42.30561813
@@ -79296,7 +79718,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD - Holland ES",
+        "title": "UP ACAD - Holland ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#4c7df4",
         "school location": [
           -71.07385902,
           42.30561813
@@ -79861,7 +80285,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD - Holland ES",
+        "title": "UP ACAD - Holland ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#53850g",
         "school location": [
           -71.07385902,
           42.30561813
@@ -80290,7 +80716,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD - Holland ES",
+        "title": "UP ACAD - Holland ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#e86ee9",
         "school location": [
           -71.07385902,
           42.30561813
@@ -80839,7 +81267,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD - Holland ES",
+        "title": "UP ACAD - Holland ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#21f88b",
         "school location": [
           -71.07385902,
           42.30561813
@@ -80988,7 +81418,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD - Holland ES",
+        "title": "UP ACAD - Holland ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a668ac",
         "school location": [
           -71.07385902,
           42.30561813
@@ -81145,7 +81577,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD - Holland ES",
+        "title": "UP ACAD - Holland ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#d7e6ef",
         "school location": [
           -71.07385902,
           42.30561813
@@ -81214,7 +81648,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD - Holland ES",
+        "title": "UP ACAD - Holland ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#57eb2e",
         "school location": [
           -71.07385902,
           42.30561813
@@ -81699,7 +82135,9 @@
         ]
       },
       "properties": {
-        "school": "KIPP Academy Boston",
+        "title": "KIPP Academy Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#3357ge",
         "school location": [
           -71.094632,
           42.2745321
@@ -82088,7 +82526,9 @@
         ]
       },
       "properties": {
-        "school": "KIPP Academy Boston",
+        "title": "KIPP Academy Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#78d0c3",
         "school location": [
           -71.094632,
           42.2745321
@@ -82397,7 +82837,9 @@
         ]
       },
       "properties": {
-        "school": "KIPP Academy Boston",
+        "title": "KIPP Academy Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#6ce85a",
         "school location": [
           -71.094632,
           42.2745321
@@ -83354,7 +83796,9 @@
         ]
       },
       "properties": {
-        "school": "KIPP Academy Boston",
+        "title": "KIPP Academy Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#dg7341",
         "school location": [
           -71.094632,
           42.2745321
@@ -83687,7 +84131,9 @@
         ]
       },
       "properties": {
-        "school": "KIPP Academy Boston",
+        "title": "KIPP Academy Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#bad140",
         "school location": [
           -71.094632,
           42.2745321
@@ -83892,7 +84338,9 @@
         ]
       },
       "properties": {
-        "school": "KIPP Academy Boston",
+        "title": "KIPP Academy Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#b77f09",
         "school location": [
           -71.094632,
           42.2745321
@@ -83937,7 +84385,9 @@
         ]
       },
       "properties": {
-        "school": "KIPP Academy Boston",
+        "title": "KIPP Academy Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#513ab7",
         "school location": [
           -71.094632,
           42.2745321
@@ -84102,7 +84552,9 @@
         ]
       },
       "properties": {
-        "school": "Dearborn STEM Acad",
+        "title": "Dearborn STEM Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#05a613",
         "school location": [
           -71.08080771,
           42.30739517
@@ -84355,7 +84807,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #3 (EB)",
+        "title": "E BROOKE #3 (EB)",
+        "marker_symbol": "bus-15",
+        "stroke": "#7a7aaf",
         "school location": [
           -71.0184877,
           42.3827859
@@ -84632,7 +85086,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #3 (EB)",
+        "title": "E BROOKE #3 (EB)",
+        "marker_symbol": "bus-15",
+        "stroke": "#f7da1g",
         "school location": [
           -71.0184877,
           42.3827859
@@ -84917,7 +85373,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #3 (EB)",
+        "title": "E BROOKE #3 (EB)",
+        "marker_symbol": "bus-15",
+        "stroke": "#e8412b",
         "school location": [
           -71.0184877,
           42.3827859
@@ -85090,7 +85548,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #3 (EB)",
+        "title": "E BROOKE #3 (EB)",
+        "marker_symbol": "bus-15",
+        "stroke": "#3df92b",
         "school location": [
           -71.0184877,
           42.3827859
@@ -85975,7 +86435,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #3 (EB)",
+        "title": "E BROOKE #3 (EB)",
+        "marker_symbol": "bus-15",
+        "stroke": "#bfg9b9",
         "school location": [
           -71.0184877,
           42.3827859
@@ -86300,7 +86762,9 @@
         ]
       },
       "properties": {
-        "school": "Park Street Sch",
+        "title": "Park Street Sch",
+        "marker_symbol": "bus-15",
+        "stroke": "#a38c7b",
         "school location": [
           -71.0739924,
           42.3564758
@@ -86337,7 +86801,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#917230",
         "school location": [
           -71.04919406,
           42.29420618
@@ -86438,7 +86904,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#4e95dg",
         "school location": [
           -71.04919406,
           42.29420618
@@ -86627,7 +87095,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#g28def",
         "school location": [
           -71.04919406,
           42.29420618
@@ -88320,7 +88790,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#g26ecg",
         "school location": [
           -71.04919406,
           42.29420618
@@ -88357,7 +88829,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#264bdd",
         "school location": [
           -71.04919406,
           42.29420618
@@ -89098,7 +89572,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#96g902",
         "school location": [
           -71.04919406,
           42.29420618
@@ -89823,7 +90299,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#568fa9",
         "school location": [
           -71.04919406,
           42.29420618
@@ -89860,7 +90338,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1f5ed3",
         "school location": [
           -71.04919406,
           42.29420618
@@ -89945,7 +90425,9 @@
         ]
       },
       "properties": {
-        "school": "Murphy K-8",
+        "title": "Murphy K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#c816ab",
         "school location": [
           -71.04919406,
           42.29420618
@@ -90222,7 +90704,9 @@
         ]
       },
       "properties": {
-        "school": "Bridge Boston",
+        "title": "Bridge Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#731b75",
         "school location": [
           -71.0875863,
           42.3013299
@@ -90419,7 +90903,9 @@
         ]
       },
       "properties": {
-        "school": "Bridge Boston",
+        "title": "Bridge Boston",
+        "marker_symbol": "bus-15",
+        "stroke": "#c72f5d",
         "school location": [
           -71.0875863,
           42.3013299
@@ -90656,7 +91142,9 @@
         ]
       },
       "properties": {
-        "school": "Ellis ES",
+        "title": "Ellis ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#3a7fbg",
         "school location": [
           -71.09289159,
           42.3163343
@@ -91189,7 +91677,9 @@
         ]
       },
       "properties": {
-        "school": "Ellis ES",
+        "title": "Ellis ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#894606",
         "school location": [
           -71.09289159,
           42.3163343
@@ -91514,7 +92004,9 @@
         ]
       },
       "properties": {
-        "school": "Ellis ES",
+        "title": "Ellis ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#482f2f",
         "school location": [
           -71.09289159,
           42.3163343
@@ -92127,7 +92619,9 @@
         ]
       },
       "properties": {
-        "school": "Ellis ES",
+        "title": "Ellis ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c41101",
         "school location": [
           -71.09289159,
           42.3163343
@@ -92460,7 +92954,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#c6eb54",
         "school location": [
           -71.11421891,
           42.31868548
@@ -93153,7 +93649,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#9dfabg",
         "school location": [
           -71.11421891,
           42.31868548
@@ -93374,7 +93872,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#gb1b53",
         "school location": [
           -71.11421891,
           42.31868548
@@ -93699,7 +94199,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#edb76c",
         "school location": [
           -71.11421891,
           42.31868548
@@ -93928,7 +94430,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#261c43",
         "school location": [
           -71.11421891,
           42.31868548
@@ -94133,7 +94637,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#c51f24",
         "school location": [
           -71.11421891,
           42.31868548
@@ -95122,7 +95628,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#g53b8c",
         "school location": [
           -71.11421891,
           42.31868548
@@ -96399,7 +96907,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#ae603c",
         "school location": [
           -71.11421891,
           42.31868548
@@ -96836,7 +97346,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#002673",
         "school location": [
           -71.11421891,
           42.31868548
@@ -96929,7 +97441,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#758206",
         "school location": [
           -71.11421891,
           42.31868548
@@ -96990,7 +97504,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1f70dd",
         "school location": [
           -71.11421891,
           42.31868548
@@ -97059,7 +97575,9 @@
         ]
       },
       "properties": {
-        "school": "Curley K-8",
+        "title": "Curley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#210ad9",
         "school location": [
           -71.11421891,
           42.31868548
@@ -97096,7 +97614,9 @@
         ]
       },
       "properties": {
-        "school": "Adams ES",
+        "title": "Adams ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#b1759e",
         "school location": [
           -71.03489031,
           42.365563
@@ -97133,7 +97653,9 @@
         ]
       },
       "properties": {
-        "school": "Adams ES",
+        "title": "Adams ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#d6cgff",
         "school location": [
           -71.03489031,
           42.365563
@@ -97578,7 +98100,9 @@
         ]
       },
       "properties": {
-        "school": "Adams ES",
+        "title": "Adams ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#7fd09c",
         "school location": [
           -71.03489031,
           42.365563
@@ -98383,7 +98907,9 @@
         ]
       },
       "properties": {
-        "school": "Adams ES",
+        "title": "Adams ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#bdf8ef",
         "school location": [
           -71.03489031,
           42.365563
@@ -98500,7 +99026,9 @@
         ]
       },
       "properties": {
-        "school": "Umana Acad K-8",
+        "title": "Umana Acad K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#gb1128",
         "school location": [
           -71.04032982,
           42.37828999
@@ -98585,7 +99113,9 @@
         ]
       },
       "properties": {
-        "school": "Umana Acad K-8",
+        "title": "Umana Acad K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1a898e",
         "school location": [
           -71.04032982,
           42.37828999
@@ -99534,7 +100064,9 @@
         ]
       },
       "properties": {
-        "school": "Umana Acad K-8",
+        "title": "Umana Acad K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#3b4396",
         "school location": [
           -71.04032982,
           42.37828999
@@ -99827,7 +100359,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Teachers Union K-8",
+        "title": "Boston Teachers Union K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#ec6388",
         "school location": [
           -71.1181739,
           42.2946217
@@ -100104,7 +100638,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Teachers Union K-8",
+        "title": "Boston Teachers Union K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#8e7115",
         "school location": [
           -71.1181739,
           42.2946217
@@ -100333,7 +100869,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Teachers Union K-8",
+        "title": "Boston Teachers Union K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#76f25c",
         "school location": [
           -71.1181739,
           42.2946217
@@ -100914,7 +101452,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Teachers Union K-8",
+        "title": "Boston Teachers Union K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#e1g32c",
         "school location": [
           -71.1181739,
           42.2946217
@@ -101279,7 +101819,9 @@
         ]
       },
       "properties": {
-        "school": "Alighieri Elementary",
+        "title": "Alighieri Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#9799ee",
         "school location": [
           -71.03794008,
           42.37156844
@@ -101364,7 +101906,9 @@
         ]
       },
       "properties": {
-        "school": "Quincy ES",
+        "title": "Quincy ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#237fdg",
         "school location": [
           -71.06492059,
           42.34797867
@@ -101425,7 +101969,9 @@
         ]
       },
       "properties": {
-        "school": "Quincy ES",
+        "title": "Quincy ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#4def91",
         "school location": [
           -71.06492059,
           42.34797867
@@ -102094,7 +102640,9 @@
         ]
       },
       "properties": {
-        "school": "Quincy ES",
+        "title": "Quincy ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#7788b0",
         "school location": [
           -71.06492059,
           42.34797867
@@ -103083,7 +103631,9 @@
         ]
       },
       "properties": {
-        "school": "Quincy ES",
+        "title": "Quincy ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#230g01",
         "school location": [
           -71.06492059,
           42.34797867
@@ -103256,7 +103806,9 @@
         ]
       },
       "properties": {
-        "school": "Quincy ES",
+        "title": "Quincy ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#21929d",
         "school location": [
           -71.06492059,
           42.34797867
@@ -103429,7 +103981,9 @@
         ]
       },
       "properties": {
-        "school": "Quincy ES",
+        "title": "Quincy ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#g18e1c",
         "school location": [
           -71.06492059,
           42.34797867
@@ -103890,7 +104444,9 @@
         ]
       },
       "properties": {
-        "school": "Quincy ES",
+        "title": "Quincy ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#bc1f5f",
         "school location": [
           -71.06492059,
           42.34797867
@@ -104367,7 +104923,9 @@
         ]
       },
       "properties": {
-        "school": "Bates ES",
+        "title": "Bates ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#6418ea",
         "school location": [
           -71.13533061,
           42.27776866
@@ -104932,7 +105490,9 @@
         ]
       },
       "properties": {
-        "school": "Bates ES",
+        "title": "Bates ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#g604e5",
         "school location": [
           -71.13533061,
           42.27776866
@@ -105353,7 +105913,9 @@
         ]
       },
       "properties": {
-        "school": "Bates ES",
+        "title": "Bates ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c451e6",
         "school location": [
           -71.13533061,
           42.27776866
@@ -105470,7 +106032,9 @@
         ]
       },
       "properties": {
-        "school": "Bates ES",
+        "title": "Bates ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#e23228",
         "school location": [
           -71.13533061,
           42.27776866
@@ -105715,7 +106279,9 @@
         ]
       },
       "properties": {
-        "school": "Advent School",
+        "title": "Advent School",
+        "marker_symbol": "bus-15",
+        "stroke": "#235953",
         "school location": [
           -71.0742567,
           42.3583139
@@ -106032,7 +106598,9 @@
         ]
       },
       "properties": {
-        "school": "Advent School",
+        "title": "Advent School",
+        "marker_symbol": "bus-15",
+        "stroke": "#92d694",
         "school location": [
           -71.0742567,
           42.3583139
@@ -106245,7 +106813,9 @@
         ]
       },
       "properties": {
-        "school": "Philbrick ES",
+        "title": "Philbrick ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#822647",
         "school location": [
           -71.11774061,
           42.28540866
@@ -106922,7 +107492,9 @@
         ]
       },
       "properties": {
-        "school": "Philbrick ES",
+        "title": "Philbrick ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f12505",
         "school location": [
           -71.11774061,
           42.28540866
@@ -107047,7 +107619,9 @@
         ]
       },
       "properties": {
-        "school": "Philbrick ES",
+        "title": "Philbrick ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#82fd61",
         "school location": [
           -71.11774061,
           42.28540866
@@ -107764,7 +108338,9 @@
         ]
       },
       "properties": {
-        "school": "MATCH MS",
+        "title": "MATCH MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#03g802",
         "school location": [
           -71.1059155,
           42.3051414
@@ -107953,7 +108529,9 @@
         ]
       },
       "properties": {
-        "school": "MATCH MS",
+        "title": "MATCH MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#b3e644",
         "school location": [
           -71.1059155,
           42.3051414
@@ -108398,7 +108976,9 @@
         ]
       },
       "properties": {
-        "school": "MATCH MS",
+        "title": "MATCH MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#b345cg",
         "school location": [
           -71.1059155,
           42.3051414
@@ -108667,7 +109247,9 @@
         ]
       },
       "properties": {
-        "school": "MATCH MS",
+        "title": "MATCH MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#1g8f2b",
         "school location": [
           -71.1059155,
           42.3051414
@@ -108816,7 +109398,9 @@
         ]
       },
       "properties": {
-        "school": "MATCH MS",
+        "title": "MATCH MS",
+        "marker_symbol": "bus-15",
+        "stroke": "#09b996",
         "school location": [
           -71.1059155,
           42.3051414
@@ -109029,7 +109613,9 @@
         ]
       },
       "properties": {
-        "school": "Mission Hill K-8",
+        "title": "Mission Hill K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#ff4ee7",
         "school location": [
           -71.11386744,
           42.30703515
@@ -109178,7 +109764,9 @@
         ]
       },
       "properties": {
-        "school": "Mission Hill K-8",
+        "title": "Mission Hill K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#a4d98c",
         "school location": [
           -71.11386744,
           42.30703515
@@ -109711,7 +110299,9 @@
         ]
       },
       "properties": {
-        "school": "Mission Hill K-8",
+        "title": "Mission Hill K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#3c1ae9",
         "school location": [
           -71.11386744,
           42.30703515
@@ -110012,7 +110602,9 @@
         ]
       },
       "properties": {
-        "school": "Holmes ES",
+        "title": "Holmes ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#af3dfe",
         "school location": [
           -71.07560026,
           42.2967885
@@ -110273,7 +110865,9 @@
         ]
       },
       "properties": {
-        "school": "Holmes ES",
+        "title": "Holmes ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#07086c",
         "school location": [
           -71.07560026,
           42.2967885
@@ -110814,7 +111408,9 @@
         ]
       },
       "properties": {
-        "school": "Holmes ES",
+        "title": "Holmes ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#d234ef",
         "school location": [
           -71.07560026,
           42.2967885
@@ -111243,7 +111839,9 @@
         ]
       },
       "properties": {
-        "school": "Holmes ES",
+        "title": "Holmes ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#5e9332",
         "school location": [
           -71.07560026,
           42.2967885
@@ -111352,7 +111950,9 @@
         ]
       },
       "properties": {
-        "school": "Harvard/Kent ES",
+        "title": "Harvard/Kent ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a7gfe8",
         "school location": [
           -71.05749225,
           42.37662852
@@ -111549,7 +112149,9 @@
         ]
       },
       "properties": {
-        "school": "Harvard/Kent ES",
+        "title": "Harvard/Kent ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#1dfb1d",
         "school location": [
           -71.05749225,
           42.37662852
@@ -111778,7 +112380,9 @@
         ]
       },
       "properties": {
-        "school": "Harvard/Kent ES",
+        "title": "Harvard/Kent ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#ee4c32",
         "school location": [
           -71.05749225,
           42.37662852
@@ -112583,7 +113187,9 @@
         ]
       },
       "properties": {
-        "school": "Harvard/Kent ES",
+        "title": "Harvard/Kent ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#3f4934",
         "school location": [
           -71.05749225,
           42.37662852
@@ -113124,7 +113730,9 @@
         ]
       },
       "properties": {
-        "school": "Harvard/Kent ES",
+        "title": "Harvard/Kent ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#4ebec1",
         "school location": [
           -71.05749225,
           42.37662852
@@ -113617,7 +114225,9 @@
         ]
       },
       "properties": {
-        "school": "Greenwood S K-8",
+        "title": "Greenwood S K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#86g24c",
         "school location": [
           -71.08066202,
           42.29656011
@@ -114222,7 +114832,9 @@
         ]
       },
       "properties": {
-        "school": "Greenwood S K-8",
+        "title": "Greenwood S K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#adf4b9",
         "school location": [
           -71.08066202,
           42.29656011
@@ -114627,7 +115239,9 @@
         ]
       },
       "properties": {
-        "school": "Greenwood S K-8",
+        "title": "Greenwood S K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#14c437",
         "school location": [
           -71.08066202,
           42.29656011
@@ -114776,7 +115390,9 @@
         ]
       },
       "properties": {
-        "school": "Greenwood S K-8",
+        "title": "Greenwood S K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#8c417e",
         "school location": [
           -71.08066202,
           42.29656011
@@ -115141,7 +115757,9 @@
         ]
       },
       "properties": {
-        "school": "Pope JP II Lower Mills",
+        "title": "Pope JP II Lower Mills",
+        "marker_symbol": "bus-15",
+        "stroke": "#f8b801",
         "school location": [
           -71.0846368,
           42.2778235
@@ -115570,7 +116188,9 @@
         ]
       },
       "properties": {
-        "school": "McKinley SEA",
+        "title": "McKinley SEA",
+        "marker_symbol": "bus-15",
+        "stroke": "#8f5e2c",
         "school location": [
           -71.07352059,
           42.34436867
@@ -115759,7 +116379,9 @@
         ]
       },
       "properties": {
-        "school": "McKinley SEA",
+        "title": "McKinley SEA",
+        "marker_symbol": "bus-15",
+        "stroke": "#195e47",
         "school location": [
           -71.07352059,
           42.34436867
@@ -116108,7 +116730,9 @@
         ]
       },
       "properties": {
-        "school": "Warren Prescott K-8",
+        "title": "Warren Prescott K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#g8c3a6",
         "school location": [
           -71.06443059,
           42.37799868
@@ -116433,7 +117057,9 @@
         ]
       },
       "properties": {
-        "school": "Warren Prescott K-8",
+        "title": "Warren Prescott K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#bb133c",
         "school location": [
           -71.06443059,
           42.37799868
@@ -116886,7 +117512,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#0f851f",
         "school location": [
           -71.1526401,
           42.2994837
@@ -117619,7 +118247,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#96f497",
         "school location": [
           -71.1526401,
           42.2994837
@@ -117768,7 +118398,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f3218e",
         "school location": [
           -71.1526401,
           42.2994837
@@ -118677,7 +119309,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#aa9ccb",
         "school location": [
           -71.1526401,
           42.2994837
@@ -119098,7 +119732,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#26aa48",
         "school location": [
           -71.1526401,
           42.2994837
@@ -120327,7 +120963,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#g931c5",
         "school location": [
           -71.1526401,
           42.2994837
@@ -120508,7 +121146,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#gda8gg",
         "school location": [
           -71.1526401,
           42.2994837
@@ -121137,7 +121777,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#55c27d",
         "school location": [
           -71.1526401,
           42.2994837
@@ -122270,7 +122912,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#0551a5",
         "school location": [
           -71.1526401,
           42.2994837
@@ -122651,7 +123295,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#9403da",
         "school location": [
           -71.1526401,
           42.2994837
@@ -122736,7 +123382,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#d245f2",
         "school location": [
           -71.1526401,
           42.2994837
@@ -122797,7 +123445,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#gff82g",
         "school location": [
           -71.1526401,
           42.2994837
@@ -122850,7 +123500,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#cf9b11",
         "school location": [
           -71.1526401,
           42.2994837
@@ -123039,7 +123691,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#7336f7",
         "school location": [
           -71.1526401,
           42.2994837
@@ -123076,7 +123730,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#619adf",
         "school location": [
           -71.1526401,
           42.2994837
@@ -123153,7 +123809,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Renaissance ES",
+        "title": "Boston Renaissance ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#gbd970",
         "school location": [
           -71.1526401,
           42.2994837
@@ -123390,7 +124048,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Green Acad",
+        "title": "Boston Green Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#b09gbe",
         "school location": [
           -71.14596106,
           42.35044073
@@ -123739,7 +124399,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Green Acad",
+        "title": "Boston Green Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#a15415",
         "school location": [
           -71.14596106,
           42.35044073
@@ -124176,7 +124838,9 @@
         ]
       },
       "properties": {
-        "school": "Boston Green Acad",
+        "title": "Boston Green Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#88fb25",
         "school location": [
           -71.14596106,
           42.35044073
@@ -124485,7 +125149,9 @@
         ]
       },
       "properties": {
-        "school": "Kilmer 4-8",
+        "title": "Kilmer 4-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#317722",
         "school location": [
           -71.15236762,
           42.29266066
@@ -125018,7 +125684,9 @@
         ]
       },
       "properties": {
-        "school": "Kilmer 4-8",
+        "title": "Kilmer 4-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#269e3d",
         "school location": [
           -71.15236762,
           42.29266066
@@ -125119,7 +125787,9 @@
         ]
       },
       "properties": {
-        "school": "Kilmer 4-8",
+        "title": "Kilmer 4-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#49e14c",
         "school location": [
           -71.15236762,
           42.29266066
@@ -125540,7 +126210,9 @@
         ]
       },
       "properties": {
-        "school": "Roosevelt K-8 (K1-1)",
+        "title": "Roosevelt K-8 (K1-1)",
+        "marker_symbol": "bus-15",
+        "stroke": "#14f1f4",
         "school location": [
           -71.13288061,
           42.23389865
@@ -125849,7 +126521,9 @@
         ]
       },
       "properties": {
-        "school": "Roosevelt K-8 (K1-1)",
+        "title": "Roosevelt K-8 (K1-1)",
+        "marker_symbol": "bus-15",
+        "stroke": "#1a500e",
         "school location": [
           -71.13288061,
           42.23389865
@@ -126486,7 +127160,9 @@
         ]
       },
       "properties": {
-        "school": "Mozart Elementary",
+        "title": "Mozart Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#2ga1b0",
         "school location": [
           -71.14105061,
           42.28122866
@@ -126595,7 +127271,9 @@
         ]
       },
       "properties": {
-        "school": "Mozart Elementary",
+        "title": "Mozart Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#a5bdda",
         "school location": [
           -71.14105061,
           42.28122866
@@ -126920,7 +127598,9 @@
         ]
       },
       "properties": {
-        "school": "Conservatory Lab Carney",
+        "title": "Conservatory Lab Carney",
+        "marker_symbol": "bus-15",
+        "stroke": "#e3g19d",
         "school location": [
           -71.0986391,
           42.3113024
@@ -127205,7 +127885,9 @@
         ]
       },
       "properties": {
-        "school": "Conservatory Lab Carney",
+        "title": "Conservatory Lab Carney",
+        "marker_symbol": "bus-15",
+        "stroke": "#74495b",
         "school location": [
           -71.0986391,
           42.3113024
@@ -127858,7 +128540,9 @@
         ]
       },
       "properties": {
-        "school": "Conservatory Lab Carney",
+        "title": "Conservatory Lab Carney",
+        "marker_symbol": "bus-15",
+        "stroke": "#50b508",
         "school location": [
           -71.0986391,
           42.3113024
@@ -128063,7 +128747,9 @@
         ]
       },
       "properties": {
-        "school": "Conservatory Lab Carney",
+        "title": "Conservatory Lab Carney",
+        "marker_symbol": "bus-15",
+        "stroke": "#50648c",
         "school location": [
           -71.0986391,
           42.3113024
@@ -128380,7 +129066,9 @@
         ]
       },
       "properties": {
-        "school": "East Boston HS",
+        "title": "East Boston HS",
+        "marker_symbol": "bus-15",
+        "stroke": "#834c81",
         "school location": [
           -71.03492143,
           42.38095746
@@ -129073,7 +129761,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a2d5ac",
         "school location": [
           -71.10408944,
           42.27581531
@@ -129718,7 +130408,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#bb098b",
         "school location": [
           -71.10408944,
           42.27581531
@@ -130099,7 +130791,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#743cgf",
         "school location": [
           -71.10408944,
           42.27581531
@@ -131288,7 +131982,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#417baf",
         "school location": [
           -71.10408944,
           42.27581531
@@ -131685,7 +132381,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#g27bab",
         "school location": [
           -71.10408944,
           42.27581531
@@ -131922,7 +132620,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c711d3",
         "school location": [
           -71.10408944,
           42.27581531
@@ -132223,7 +132923,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#37gadb",
         "school location": [
           -71.10408944,
           42.27581531
@@ -132308,7 +133010,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#af1567",
         "school location": [
           -71.10408944,
           42.27581531
@@ -132385,7 +133089,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#9d94d6",
         "school location": [
           -71.10408944,
           42.27581531
@@ -132430,7 +133136,9 @@
         ]
       },
       "properties": {
-        "school": "Mattahunt ES",
+        "title": "Mattahunt ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#7c0b4g",
         "school location": [
           -71.10408944,
           42.27581531
@@ -132467,7 +133175,9 @@
         ]
       },
       "properties": {
-        "school": "Guild ES",
+        "title": "Guild ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#866g83",
         "school location": [
           -71.00412057,
           42.38879868
@@ -132576,7 +133286,9 @@
         ]
       },
       "properties": {
-        "school": "Guild ES",
+        "title": "Guild ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#3c05a6",
         "school location": [
           -71.00412057,
           42.38879868
@@ -132893,7 +133605,9 @@
         ]
       },
       "properties": {
-        "school": "Guild ES",
+        "title": "Guild ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#81f005",
         "school location": [
           -71.00412057,
           42.38879868
@@ -133866,7 +134580,9 @@
         ]
       },
       "properties": {
-        "school": "Guild ES",
+        "title": "Guild ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#6b69cc",
         "school location": [
           -71.00412057,
           42.38879868
@@ -134383,7 +135099,9 @@
         ]
       },
       "properties": {
-        "school": "Roxbury Prep Dorchester Campus",
+        "title": "Roxbury Prep Dorchester Campus",
+        "marker_symbol": "bus-15",
+        "stroke": "#53de91",
         "school location": [
           -71.0810657,
           42.303422
@@ -134652,7 +135370,9 @@
         ]
       },
       "properties": {
-        "school": "Roxbury Prep Dorchester Campus",
+        "title": "Roxbury Prep Dorchester Campus",
+        "marker_symbol": "bus-15",
+        "stroke": "#2bef1d",
         "school location": [
           -71.0810657,
           42.303422
@@ -135609,7 +136329,9 @@
         ]
       },
       "properties": {
-        "school": "Roosevelt K-8 (2-8)",
+        "title": "Roosevelt K-8 (2-8)",
+        "marker_symbol": "bus-15",
+        "stroke": "#923d73",
         "school location": [
           -71.12345117,
           42.24295076
@@ -135694,7 +136416,9 @@
         ]
       },
       "properties": {
-        "school": "Roosevelt K-8 (2-8)",
+        "title": "Roosevelt K-8 (2-8)",
+        "marker_symbol": "bus-15",
+        "stroke": "#625014",
         "school location": [
           -71.12345117,
           42.24295076
@@ -135843,7 +136567,9 @@
         ]
       },
       "properties": {
-        "school": "Roosevelt K-8 (2-8)",
+        "title": "Roosevelt K-8 (2-8)",
+        "marker_symbol": "bus-15",
+        "stroke": "#57g566",
         "school location": [
           -71.12345117,
           42.24295076
@@ -136112,7 +136838,9 @@
         ]
       },
       "properties": {
-        "school": "Excel Acad 1 (EB)",
+        "title": "Excel Acad 1 (EB)",
+        "marker_symbol": "bus-15",
+        "stroke": "#162d44",
         "school location": [
           -71.0209717,
           42.3827059
@@ -136533,7 +137261,9 @@
         ]
       },
       "properties": {
-        "school": "Hurley K-8",
+        "title": "Hurley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#bd2gg8",
         "school location": [
           -71.0777406,
           42.33875867
@@ -136842,7 +137572,9 @@
         ]
       },
       "properties": {
-        "school": "Hurley K-8",
+        "title": "Hurley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#8ca585",
         "school location": [
           -71.0777406,
           42.33875867
@@ -137031,7 +137763,9 @@
         ]
       },
       "properties": {
-        "school": "Mendell ES",
+        "title": "Mendell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#5cdb21",
         "school location": [
           -71.1016106,
           42.31655866
@@ -137396,7 +138130,9 @@
         ]
       },
       "properties": {
-        "school": "Mendell ES",
+        "title": "Mendell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#ab1897",
         "school location": [
           -71.1016106,
           42.31655866
@@ -137745,7 +138481,9 @@
         ]
       },
       "properties": {
-        "school": "Mendell ES",
+        "title": "Mendell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#780gfg",
         "school location": [
           -71.1016106,
           42.31655866
@@ -138126,7 +138864,9 @@
         ]
       },
       "properties": {
-        "school": "SHAW ES",
+        "title": "SHAW ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8ga504",
         "school location": [
           -71.08684033,
           42.28212094
@@ -138491,7 +139231,9 @@
         ]
       },
       "properties": {
-        "school": "SHAW ES",
+        "title": "SHAW ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a79cg9",
         "school location": [
           -71.08684033,
           42.28212094
@@ -139000,7 +139742,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#02c9f1",
         "school location": [
           -71.1082974,
           42.2614165
@@ -140005,7 +140749,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#eg6g08",
         "school location": [
           -71.1082974,
           42.2614165
@@ -140250,7 +140996,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#771g44",
         "school location": [
           -71.1082974,
           42.2614165
@@ -140527,7 +141275,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#1396gg",
         "school location": [
           -71.1082974,
           42.2614165
@@ -141484,7 +142234,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#38e7ee",
         "school location": [
           -71.1082974,
           42.2614165
@@ -141777,7 +142529,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#07f69e",
         "school location": [
           -71.1082974,
           42.2614165
@@ -141814,7 +142568,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#ggc37g",
         "school location": [
           -71.1082974,
           42.2614165
@@ -141923,7 +142679,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#1bbge2",
         "school location": [
           -71.1082974,
           42.2614165
@@ -142048,7 +142806,9 @@
         ]
       },
       "properties": {
-        "school": "Match Community Day",
+        "title": "Match Community Day",
+        "marker_symbol": "bus-15",
+        "stroke": "#c00495",
         "school location": [
           -71.1082974,
           42.2614165
@@ -142365,7 +143125,9 @@
         ]
       },
       "properties": {
-        "school": "ODonnell ES",
+        "title": "ODonnell ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a28cdf",
         "school location": [
           -71.03801072,
           42.37808862
@@ -142794,7 +143556,9 @@
         ]
       },
       "properties": {
-        "school": "English HS",
+        "title": "English HS",
+        "marker_symbol": "bus-15",
+        "stroke": "#606a6c",
         "school location": [
           -71.1096006,
           42.30600866
@@ -143079,7 +143843,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#d1f431",
         "school location": [
           -71.07072943,
           42.29992615
@@ -143524,7 +144290,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#g29bab",
         "school location": [
           -71.07072943,
           42.29992615
@@ -144089,7 +144857,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#7a9d4f",
         "school location": [
           -71.07072943,
           42.29992615
@@ -144542,7 +145312,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#e006g8",
         "school location": [
           -71.07072943,
           42.29992615
@@ -145099,7 +145871,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#dgd5b8",
         "school location": [
           -71.07072943,
           42.29992615
@@ -145192,7 +145966,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#g3f4f7",
         "school location": [
           -71.07072943,
           42.29992615
@@ -145861,7 +146637,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#f3a5cd",
         "school location": [
           -71.07072943,
           42.29992615
@@ -146242,7 +147020,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#11bg6f",
         "school location": [
           -71.07072943,
           42.29992615
@@ -146279,7 +147059,9 @@
         ]
       },
       "properties": {
-        "school": "UP ACAD / Dorchester",
+        "title": "UP ACAD / Dorchester",
+        "marker_symbol": "bus-15",
+        "stroke": "#b09e27",
         "school location": [
           -71.07072943,
           42.29992615
@@ -146556,7 +147338,9 @@
         ]
       },
       "properties": {
-        "school": "Higginson K-2 (Harrishoff St)",
+        "title": "Higginson K-2 (Harrishoff St)",
+        "marker_symbol": "bus-15",
+        "stroke": "#a0fcd1",
         "school location": [
           -71.09202957,
           42.31766019
@@ -146729,7 +147513,9 @@
         ]
       },
       "properties": {
-        "school": "Higginson K-2 (Harrishoff St)",
+        "title": "Higginson K-2 (Harrishoff St)",
+        "marker_symbol": "bus-15",
+        "stroke": "#47c166",
         "school location": [
           -71.09202957,
           42.31766019
@@ -147190,7 +147976,9 @@
         ]
       },
       "properties": {
-        "school": "Higginson K-2 (Harrishoff St)",
+        "title": "Higginson K-2 (Harrishoff St)",
+        "marker_symbol": "bus-15",
+        "stroke": "#357g1e",
         "school location": [
           -71.09202957,
           42.31766019
@@ -147379,7 +148167,9 @@
         ]
       },
       "properties": {
-        "school": "Charlestown High School",
+        "title": "Charlestown High School",
+        "marker_symbol": "bus-15",
+        "stroke": "#215c09",
         "school location": [
           -71.06107059,
           42.38011868
@@ -147872,7 +148662,9 @@
         ]
       },
       "properties": {
-        "school": "Charlestown High School",
+        "title": "Charlestown High School",
+        "marker_symbol": "bus-15",
+        "stroke": "#f00822",
         "school location": [
           -71.06107059,
           42.38011868
@@ -148109,7 +148901,9 @@
         ]
       },
       "properties": {
-        "school": "Charlestown High School",
+        "title": "Charlestown High School",
+        "marker_symbol": "bus-15",
+        "stroke": "#2bb3fa",
         "school location": [
           -71.06107059,
           42.38011868
@@ -148514,7 +149308,9 @@
         ]
       },
       "properties": {
-        "school": "Conley ES",
+        "title": "Conley ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#0cf7cb",
         "school location": [
           -71.12705061,
           42.27479865
@@ -148863,7 +149659,9 @@
         ]
       },
       "properties": {
-        "school": "Conley ES",
+        "title": "Conley ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f20d15",
         "school location": [
           -71.12705061,
           42.27479865
@@ -149260,7 +150058,9 @@
         ]
       },
       "properties": {
-        "school": "Conley ES",
+        "title": "Conley ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#94ec2e",
         "school location": [
           -71.12705061,
           42.27479865
@@ -149449,7 +150249,9 @@
         ]
       },
       "properties": {
-        "school": "Conley ES",
+        "title": "Conley ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#02d1da",
         "school location": [
           -71.12705061,
           42.27479865
@@ -149502,7 +150304,9 @@
         ]
       },
       "properties": {
-        "school": "McKay K-8",
+        "title": "McKay K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#b2a0b7",
         "school location": [
           -71.03430758,
           42.36927368
@@ -149539,7 +150343,9 @@
         ]
       },
       "properties": {
-        "school": "McKay K-8",
+        "title": "McKay K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#g6d292",
         "school location": [
           -71.03430758,
           42.36927368
@@ -149576,7 +150382,9 @@
         ]
       },
       "properties": {
-        "school": "McKay K-8",
+        "title": "McKay K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#8gdgc4",
         "school location": [
           -71.03430758,
           42.36927368
@@ -149637,7 +150445,9 @@
         ]
       },
       "properties": {
-        "school": "McKay K-8",
+        "title": "McKay K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#7285d8",
         "school location": [
           -71.03430758,
           42.36927368
@@ -151218,7 +152028,9 @@
         ]
       },
       "properties": {
-        "school": "McKay K-8",
+        "title": "McKay K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#cc01df",
         "school location": [
           -71.03430758,
           42.36927368
@@ -151607,7 +152419,9 @@
         ]
       },
       "properties": {
-        "school": "Ellison/Parks EES",
+        "title": "Ellison/Parks EES",
+        "marker_symbol": "bus-15",
+        "stroke": "#def5d0",
         "school location": [
           -71.0918906,
           42.27178866
@@ -151740,7 +152554,9 @@
         ]
       },
       "properties": {
-        "school": "Ellison/Parks EES",
+        "title": "Ellison/Parks EES",
+        "marker_symbol": "bus-15",
+        "stroke": "#a368da",
         "school location": [
           -71.0918906,
           42.27178866
@@ -152441,7 +153257,9 @@
         ]
       },
       "properties": {
-        "school": "Ellison/Parks EES",
+        "title": "Ellison/Parks EES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f9f2b0",
         "school location": [
           -71.0918906,
           42.27178866
@@ -153462,7 +154280,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #2 (MT)",
+        "title": "E BROOKE #2 (MT)",
+        "marker_symbol": "bus-15",
+        "stroke": "#012885",
         "school location": [
           -71.0947344,
           42.2948338
@@ -153659,7 +154479,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #2 (MT)",
+        "title": "E BROOKE #2 (MT)",
+        "marker_symbol": "bus-15",
+        "stroke": "#a81251",
         "school location": [
           -71.0947344,
           42.2948338
@@ -154224,7 +155046,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #2 (MT)",
+        "title": "E BROOKE #2 (MT)",
+        "marker_symbol": "bus-15",
+        "stroke": "#e8cdfd",
         "school location": [
           -71.0947344,
           42.2948338
@@ -154365,7 +155189,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #2 (MT)",
+        "title": "E BROOKE #2 (MT)",
+        "marker_symbol": "bus-15",
+        "stroke": "#5ba54c",
         "school location": [
           -71.0947344,
           42.2948338
@@ -154946,7 +155772,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #2 (MT)",
+        "title": "E BROOKE #2 (MT)",
+        "marker_symbol": "bus-15",
+        "stroke": "#ag5fe6",
         "school location": [
           -71.0947344,
           42.2948338
@@ -155479,7 +156307,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #2 (MT)",
+        "title": "E BROOKE #2 (MT)",
+        "marker_symbol": "bus-15",
+        "stroke": "#4b1g9a",
         "school location": [
           -71.0947344,
           42.2948338
@@ -155732,7 +156562,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #2 (MT)",
+        "title": "E BROOKE #2 (MT)",
+        "marker_symbol": "bus-15",
+        "stroke": "#1dda14",
         "school location": [
           -71.0947344,
           42.2948338
@@ -155769,7 +156601,9 @@
         ]
       },
       "properties": {
-        "school": "E BROOKE #2 (MT)",
+        "title": "E BROOKE #2 (MT)",
+        "marker_symbol": "bus-15",
+        "stroke": "#706b81",
         "school location": [
           -71.0947344,
           42.2948338
@@ -156070,7 +156904,9 @@
         ]
       },
       "properties": {
-        "school": "Urban Science Academy",
+        "title": "Urban Science Academy",
+        "marker_symbol": "bus-15",
+        "stroke": "#9166bf",
         "school location": [
           -71.17434062,
           42.28226865
@@ -156763,7 +157599,9 @@
         ]
       },
       "properties": {
-        "school": "Winthrop ES",
+        "title": "Winthrop ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c71ag9",
         "school location": [
           -71.0756266,
           42.31820265
@@ -157168,7 +158006,9 @@
         ]
       },
       "properties": {
-        "school": "Winthrop ES",
+        "title": "Winthrop ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#5gbcf1",
         "school location": [
           -71.0756266,
           42.31820265
@@ -157205,7 +158045,9 @@
         ]
       },
       "properties": {
-        "school": "Winthrop ES",
+        "title": "Winthrop ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#b9ddf8",
         "school location": [
           -71.0756266,
           42.31820265
@@ -157482,7 +158324,9 @@
         ]
       },
       "properties": {
-        "school": "Haynes EEC",
+        "title": "Haynes EEC",
+        "marker_symbol": "bus-15",
+        "stroke": "#cdf10e",
         "school location": [
           -71.07893913,
           42.31496685
@@ -157799,7 +158643,9 @@
         ]
       },
       "properties": {
-        "school": "Haynes EEC",
+        "title": "Haynes EEC",
+        "marker_symbol": "bus-15",
+        "stroke": "#b90062",
         "school location": [
           -71.07893913,
           42.31496685
@@ -158108,7 +158954,9 @@
         ]
       },
       "properties": {
-        "school": "Haynes EEC",
+        "title": "Haynes EEC",
+        "marker_symbol": "bus-15",
+        "stroke": "#d64b06",
         "school location": [
           -71.07893913,
           42.31496685
@@ -158689,7 +159537,9 @@
         ]
       },
       "properties": {
-        "school": "Channing Elementary",
+        "title": "Channing Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#gdd1a1",
         "school location": [
           -71.13332061,
           42.25162865
@@ -159094,7 +159944,9 @@
         ]
       },
       "properties": {
-        "school": "Channing Elementary",
+        "title": "Channing Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#b4c5ab",
         "school location": [
           -71.13332061,
           42.25162865
@@ -159379,7 +160231,9 @@
         ]
       },
       "properties": {
-        "school": "Channing Elementary",
+        "title": "Channing Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#313b5d",
         "school location": [
           -71.13332061,
           42.25162865
@@ -159552,7 +160406,9 @@
         ]
       },
       "properties": {
-        "school": "Channing Elementary",
+        "title": "Channing Elementary",
+        "marker_symbol": "bus-15",
+        "stroke": "#c8df94",
         "school location": [
           -71.13332061,
           42.25162865
@@ -159949,7 +160805,9 @@
         ]
       },
       "properties": {
-        "school": "Taylor ES",
+        "title": "Taylor ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#g3e826",
         "school location": [
           -71.07743057,
           42.27786075
@@ -160802,7 +161660,9 @@
         ]
       },
       "properties": {
-        "school": "Taylor ES",
+        "title": "Taylor ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#7d9558",
         "school location": [
           -71.07743057,
           42.27786075
@@ -161335,7 +162195,9 @@
         ]
       },
       "properties": {
-        "school": "Taylor ES",
+        "title": "Taylor ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#5ea1e6",
         "school location": [
           -71.07743057,
           42.27786075
@@ -162020,7 +162882,9 @@
         ]
       },
       "properties": {
-        "school": "Taylor ES",
+        "title": "Taylor ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#d5d84e",
         "school location": [
           -71.07743057,
           42.27786075
@@ -162265,7 +163129,9 @@
         ]
       },
       "properties": {
-        "school": "Taylor ES",
+        "title": "Taylor ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#857311",
         "school location": [
           -71.07743057,
           42.27786075
@@ -162302,7 +163168,9 @@
         ]
       },
       "properties": {
-        "school": "Taylor ES",
+        "title": "Taylor ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#b9cf71",
         "school location": [
           -71.07743057,
           42.27786075
@@ -162595,7 +163463,9 @@
         ]
       },
       "properties": {
-        "school": "Taylor ES",
+        "title": "Taylor ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#2e2geg",
         "school location": [
           -71.07743057,
           42.27786075
@@ -162632,7 +163502,9 @@
         ]
       },
       "properties": {
-        "school": "Taylor ES",
+        "title": "Taylor ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#cbbf1c",
         "school location": [
           -71.07743057,
           42.27786075
@@ -162861,7 +163733,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#d6f7d0",
         "school location": [
           -71.13770062,
           42.35205867
@@ -163538,7 +164412,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#1783d9",
         "school location": [
           -71.13770062,
           42.35205867
@@ -163799,7 +164675,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#23e1e1",
         "school location": [
           -71.13770062,
           42.35205867
@@ -164268,7 +165146,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#2dab5g",
         "school location": [
           -71.13770062,
           42.35205867
@@ -165353,7 +166233,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#330d74",
         "school location": [
           -71.13770062,
           42.35205867
@@ -165462,7 +166344,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#5fa28a",
         "school location": [
           -71.13770062,
           42.35205867
@@ -165835,7 +166719,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#gfefc0",
         "school location": [
           -71.13770062,
           42.35205867
@@ -166272,7 +167158,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#b8663f",
         "school location": [
           -71.13770062,
           42.35205867
@@ -166445,7 +167333,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#f53ag0",
         "school location": [
           -71.13770062,
           42.35205867
@@ -166530,7 +167420,9 @@
         ]
       },
       "properties": {
-        "school": "Jackson/Mann",
+        "title": "Jackson/Mann",
+        "marker_symbol": "bus-15",
+        "stroke": "#35g6e3",
         "school location": [
           -71.13770062,
           42.35205867
@@ -166927,7 +167819,9 @@
         ]
       },
       "properties": {
-        "school": "Lee Acad",
+        "title": "Lee Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#c8a952",
         "school location": [
           -71.07300863,
           42.28660893
@@ -167356,7 +168250,9 @@
         ]
       },
       "properties": {
-        "school": "Lee Acad",
+        "title": "Lee Acad",
+        "marker_symbol": "bus-15",
+        "stroke": "#344a0f",
         "school location": [
           -71.07300863,
           42.28660893
@@ -167817,7 +168713,9 @@
         ]
       },
       "properties": {
-        "school": "Roxbury Prep Lucy Stone",
+        "title": "Roxbury Prep Lucy Stone",
+        "marker_symbol": "bus-15",
+        "stroke": "#2f4c9d",
         "school location": [
           -71.0732756,
           42.2955009
@@ -168142,7 +169040,9 @@
         ]
       },
       "properties": {
-        "school": "Roxbury Prep Lucy Stone",
+        "title": "Roxbury Prep Lucy Stone",
+        "marker_symbol": "bus-15",
+        "stroke": "#0cf2f5",
         "school location": [
           -71.0732756,
           42.2955009
@@ -168483,7 +169383,9 @@
         ]
       },
       "properties": {
-        "school": "Roxbury Prep Lucy Stone",
+        "title": "Roxbury Prep Lucy Stone",
+        "marker_symbol": "bus-15",
+        "stroke": "#db0235",
         "school location": [
           -71.0732756,
           42.2955009
@@ -168888,7 +169790,9 @@
         ]
       },
       "properties": {
-        "school": "Dudley Street Neighborhood",
+        "title": "Dudley Street Neighborhood",
+        "marker_symbol": "bus-15",
+        "stroke": "#12dc44",
         "school location": [
           -71.07337366,
           42.32192747
@@ -169533,7 +170437,9 @@
         ]
       },
       "properties": {
-        "school": "Dudley Street Neighborhood",
+        "title": "Dudley Street Neighborhood",
+        "marker_symbol": "bus-15",
+        "stroke": "#1a93a1",
         "school location": [
           -71.07337366,
           42.32192747
@@ -169602,7 +170508,9 @@
         ]
       },
       "properties": {
-        "school": "Dudley Street Neighborhood",
+        "title": "Dudley Street Neighborhood",
+        "marker_symbol": "bus-15",
+        "stroke": "#0d3gd7",
         "school location": [
           -71.07337366,
           42.32192747
@@ -170071,7 +170979,9 @@
         ]
       },
       "properties": {
-        "school": "Dudley Street Neighborhood",
+        "title": "Dudley Street Neighborhood",
+        "marker_symbol": "bus-15",
+        "stroke": "#8a4d3g",
         "school location": [
           -71.07337366,
           42.32192747
@@ -170332,7 +171242,9 @@
         ]
       },
       "properties": {
-        "school": "Dudley Street Neighborhood",
+        "title": "Dudley Street Neighborhood",
+        "marker_symbol": "bus-15",
+        "stroke": "#aa6790",
         "school location": [
           -71.07337366,
           42.32192747
@@ -170449,7 +171361,9 @@
         ]
       },
       "properties": {
-        "school": "Hale ES",
+        "title": "Hale ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#8ag27f",
         "school location": [
           -71.0910406,
           42.32554867
@@ -170990,7 +171904,9 @@
         ]
       },
       "properties": {
-        "school": "Hale ES",
+        "title": "Hale ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#833dg9",
         "school location": [
           -71.0910406,
           42.32554867
@@ -171203,7 +172119,9 @@
         ]
       },
       "properties": {
-        "school": "Kilmer K-3",
+        "title": "Kilmer K-3",
+        "marker_symbol": "bus-15",
+        "stroke": "#gf0308",
         "school location": [
           -71.16257013,
           42.27188582
@@ -171480,7 +172398,9 @@
         ]
       },
       "properties": {
-        "school": "Kilmer K-3",
+        "title": "Kilmer K-3",
+        "marker_symbol": "bus-15",
+        "stroke": "#90dc49",
         "school location": [
           -71.16257013,
           42.27188582
@@ -172213,7 +173133,9 @@
         ]
       },
       "properties": {
-        "school": "Kilmer K-3",
+        "title": "Kilmer K-3",
+        "marker_symbol": "bus-15",
+        "stroke": "#f5050a",
         "school location": [
           -71.16257013,
           42.27188582
@@ -172354,7 +173276,9 @@
         ]
       },
       "properties": {
-        "school": "Kilmer K-3",
+        "title": "Kilmer K-3",
+        "marker_symbol": "bus-15",
+        "stroke": "#62g862",
         "school location": [
           -71.16257013,
           42.27188582
@@ -172855,7 +173779,9 @@
         ]
       },
       "properties": {
-        "school": "Chittick ES",
+        "title": "Chittick ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#23c56g",
         "school location": [
           -71.1047806,
           42.26725865
@@ -173612,7 +174538,9 @@
         ]
       },
       "properties": {
-        "school": "Chittick ES",
+        "title": "Chittick ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#dg573a",
         "school location": [
           -71.1047806,
           42.26725865
@@ -173921,7 +174849,9 @@
         ]
       },
       "properties": {
-        "school": "Chittick ES",
+        "title": "Chittick ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#9007a5",
         "school location": [
           -71.1047806,
           42.26725865
@@ -173974,7 +174904,9 @@
         ]
       },
       "properties": {
-        "school": "Chittick ES",
+        "title": "Chittick ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#597b23",
         "school location": [
           -71.1047806,
           42.26725865
@@ -174475,7 +175407,9 @@
         ]
       },
       "properties": {
-        "school": "Haley K-8",
+        "title": "Haley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#a4a8c9",
         "school location": [
           -71.1077206,
           42.28675866
@@ -174712,7 +175646,9 @@
         ]
       },
       "properties": {
-        "school": "Haley K-8",
+        "title": "Haley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#cdcfb6",
         "school location": [
           -71.1077206,
           42.28675866
@@ -175413,7 +176349,9 @@
         ]
       },
       "properties": {
-        "school": "Haley K-8",
+        "title": "Haley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#dbf566",
         "school location": [
           -71.1077206,
           42.28675866
@@ -175682,7 +176620,9 @@
         ]
       },
       "properties": {
-        "school": "Haley K-8",
+        "title": "Haley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#4fb4b7",
         "school location": [
           -71.1077206,
           42.28675866
@@ -176055,7 +176995,9 @@
         ]
       },
       "properties": {
-        "school": "Haley K-8",
+        "title": "Haley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#g9ee80",
         "school location": [
           -71.1077206,
           42.28675866
@@ -176468,7 +177410,9 @@
         ]
       },
       "properties": {
-        "school": "Haley K-8",
+        "title": "Haley K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1337df",
         "school location": [
           -71.1077206,
           42.28675866
@@ -176945,7 +177889,9 @@
         ]
       },
       "properties": {
-        "school": "Perkins ES",
+        "title": "Perkins ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f8b2de",
         "school location": [
           -71.05054059,
           42.33131867
@@ -177278,7 +178224,9 @@
         ]
       },
       "properties": {
-        "school": "Perkins ES",
+        "title": "Perkins ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#fd45gb",
         "school location": [
           -71.05054059,
           42.33131867
@@ -177571,7 +178519,9 @@
         ]
       },
       "properties": {
-        "school": "Perkins ES",
+        "title": "Perkins ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#6c5fb8",
         "school location": [
           -71.05054059,
           42.33131867
@@ -178232,7 +179182,9 @@
         ]
       },
       "properties": {
-        "school": "Sumner ES",
+        "title": "Sumner ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#4910ff",
         "school location": [
           -71.12684061,
           42.28645866
@@ -178629,7 +179581,9 @@
         ]
       },
       "properties": {
-        "school": "Sumner ES",
+        "title": "Sumner ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f9ab7a",
         "school location": [
           -71.12684061,
           42.28645866
@@ -179018,7 +179972,9 @@
         ]
       },
       "properties": {
-        "school": "Sumner ES",
+        "title": "Sumner ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#b2bfg0",
         "school location": [
           -71.12684061,
           42.28645866
@@ -179559,7 +180515,9 @@
         ]
       },
       "properties": {
-        "school": "Sumner ES",
+        "title": "Sumner ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#320285",
         "school location": [
           -71.12684061,
           42.28645866
@@ -179692,7 +180650,9 @@
         ]
       },
       "properties": {
-        "school": "Sumner ES",
+        "title": "Sumner ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#9f4dcf",
         "school location": [
           -71.12684061,
           42.28645866
@@ -180073,7 +181033,9 @@
         ]
       },
       "properties": {
-        "school": "Sumner ES",
+        "title": "Sumner ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#080466",
         "school location": [
           -71.12684061,
           42.28645866
@@ -180510,7 +181472,9 @@
         ]
       },
       "properties": {
-        "school": "Hennigan ES",
+        "title": "Hennigan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#c801c1",
         "school location": [
           -71.10691069,
           42.32562212
@@ -180779,7 +181743,9 @@
         ]
       },
       "properties": {
-        "school": "Hennigan ES",
+        "title": "Hennigan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#68e8ed",
         "school location": [
           -71.10691069,
           42.32562212
@@ -180888,7 +181854,9 @@
         ]
       },
       "properties": {
-        "school": "Hennigan ES",
+        "title": "Hennigan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#7b1007",
         "school location": [
           -71.10691069,
           42.32562212
@@ -181085,7 +182053,9 @@
         ]
       },
       "properties": {
-        "school": "Hennigan ES",
+        "title": "Hennigan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#f67gd8",
         "school location": [
           -71.10691069,
           42.32562212
@@ -181186,7 +182156,9 @@
         ]
       },
       "properties": {
-        "school": "Hennigan ES",
+        "title": "Hennigan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#3g375a",
         "school location": [
           -71.10691069,
           42.32562212
@@ -182407,7 +183379,9 @@
         ]
       },
       "properties": {
-        "school": "Hennigan ES",
+        "title": "Hennigan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#2573g8",
         "school location": [
           -71.10691069,
           42.32562212
@@ -182732,7 +183706,9 @@
         ]
       },
       "properties": {
-        "school": "Hennigan ES",
+        "title": "Hennigan ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#2e7ef2",
         "school location": [
           -71.10691069,
           42.32562212
@@ -182881,7 +183857,9 @@
         ]
       },
       "properties": {
-        "school": "McKinley Prep HS",
+        "title": "McKinley Prep HS",
+        "marker_symbol": "bus-15",
+        "stroke": "#4397ee",
         "school location": [
           -71.0992606,
           42.34343867
@@ -182918,7 +183896,9 @@
         ]
       },
       "properties": {
-        "school": "Eliot K-8",
+        "title": "Eliot K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#3eceb8",
         "school location": [
           -71.05336967,
           42.36610274
@@ -182955,7 +183935,9 @@
         ]
       },
       "properties": {
-        "school": "Eliot K-8",
+        "title": "Eliot K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1af611",
         "school location": [
           -71.05336967,
           42.36610274
@@ -183144,7 +184126,9 @@
         ]
       },
       "properties": {
-        "school": "Eliot K-8",
+        "title": "Eliot K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#755b8d",
         "school location": [
           -71.05336967,
           42.36610274
@@ -183733,7 +184717,9 @@
         ]
       },
       "properties": {
-        "school": "Eliot K-8",
+        "title": "Eliot K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#7cbgdf",
         "school location": [
           -71.05336967,
           42.36610274
@@ -183794,7 +184780,9 @@
         ]
       },
       "properties": {
-        "school": "Eliot K-8",
+        "title": "Eliot K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#0bb84d",
         "school location": [
           -71.05336967,
           42.36610274
@@ -185103,7 +186091,9 @@
         ]
       },
       "properties": {
-        "school": "Eliot K-8",
+        "title": "Eliot K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#01cd53",
         "school location": [
           -71.05336967,
           42.36610274
@@ -185580,7 +186570,9 @@
         ]
       },
       "properties": {
-        "school": "Everett ES",
+        "title": "Everett ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#dabf7b",
         "school location": [
           -71.05976976,
           42.31368761
@@ -186153,7 +187145,9 @@
         ]
       },
       "properties": {
-        "school": "Everett ES",
+        "title": "Everett ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#868e3c",
         "school location": [
           -71.05976976,
           42.31368761
@@ -186254,7 +187248,9 @@
         ]
       },
       "properties": {
-        "school": "Everett ES",
+        "title": "Everett ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#0156a0",
         "school location": [
           -71.05976976,
           42.31368761
@@ -186731,7 +187727,9 @@
         ]
       },
       "properties": {
-        "school": "Orchard Gardens K-8",
+        "title": "Orchard Gardens K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#4ceff3",
         "school location": [
           -71.07790902,
           42.33027521
@@ -187552,7 +188550,9 @@
         ]
       },
       "properties": {
-        "school": "Orchard Gardens K-8",
+        "title": "Orchard Gardens K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#4b92be",
         "school location": [
           -71.07790902,
           42.33027521
@@ -188173,7 +189173,9 @@
         ]
       },
       "properties": {
-        "school": "Orchard Gardens K-8",
+        "title": "Orchard Gardens K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1c2999",
         "school location": [
           -71.07790902,
           42.33027521
@@ -188778,7 +189780,9 @@
         ]
       },
       "properties": {
-        "school": "Orchard Gardens K-8",
+        "title": "Orchard Gardens K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#ebdbg6",
         "school location": [
           -71.07790902,
           42.33027521
@@ -189135,7 +190139,9 @@
         ]
       },
       "properties": {
-        "school": "Orchard Gardens K-8",
+        "title": "Orchard Gardens K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#ga0711",
         "school location": [
           -71.07790902,
           42.33027521
@@ -189180,7 +190186,9 @@
         ]
       },
       "properties": {
-        "school": "Orchard Gardens K-8",
+        "title": "Orchard Gardens K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#2117cc",
         "school location": [
           -71.07790902,
           42.33027521
@@ -189289,7 +190297,9 @@
         ]
       },
       "properties": {
-        "school": "Orchard Gardens K-8",
+        "title": "Orchard Gardens K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#677431",
         "school location": [
           -71.07790902,
           42.33027521
@@ -189526,7 +190536,9 @@
         ]
       },
       "properties": {
-        "school": "Orchard Gardens K-8",
+        "title": "Orchard Gardens K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#b0ed20",
         "school location": [
           -71.07790902,
           42.33027521
@@ -189987,7 +190999,9 @@
         ]
       },
       "properties": {
-        "school": "Higginson/Lewis K-8",
+        "title": "Higginson/Lewis K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#4af172",
         "school location": [
           -71.08630957,
           42.32094834
@@ -190392,7 +191406,9 @@
         ]
       },
       "properties": {
-        "school": "Higginson/Lewis K-8",
+        "title": "Higginson/Lewis K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#a3ab50",
         "school location": [
           -71.08630957,
           42.32094834
@@ -190645,7 +191661,9 @@
         ]
       },
       "properties": {
-        "school": "Higginson/Lewis K-8",
+        "title": "Higginson/Lewis K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#080ade",
         "school location": [
           -71.08630957,
           42.32094834
@@ -191362,7 +192380,9 @@
         ]
       },
       "properties": {
-        "school": "HERNANDEZ K-8",
+        "title": "HERNANDEZ K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#1g3cg3",
         "school location": [
           -71.09812021,
           42.31393788
@@ -191799,7 +192819,9 @@
         ]
       },
       "properties": {
-        "school": "HERNANDEZ K-8",
+        "title": "HERNANDEZ K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#eea4c8",
         "school location": [
           -71.09812021,
           42.31393788
@@ -192596,7 +193618,9 @@
         ]
       },
       "properties": {
-        "school": "HERNANDEZ K-8",
+        "title": "HERNANDEZ K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#64ba17",
         "school location": [
           -71.09812021,
           42.31393788
@@ -192633,7 +193657,9 @@
         ]
       },
       "properties": {
-        "school": "HERNANDEZ K-8",
+        "title": "HERNANDEZ K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#cc0a87",
         "school location": [
           -71.09812021,
           42.31393788
@@ -192734,7 +193760,9 @@
         ]
       },
       "properties": {
-        "school": "HERNANDEZ K-8",
+        "title": "HERNANDEZ K-8",
+        "marker_symbol": "bus-15",
+        "stroke": "#7680d5",
         "school location": [
           -71.09812021,
           42.31393788
@@ -193147,7 +194175,9 @@
         ]
       },
       "properties": {
-        "school": "Kennedy JF ES",
+        "title": "Kennedy JF ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#g53045",
         "school location": [
           -71.10583938,
           42.32178533
@@ -193512,7 +194542,9 @@
         ]
       },
       "properties": {
-        "school": "Kennedy JF ES",
+        "title": "Kennedy JF ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#507c28",
         "school location": [
           -71.10583938,
           42.32178533
@@ -194133,7 +195165,9 @@
         ]
       },
       "properties": {
-        "school": "Kennedy JF ES",
+        "title": "Kennedy JF ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#2b3eg1",
         "school location": [
           -71.10583938,
           42.32178533
@@ -194370,7 +195404,9 @@
         ]
       },
       "properties": {
-        "school": "Kennedy JF ES",
+        "title": "Kennedy JF ES",
+        "marker_symbol": "bus-15",
+        "stroke": "#3c679b",
         "school location": [
           -71.10583938,
           42.32178533

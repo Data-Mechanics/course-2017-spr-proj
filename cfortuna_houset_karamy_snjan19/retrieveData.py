@@ -82,34 +82,18 @@ class retrieveData(dml.Algorithm):
 
         this_script = doc.agent('alg:cfortuna_houset_karamy_snjan19#retrieveData', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
         
-        #streetResource = doc.entity('mag:ms23-5ubn', {'prov:label':'Boston Streets Data', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
-        #wazeResource = doc.entity('bdp:dih6-az4h', {'prov:label':'Waze Traffic Data', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
         hospitalsResource = doc.entity('bdp:u6fv-m8v4', {'prov:label':'Boston Hospitals Data', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
         carCrashResource = doc.entity('car:CarCrashData', {'prov:label':'Car Crash Data', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
         emsStationsResource = doc.entity('car:EMSStationsData', {'prov:label':'EMS Stations Data', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
         
-        #getBostonStreetsData = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
-        #getWazeTrafficData = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
         getBostonHospitalsData = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
         getCarCrashData = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
         getEMSStationsData = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
         
-        #doc.wasAssociatedWith(getBostonStreetsData, this_script)
-        #doc.wasAssociatedWith(getWazeTrafficData, this_script)
         doc.wasAssociatedWith(getBostonHospitalsData, this_script)
         doc.wasAssociatedWith(getCarCrashData, this_script)
         doc.wasAssociatedWith(getEMSStationsData, this_script)
 
-        # doc.usage(getBostonStreetsData, streetResource, startTime, None,
-        #           {prov.model.PROV_TYPE:'ont:Retrieval',
-        #           #'ont:Query':'?type=Neighborhood+Area+Cambridge'
-        #           }
-        #          )
-        # doc.usage(getWazeTrafficData, wazeResource, startTime, None,
-        #           {prov.model.PROV_TYPE:'ont:Retrieval',
-        #           #'ont:Query':'?type=Neighborhood+Area+Boston'
-        #           }
-        #           )
         doc.usage(getBostonHospitalsData, hospitalsResource, startTime, None,
                   {prov.model.PROV_TYPE:'ont:Retrieval',
                   #'ont:Query':'?type=Neighborhood+Area+Cambridge'
@@ -125,15 +109,6 @@ class retrieveData(dml.Algorithm):
                   #'ont:Query':'?type=Neighborhood+Area+Cambridge'
                   }
                   )
-
-        # BostonStreetsData = doc.entity('dat:cfortuna_houset_karamy_snjan19#BostonStreetsData', {prov.model.PROV_LABEL:'Boston Streets Data', prov.model.PROV_TYPE:'ont:DataSet'})
-        # doc.wasAttributedTo(BostonStreetsData, this_script)
-        # doc.wasGeneratedBy(BostonStreetsData, getBostonStreetsData, endTime)
-        # doc.wasDerivedFrom(BostonStreetsData, streetResource, getBostonStreetsData, getBostonStreetsData, getBostonStreetsData)
-        # WazeTrafficData = doc.entity('dat:cfortuna_houset_karamy_snjan19#WazeTrafficData', {prov.model.PROV_LABEL:'Waze Traffic Data', prov.model.PROV_TYPE:'ont:DataSet'})
-        # doc.wasAttributedTo(WazeTrafficData, this_script)
-        # doc.wasGeneratedBy(WazeTrafficData, getWazeTrafficData, endTime)
-        # doc.wasDerivedFrom(WazeTrafficData, wazeResource, getWazeTrafficData, getWazeTrafficData, getWazeTrafficData)
 
         BostonHospitalsData = doc.entity('dat:cfortuna_houset_karamy_snjan19#BostonHospitalsData', {prov.model.PROV_LABEL:'Boston Hospitals Data', prov.model.PROV_TYPE:'ont:DataSet'})
         doc.wasAttributedTo(BostonHospitalsData, this_script)

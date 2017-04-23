@@ -8,9 +8,7 @@ import datetime
 import uuid
 import math
 import random
-#from heapq import heappush, heappop
 from geopy.distance import vincenty
-import sys
 from tsp_solver.greedy import solve_tsp
 
 class optimizePickupSequence(dml.Algorithm):

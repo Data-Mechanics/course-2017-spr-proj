@@ -8,9 +8,7 @@ import datetime
 import uuid
 import math
 import random
-#from heapq import heappush, heappop
 from geopy.distance import vincenty
-from tsp_solver.greedy import solve_tsp
 
 class assignBusYards(dml.Algorithm):
     contributor = 'echogu_wei0496_wuhaoyu'
@@ -19,7 +17,7 @@ class assignBusYards(dml.Algorithm):
 
     @staticmethod
     def execute(trial = False):
-        ''' find the closest bus yard to each route
+        ''' find the closest bus yard
         '''
         startTime = datetime.datetime.now()
 
@@ -48,26 +46,28 @@ class assignBusYards(dml.Algorithm):
         raw_buses = repo['echogu_wei0496_wuhaoyu.buses'].find()
         buses = []
         for item in raw_buses:
-            buses.append({'coordinates': item['geometry']["coordinates"],
+            buses.append({'coordinates': tuple(reversed(item['geometry']["coordinates"])),
                           'yard': item['properties']['yard'],
                           'address': item['properties']['address']})
 
-        # find the closest bus yard and assign it to the route
+        # find the closest bus yard to the first or last student in sequence
         route = []
         for s in pickup_sequence:
             origin = []
             min_dis = float('inf')
-            mean = s['mean']
+            first_student = s['pickup_sequence'][0]
+            first_student_loc = (first_student['latitude'], first_student['longitude'])
+
             for bus in buses:
-                temp_dis = assignBusYards.distance(bus['coordinates'], mean)
+                temp_dis = assignBusYards.distance(bus['coordinates'], first_student_loc)
                 if(temp_dis < min_dis):
                     origin = bus
                     min_dis = temp_dis
             route.append({'school': s['school'],
-                          'location': s['location'],
-                          'yard': origin['coordinates'],
-                          'name': origin['yard'],
-                          'address': origin['address'],
+                          'school location': s['location'],
+                          'bus yard': origin['yard'],
+                          'yard location': origin['coordinates'],
+                          'yard address': origin['address'],
                           'pickup_sequence': s['pickup_sequence']})
 
         # store bus routes into the database

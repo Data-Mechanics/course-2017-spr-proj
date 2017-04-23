@@ -17,7 +17,7 @@ http://datamechanics.io/data/cfortuna_houset_karamy_snjan19/CarCrashData.json
 
 ## Statistical Analyses
 
-### K-Means (OptimalHospitals.py)
+### K-Means (optimalHospitals.py)
 We used the k-means algorithm to calculate the optimal locations for hospitals for the most common traffic accident locations in Boston. With this data, we can determine optimal hospital locations, such that the most common car crash sites can reach the hospital quickly.
 
 ### Linear Regression (carCrashTimes.py)

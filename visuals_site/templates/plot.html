@@ -35,7 +35,7 @@ svg {
 
 .dot {
     stroke: #293b47;
-    fill: #b9eae9
+    fill: #b9eae9;
     opacity: 0.5;
 }
 div.text-form {
@@ -146,10 +146,6 @@ div.text-form {
         .style("text-anchor", "end")
         .text("Percent Obesity")
 
-    var radius = d3.scale.sqrt()
-        .domain([0, 1e6])
-        .range([0, 15]);
-
     svg.selectAll(".dot")
         .data(data)
         .enter().append("circle")
@@ -161,7 +157,7 @@ div.text-form {
         .attr("cy", function(d) {
             return y(d.y);
         })
-        .attr("r", function(d) { return radius(d.population); });
+        .attr("r", function(d) { return (d.population)/500; });
 
     svg.append("path")
         .datum(data)

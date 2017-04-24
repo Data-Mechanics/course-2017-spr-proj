@@ -34,12 +34,14 @@ class VisualOne(dml.Algorithm):
 
                 # loads
                 obesity_time = repo['asafer_asambors_maxzm_vivyee.obesity_time'].find()
-                obesity_time_tuples = [[a['time'], a['data_value']] for a in obesity_time if (int(a['population'])<max_pop and int(a['population'])>min_pop)]
+                obesity_time_tuples = [[a['time'], a['data_value'], int(a['population'])] for a in obesity_time if (int(a['population'])<max_pop and int(a['population'])>min_pop)]
 
 		# X that will be returned (time to get to healthy location)
                 X = np.array(obesity_time_tuples)[:,0]
 		# Y that will be returned (obesity percentage)
                 Y = np.array(obesity_time_tuples)[:,1] 
+        # Population array 
+                Pop = np.array(obesity_time_tuples)[:,2]
 
 		# linear regression code
                 meanX = sum(X)*1.0/len(X)
@@ -61,7 +63,8 @@ class VisualOne(dml.Algorithm):
                 for i in range(len(Y)):
                         data += [{"yhat": yhat[i],
                             "y": Y[i],
-                            "x": X[i]}]
+                            "x": X[i],
+                            "population": Pop[i]}]
 
                 return data
 VisualOne.execute()

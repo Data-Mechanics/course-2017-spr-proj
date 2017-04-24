@@ -49,15 +49,17 @@ Given the obesity and healthy locations data, we created a map of Boston, which 
 
 ![Map of Boston with obesity and healthy locations:](../visuals_site/images/bostonmap.png)
 
-Our data analysis found that there was a huge correlation between obesity and distance from a healthy location. The linear regression suggests that for every minute more it takes to get to a healthy location, the obesity rate increases 
-According to our data, the mean squared error between obesity and healthy location distance was only 10.4 whereas our control data had a mean squared error of 10.54,  This means that both datasets were about as accurate in finding linear regression models between obesity and distance from a healthy location. 
+Our data analysis found that there was a huge correlation between obesity and distance from a healthy location. The linear regression suggests that for every minute more it takes to get to a healthy location, the obesity rate increases by .2 percent (because the slope of the linear regression is .2256). This occurs with a baseline obesity percentage of 16 (based on a y intercept of 16.5). Meaning that in the best case where there is an area directly by a healthy location, that area is predicted to have an obesity rate of 16. The further the area is from a healthy location, the worse the obesity rate gets. The mean squared error was 10.4 which suggests some variance despite an overall trend.
+
 
 ![Results for linear regression:](../visuals_site/images/linregressgraph.png)
 
-We ran our algorithm on a Control data and found that there was also a correlation between obesity and distance from a trash bin. While this does mean that there may be external factors contributing to the correlations, the correlation between obesity and distance of healthy locations was much stronger. 
+We ran our algorithm on a Control data and found that there was a very slight correlation between obesity and distance from a trash bin with an obesity rate increase of .02% per minute longer it takes to get to a big belly location. Less than one tenth the correlation healthy locations had. Surprisingly our control data had a similar MSE to our Healthy location data. While this does mean that there may be external factors contributing to the correlations, the correlation between obesity and distance of healthy locations was much stronger. 
+
+Overall, healthy locations are not located in areas with higher obesity. It is possible that healthy locations are lowering current rates of obesity. It is also possible that the city of Boston needs to do a better job placing healthy locations. In order to get a more definite answer, we would need to do further work, highlighted below.
 
 # Future Work
-A few questions that we would like to address in a future work that we were not able to pursue are:
+A few questions that we would like to address in future work that we were not able to pursue are:
 * Do areas with more than one healthy location have lower rates of obesity? If so, are these healthy locations helping lower obesity percentage?
 * Would the introduction of a healthy location into an obese area lower the obesity rate over time?
 * Could we predict an optimal point to place a healthy location based on our data?

@@ -15,10 +15,38 @@ svg {
     display: block;
     margin: 0 auto;
 }
+.button {
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #606b82;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.button:hover {
+    background-color: #606b82;
+    color: white;
+}
+
 
 </style>
-<head><center><h3>Obesity and Health Locations in Boston</h3></center></head>
-<body>
+<head>
+   <form action="/" type="POST">
+        <input style="position: absolute; margin-top:0%;" type="submit" class="button" value="Back" />
+    </form>
+<center><h1>Obesity and Health Locations in Boston</h1></center>
+</head>
+<body bgcolor="ffffff">
+
+<br> 
+<br>
 
 <div align="center">
 
@@ -61,7 +89,7 @@ svg {
         .data( neighborhoods_json.features )
         .enter()
         .append( "path" )
-        .attr( "fill", "#999fa8" )
+        .attr( "fill", "#606b82") //516182")g
         .attr( "d", geoPath );
 
     var obesity = svg.append( "g" );
@@ -85,7 +113,7 @@ svg {
                 .style("width", "100px")
         })
         .on("mouseout", function(d) {
-            d3.select(this).attr("opacity", "0.5");
+            d3.select(this).attr("opacity", "0.7");
             tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);
@@ -98,7 +126,7 @@ svg {
         .data( health_json.features )
         .enter()
         .append( "path" )
-        .attr( "fill", "#34773f" )
+        .attr( "fill", "#750075") 
         .attr( "stroke", "#000000" )
         .attr("opacity", "0.5")
         .attr( "d", geoPath )
@@ -121,7 +149,7 @@ svg {
                 .style("width", "60px");
         })
         .on("mouseout", function(d) {
-            d3.select(this).attr("opacity", "0.5");
+            d3.select(this).attr("opacity", "0.7");
             tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);

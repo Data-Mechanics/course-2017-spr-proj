@@ -267,7 +267,7 @@
       "properties": {
         "school": "Conservatory Lab Hancock",
         "yard": "Ctwn",
-        "stroke": "#644421",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -905,7 +905,7 @@
       "properties": {
         "school": "Conservatory Lab Hancock",
         "yard": "Frpt",
-        "stroke": "#552363",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -1271,7 +1271,7 @@
       "properties": {
         "school": "Conservatory Lab Hancock",
         "yard": "Frpt",
-        "stroke": "#504205",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -1349,7 +1349,7 @@
       "properties": {
         "school": "Conservatory Lab Hancock",
         "yard": "Wash",
-        "stroke": "#420226",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -1579,7 +1579,7 @@
       "properties": {
         "school": "Excel Acad 2 (EB)",
         "yard": "Wash",
-        "stroke": "#163664",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -1633,7 +1633,7 @@
       "properties": {
         "school": "Kenny ES",
         "yard": "Ctwn",
-        "stroke": "#612343",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -2207,7 +2207,7 @@
       "properties": {
         "school": "Kenny ES",
         "yard": "Read",
-        "stroke": "#265053",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -2909,7 +2909,7 @@
       "properties": {
         "school": "Kenny ES",
         "yard": "Read",
-        "stroke": "#561414",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -3227,7 +3227,7 @@
       "properties": {
         "school": "Kenny ES",
         "yard": "Read",
-        "stroke": "#634665",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -3449,7 +3449,7 @@
       "properties": {
         "school": "Mason ES",
         "yard": "Read",
-        "stroke": "#555131",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -3855,7 +3855,7 @@
       "properties": {
         "school": "Mason ES",
         "yard": "Frpt",
-        "stroke": "#260041",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -4261,7 +4261,7 @@
       "properties": {
         "school": "Mason ES",
         "yard": "Wash",
-        "stroke": "#561216",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -4299,7 +4299,7 @@
       "properties": {
         "school": "Bradley ES",
         "yard": "Read",
-        "stroke": "#312236",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -4329,7 +4329,7 @@
       "properties": {
         "school": "Bradley ES",
         "yard": "Wash",
-        "stroke": "#632160",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -4535,7 +4535,7 @@
       "properties": {
         "school": "Bradley ES",
         "yard": "Wash",
-        "stroke": "#460146",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -5805,7 +5805,7 @@
       "properties": {
         "school": "Bradley ES",
         "yard": "Wash",
-        "stroke": "#545663",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -5987,7 +5987,7 @@
       "properties": {
         "school": "Excel HS",
         "yard": "Wash",
-        "stroke": "#045363",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -6225,7 +6225,7 @@
       "properties": {
         "school": "Boston Collegiate Lower",
         "yard": "Read",
-        "stroke": "#361224",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -6327,7 +6327,7 @@
       "properties": {
         "school": "Boston Collegiate Lower",
         "yard": "Read",
-        "stroke": "#133500",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -7013,7 +7013,7 @@
       "properties": {
         "school": "Boston Collegiate Lower",
         "yard": "Read",
-        "stroke": "#623244",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -7299,7 +7299,7 @@
       "properties": {
         "school": "Boston Collegiate Lower",
         "yard": "Frpt",
-        "stroke": "#401440",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -7609,7 +7609,7 @@
       "properties": {
         "school": "Davis Leadership Acad",
         "yard": "Read",
-        "stroke": "#435415",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -7839,7 +7839,7 @@
       "properties": {
         "school": "Davis Leadership Acad",
         "yard": "Frpt",
-        "stroke": "#540156",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -8285,7 +8285,7 @@
       "properties": {
         "school": "HENDERSON K-2",
         "yard": "Ctwn",
-        "stroke": "#143552",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -8619,7 +8619,7 @@
       "properties": {
         "school": "HENDERSON K-2",
         "yard": "Read",
-        "stroke": "#023151",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -8825,7 +8825,7 @@
       "properties": {
         "school": "HENDERSON K-2",
         "yard": "Read",
-        "stroke": "#401306",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -9071,7 +9071,7 @@
       "properties": {
         "school": "Codman Acad Lower",
         "yard": "Ctwn",
-        "stroke": "#036341",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -9653,7 +9653,7 @@
       "properties": {
         "school": "Codman Acad Lower",
         "yard": "Read",
-        "stroke": "#365022",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -10019,7 +10019,7 @@
       "properties": {
         "school": "Lyon K-8",
         "yard": "Wash",
-        "stroke": "#002005",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -10073,7 +10073,7 @@
       "properties": {
         "school": "Clap ES",
         "yard": "Read",
-        "stroke": "#606106",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -10615,7 +10615,7 @@
       "properties": {
         "school": "Clap ES",
         "yard": "Read",
-        "stroke": "#124360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -10909,7 +10909,7 @@
       "properties": {
         "school": "Clap ES",
         "yard": "Read",
-        "stroke": "#223306",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -11179,7 +11179,7 @@
       "properties": {
         "school": "Comm Acad Sci & Health",
         "yard": "Read",
-        "stroke": "#635661",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -11521,7 +11521,7 @@
       "properties": {
         "school": "Comm Acad Sci & Health",
         "yard": "Wash",
-        "stroke": "#445151",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -11831,7 +11831,7 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Ctwn",
-        "stroke": "#502521",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -12525,7 +12525,7 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Read",
-        "stroke": "#630334",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -13515,7 +13515,7 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Read",
-        "stroke": "#621040",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -13809,7 +13809,7 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Frpt",
-        "stroke": "#644651",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -14167,7 +14167,7 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Frpt",
-        "stroke": "#430503",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -14253,7 +14253,7 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Frpt",
-        "stroke": "#266455",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -14323,7 +14323,7 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Frpt",
-        "stroke": "#320361",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -14609,7 +14609,7 @@
       "properties": {
         "school": "St John",
         "yard": "Frpt",
-        "stroke": "#251121",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -14959,7 +14959,7 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Ctwn",
-        "stroke": "#443360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -15381,7 +15381,7 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Ctwn",
-        "stroke": "#216310",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -15603,7 +15603,7 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Ctwn",
-        "stroke": "#642255",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -16241,7 +16241,7 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Frpt",
-        "stroke": "#232505",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -16415,7 +16415,7 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Frpt",
-        "stroke": "#015566",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -16829,7 +16829,7 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Ctwn",
-        "stroke": "#603620",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -16923,7 +16923,7 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Ctwn",
-        "stroke": "#661445",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -18233,7 +18233,7 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Ctwn",
-        "stroke": "#644515",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -18367,7 +18367,7 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Frpt",
-        "stroke": "#210354",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -18541,7 +18541,7 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Frpt",
-        "stroke": "#321132",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -18587,7 +18587,7 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Frpt",
-        "stroke": "#153130",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -18641,7 +18641,7 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Ctwn",
-        "stroke": "#210325",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -19191,7 +19191,7 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Read",
-        "stroke": "#525200",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -19621,7 +19621,7 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Read",
-        "stroke": "#241640",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -19987,7 +19987,7 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Read",
-        "stroke": "#104204",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -20753,7 +20753,7 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Frpt",
-        "stroke": "#654056",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -21271,7 +21271,7 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Frpt",
-        "stroke": "#363253",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -21493,7 +21493,7 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Frpt",
-        "stroke": "#263322",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -22235,7 +22235,7 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Ctwn",
-        "stroke": "#305236",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -22465,7 +22465,7 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Ctwn",
-        "stroke": "#663051",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -22583,7 +22583,7 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Read",
-        "stroke": "#512526",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -23637,7 +23637,7 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Ctwn",
-        "stroke": "#401501",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -23739,7 +23739,7 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Frpt",
-        "stroke": "#452063",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -24121,7 +24121,7 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Frpt",
-        "stroke": "#005240",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -24159,7 +24159,7 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Frpt",
-        "stroke": "#241343",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -24245,7 +24245,7 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Ctwn",
-        "stroke": "#462404",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -24843,7 +24843,7 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Read",
-        "stroke": "#050620",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -25529,7 +25529,7 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Read",
-        "stroke": "#556302",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -25767,7 +25767,7 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Frpt",
-        "stroke": "#232364",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -25877,7 +25877,7 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Wash",
-        "stroke": "#026220",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -26299,7 +26299,7 @@
       "properties": {
         "school": "West Zone ELC",
         "yard": "Frpt",
-        "stroke": "#565562",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -26689,7 +26689,7 @@
       "properties": {
         "school": "Frederick MS",
         "yard": "Ctwn",
-        "stroke": "#124450",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -26959,7 +26959,7 @@
       "properties": {
         "school": "Frederick MS",
         "yard": "Frpt",
-        "stroke": "#214013",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -27061,7 +27061,7 @@
       "properties": {
         "school": "HENDERSON 3-12",
         "yard": "Ctwn",
-        "stroke": "#005144",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -27443,7 +27443,7 @@
       "properties": {
         "school": "HENDERSON 3-12",
         "yard": "Read",
-        "stroke": "#050066",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -27841,7 +27841,7 @@
       "properties": {
         "school": "HENDERSON 3-12",
         "yard": "Read",
-        "stroke": "#605632",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -28591,7 +28591,7 @@
       "properties": {
         "school": "HENDERSON 3-12",
         "yard": "Wash",
-        "stroke": "#246635",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -28717,7 +28717,7 @@
       "properties": {
         "school": "Edwards Middle",
         "yard": "Read",
-        "stroke": "#322542",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -29435,7 +29435,7 @@
       "properties": {
         "school": "Edwards Middle",
         "yard": "Wash",
-        "stroke": "#350320",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -29809,7 +29809,7 @@
       "properties": {
         "school": "Perry K-8",
         "yard": "Ctwn",
-        "stroke": "#252063",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -30255,7 +30255,7 @@
       "properties": {
         "school": "Perry K-8",
         "yard": "Wash",
-        "stroke": "#665056",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -30429,7 +30429,7 @@
       "properties": {
         "school": "Madison Park HS",
         "yard": "Ctwn",
-        "stroke": "#300644",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -30707,7 +30707,7 @@
       "properties": {
         "school": "Madison Park HS",
         "yard": "Wash",
-        "stroke": "#224515",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -30769,7 +30769,7 @@
       "properties": {
         "school": "King K-8",
         "yard": "Ctwn",
-        "stroke": "#246016",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -30855,7 +30855,7 @@
       "properties": {
         "school": "King K-8",
         "yard": "Ctwn",
-        "stroke": "#246162",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -31333,7 +31333,7 @@
       "properties": {
         "school": "King K-8",
         "yard": "Read",
-        "stroke": "#446264",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -31891,7 +31891,7 @@
       "properties": {
         "school": "King K-8",
         "yard": "Frpt",
-        "stroke": "#102355",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -32497,7 +32497,7 @@
       "properties": {
         "school": "King K-8",
         "yard": "Read",
-        "stroke": "#642360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -32751,7 +32751,7 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Ctwn",
-        "stroke": "#061152",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -33613,7 +33613,7 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Read",
-        "stroke": "#400621",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -33755,7 +33755,7 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Ctwn",
-        "stroke": "#256255",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -34457,7 +34457,7 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Wash",
-        "stroke": "#462414",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -34503,7 +34503,7 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Frpt",
-        "stroke": "#444466",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -35165,7 +35165,7 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Read",
-        "stroke": "#060105",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -35995,7 +35995,7 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Read",
-        "stroke": "#541531",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -36137,7 +36137,7 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Frpt",
-        "stroke": "#133053",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -36287,7 +36287,7 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Wash",
-        "stroke": "#313225",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -36341,7 +36341,7 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Frpt",
-        "stroke": "#151115",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -36635,7 +36635,7 @@
       "properties": {
         "school": "West Roxbury Academy",
         "yard": "Frpt",
-        "stroke": "#104052",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -37081,7 +37081,7 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Frpt",
-        "stroke": "#400351",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -37615,7 +37615,7 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Frpt",
-        "stroke": "#305023",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -38165,7 +38165,7 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Frpt",
-        "stroke": "#032320",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -38275,7 +38275,7 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Frpt",
-        "stroke": "#400512",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -38409,7 +38409,7 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Wash",
-        "stroke": "#642343",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -38447,7 +38447,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Ctwn",
-        "stroke": "#656323",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -38677,7 +38677,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Read",
-        "stroke": "#110403",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -38723,7 +38723,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Ctwn",
-        "stroke": "#561163",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -38993,7 +38993,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Read",
-        "stroke": "#651661",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -39207,7 +39207,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Read",
-        "stroke": "#335400",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -39477,7 +39477,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Frpt",
-        "stroke": "#514145",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -39963,7 +39963,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Frpt",
-        "stroke": "#640553",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -41969,7 +41969,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Frpt",
-        "stroke": "#350164",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -42191,7 +42191,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Wash",
-        "stroke": "#000624",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -42261,7 +42261,7 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Wash",
-        "stroke": "#321133",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -42355,7 +42355,7 @@
       "properties": {
         "school": "McCormack MS",
         "yard": "Ctwn",
-        "stroke": "#404652",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -43265,7 +43265,7 @@
       "properties": {
         "school": "McCormack MS",
         "yard": "Frpt",
-        "stroke": "#066053",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -43431,7 +43431,7 @@
       "properties": {
         "school": "McCormack MS",
         "yard": "Wash",
-        "stroke": "#235035",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -43917,7 +43917,7 @@
       "properties": {
         "school": "Grew ES",
         "yard": "Ctwn",
-        "stroke": "#364164",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -44395,7 +44395,7 @@
       "properties": {
         "school": "Grew ES",
         "yard": "Ctwn",
-        "stroke": "#162224",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -44649,7 +44649,7 @@
       "properties": {
         "school": "Grew ES",
         "yard": "Frpt",
-        "stroke": "#202516",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -45375,7 +45375,7 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Ctwn",
-        "stroke": "#222015",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -45781,7 +45781,7 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Read",
-        "stroke": "#131061",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -46323,7 +46323,7 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Read",
-        "stroke": "#004206",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -46457,7 +46457,7 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Frpt",
-        "stroke": "#564142",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -46519,7 +46519,7 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Wash",
-        "stroke": "#003021",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -46877,7 +46877,7 @@
       "properties": {
         "school": "Timilty MS",
         "yard": "Ctwn",
-        "stroke": "#600166",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -47115,7 +47115,7 @@
       "properties": {
         "school": "Timilty MS",
         "yard": "Wash",
-        "stroke": "#053315",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -47185,7 +47185,7 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Read",
-        "stroke": "#214240",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -47839,7 +47839,7 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Read",
-        "stroke": "#041614",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -48365,7 +48365,7 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Read",
-        "stroke": "#300333",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -48851,7 +48851,7 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Read",
-        "stroke": "#130232",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -49561,7 +49561,7 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Frpt",
-        "stroke": "#305442",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -49647,7 +49647,7 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Frpt",
-        "stroke": "#660401",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -50013,7 +50013,7 @@
       "properties": {
         "school": "TechBoston Academy",
         "yard": "Read",
-        "stroke": "#615342",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -50731,7 +50731,7 @@
       "properties": {
         "school": "TechBoston Academy",
         "yard": "Frpt",
-        "stroke": "#352266",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -50809,7 +50809,7 @@
       "properties": {
         "school": "TechBoston Academy",
         "yard": "Wash",
-        "stroke": "#324320",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -51031,7 +51031,7 @@
       "properties": {
         "school": "Kennedy PJ ES",
         "yard": "Wash",
-        "stroke": "#441302",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -51333,7 +51333,7 @@
       "properties": {
         "school": "Kennedy PJ ES",
         "yard": "Wash",
-        "stroke": "#336220",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -51427,7 +51427,7 @@
       "properties": {
         "school": "Otis ES",
         "yard": "Wash",
-        "stroke": "#513235",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -51953,7 +51953,7 @@
       "properties": {
         "school": "Otis ES",
         "yard": "Wash",
-        "stroke": "#455053",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -51999,7 +51999,7 @@
       "properties": {
         "school": "Trotter ES",
         "yard": "Ctwn",
-        "stroke": "#246400",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -52125,7 +52125,7 @@
       "properties": {
         "school": "Trotter ES",
         "yard": "Frpt",
-        "stroke": "#461232",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -52563,7 +52563,7 @@
       "properties": {
         "school": "Trotter ES",
         "yard": "Read",
-        "stroke": "#410252",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -53329,7 +53329,7 @@
       "properties": {
         "school": "Trotter ES",
         "yard": "Frpt",
-        "stroke": "#210556",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -53479,7 +53479,7 @@
       "properties": {
         "school": "Winship ES",
         "yard": "Ctwn",
-        "stroke": "#131205",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -54165,7 +54165,7 @@
       "properties": {
         "school": "Winship ES",
         "yard": "Frpt",
-        "stroke": "#364351",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -54379,7 +54379,7 @@
       "properties": {
         "school": "Gardner Pilot Acad",
         "yard": "Frpt",
-        "stroke": "#501332",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -54561,7 +54561,7 @@
       "properties": {
         "school": "Gardner Pilot Acad",
         "yard": "Frpt",
-        "stroke": "#465633",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -55471,7 +55471,7 @@
       "properties": {
         "school": "Gardner Pilot Acad",
         "yard": "Frpt",
-        "stroke": "#440341",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -55621,7 +55621,7 @@
       "properties": {
         "school": "Gardner Pilot Acad",
         "yard": "Wash",
-        "stroke": "#163652",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -56011,7 +56011,7 @@
       "properties": {
         "school": "Horace Mann",
         "yard": "Wash",
-        "stroke": "#534404",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -56217,7 +56217,7 @@
       "properties": {
         "school": "Pope JP II Col Rd",
         "yard": "Read",
-        "stroke": "#541416",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -56295,7 +56295,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Ctwn",
-        "stroke": "#342065",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -56509,7 +56509,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#016055",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -56731,7 +56731,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#652233",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -57121,7 +57121,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#420446",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -57727,7 +57727,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#663034",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -57949,7 +57949,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#660243",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -58579,7 +58579,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#003036",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -58929,7 +58929,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Frpt",
-        "stroke": "#166421",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -59671,7 +59671,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Frpt",
-        "stroke": "#033646",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -60309,7 +60309,7 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Frpt",
-        "stroke": "#122066",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -60355,7 +60355,7 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Ctwn",
-        "stroke": "#622350",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -60425,7 +60425,7 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Read",
-        "stroke": "#222556",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -61127,7 +61127,7 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Frpt",
-        "stroke": "#643555",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -61981,7 +61981,7 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Frpt",
-        "stroke": "#461206",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -62059,7 +62059,7 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Frpt",
-        "stroke": "#354102",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -62697,7 +62697,7 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Wash",
-        "stroke": "#305342",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -62871,7 +62871,7 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Wash",
-        "stroke": "#002266",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -63061,7 +63061,7 @@
       "properties": {
         "school": "McKinley Middle",
         "yard": "Frpt",
-        "stroke": "#342222",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -63307,7 +63307,7 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Ctwn",
-        "stroke": "#354243",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -63865,7 +63865,7 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Ctwn",
-        "stroke": "#126530",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -64079,7 +64079,7 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Ctwn",
-        "stroke": "#121416",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -64581,7 +64581,7 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Read",
-        "stroke": "#523361",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -65043,7 +65043,7 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Read",
-        "stroke": "#604611",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -65257,7 +65257,7 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Ctwn",
-        "stroke": "#646644",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -66119,7 +66119,7 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Frpt",
-        "stroke": "#665546",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -66317,7 +66317,7 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Frpt",
-        "stroke": "#024450",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -66403,7 +66403,7 @@
       "properties": {
         "school": "Baldwin ELC",
         "yard": "Read",
-        "stroke": "#416332",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -67009,7 +67009,7 @@
       "properties": {
         "school": "Baldwin ELC",
         "yard": "Frpt",
-        "stroke": "#546243",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -67615,7 +67615,7 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Ctwn",
-        "stroke": "#462015",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -67957,7 +67957,7 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Read",
-        "stroke": "#224054",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -68203,7 +68203,7 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Ctwn",
-        "stroke": "#434360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -68913,7 +68913,7 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Read",
-        "stroke": "#610022",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -69303,7 +69303,7 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Read",
-        "stroke": "#524444",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -69573,7 +69573,7 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Read",
-        "stroke": "#513054",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -69939,7 +69939,7 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Frpt",
-        "stroke": "#605051",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -70009,7 +70009,7 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Frpt",
-        "stroke": "#321654",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -70391,7 +70391,7 @@
       "properties": {
         "school": "Quincy Upper School",
         "yard": "Frpt",
-        "stroke": "#363106",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -70893,7 +70893,7 @@
       "properties": {
         "school": "UP ACAD / S BOSTON",
         "yard": "Read",
-        "stroke": "#333001",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -71267,7 +71267,7 @@
       "properties": {
         "school": "UP ACAD / S BOSTON",
         "yard": "Read",
-        "stroke": "#110253",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -71497,7 +71497,7 @@
       "properties": {
         "school": "UP ACAD / S BOSTON",
         "yard": "Frpt",
-        "stroke": "#112211",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -71759,7 +71759,7 @@
       "properties": {
         "school": "UP ACAD / S BOSTON",
         "yard": "Frpt",
-        "stroke": "#033602",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -72277,7 +72277,7 @@
       "properties": {
         "school": "Manning ES",
         "yard": "Ctwn",
-        "stroke": "#532561",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -72371,7 +72371,7 @@
       "properties": {
         "school": "Manning ES",
         "yard": "Read",
-        "stroke": "#100512",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -72697,7 +72697,7 @@
       "properties": {
         "school": "Manning ES",
         "yard": "Frpt",
-        "stroke": "#231161",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -73047,7 +73047,7 @@
       "properties": {
         "school": "Bridge Boston 2-4",
         "yard": "Ctwn",
-        "stroke": "#263254",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -73421,7 +73421,7 @@
       "properties": {
         "school": "Bridge Boston 2-4",
         "yard": "Frpt",
-        "stroke": "#503665",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -73683,7 +73683,7 @@
       "properties": {
         "school": "Bridge Boston 2-4",
         "yard": "Frpt",
-        "stroke": "#441323",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -74057,7 +74057,7 @@
       "properties": {
         "school": "BCLA - Boston Comm Lead Acad",
         "yard": "Frpt",
-        "stroke": "#012020",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -74391,7 +74391,7 @@
       "properties": {
         "school": "McKinley Elementary",
         "yard": "Wash",
-        "stroke": "#260103",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -74725,7 +74725,7 @@
       "properties": {
         "school": "Boston Prep",
         "yard": "Ctwn",
-        "stroke": "#241143",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -75131,7 +75131,7 @@
       "properties": {
         "school": "Irving MS",
         "yard": "Read",
-        "stroke": "#101104",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -75241,7 +75241,7 @@
       "properties": {
         "school": "Irving MS",
         "yard": "Frpt",
-        "stroke": "#046630",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -75631,7 +75631,7 @@
       "properties": {
         "school": "Irving MS",
         "yard": "Frpt",
-        "stroke": "#454503",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -75997,7 +75997,7 @@
       "properties": {
         "school": "Brighton HS",
         "yard": "Frpt",
-        "stroke": "#500330",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -76027,7 +76027,7 @@
       "properties": {
         "school": "East Boston EEC",
         "yard": "Frpt",
-        "stroke": "#610204",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -76657,7 +76657,7 @@
       "properties": {
         "school": "East Boston EEC",
         "yard": "Wash",
-        "stroke": "#664300",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -77343,7 +77343,7 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#621263",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -77821,7 +77821,7 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#024122",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -78379,7 +78379,7 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#650360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -78801,7 +78801,7 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#620553",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -79343,7 +79343,7 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#136260",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -79485,7 +79485,7 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Frpt",
-        "stroke": "#563640",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -79635,7 +79635,7 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Frpt",
-        "stroke": "#050106",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -79697,7 +79697,7 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Wash",
-        "stroke": "#631566",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -80175,7 +80175,7 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Ctwn",
-        "stroke": "#101064",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -80557,7 +80557,7 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Read",
-        "stroke": "#142500",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -80859,7 +80859,7 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Read",
-        "stroke": "#040360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -81809,7 +81809,7 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Frpt",
-        "stroke": "#624334",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -82135,7 +82135,7 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Read",
-        "stroke": "#566061",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -82333,7 +82333,7 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Frpt",
-        "stroke": "#052254",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -82371,7 +82371,7 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Wash",
-        "stroke": "#631424",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -82529,7 +82529,7 @@
       "properties": {
         "school": "Dearborn STEM Acad",
         "yard": "Frpt",
-        "stroke": "#112214",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -82775,7 +82775,7 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Read",
-        "stroke": "#333130",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -83045,7 +83045,7 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Read",
-        "stroke": "#001541",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -83323,7 +83323,7 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Frpt",
-        "stroke": "#611344",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -83489,7 +83489,7 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Read",
-        "stroke": "#253540",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -84367,7 +84367,7 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Wash",
-        "stroke": "#604105",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -84685,7 +84685,7 @@
       "properties": {
         "school": "Park Street Sch",
         "yard": "Wash",
-        "stroke": "#034104",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -84715,7 +84715,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Ctwn",
-        "stroke": "#316136",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -84809,7 +84809,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Ctwn",
-        "stroke": "#455040",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -84991,7 +84991,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Read",
-        "stroke": "#215162",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -86677,7 +86677,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Read",
-        "stroke": "#124650",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -86707,7 +86707,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Ctwn",
-        "stroke": "#236263",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -87441,7 +87441,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Read",
-        "stroke": "#203033",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -88159,7 +88159,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Read",
-        "stroke": "#000210",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -88189,7 +88189,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Frpt",
-        "stroke": "#205205",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -88267,7 +88267,7 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Wash",
-        "stroke": "#232561",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -88537,7 +88537,7 @@
       "properties": {
         "school": "Bridge Boston",
         "yard": "Ctwn",
-        "stroke": "#643422",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -88727,7 +88727,7 @@
       "properties": {
         "school": "Bridge Boston",
         "yard": "Frpt",
-        "stroke": "#212524",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -88957,7 +88957,7 @@
       "properties": {
         "school": "Ellis ES",
         "yard": "Read",
-        "stroke": "#341331",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -89483,7 +89483,7 @@
       "properties": {
         "school": "Ellis ES",
         "yard": "Read",
-        "stroke": "#556535",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -89801,7 +89801,7 @@
       "properties": {
         "school": "Ellis ES",
         "yard": "Frpt",
-        "stroke": "#301614",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -90407,7 +90407,7 @@
       "properties": {
         "school": "Ellis ES",
         "yard": "Frpt",
-        "stroke": "#253612",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -90733,7 +90733,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Ctwn",
-        "stroke": "#345434",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -91419,7 +91419,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Ctwn",
-        "stroke": "#512362",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -91633,7 +91633,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#350322",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -91951,7 +91951,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Read",
-        "stroke": "#325104",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -92173,7 +92173,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#510006",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -92371,7 +92371,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Read",
-        "stroke": "#144035",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -93353,7 +93353,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Read",
-        "stroke": "#551650",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -94623,7 +94623,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Read",
-        "stroke": "#305014",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -95053,7 +95053,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#214062",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -95139,7 +95139,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#115460",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -95193,7 +95193,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#211012",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -95255,7 +95255,7 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#225514",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -95285,7 +95285,7 @@
       "properties": {
         "school": "Adams ES",
         "yard": "Frpt",
-        "stroke": "#536615",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -95315,7 +95315,7 @@
       "properties": {
         "school": "Adams ES",
         "yard": "Wash",
-        "stroke": "#543411",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -95753,7 +95753,7 @@
       "properties": {
         "school": "Adams ES",
         "yard": "Wash",
-        "stroke": "#013636",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -96551,7 +96551,7 @@
       "properties": {
         "school": "Adams ES",
         "yard": "Wash",
-        "stroke": "#156116",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -96661,7 +96661,7 @@
       "properties": {
         "school": "Umana Acad K-8",
         "yard": "Read",
-        "stroke": "#415023",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -96739,7 +96739,7 @@
       "properties": {
         "school": "Umana Acad K-8",
         "yard": "Frpt",
-        "stroke": "#340652",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -97681,7 +97681,7 @@
       "properties": {
         "school": "Umana Acad K-8",
         "yard": "Wash",
-        "stroke": "#402326",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -97967,7 +97967,7 @@
       "properties": {
         "school": "Boston Teachers Union K-8",
         "yard": "Ctwn",
-        "stroke": "#165424",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -98237,7 +98237,7 @@
       "properties": {
         "school": "Boston Teachers Union K-8",
         "yard": "Frpt",
-        "stroke": "#036124",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -98459,7 +98459,7 @@
       "properties": {
         "school": "Boston Teachers Union K-8",
         "yard": "Read",
-        "stroke": "#025036",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -99033,7 +99033,7 @@
       "properties": {
         "school": "Boston Teachers Union K-8",
         "yard": "Frpt",
-        "stroke": "#630633",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -99391,7 +99391,7 @@
       "properties": {
         "school": "Alighieri Elementary",
         "yard": "Wash",
-        "stroke": "#236165",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -99469,7 +99469,7 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Read",
-        "stroke": "#063364",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -99523,7 +99523,7 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#154220",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -100185,7 +100185,7 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#535665",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -101167,7 +101167,7 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#043333",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -101333,7 +101333,7 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#052523",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -101499,7 +101499,7 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#231325",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -101953,7 +101953,7 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Wash",
-        "stroke": "#034250",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -102423,7 +102423,7 @@
       "properties": {
         "school": "Bates ES",
         "yard": "Ctwn",
-        "stroke": "#114136",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -102981,7 +102981,7 @@
       "properties": {
         "school": "Bates ES",
         "yard": "Read",
-        "stroke": "#510630",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -103395,7 +103395,7 @@
       "properties": {
         "school": "Bates ES",
         "yard": "Ctwn",
-        "stroke": "#256062",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -103505,7 +103505,7 @@
       "properties": {
         "school": "Bates ES",
         "yard": "Frpt",
-        "stroke": "#442042",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -103743,7 +103743,7 @@
       "properties": {
         "school": "Advent School",
         "yard": "Frpt",
-        "stroke": "#352164",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -104053,7 +104053,7 @@
       "properties": {
         "school": "Advent School",
         "yard": "Wash",
-        "stroke": "#621410",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -104259,7 +104259,7 @@
       "properties": {
         "school": "Philbrick ES",
         "yard": "Ctwn",
-        "stroke": "#125010",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -104929,7 +104929,7 @@
       "properties": {
         "school": "Philbrick ES",
         "yard": "Read",
-        "stroke": "#640325",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -105047,7 +105047,7 @@
       "properties": {
         "school": "Philbrick ES",
         "yard": "Read",
-        "stroke": "#504133",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -105757,7 +105757,7 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Read",
-        "stroke": "#543536",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -105939,7 +105939,7 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Ctwn",
-        "stroke": "#051511",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -106377,7 +106377,7 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Frpt",
-        "stroke": "#244504",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -106639,7 +106639,7 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Read",
-        "stroke": "#200533",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -106781,7 +106781,7 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Wash",
-        "stroke": "#666150",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -106987,7 +106987,7 @@
       "properties": {
         "school": "Mission Hill K-8",
         "yard": "Read",
-        "stroke": "#230203",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -107129,7 +107129,7 @@
       "properties": {
         "school": "Mission Hill K-8",
         "yard": "Ctwn",
-        "stroke": "#040122",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -107655,7 +107655,7 @@
       "properties": {
         "school": "Mission Hill K-8",
         "yard": "Read",
-        "stroke": "#264421",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -107949,7 +107949,7 @@
       "properties": {
         "school": "Holmes ES",
         "yard": "Read",
-        "stroke": "#351201",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -108203,7 +108203,7 @@
       "properties": {
         "school": "Holmes ES",
         "yard": "Read",
-        "stroke": "#251163",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -108737,7 +108737,7 @@
       "properties": {
         "school": "Holmes ES",
         "yard": "Read",
-        "stroke": "#044512",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -109159,7 +109159,7 @@
       "properties": {
         "school": "Holmes ES",
         "yard": "Wash",
-        "stroke": "#640400",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -109261,7 +109261,7 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Read",
-        "stroke": "#412426",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -109451,7 +109451,7 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Frpt",
-        "stroke": "#005604",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -109673,7 +109673,7 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Frpt",
-        "stroke": "#212563",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -110471,7 +110471,7 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Frpt",
-        "stroke": "#055463",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -111005,7 +111005,7 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Wash",
-        "stroke": "#554550",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -111491,7 +111491,7 @@
       "properties": {
         "school": "Greenwood S K-8",
         "yard": "Ctwn",
-        "stroke": "#645465",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -112089,7 +112089,7 @@
       "properties": {
         "school": "Greenwood S K-8",
         "yard": "Read",
-        "stroke": "#451140",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -112487,7 +112487,7 @@
       "properties": {
         "school": "Greenwood S K-8",
         "yard": "Frpt",
-        "stroke": "#154624",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -112629,7 +112629,7 @@
       "properties": {
         "school": "Greenwood S K-8",
         "yard": "Frpt",
-        "stroke": "#025264",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -112987,7 +112987,7 @@
       "properties": {
         "school": "Pope JP II Lower Mills",
         "yard": "Ctwn",
-        "stroke": "#510252",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -113409,7 +113409,7 @@
       "properties": {
         "school": "McKinley SEA",
         "yard": "Frpt",
-        "stroke": "#555613",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -113591,7 +113591,7 @@
       "properties": {
         "school": "McKinley SEA",
         "yard": "Frpt",
-        "stroke": "#643060",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -113933,7 +113933,7 @@
       "properties": {
         "school": "Warren Prescott K-8",
         "yard": "Ctwn",
-        "stroke": "#145524",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -114251,7 +114251,7 @@
       "properties": {
         "school": "Warren Prescott K-8",
         "yard": "Wash",
-        "stroke": "#544010",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -114697,7 +114697,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Ctwn",
-        "stroke": "#004532",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -115423,7 +115423,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Ctwn",
-        "stroke": "#421414",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -115565,7 +115565,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Ctwn",
-        "stroke": "#540360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -116467,7 +116467,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#444340",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -116881,7 +116881,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Ctwn",
-        "stroke": "#443504",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -118103,7 +118103,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#650563",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -118277,7 +118277,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#420403",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -118899,7 +118899,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#224346",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -120025,7 +120025,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#426234",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -120399,7 +120399,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#615360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -120477,7 +120477,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#053012",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -120531,7 +120531,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#155212",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -120577,7 +120577,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#425513",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -120759,7 +120759,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#143221",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -120789,7 +120789,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Wash",
-        "stroke": "#341166",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -120859,7 +120859,7 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Wash",
-        "stroke": "#106352",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -121089,7 +121089,7 @@
       "properties": {
         "school": "Boston Green Acad",
         "yard": "Ctwn",
-        "stroke": "#452044",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -121431,7 +121431,7 @@
       "properties": {
         "school": "Boston Green Acad",
         "yard": "Read",
-        "stroke": "#505102",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -121861,7 +121861,7 @@
       "properties": {
         "school": "Boston Green Acad",
         "yard": "Frpt",
-        "stroke": "#311441",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -122163,7 +122163,7 @@
       "properties": {
         "school": "Kilmer 4-8",
         "yard": "Ctwn",
-        "stroke": "#205302",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -122689,7 +122689,7 @@
       "properties": {
         "school": "Kilmer 4-8",
         "yard": "Ctwn",
-        "stroke": "#024200",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -122783,7 +122783,7 @@
       "properties": {
         "school": "Kilmer 4-8",
         "yard": "Read",
-        "stroke": "#232266",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -123197,7 +123197,7 @@
       "properties": {
         "school": "Roosevelt K-8 (K1-1)",
         "yard": "Ctwn",
-        "stroke": "#005165",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -123499,7 +123499,7 @@
       "properties": {
         "school": "Roosevelt K-8 (K1-1)",
         "yard": "Ctwn",
-        "stroke": "#435234",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -124129,7 +124129,7 @@
       "properties": {
         "school": "Mozart Elementary",
         "yard": "Ctwn",
-        "stroke": "#365043",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -124231,7 +124231,7 @@
       "properties": {
         "school": "Mozart Elementary",
         "yard": "Read",
-        "stroke": "#404256",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -124549,7 +124549,7 @@
       "properties": {
         "school": "Conservatory Lab Carney",
         "yard": "Ctwn",
-        "stroke": "#616651",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -124827,7 +124827,7 @@
       "properties": {
         "school": "Conservatory Lab Carney",
         "yard": "Frpt",
-        "stroke": "#143600",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -125473,7 +125473,7 @@
       "properties": {
         "school": "Conservatory Lab Carney",
         "yard": "Wash",
-        "stroke": "#000053",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -125671,7 +125671,7 @@
       "properties": {
         "school": "Conservatory Lab Carney",
         "yard": "Frpt",
-        "stroke": "#321204",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -125981,7 +125981,7 @@
       "properties": {
         "school": "East Boston HS",
         "yard": "Ctwn",
-        "stroke": "#450036",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -126667,7 +126667,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Ctwn",
-        "stroke": "#543604",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -127305,7 +127305,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Read",
-        "stroke": "#451655",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -127679,7 +127679,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Ctwn",
-        "stroke": "#525155",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -128861,7 +128861,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Read",
-        "stroke": "#641543",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -129251,7 +129251,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Read",
-        "stroke": "#061111",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -129481,7 +129481,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Frpt",
-        "stroke": "#006330",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -129775,7 +129775,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Read",
-        "stroke": "#530005",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -129853,7 +129853,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Frpt",
-        "stroke": "#562360",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -129923,7 +129923,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Frpt",
-        "stroke": "#314142",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -129961,7 +129961,7 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Frpt",
-        "stroke": "#164133",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -129991,7 +129991,7 @@
       "properties": {
         "school": "Guild ES",
         "yard": "Read",
-        "stroke": "#114201",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -130093,7 +130093,7 @@
       "properties": {
         "school": "Guild ES",
         "yard": "Wash",
-        "stroke": "#464031",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -130403,7 +130403,7 @@
       "properties": {
         "school": "Guild ES",
         "yard": "Wash",
-        "stroke": "#210026",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -131369,7 +131369,7 @@
       "properties": {
         "school": "Guild ES",
         "yard": "Wash",
-        "stroke": "#120254",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -131879,7 +131879,7 @@
       "properties": {
         "school": "Roxbury Prep Dorchester Campus",
         "yard": "Read",
-        "stroke": "#612665",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -132141,7 +132141,7 @@
       "properties": {
         "school": "Roxbury Prep Dorchester Campus",
         "yard": "Wash",
-        "stroke": "#050303",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -133091,7 +133091,7 @@
       "properties": {
         "school": "Roosevelt K-8 (2-8)",
         "yard": "Read",
-        "stroke": "#660654",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -133169,7 +133169,7 @@
       "properties": {
         "school": "Roosevelt K-8 (2-8)",
         "yard": "Ctwn",
-        "stroke": "#522062",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -133311,7 +133311,7 @@
       "properties": {
         "school": "Roosevelt K-8 (2-8)",
         "yard": "Frpt",
-        "stroke": "#503064",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -133573,7 +133573,7 @@
       "properties": {
         "school": "Excel Acad 1 (EB)",
         "yard": "Wash",
-        "stroke": "#524310",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -133987,7 +133987,7 @@
       "properties": {
         "school": "Hurley K-8",
         "yard": "Read",
-        "stroke": "#621034",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -134289,7 +134289,7 @@
       "properties": {
         "school": "Hurley K-8",
         "yard": "Frpt",
-        "stroke": "#232130",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -134471,7 +134471,7 @@
       "properties": {
         "school": "Mendell ES",
         "yard": "Ctwn",
-        "stroke": "#431203",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -134829,7 +134829,7 @@
       "properties": {
         "school": "Mendell ES",
         "yard": "Frpt",
-        "stroke": "#201454",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -135171,7 +135171,7 @@
       "properties": {
         "school": "Mendell ES",
         "yard": "Frpt",
-        "stroke": "#433161",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -135545,7 +135545,7 @@
       "properties": {
         "school": "SHAW ES",
         "yard": "Ctwn",
-        "stroke": "#443302",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -135903,7 +135903,7 @@
       "properties": {
         "school": "SHAW ES",
         "yard": "Frpt",
-        "stroke": "#100253",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -136405,7 +136405,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Read",
-        "stroke": "#114206",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -137403,7 +137403,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Read",
-        "stroke": "#413166",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -137641,7 +137641,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Read",
-        "stroke": "#364101",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -137911,7 +137911,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Read",
-        "stroke": "#165032",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -138861,7 +138861,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Frpt",
-        "stroke": "#213400",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -139147,7 +139147,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Frpt",
-        "stroke": "#021060",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -139177,7 +139177,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Frpt",
-        "stroke": "#034441",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -139279,7 +139279,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Frpt",
-        "stroke": "#061056",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -139397,7 +139397,7 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Wash",
-        "stroke": "#461205",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -139707,7 +139707,7 @@
       "properties": {
         "school": "ODonnell ES",
         "yard": "Wash",
-        "stroke": "#016604",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -140129,7 +140129,7 @@
       "properties": {
         "school": "English HS",
         "yard": "Wash",
-        "stroke": "#565551",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -140407,7 +140407,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Ctwn",
-        "stroke": "#120543",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -140845,7 +140845,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Read",
-        "stroke": "#335103",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -141403,7 +141403,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Read",
-        "stroke": "#644246",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -141849,7 +141849,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Read",
-        "stroke": "#260334",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -142399,7 +142399,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Read",
-        "stroke": "#323653",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -142485,7 +142485,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Frpt",
-        "stroke": "#246303",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -143147,7 +143147,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Frpt",
-        "stroke": "#243366",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -143521,7 +143521,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Frpt",
-        "stroke": "#365362",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -143551,7 +143551,7 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Frpt",
-        "stroke": "#332341",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -143821,7 +143821,7 @@
       "properties": {
         "school": "Higginson K-2 (Harrishoff St)",
         "yard": "Read",
-        "stroke": "#454262",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -143987,7 +143987,7 @@
       "properties": {
         "school": "Higginson K-2 (Harrishoff St)",
         "yard": "Frpt",
-        "stroke": "#233403",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -144441,7 +144441,7 @@
       "properties": {
         "school": "Higginson K-2 (Harrishoff St)",
         "yard": "Frpt",
-        "stroke": "#045213",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -144623,7 +144623,7 @@
       "properties": {
         "school": "Charlestown High School",
         "yard": "Ctwn",
-        "stroke": "#103011",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -145109,7 +145109,7 @@
       "properties": {
         "school": "Charlestown High School",
         "yard": "Frpt",
-        "stroke": "#425330",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -145339,7 +145339,7 @@
       "properties": {
         "school": "Charlestown High School",
         "yard": "Frpt",
-        "stroke": "#660651",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -145737,7 +145737,7 @@
       "properties": {
         "school": "Conley ES",
         "yard": "Ctwn",
-        "stroke": "#525611",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -146079,7 +146079,7 @@
       "properties": {
         "school": "Conley ES",
         "yard": "Ctwn",
-        "stroke": "#436116",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -146469,7 +146469,7 @@
       "properties": {
         "school": "Conley ES",
         "yard": "Frpt",
-        "stroke": "#321454",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -146651,7 +146651,7 @@
       "properties": {
         "school": "Conley ES",
         "yard": "Frpt",
-        "stroke": "#135554",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -146697,7 +146697,7 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Read",
-        "stroke": "#106234",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -146727,7 +146727,7 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Frpt",
-        "stroke": "#246442",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -146757,7 +146757,7 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Frpt",
-        "stroke": "#553335",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -146811,7 +146811,7 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Wash",
-        "stroke": "#212606",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -148385,7 +148385,7 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Wash",
-        "stroke": "#234124",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -148767,7 +148767,7 @@
       "properties": {
         "school": "Ellison/Parks EES",
         "yard": "Read",
-        "stroke": "#066026",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -148893,7 +148893,7 @@
       "properties": {
         "school": "Ellison/Parks EES",
         "yard": "Read",
-        "stroke": "#022451",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -149587,7 +149587,7 @@
       "properties": {
         "school": "Ellison/Parks EES",
         "yard": "Read",
-        "stroke": "#255361",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -150601,7 +150601,7 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Ctwn",
-        "stroke": "#143632",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -150791,7 +150791,7 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Ctwn",
-        "stroke": "#236224",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -151349,7 +151349,7 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Read",
-        "stroke": "#304664",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -151483,7 +151483,7 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Read",
-        "stroke": "#345005",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -152057,7 +152057,7 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Read",
-        "stroke": "#032653",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -152583,7 +152583,7 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Frpt",
-        "stroke": "#401340",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -152829,7 +152829,7 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Frpt",
-        "stroke": "#351061",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -152859,7 +152859,7 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Wash",
-        "stroke": "#541500",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -153153,7 +153153,7 @@
       "properties": {
         "school": "Urban Science Academy",
         "yard": "Ctwn",
-        "stroke": "#506226",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -153839,7 +153839,7 @@
       "properties": {
         "school": "Winthrop ES",
         "yard": "Frpt",
-        "stroke": "#643365",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -154237,7 +154237,7 @@
       "properties": {
         "school": "Winthrop ES",
         "yard": "Read",
-        "stroke": "#420415",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -154267,7 +154267,7 @@
       "properties": {
         "school": "Winthrop ES",
         "yard": "Frpt",
-        "stroke": "#302540",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -154537,7 +154537,7 @@
       "properties": {
         "school": "Haynes EEC",
         "yard": "Read",
-        "stroke": "#125321",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -154847,7 +154847,7 @@
       "properties": {
         "school": "Haynes EEC",
         "yard": "Read",
-        "stroke": "#665422",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -155149,7 +155149,7 @@
       "properties": {
         "school": "Haynes EEC",
         "yard": "Frpt",
-        "stroke": "#243266",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -155723,7 +155723,7 @@
       "properties": {
         "school": "Channing Elementary",
         "yard": "Ctwn",
-        "stroke": "#514645",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -156121,7 +156121,7 @@
       "properties": {
         "school": "Channing Elementary",
         "yard": "Ctwn",
-        "stroke": "#102662",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -156399,7 +156399,7 @@
       "properties": {
         "school": "Channing Elementary",
         "yard": "Ctwn",
-        "stroke": "#435405",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -156565,7 +156565,7 @@
       "properties": {
         "school": "Channing Elementary",
         "yard": "Read",
-        "stroke": "#410661",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -156955,7 +156955,7 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Ctwn",
-        "stroke": "#130233",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -157801,7 +157801,7 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Read",
-        "stroke": "#445044",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -158327,7 +158327,7 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Read",
-        "stroke": "#143036",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -159005,7 +159005,7 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Read",
-        "stroke": "#102533",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -159243,7 +159243,7 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Read",
-        "stroke": "#033600",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -159273,7 +159273,7 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Frpt",
-        "stroke": "#522516",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -159559,7 +159559,7 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Frpt",
-        "stroke": "#540152",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -159589,7 +159589,7 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Wash",
-        "stroke": "#140315",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -159811,7 +159811,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Ctwn",
-        "stroke": "#003060",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -160481,7 +160481,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Read",
-        "stroke": "#625400",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -160735,7 +160735,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Read",
-        "stroke": "#134615",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -161197,7 +161197,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#012156",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -162275,7 +162275,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#346511",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -162377,7 +162377,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#004266",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -162743,7 +162743,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#203033",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -163173,7 +163173,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#601136",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -163339,7 +163339,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Wash",
-        "stroke": "#311322",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -163417,7 +163417,7 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Wash",
-        "stroke": "#241205",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -163807,7 +163807,7 @@
       "properties": {
         "school": "Lee Acad",
         "yard": "Ctwn",
-        "stroke": "#100621",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -164229,7 +164229,7 @@
       "properties": {
         "school": "Lee Acad",
         "yard": "Wash",
-        "stroke": "#501535",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -164683,7 +164683,7 @@
       "properties": {
         "school": "Roxbury Prep Lucy Stone",
         "yard": "Frpt",
-        "stroke": "#152530",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -165001,7 +165001,7 @@
       "properties": {
         "school": "Roxbury Prep Lucy Stone",
         "yard": "Read",
-        "stroke": "#366560",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -165335,7 +165335,7 @@
       "properties": {
         "school": "Roxbury Prep Lucy Stone",
         "yard": "Frpt",
-        "stroke": "#305451",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -165733,7 +165733,7 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Read",
-        "stroke": "#652202",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -166371,7 +166371,7 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Read",
-        "stroke": "#501435",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -166433,7 +166433,7 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Frpt",
-        "stroke": "#365133",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -166895,7 +166895,7 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Read",
-        "stroke": "#261154",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -167149,7 +167149,7 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Frpt",
-        "stroke": "#056035",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -167259,7 +167259,7 @@
       "properties": {
         "school": "Hale ES",
         "yard": "Read",
-        "stroke": "#245653",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -167793,7 +167793,7 @@
       "properties": {
         "school": "Hale ES",
         "yard": "Frpt",
-        "stroke": "#066220",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -167999,7 +167999,7 @@
       "properties": {
         "school": "Kilmer K-3",
         "yard": "Ctwn",
-        "stroke": "#640412",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -168269,7 +168269,7 @@
       "properties": {
         "school": "Kilmer K-3",
         "yard": "Ctwn",
-        "stroke": "#235462",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -168995,7 +168995,7 @@
       "properties": {
         "school": "Kilmer K-3",
         "yard": "Ctwn",
-        "stroke": "#663162",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -169129,7 +169129,7 @@
       "properties": {
         "school": "Kilmer K-3",
         "yard": "Ctwn",
-        "stroke": "#225253",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -169623,7 +169623,7 @@
       "properties": {
         "school": "Chittick ES",
         "yard": "Ctwn",
-        "stroke": "#105641",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -170373,7 +170373,7 @@
       "properties": {
         "school": "Chittick ES",
         "yard": "Ctwn",
-        "stroke": "#664024",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -170675,7 +170675,7 @@
       "properties": {
         "school": "Chittick ES",
         "yard": "Read",
-        "stroke": "#524150",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -170721,7 +170721,7 @@
       "properties": {
         "school": "Chittick ES",
         "yard": "Frpt",
-        "stroke": "#656662",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -171215,7 +171215,7 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Ctwn",
-        "stroke": "#401026",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -171445,7 +171445,7 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Read",
-        "stroke": "#644624",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -172139,7 +172139,7 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Ctwn",
-        "stroke": "#252456",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -172401,7 +172401,7 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Frpt",
-        "stroke": "#613645",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -172767,7 +172767,7 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Read",
-        "stroke": "#216346",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -173173,7 +173173,7 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Frpt",
-        "stroke": "#436032",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -173643,7 +173643,7 @@
       "properties": {
         "school": "Perkins ES",
         "yard": "Ctwn",
-        "stroke": "#656524",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -173969,7 +173969,7 @@
       "properties": {
         "school": "Perkins ES",
         "yard": "Frpt",
-        "stroke": "#316344",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -174255,7 +174255,7 @@
       "properties": {
         "school": "Perkins ES",
         "yard": "Frpt",
-        "stroke": "#324654",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -174909,7 +174909,7 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Ctwn",
-        "stroke": "#255123",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -175299,7 +175299,7 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Ctwn",
-        "stroke": "#222140",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -175681,7 +175681,7 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Read",
-        "stroke": "#344422",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -176215,7 +176215,7 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Ctwn",
-        "stroke": "#523240",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -176341,7 +176341,7 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Frpt",
-        "stroke": "#032231",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -176715,7 +176715,7 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Read",
-        "stroke": "#604025",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -177145,7 +177145,7 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Ctwn",
-        "stroke": "#043301",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -177407,7 +177407,7 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Read",
-        "stroke": "#603162",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -177509,7 +177509,7 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Ctwn",
-        "stroke": "#161110",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -177699,7 +177699,7 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Read",
-        "stroke": "#160356",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -177793,7 +177793,7 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Frpt",
-        "stroke": "#214546",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -179007,7 +179007,7 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Frpt",
-        "stroke": "#451541",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -179325,7 +179325,7 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Frpt",
-        "stroke": "#126351",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -179467,7 +179467,7 @@
       "properties": {
         "school": "McKinley Prep HS",
         "yard": "Read",
-        "stroke": "#043404",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -179497,7 +179497,7 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Ctwn",
-        "stroke": "#053506",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -179527,7 +179527,7 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Read",
-        "stroke": "#201616",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -179709,7 +179709,7 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Frpt",
-        "stroke": "#663653",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -180291,7 +180291,7 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Frpt",
-        "stroke": "#134143",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -180345,7 +180345,7 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Wash",
-        "stroke": "#140130",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -181647,7 +181647,7 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Wash",
-        "stroke": "#624101",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -182117,7 +182117,7 @@
       "properties": {
         "school": "Everett ES",
         "yard": "Read",
-        "stroke": "#021533",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -182683,7 +182683,7 @@
       "properties": {
         "school": "Everett ES",
         "yard": "Read",
-        "stroke": "#220535",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -182777,7 +182777,7 @@
       "properties": {
         "school": "Everett ES",
         "yard": "Wash",
-        "stroke": "#010245",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -183247,7 +183247,7 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Read",
-        "stroke": "#302366",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -184061,7 +184061,7 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Read",
-        "stroke": "#656446",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -184675,7 +184675,7 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#340214",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -185273,7 +185273,7 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#350335",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -185623,7 +185623,7 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#451362",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -185661,7 +185661,7 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#021142",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -185763,7 +185763,7 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#014545",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -185993,7 +185993,7 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Wash",
-        "stroke": "#036413",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -186447,7 +186447,7 @@
       "properties": {
         "school": "Higginson/Lewis K-8",
         "yard": "Read",
-        "stroke": "#045426",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -186845,7 +186845,7 @@
       "properties": {
         "school": "Higginson/Lewis K-8",
         "yard": "Frpt",
-        "stroke": "#646555",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -187091,7 +187091,7 @@
       "properties": {
         "school": "Higginson/Lewis K-8",
         "yard": "Wash",
-        "stroke": "#600233",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -187801,7 +187801,7 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Ctwn",
-        "stroke": "#146615",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -188231,7 +188231,7 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Ctwn",
-        "stroke": "#636051",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -189021,7 +189021,7 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Frpt",
-        "stroke": "#426325",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -189051,7 +189051,7 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Frpt",
-        "stroke": "#034104",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -189145,7 +189145,7 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Frpt",
-        "stroke": "#442336",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -189551,7 +189551,7 @@
       "properties": {
         "school": "Kennedy JF ES",
         "yard": "Ctwn",
-        "stroke": "#606216",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -189909,7 +189909,7 @@
       "properties": {
         "school": "Kennedy JF ES",
         "yard": "Read",
-        "stroke": "#063415",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -190523,7 +190523,7 @@
       "properties": {
         "school": "Kennedy JF ES",
         "yard": "Frpt",
-        "stroke": "#665431",
+        "stroke": "#ace",
         "stroke-width": 1
       }
     },
@@ -190753,8 +190753,2405 @@
       "properties": {
         "school": "Kennedy JF ES",
         "yard": "Wash",
-        "stroke": "#122436",
+        "stroke": "#ace",
         "stroke-width": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1320302,
+          42.244227
+        ]
+      },
+      "properties": {
+        "school": "Academy Of Pacific Rim",
+        "address": "1 Westinghouse Plaza",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03489031,
+          42.365563
+        ]
+      },
+      "properties": {
+        "school": "Adams ES",
+        "address": "165 Webster Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0742567,
+          42.3583139
+        ]
+      },
+      "properties": {
+        "school": "Advent School",
+        "address": "15 Brimmer Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03794008,
+          42.37156844
+        ]
+      },
+      "properties": {
+        "school": "Alighieri Elementary",
+        "address": "37 Gove Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14051062,
+          42.34203867
+        ]
+      },
+      "properties": {
+        "school": "Baldwin ELC",
+        "address": "121 Corey Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13533061,
+          42.27776866
+        ]
+      },
+      "properties": {
+        "school": "Bates ES",
+        "address": "426 Beech Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1375826,
+          42.2777394
+        ]
+      },
+      "properties": {
+        "school": "BCLA - Boston Comm Lead Acad",
+        "address": "655 Metropolitan Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15613062,
+          42.26343865
+        ]
+      },
+      "properties": {
+        "school": "Beethoven ES",
+        "address": "5125 Washington Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07246107,
+          42.34073755
+        ]
+      },
+      "properties": {
+        "school": "Blackstone ES",
+        "address": "380 Shawmut Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0628483,
+          42.3217541
+        ]
+      },
+      "properties": {
+        "school": "Boston Collegiate Lower",
+        "address": "11 Mayhew Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14596106,
+          42.35044073
+        ]
+      },
+      "properties": {
+        "school": "Boston Green Acad",
+        "address": "20 Warren Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1259805,
+          42.2548081
+        ]
+      },
+      "properties": {
+        "school": "Boston Prep",
+        "address": "1286 Hyde Park Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1526401,
+          42.2994837
+        ]
+      },
+      "properties": {
+        "school": "Boston Renaissance ES",
+        "address": "1415 Hyde Park Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.00504508,
+          42.39161618
+        ]
+      },
+      "properties": {
+        "school": "Bradley ES",
+        "address": "110 Beachview Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0875863,
+          42.3013299
+        ]
+      },
+      "properties": {
+        "school": "Bridge Boston",
+        "address": "2 McLellan Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0875863,
+          42.3013299
+        ]
+      },
+      "properties": {
+        "school": "Bridge Boston 2-4",
+        "address": "2 McLellan Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14549062,
+          42.34908867
+        ]
+      },
+      "properties": {
+        "school": "Brighton HS",
+        "address": "25 Warren Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13332061,
+          42.25162865
+        ]
+      },
+      "properties": {
+        "school": "Channing Elementary",
+        "address": "35 Sunnyside Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06107059,
+          42.38011868
+        ]
+      },
+      "properties": {
+        "school": "Charlestown High School",
+        "address": "240 Medford Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1047806,
+          42.26725865
+        ]
+      },
+      "properties": {
+        "school": "Chittick ES",
+        "address": "154 Ruskindale Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05819134,
+          42.3231762
+        ]
+      },
+      "properties": {
+        "school": "Clap ES",
+        "address": "35 Harvest Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0742432,
+          42.2894184
+        ]
+      },
+      "properties": {
+        "school": "Codman Acad Lower",
+        "address": "637 Washington Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06172942,
+          42.30112879
+        ]
+      },
+      "properties": {
+        "school": "Comm Acad Sci & Health",
+        "address": "11 Charles Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05215122,
+          42.33802589
+        ]
+      },
+      "properties": {
+        "school": "Condon ES",
+        "address": "200 D Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12705061,
+          42.27479865
+        ]
+      },
+      "properties": {
+        "school": "Conley ES",
+        "address": "450 Poplar Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11421891,
+          42.31868548
+        ]
+      },
+      "properties": {
+        "school": "Curley K-8",
+        "address": "40 Pershing Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08080771,
+          42.30739517
+        ]
+      },
+      "properties": {
+        "school": "Dearborn STEM Acad",
+        "address": "60 Washington Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04274058,
+          42.31762867
+        ]
+      },
+      "properties": {
+        "school": "Dever Elementary",
+        "address": "325 Mt. Vernon Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07337366,
+          42.32192747
+        ]
+      },
+      "properties": {
+        "school": "Dudley Street Neighborhood",
+        "address": "6 Shirley Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03411995,
+          42.36967602
+        ]
+      },
+      "properties": {
+        "school": "East Boston EEC",
+        "address": "135 Gove Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03492143,
+          42.38095746
+        ]
+      },
+      "properties": {
+        "school": "East Boston HS",
+        "address": "86 White Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.16019062,
+          42.34558867
+        ]
+      },
+      "properties": {
+        "school": "Edison K-8",
+        "address": "60 Glenmont Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06723124,
+          42.37908036
+        ]
+      },
+      "properties": {
+        "school": "Edwards Middle",
+        "address": "28 Walker Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05336967,
+          42.36610274
+        ]
+      },
+      "properties": {
+        "school": "Eliot K-8",
+        "address": "16 Charter Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09289159,
+          42.3163343
+        ]
+      },
+      "properties": {
+        "school": "Ellis ES",
+        "address": "302 Walnut Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0918906,
+          42.27178866
+        ]
+      },
+      "properties": {
+        "school": "Ellison/Parks EES",
+        "address": "108 Babson Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1096006,
+          42.30600866
+        ]
+      },
+      "properties": {
+        "school": "English HS",
+        "address": "144 Mcbride Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05976976,
+          42.31368761
+        ]
+      },
+      "properties": {
+        "school": "Everett ES",
+        "address": "71 Pleasant Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0209717,
+          42.3827059
+        ]
+      },
+      "properties": {
+        "school": "Excel Acad 1 (EB)",
+        "address": "58 Moore Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0298419,
+          42.3785464
+        ]
+      },
+      "properties": {
+        "school": "Excel Acad 2 (EB)",
+        "address": "401 Bremen Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04489058,
+          42.33286867
+        ]
+      },
+      "properties": {
+        "school": "Excel HS",
+        "address": "95 G Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07541082,
+          42.30905402
+        ]
+      },
+      "properties": {
+        "school": "Frederick MS",
+        "address": "270 Columbia Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13411062,
+          42.36076867
+        ]
+      },
+      "properties": {
+        "school": "Gardner Pilot Acad",
+        "address": "30 Athol Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08066202,
+          42.29656011
+        ]
+      },
+      "properties": {
+        "school": "Greenwood S K-8",
+        "address": "189 Glenway Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12732061,
+          42.25676865
+        ]
+      },
+      "properties": {
+        "school": "Grew ES",
+        "address": "40 Gordon Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.00412057,
+          42.38879868
+        ]
+      },
+      "properties": {
+        "school": "Guild ES",
+        "address": "195 Leyden Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0910406,
+          42.32554867
+        ]
+      },
+      "properties": {
+        "school": "Hale ES",
+        "address": "51 Cedar Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1077206,
+          42.28675866
+        ]
+      },
+      "properties": {
+        "school": "Haley K-8",
+        "address": "570 American Legion Highway",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05749225,
+          42.37662852
+        ]
+      },
+      "properties": {
+        "school": "Harvard/Kent ES",
+        "address": "50 Bunker Hill Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07893913,
+          42.31496685
+        ]
+      },
+      "properties": {
+        "school": "Haynes EEC",
+        "address": "263 Blue Hill Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06956993,
+          42.28126173
+        ]
+      },
+      "properties": {
+        "school": "HENDERSON 3-12",
+        "address": "18 Croftland Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06222064,
+          42.29396673
+        ]
+      },
+      "properties": {
+        "school": "HENDERSON K-2",
+        "address": "1669 Dorchester Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10691069,
+          42.32562212
+        ]
+      },
+      "properties": {
+        "school": "Hennigan ES",
+        "address": "200 Heath Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09812021,
+          42.31393788
+        ]
+      },
+      "properties": {
+        "school": "HERNANDEZ K-8",
+        "address": "61 School Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09202957,
+          42.31766019
+        ]
+      },
+      "properties": {
+        "school": "Higginson K-2 (Harrishoff St)",
+        "address": "160 Harrishof Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08630957,
+          42.32094834
+        ]
+      },
+      "properties": {
+        "school": "Higginson/Lewis K-8",
+        "address": "131 Walnut Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07560026,
+          42.2967885
+        ]
+      },
+      "properties": {
+        "school": "Holmes ES",
+        "address": "40 School Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13770062,
+          42.35205867
+        ]
+      },
+      "properties": {
+        "school": "Horace Mann",
+        "address": "40 Armington Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0777406,
+          42.33875867
+        ]
+      },
+      "properties": {
+        "school": "Hurley K-8",
+        "address": "70 Worcester Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12493061,
+          42.28363866
+        ]
+      },
+      "properties": {
+        "school": "Irving MS",
+        "address": "105 Cummins Highway",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13770062,
+          42.35205867
+        ]
+      },
+      "properties": {
+        "school": "Jackson/Mann",
+        "address": "40 Armington Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10583938,
+          42.32178533
+        ]
+      },
+      "properties": {
+        "school": "Kennedy JF ES",
+        "address": "7 Bolster Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03048029,
+          42.3785453
+        ]
+      },
+      "properties": {
+        "school": "Kennedy PJ ES",
+        "address": "343 Saratoga Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05319154,
+          42.28655025
+        ]
+      },
+      "properties": {
+        "school": "Kenny ES",
+        "address": "19 Oakton Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.16257013,
+          42.27188582
+        ]
+      },
+      "properties": {
+        "school": "Kilmer K-3",
+        "address": "35 Baker Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15236762,
+          42.29266066
+        ]
+      },
+      "properties": {
+        "school": "Kilmer 4-8",
+        "address": "140 Russett Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07619659,
+          42.31129966
+        ]
+      },
+      "properties": {
+        "school": "King K-8",
+        "address": "77 Lawrence Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07300863,
+          42.28660893
+        ]
+      },
+      "properties": {
+        "school": "Lee Acad",
+        "address": "25 Dunbar Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08037542,
+          42.2924381
+        ]
+      },
+      "properties": {
+        "school": "Lee ES",
+        "address": "155 Talbot Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15837062,
+          42.28299866
+        ]
+      },
+      "properties": {
+        "school": "Lyndon K-8",
+        "address": "20 Mt. Vernon Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.16076062,
+          42.35212867
+        ]
+      },
+      "properties": {
+        "school": "Lyon 9-12 ",
+        "address": "95 Beechcroft Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.16150062,
+          42.35107867
+        ]
+      },
+      "properties": {
+        "school": "Lyon K-8",
+        "address": "50 Beechcroft Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0902906,
+          42.33175867
+        ]
+      },
+      "properties": {
+        "school": "Madison Park HS",
+        "address": "75 Malcolm X Boulevard",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13149061,
+          42.30558866
+        ]
+      },
+      "properties": {
+        "school": "Manning ES",
+        "address": "130 Louders Lane",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07133141,
+          42.32621703
+        ]
+      },
+      "properties": {
+        "school": "Mason ES",
+        "address": "150 Norfolk Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06101177,
+          42.30839621
+        ]
+      },
+      "properties": {
+        "school": "Mather ES",
+        "address": "1 Parish Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10408944,
+          42.27581531
+        ]
+      },
+      "properties": {
+        "school": "Mattahunt ES",
+        "address": "100 Hebron Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04350058,
+          42.31802867
+        ]
+      },
+      "properties": {
+        "school": "McCormack MS",
+        "address": "315 Mt. Vernon Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03430758,
+          42.36927368
+        ]
+      },
+      "properties": {
+        "school": "McKay K-8",
+        "address": "122 Cottage Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07352059,
+          42.34436867
+        ]
+      },
+      "properties": {
+        "school": "McKinley Elementary",
+        "address": "90 Warren Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10676061,
+          42.34794867
+        ]
+      },
+      "properties": {
+        "school": "McKinley Middle",
+        "address": "50 St. Mary Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0992606,
+          42.34343867
+        ]
+      },
+      "properties": {
+        "school": "McKinley Prep HS",
+        "address": "97 Peterborough Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07352059,
+          42.34436867
+        ]
+      },
+      "properties": {
+        "school": "McKinley SEA",
+        "address": "90 Warren Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1016106,
+          42.31655866
+        ]
+      },
+      "properties": {
+        "school": "Mendell ES",
+        "address": "164 School Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0904296,
+          42.27676066
+        ]
+      },
+      "properties": {
+        "school": "Mildred Ave K-8",
+        "address": "5 Mildred Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11386744,
+          42.30703515
+        ]
+      },
+      "properties": {
+        "school": "Mission Hill K-8",
+        "address": "20 Child Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14105061,
+          42.28122866
+        ]
+      },
+      "properties": {
+        "school": "Mozart Elementary",
+        "address": "236 Beech Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04919406,
+          42.29420618
+        ]
+      },
+      "properties": {
+        "school": "Murphy K-8",
+        "address": "1 Worrell Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03801072,
+          42.37808862
+        ]
+      },
+      "properties": {
+        "school": "ODonnell ES",
+        "address": "33 Trenton Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14961061,
+          42.26075865
+        ]
+      },
+      "properties": {
+        "school": "Ohrenberger",
+        "address": "175 West Boundary Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07790902,
+          42.33027521
+        ]
+      },
+      "properties": {
+        "school": "Orchard Gardens K-8",
+        "address": "906 Albany Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03389058,
+          42.37527868
+        ]
+      },
+      "properties": {
+        "school": "Otis ES",
+        "address": "218 Marion Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05054059,
+          42.33131867
+        ]
+      },
+      "properties": {
+        "school": "Perkins ES",
+        "address": "50 Burke Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03019874,
+          42.33212077
+        ]
+      },
+      "properties": {
+        "school": "Perry K-8",
+        "address": "745 E. Seventh Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11774061,
+          42.28540866
+        ]
+      },
+      "properties": {
+        "school": "Philbrick ES",
+        "address": "40 Philbrick Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06492059,
+          42.34797867
+        ]
+      },
+      "properties": {
+        "school": "Quincy ES",
+        "address": "885 Washington Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06905025,
+          42.34840829
+        ]
+      },
+      "properties": {
+        "school": "Quincy Upper School",
+        "address": "152 Arlington Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12345117,
+          42.24295076
+        ]
+      },
+      "properties": {
+        "school": "Roosevelt K-8 (2-8)",
+        "address": "95 Needham Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13288061,
+          42.23389865
+        ]
+      },
+      "properties": {
+        "school": "Roosevelt K-8 (K1-1)",
+        "address": "30 Millstone Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0810657,
+          42.303422
+        ]
+      },
+      "properties": {
+        "school": "Roxbury Prep Dorchester Campus",
+        "address": "206 Magnolia Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0732756,
+          42.2955009
+        ]
+      },
+      "properties": {
+        "school": "Roxbury Prep Lucy Stone",
+        "address": "22 Regina Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1073228,
+          42.3276398
+        ]
+      },
+      "properties": {
+        "school": "Roxbury Prep Mission Hill ",
+        "address": "120 Fisher Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05954941,
+          42.32038241
+        ]
+      },
+      "properties": {
+        "school": "Russell ES",
+        "address": "750 Columbia Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08684033,
+          42.28212094
+        ]
+      },
+      "properties": {
+        "school": "SHAW ES",
+        "address": "429 Norfolk Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0548936,
+          42.3639082
+        ]
+      },
+      "properties": {
+        "school": "St John",
+        "address": "9 Moon Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12684061,
+          42.28645866
+        ]
+      },
+      "properties": {
+        "school": "Sumner ES",
+        "address": "15 Basile Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07743057,
+          42.27786075
+        ]
+      },
+      "properties": {
+        "school": "Taylor ES",
+        "address": "1060 Morton Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07679145,
+          42.28779215
+        ]
+      },
+      "properties": {
+        "school": "TechBoston Academy",
+        "address": "9 Peacevale Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0909706,
+          42.33039867
+        ]
+      },
+      "properties": {
+        "school": "Timilty MS",
+        "address": "205 Roxbury Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0982906,
+          42.33301867
+        ]
+      },
+      "properties": {
+        "school": "Tobin K-8",
+        "address": "40 Smith Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08784105,
+          42.31574003
+        ]
+      },
+      "properties": {
+        "school": "Trotter ES",
+        "address": "135 Humboldt Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03841128,
+          42.33487071
+        ]
+      },
+      "properties": {
+        "school": "Tynan ES",
+        "address": "650 E. Fourth Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04032982,
+          42.37828999
+        ]
+      },
+      "properties": {
+        "school": "Umana Acad K-8",
+        "address": "312 Border Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07385902,
+          42.30561813
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD - Holland ES",
+        "address": "85 Olney Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07072943,
+          42.29992615
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD / Dorchester",
+        "address": "35 Westville Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05042966,
+          42.33357372
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD / S BOSTON",
+        "address": "215 Dorchester Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.17434062,
+          42.28226865
+        ]
+      },
+      "properties": {
+        "school": "Urban Science Academy",
+        "address": "1205 V.F.W. Parkway",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06443059,
+          42.37799868
+        ]
+      },
+      "properties": {
+        "school": "Warren Prescott K-8",
+        "address": "50 School Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.17434062,
+          42.28226865
+        ]
+      },
+      "properties": {
+        "school": "West Roxbury Academy",
+        "address": "1205 V.F.W. Parkway",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10693577,
+          42.32629276
+        ]
+      },
+      "properties": {
+        "school": "West Zone ELC",
+        "address": "200 Heath Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1553486,
+          42.3476017
+        ]
+      },
+      "properties": {
+        "school": "Winship ES",
+        "address": "54 Dighton Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0756266,
+          42.31820265
+        ]
+      },
+      "properties": {
+        "school": "Winthrop ES",
+        "address": "35 Brookford Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09500233,
+          42.28231466
+        ]
+      },
+      "properties": {
+        "school": "Young Achievers",
+        "address": "20 Outlook Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0600473,
+          42.3206748
+        ]
+      },
+      "properties": {
+        "school": "Pope JP II Col Rd",
+        "address": "790 Columbia Road",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0846368,
+          42.2778235
+        ]
+      },
+      "properties": {
+        "school": "Pope JP II Lower Mills",
+        "address": "2200 Dorchester Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0739924,
+          42.3564758
+        ]
+      },
+      "properties": {
+        "school": "Park Street Sch",
+        "address": "67 Brimmer Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0556393,
+          42.2933291
+        ]
+      },
+      "properties": {
+        "school": "Neighborhood House",
+        "address": "21 Queen Street, Claymont Terrace",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1082974,
+          42.2614165
+        ]
+      },
+      "properties": {
+        "school": "Match Community Day",
+        "address": "100 Poydras Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1059155,
+          42.3051414
+        ]
+      },
+      "properties": {
+        "school": "MATCH MS",
+        "address": "215 Forest Hills Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.094632,
+          42.2745321
+        ]
+      },
+      "properties": {
+        "school": "KIPP Academy Boston",
+        "address": "37 Babson Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1238752,
+          42.2818339
+        ]
+      },
+      "properties": {
+        "school": "E BROOKE #1 (RS)",
+        "address": "190 Cummins Highway",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0947344,
+          42.2948338
+        ]
+      },
+      "properties": {
+        "school": "E BROOKE #2 (MT)",
+        "address": "150 American Legion Highway",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0184877,
+          42.3827859
+        ]
+      },
+      "properties": {
+        "school": "E BROOKE #3 (EB)",
+        "address": "94 Horace Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0608867,
+          42.3012901
+        ]
+      },
+      "properties": {
+        "school": "Davis Leadership Acad",
+        "address": "23 Leonard Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0986391,
+          42.3113024
+        ]
+      },
+      "properties": {
+        "school": "Conservatory Lab Carney",
+        "address": "2120 Dorchester Avenue",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0658083,
+          42.3112403
+        ]
+      },
+      "properties": {
+        "school": "Conservatory Lab Hancock",
+        "address": "133 Hancock Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1181739,
+          42.2946217
+        ]
+      },
+      "properties": {
+        "school": "Boston Teachers Union K-8",
+        "address": "25 Walk Hill Street",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#c55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#eaa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#eaa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#eaa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#eaa"
       }
     }
   ]

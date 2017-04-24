@@ -90,7 +90,8 @@ class transformation_one_bus(dml.Algorithm):
               (f,s) = student_locations[i]
               student_tree.insert(i, s.bounds)
 
-        
+               
+ 
         avgs = []
         #average distance to nearest other students for each student
         student_radius = []

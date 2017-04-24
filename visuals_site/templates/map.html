@@ -1,17 +1,27 @@
 <html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <head>
     <title>Obesity and Healthy Locations Map</title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="neighborhoods.js"></script>
-    <script src="obesity.js"></script>
-    <script src="health.js"></script>
+    <script src="{{ url_for('static', filename='neighborhoods.js') }}"></script>
+    <script src="{{ url_for('static', filename='obesity.js') }}"></script>
+    <script src="{{ url_for('static', filename='health.js') }}"></script>
 </head>
 
 <style>
+body,h1 {font-family: "Raleway", sans-serif}
+
+svg {
+    display: block;
+    margin: 0 auto;
+}
 
 </style>
-
+<head><center><h3>Obesity and Health Locations in Boston</h3></center></head>
 <body>
+
+<div align="center">
+
     <script>
     // our code will go here
     var width = 700,
@@ -69,10 +79,10 @@
             tooltip.transition()
                 .duration(200)
                 .style("opacity", .9);
-            tooltip.html(d.properties.percentage + "% obese<br/>" + d.properties.population_size + " people")
+            tooltip.html(d.properties.percentage + "% obese<br/>" + "population: " + d.properties.population_size)
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px")
-                .style("width", "80px")
+                .style("width", "100px")
         })
         .on("mouseout", function(d) {
             d3.select(this).attr("opacity", "0.5");
@@ -118,5 +128,7 @@
         });
 
     </script>
+
+</div>
 </body>
 </html>

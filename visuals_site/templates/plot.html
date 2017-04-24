@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<title>Scatterplot with Regression Line</title>
+
+<!-- pretty things for the visualization -->
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+.line {
+    stroke: #5e0000;
+    fill: none;
+    stroke-width: 3;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.text-label {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.dot {
+    stroke: #293b47;
+    fill: #b9eae9
+}
+div.text-form {
+  margin: 5%;
+  color: #5e0000;
+}
+.button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #5e0000;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.button:hover {
+    background-color: #5e0000;
+    color: white;
+}
+</style>
+<head>
+<center><h3>Obesity Percentage over Time to get to Healthy Location</h3></center>
+</head>
+<!-- graphic -->
+<body bgcolor="ffffff">
+    <form action="/" type="POST">
+        <input type="submit" class="button" value="Back" />
+    </form>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+	<script>
+    var margin = {
+            top: 20,
+            right: 20,
+            bottom: 30,
+            left: 40
+        },
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    var x = d3.scale.linear()
+        .range([0, width]);
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var data = {{ data|safe }};
+
+    data.forEach(function(d) {
+        d.x = +d.x;
+        d.y = +d.y;
+        d.yhat = +d.yhat;
+    });
+
+    var line = d3.svg.line()
+        .x(function(d) {
+            return x(d.x);
+        })
+        .y(function(d) {
+            return y(d.yhat);
+        });
+
+    x.domain(d3.extent(data, function(d) {
+        return d.x;
+    }));
+    y.domain(d3.extent(data, function(d) {
+        return d.y;
+    }));
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("x", width)
+        .attr("y", -6)
+        .style("text-anchor", "end")
+        .text("Time to get to Healthy Location");
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Percent Obesity")
+
+    svg.selectAll(".dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("class", "dot")
+        .attr("r", 3.5)
+        .attr("cx", function(d) {
+            return x(d.x);
+        })
+        .attr("cy", function(d) {
+            return y(d.y);
+        });
+
+    svg.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .attr("d", line);
+
+    </script>
+
+<!-- min and max stuff, form -->
+<center>
+<div class="text-form">
+<h2>Only look at districts with a certain population:</h2>
+{% if minimum and maximum %}
+<h3>The minimum is {{ minimum }} and the maximum is {{ maximum }}</h3>
+{% elif maximum %}
+{% set minimum = 0 %}
+<h3>The minimum is 0 and the maximum is {{ maximum }}</h3>
+{% elif minimum %}
+{% set maximum = 10000 %}
+<h3>The minimum is {{ minimum }} and the maximum is 10000</h3>
+{% else %}
+{% set minimum = 0 %}
+{% set maximum = 10000 %}
+<h3>Please enter a valid minimum and maximum. Min and max have been reset to 0 and 10000.</h3>
+{% endif %}
+<form>
+	Minimum: <input type="text" name="min"> Maximum: <input type="text" name="max"><br><br>
+	<input class="button" type="submit" value="Submit">
+</form>
+</body>
+</div>
+</center>

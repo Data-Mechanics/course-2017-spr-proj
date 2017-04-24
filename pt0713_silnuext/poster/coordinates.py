@@ -17,13 +17,13 @@ coordinates = get_coordinates()
 
 features = []
 for coordinate in coordinates:
-	properties = {'stroke': "#37gd68", 
+	properties = {'color': "green", 
 				  'crime location': coordinate
 				   }
 	geometry = geojson.Point(coordinate)
 	features.append(geojson.Feature(geometry=geometry, properties=properties))
 
-properties = {'stroke': "#8a97a9", 
+properties = {'color': "red", 
 			  'specific point': "Safest Point in Boston",
 			  'acheiving way': "k-means",
 			  'coordinates': [-71.08318212371852, 42.32110599965421]

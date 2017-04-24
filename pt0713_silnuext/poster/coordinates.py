@@ -23,7 +23,13 @@ for coordinate in coordinates:
 	geometry = geojson.Point(coordinate)
 	features.append(geojson.Feature(geometry=geometry, properties=properties))
 
-print(features)
+properties = {'stroke': "#8a97a9", 
+			  'specific point': "Safest Point in Boston",
+			  'acheiving way': "k-means",
+			  'coordinates': [-71.08318212371852, 42.32110599965421]
+			   }
+geometry = geojson.Point([-71.08318212371852, 42.32110599965421])
+features.append(geojson.Feature(geometry=geometry, properties=properties))
 
 
 open('map_to_points.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features)))

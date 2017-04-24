@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>CS 591 Assessed Property Values</title>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <link rel="stylesheet" href="MarkerCluster.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="leaflet.markercluster.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <style>
+    #map{ height: 100% }
+  </style>
+</head>
+<body>
+ 
+  <div id="map"></div>
+ 
+  <script>
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  // initialize the map
+  var map = L.map('map').setView([42.35, -71.08], 13);
+ 
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+    
+  $.getJSON("neighborhoods.geojson",function(hoodData){
+    L.geoJson( hoodData, {
+      style: function(feature){
+        var fillColor,
+            density = feature.properties.density;
+        if ( density > 3000000 ) fillColor = "#CE4A65";
+        else if ( density > 2000000 ) fillColor = "#E85C5E";
+        else if ( density > 1000000 ) fillColor = "#FA8067";
+        else if ( density > 750000 ) fillColor = "#FBAC74";
+        else if ( density > 500000 ) fillColor = "#FBC67F";
+        else if ( density > 0 ) fillColor = "#FBE19C";
+        else fillColor = "#f7f7f7";  // no data
+        return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
+      },
+      onEachFeature: function( feature, layer ){
+        layer.bindPopup( "<strong>" + feature.properties.Name + "</strong><br/> $" + numberWithCommas(feature.properties.density) + " average cost for this neighborhood" )
+      }
+    }).addTo(map);
+  });
+  $.getJSON("assessed_prop.geojson",function(data){
+      var houseIcon = L.icon({
+        iconUrl: 'https://cdn2.iconfinder.com/data/icons/pittogrammi/142/65-512.png',
+        iconSize: [60,50]
+      });
+      var properties = L.geoJson(data,{
+        pointToLayer: function(feature,latlng){
+          var marker = L.marker(latlng, {icon: houseIcon});
+          marker.bindPopup('Assessed property value: <br/> $' + numberWithCommas(feature.properties.av_total));
+          return marker;
+        }
+      });
+      var clusters = L.markerClusterGroup();
+      clusters.addLayer(properties);
+      map.addLayer(clusters);
+
+  });
+ 
+  </script>
+</body>
+</html>

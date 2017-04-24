@@ -16,9 +16,14 @@ svg {
     margin: 0 auto;
 }
 
+
+
 </style>
 <head><center><h3>Obesity and Health Locations in Boston</h3></center></head>
-<body>
+<body bgcolor="e6e9ef">
+
+<br> 
+<br>
 
 <div align="center">
 
@@ -61,7 +66,7 @@ svg {
         .data( neighborhoods_json.features )
         .enter()
         .append( "path" )
-        .attr( "fill", "#999fa8" )
+        .attr( "fill", "#606b82") //516182")
         .attr( "d", geoPath );
 
     var obesity = svg.append( "g" );
@@ -85,7 +90,7 @@ svg {
                 .style("width", "100px")
         })
         .on("mouseout", function(d) {
-            d3.select(this).attr("opacity", "0.5");
+            d3.select(this).attr("opacity", "0.7");
             tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);
@@ -98,7 +103,7 @@ svg {
         .data( health_json.features )
         .enter()
         .append( "path" )
-        .attr( "fill", "#34773f" )
+        .attr( "fill", "#87004c") //#e074af") //#00b727") //"#34773f" )
         .attr( "stroke", "#000000" )
         .attr("opacity", "0.5")
         .attr( "d", geoPath )
@@ -121,7 +126,7 @@ svg {
                 .style("width", "60px");
         })
         .on("mouseout", function(d) {
-            d3.select(this).attr("opacity", "0.5");
+            d3.select(this).attr("opacity", "0.7");
             tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);

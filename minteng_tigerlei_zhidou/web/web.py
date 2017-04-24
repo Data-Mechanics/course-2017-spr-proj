@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import optimization_algorithm
+import json
 
 app = Flask(__name__)
 
@@ -35,13 +36,15 @@ def optimize_result():
         temp['postal_code'] = item['postal_code']
         temp['grade'] = item['grade']
         data.append(temp)
-    # print(temp)
     return render_template('optimize-result.html',f=food,t=transport,s=safe,r=rent,res=res, data=data)
 
 @app.route("/map/")
 def get_map():
     global info
+    for dic in info:
+        dic.pop('_id', None)
     return render_template('map.html',a=info[0],b=info[1],c=info[2],d=info[3],e=info[4])
+
 
 @app.route("/static-analysis/")
 def static_analysis():

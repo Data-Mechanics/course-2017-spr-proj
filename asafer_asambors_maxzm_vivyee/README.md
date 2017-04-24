@@ -48,8 +48,8 @@ We ran our algorithm on a Control data and found that there was also a correlati
 # Results
 According to our data, the mean squared error between obesity and healthy location distance was only 8.98 whereas our control data had a mean squared error of 14.15. This means that there is more significance to trying to predict obesity based on the distance from a healthy location. Both datasets ended up having similar rates of increase in obesity based on the distance from either trash bins or healthy locations.
 
-![Results for linear regression:]{../visuals_sit/images/linregressgraph.png}
-![Map of Boston with obesity and healthy locations:]{../visuals_sit/images/bostonmap.png}
+![Results for linear regression:](../visuals_site/images/linregressgraph.png)
+![Map of Boston with obesity and healthy locations:](../visuals_site/images/bostonmap.png)
 
 # Conclusion
 

@@ -18,9 +18,6 @@ The following are all the datasets we created in the transformations:
 * Health Obesity and Control Obesity: the closest healthy/control location for each obesity location. Modified from the previous dataset. Each data entry also contains the shortest travel time (in minutes) from the obese location to the healthy/control location.
 * Results and Linear Regression Data: linear regression data contains the RMSE, slope, MSE, and y-intercepts of the best fit linear regression for Obesity percentage vs min travel time. Results contains the same data, but with control linear regression as well.
 
-# Summary & Problem
-We are using datasets of different healthy locations and a dataset of locations with high adult obesity. To get a dataset of healthy locations, we're combining several different datasets such as urban orchards, nutrition programs, and healthy corner stores. We'll be looking to see if there is any correlation between access to healthy locations and obesity. We will then use these information to determine whether these programs and shops are located in areas with higher levels of obesity, which need them the most.
-
 # Transformations Performed
 ## Healthy Locations
 We aggregated all of the health programs, stores and orchards into one dataset, with its type and location. We used select and project to clean and reformat the datasets. This generalizes the notion of a healthy location and allows us to have coordinates of healthy points.

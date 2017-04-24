@@ -16,7 +16,14 @@ def get_coordinates():
 coordinates = get_coordinates()
 
 features = []
-	for coordinate in coordinates:
-		properties = {'name': crime scene}
-		geometry.Points(coordinate)
-		features.append(geometry = geometry,features = features)
+for coordinate in coordinates:
+	properties = {'stroke': "#37gd68", 
+				  'crime location': coordinate
+				   }
+	geometry = geojson.Point(coordinate)
+	features.append(geojson.Feature(geometry=geometry, properties=properties))
+
+print(features)
+
+
+open('map_to_points.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features)))

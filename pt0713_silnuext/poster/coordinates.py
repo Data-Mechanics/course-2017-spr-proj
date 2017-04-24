@@ -11,7 +11,6 @@ def get_coordinates():
 			if point != (0, 0):
 				point = [list(tuple(reversed(point)))]
 				coordinates += point
-				print(point)
 
 	return coordinates
 
@@ -19,13 +18,13 @@ coordinates = get_coordinates()
 
 features = []
 for coordinate in coordinates:
-	properties = {'stroke': "#3d7e49", 
+	properties = {'colore': "#3d7e49", 
 				  'crime location': coordinate
 				   }
 	geometry = geojson.Point(coordinate)
 	features.append(geojson.Feature(geometry=geometry, properties=properties))
 
-properties = {'stroke': "#8bef85", 
+properties = {'colore': "#8bef85", 
 			  'specific point': "Safest Point in Boston",
 			  'acheiving way': "k-means",
 			  'coordinates': [

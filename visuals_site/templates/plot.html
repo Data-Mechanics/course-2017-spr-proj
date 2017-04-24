@@ -128,7 +128,7 @@ div.text-form {
         .attr("x", width)
         .attr("y", -6)
         .style("text-anchor", "end")
-        .text("X-Value");
+        .text("Time to get to Healthy Location");
 
     svg.append("g")
         .attr("class", "y axis")
@@ -139,7 +139,7 @@ div.text-form {
         .attr("y", 6)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .text("Y-Value")
+        .text("Percent Obesity")
 
     svg.selectAll(".dot")
         .data(data)

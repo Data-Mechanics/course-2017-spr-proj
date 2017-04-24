@@ -9,7 +9,7 @@ def get_coordinates():
 		points = zip_to_points[zipcode]
 		for point in points:
 			if point != (0, 0):
-				coordinates += [list(point)]
+				coordinates += [list(tuple(reversed(point)))]
 
 	return coordinates
 

@@ -1,5 +1,5 @@
 # Introduction
-The city of Boston provides sets of data for different series of city services. We use datasets of different healthy locations and a dataset of locations with high percentages of adult obesity. With these datasets, we look for correlation between access to healthy locations in the form of travel time through public transportation and obesity percentages. With our results we will determine whether these healthy programs/locations are located in neighborhoods with higher levels of obesity, which need them the most
+The city of Boston provides sets of data for different series of city services. We use datasets of different healthy locations and a dataset of locations with high percentages of adult obesity. With these datasets, we look for correlation between access to healthy locations in the form of travel time through public transportation and obesity percentages. With our results we will determine whether these healthy programs/locations are located in neighborhoods with higher levels of obesity, which need them the most.
 
 # Datasets
 The healthy location datasets we use and created are:
@@ -43,16 +43,18 @@ We use linear regression to see how strong the correlation between access to hea
 
 We used trash bins as a control to make sure that any correlation we find is specific to the obesity locations. Since trash cans are probably unrelated to the obesity in an area, we expected little or no correlation.  We found that there was a positive correlation with a slope of 16 between obesity and distance from a healthy location. This means that if we decrease the distance a person has to go to get healthy food we can drastically decrease the levels of obesity in that area. 
 
-We ran our algorithm on a Control data and found that there was also a correlation between obesity and distance from a trash bin. While this does mean that there may be external factors contributing to the correlations, the correlation between obesity and distance of healthy locations was much stronger. 
 
-# Results
-According to our data, the mean squared error between obesity and healthy location distance was only 8.98 whereas our control data had a mean squared error of 14.15. This means that there is more significance to trying to predict obesity based on the distance from a healthy location. Both datasets ended up having similar rates of increase in obesity based on the distance from either trash bins or healthy locations.
+# Results and Conclusion
+Given the obesity and healthy locations data, we created a map of Boston, which shows where each location is. The obesity locations are in yellow and healthy locations in purple. Obesity locations are sized based off of obesity percentage.
 
-![Results for linear regression:](../visuals_site/images/linregressgraph.png)
 ![Map of Boston with obesity and healthy locations:](../visuals_site/images/bostonmap.png)
 
-# Conclusion
+Our data analysis found that there was a huge correlation between obesity and distance from a healthy location. The linear regression suggests that for every minute more it takes to get to a healthy location, the obesity rate increases 
+According to our data, the mean squared error between obesity and healthy location distance was only 10.4 whereas our control data had a mean squared error of 10.54,  This means that both datasets were about as accurate in finding linear regression models between obesity and distance from a healthy location. 
 
+![Results for linear regression:](../visuals_site/images/linregressgraph.png)
+
+We ran our algorithm on a Control data and found that there was also a correlation between obesity and distance from a trash bin. While this does mean that there may be external factors contributing to the correlations, the correlation between obesity and distance of healthy locations was much stronger. 
 
 # Future Work
 A few questions that we would like to address in a future work that we were not able to pursue are:

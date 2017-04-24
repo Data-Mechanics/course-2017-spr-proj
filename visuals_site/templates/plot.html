@@ -141,6 +141,10 @@ div.text-form {
         .style("text-anchor", "end")
         .text("Percent Obesity")
 
+    var radius = d3.scale.sqrt()
+        .domain([0, 1e6])
+        .range([0, 15]);
+
     svg.selectAll(".dot")
         .data(data)
         .enter().append("circle")
@@ -151,7 +155,8 @@ div.text-form {
         })
         .attr("cy", function(d) {
             return y(d.y);
-        });
+        })
+        .attr("r", function(d) { return radius(d.population); });
 
     svg.append("path")
         .datum(data)

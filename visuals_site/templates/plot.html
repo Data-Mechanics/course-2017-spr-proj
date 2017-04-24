@@ -62,6 +62,9 @@ div.text-form {
 </head>
 <!-- graphic -->
 <body bgcolor="ffffff">
+    <form action="/" type="POST">
+        <input type="submit" class="button" value="Back" />
+    </form>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 	<script>
     var margin = {
@@ -163,10 +166,16 @@ div.text-form {
 <h2>Only look at districts with a certain population:</h2>
 {% if minimum and maximum %}
 <h3>The minimum is {{ minimum }} and the maximum is {{ maximum }}</h3>
+{% elif maximum %}
+{% set minimum = 0 %}
+<h3>The minimum is 0 and the maximum is {{ maximum }}</h3>
+{% elif minimum %}
+{% set maximum = 100000 %}
+<h3>The minimum is {{ minimum }} and the maximum is 100000</h3>
 {% else %}
 {% set minimum = 0 %}
 {% set maximum = 100000 %}
-<h3>Please enter a valid minimum and maximum. Min and max have been reset to 0 and 10000.</h3>
+<h3>Please enter a valid minimum and maximum. Min and max have been reset to 0 and 100000.</h3>
 {% endif %}
 <form>
 	Minimum: <input type="text" name="min"> Maximum: <input type="text" name="max"><br><br>

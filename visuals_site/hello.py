@@ -13,15 +13,13 @@ def index():
 def visual_1_with_bounds():
 	minimum = request.args.get('min')
 	maximum = request.args.get('max')
-	if minimum and maximum:
-		try:
-			minimum = int(minimum)
-			maximum = int(maximum)
-		except ValueError:
-			minimum = None
-			maximum = None
-	elif not minimum and not maximum:
+	try:
+		minimum = int(minimum)
+	except (ValueError, TypeError):
 		minimum = 0
+	try:
+		maximum = int(maximum)
+	except (ValueError, TypeError):
 		maximum = 100000
 	data = VisualOne.get_data(minimum, maximum)
 	return render_template('plot.html', minimum=minimum, maximum=maximum, data=json.dumps(data))

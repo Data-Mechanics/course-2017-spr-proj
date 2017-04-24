@@ -47,25 +47,31 @@ var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 var map = L.map('map');     
 map.setView([42.3137055, -71.0566365], 12);  
 map.addLayer(osm);
+var a = {{a|tojson}},
+    b = {{b|tojson}},
+    c = {{c|tojson}},
+    d = {{d|tojson}},
+    e = {{e|tojson}};
+
 //marker
-var temp='#1:  '+'('+String({{a.center}})+ ')';
-var marker = new L.Marker(new L.latLng({{a.center}}));
+var temp='#1:  '+a.area;
+var marker = new L.Marker(new L.latLng(a.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false}).openPopup();
 
-var temp='#2:  '+'('+String({{b.center}})+ ')';
-var marker = new L.Marker(new L.latLng({{b.center}}));
+var temp='#2:  '+b.area;
+var marker = new L.Marker(new L.latLng(b.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false});
 
-var temp='#3:  '+'('+String({{c.center}})+ ')';
-var marker = new L.Marker(new L.latLng({{c.center}}));
+var temp='#3:  '+c.area;
+var marker = new L.Marker(new L.latLng(c.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false});
 
-var temp='#4:  '+'('+String({{d.center}})+ ')';
-var marker = new L.Marker(new L.latLng({{d.center}}));
+var temp='#4:  '+d.area;
+var marker = new L.Marker(new L.latLng(d.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false});
 
-var temp='#5:  '+'('+String({{e.center}})+ ')';
-var marker = new L.Marker(new L.latLng({{e.center}}));
+var temp='#5:  '+e.area;
+var marker = new L.Marker(new L.latLng(e.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false});
 
 

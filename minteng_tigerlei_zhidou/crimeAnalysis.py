@@ -22,6 +22,7 @@ class crimeAnalysis(dml.Algorithm):
         districtNum = repo['minteng_tigerlei_zhidou.box_count'].count()
         crimeVector = np.zeros([6, districtNum, 12])
         crimeCount = []
+        monthlyCount = np.zeros(48)
 
 
         for data, dNum in zip(repo['minteng_tigerlei_zhidou.box_count'].find(), range(districtNum)):
@@ -33,9 +34,18 @@ class crimeAnalysis(dml.Algorithm):
             for event in area:
                 crimeVector[event['year'] - 2012][dNum][event['month'] - 1] += 1
                 if event['year'] in [2012, 2017]: continue
+                monthlyCount[(event['year'] - 2013) * 12 + (event['month'] - 1)] += 1
                 crimeBox['crimeNum'][(event['year'] - 2013) * 12 + (event['month'] - 1)] += 1
             crimeBox['crimeNum'] = crimeBox['crimeNum'].tolist()
             crimeCount.append(crimeBox)
+
+        for crimeBox in crimeCount:
+            crimeBox['crimeRatio'] = np.zeros(48)
+            for i in range(48):
+                crimeBox['crimeRatio'][i] = crimeBox['crimeNum'][i] / monthlyCount[i]
+
+            crimeBox['crimeRatio'] = crimeBox['crimeRatio'].tolist()
+
 
 
         # compute the correlation coefficient and p-value

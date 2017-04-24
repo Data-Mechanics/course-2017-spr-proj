@@ -1,0 +1,96 @@
+.g-chart {
+  font-family: "nyt-franklin-1", sans-serif;
+  font-weight: 500;
+  margin: 0 auto 4em auto;
+}
+
+.g-chart svg {
+  margin-left: -5px;
+  overflow: hidden;
+  font-size: 11px;
+}
+
+.g-arrow {
+  stroke: #000;
+  stroke-width: 1.5px;
+  marker-end: url(#g-arrow);
+}
+
+.g-line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.g-line.g-secondary {
+  stroke: #bcbd22;
+}
+
+.g-label-value.g-secondary {
+  fill: #999;
+}
+
+.g-value.g-secondary {
+  fill: #bcbd22;
+}
+
+.g-area {
+  fill-opacity: .1;
+}
+
+.g-label-value {
+  font-weight: 700;
+}
+
+.g-axis path,
+.g-axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.g-y.g-axis line {
+  stroke: #fff;
+  stroke-dasharray: 2,2;
+}
+
+.g-y.g-axis path {
+  display: none;
+}
+
+.g-chart-title,
+.g-chart-caption {
+  line-height: 1.5em;
+}
+
+.g-chart-caption {
+  font-size: 14px;
+}
+
+.g-chart-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.g-chart-caption {
+  color: #777;
+  font-weight: 300;
+}
+
+.g-overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+@media screen and (min-device-width: 1024px) {
+  .g-fixed {
+    background-image: -webkit-linear-gradient(top, #fff 50%, rgba(255,255,255,0) 100%);
+    background-image: linear-gradient(to bottom, #fff 50%, rgba(255,255,255,0) 100%);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+}

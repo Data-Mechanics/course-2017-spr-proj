@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body id="interactiveABC" class="interactiveABC">
+<div class="g-header-placeholder"><div class="g-header"></div></div>
+<div class="g-body"></div>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>(function(){
+
+var formatWholePercent = d3.format(".0%"),
+    formatTenthPercent = d3.format(".1%"),
+    formatPercent = function(d) { return (d < .1 ? formatTenthPercent : formatWholePercent)(d); };
+
+d3.tsv('top5Name.tsv', function(error, name){   
+  d3.tsv("/static/charts.tsv", function(error1, charts){
+    d3.tsv("top5.tsv", function(error2, data){
+
+      var brackets = name[0];
+
+      data.forEach(function(d) {
+        d.year = +d.year;
+        d.overall = +d.overall;
+      });
+
+      var dataByBracket = d3.nest()
+          .key(function(d) { return d.bracket; })
+          .map(data);
+
+      var bisect = d3.bisector(function(d) {return d.date; }).left,
+          date0 = new Date(2013, 0, 1),
+          date1 = new Date(2017, 0, 1);
+
+      var margin = {top: 30, right: 5, bottom: 30, left: 5},
+          width = 730 - margin.left - margin.right,
+          height = 600 - margin.bottom - margin.top;
+
+      var x0 = d3.scale.ordinal()
+          .domain([1, 2, 3, 4, 5])
+          .rangeBands([0, width], .1, 0);
+
+      var x1 = d3.time.scale()
+          .domain([date0, date1])
+          .range([0, x0.rangeBand()]);
+
+      var chart = d3.select(".g-body").selectAll(".g-chart")
+          .data(charts)
+        .enter().append("div")
+          .attr("class", function(d) { return "g-chart g-crime"; });
+
+      chart.append("div")
+          .attr("class", "g-chart-title")
+          .text(function(d) { return d.title; });
+
+      var caption = chart.append("div")
+          .attr("class", "g-chart-caption")
+        .selectAll("span")
+          .data(function(d) { return d.caption.split("[-]"); })
+        .enter().append("span");
+
+      caption.filter(function(d, i) { return i; }).append("svg")
+          .style("margin-left", ".5em")
+          .attr("width", 24)
+          .attr("height", 16)
+        .append("path")
+          .attr("class", function(d, i) { return "g-line g-" + (i ? "secondary" : "primary"); })
+          .attr("d", "M4,12h20");
+
+      caption.append("span")
+          .text(function(d) { return d; });
+
+      chart.call(renderChart);
+
+      var header = d3.selectAll(".g-header").call(renderHeader),
+        placeholder = d3.select(".g-header-placeholder").node();
+
+      function renderChart(div) {
+        var svg = div
+            .each(function(d) {
+              d.primary = new Function("d", "return " + d.primary);
+            })
+          .insert("svg", ".g-chart-summary")
+            .attr("width", width + margin.left + margin.right);
+
+        svg.filter(function(d, i) { return !i; }).append("defs").append("marker")
+            .attr("id", "g-arrow")
+            .attr("viewBox", "0 0 10 10")
+            .attr("refX", 0)
+            .attr("refY", 5)
+            .attr("markerUnits", "strokeWidth")
+            .attr("markerWidth", 4)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+          .append("path")
+            .attr("d", "M0,0L10,5L0,10Z");
+
+        var gChart = svg.append("g");
+
+        var gBracket = gChart.selectAll("g")
+            .data(x0.domain())
+          .enter().append("g")
+            .attr("class", "g-bracket")
+            .attr("transform", function(d) { return "translate(" + x0(d) + ",0)"; });
+
+        svg.each(function(chart) {
+          var svg = d3.select(this),
+              gChart = svg.select("g");
+
+          var format = formatPercent;
+
+          var y = d3.scale.linear()
+              .domain([0, 0.05])
+              .range([height, 0]);
+
+          var yAxis = d3.svg.axis()
+              .scale(y)
+              .orient("left")
+              .tickValues(d3.range(.002, 0.2, .002))
+              .tickSize(-x0.rangeBand())
+              .tickFormat("");
+
+          var area = d3.svg.area()
+              .x(function(d) { return x1(d.date); })
+              .y0(height)
+              .y1(function(d) { return y(d.primary); });
+
+          var h = Math.round(y(d3.max(data, chart.primary)));
+          svg.attr("height", (height - h) + margin.top + margin.bottom);
+          gChart.attr("transform", "translate(" + margin.left + "," + (margin.top - h + .5) + ")");
+
+          var y0 = h = height;
+
+          var line = d3.svg.line()
+              .x(function(d) { return x1(d.date); });
+
+          var gBracket = gChart.selectAll(".g-bracket")
+              .datum(function(bracket) {
+                return dataByBracket[bracket].map(function(d, i) {
+                  return {
+                    // control the number of points
+                    date: new Date(d.year, i % 12, 1),
+                    primary: chart.primary(d),
+                  };
+                });
+              });
+
+          gBracket.append("path")
+              .attr("class", "g-area")
+              .attr("d", area);
+
+          gBracket.append("g")
+              .attr("class", "g-y g-axis")
+              .call(yAxis);
+
+          gBracket.append("g")
+              .attr("class", "g-x g-axis")
+            .append("line")
+              .attr("x2", x0.rangeBand())
+              .attr("y1", y0)
+              .attr("y2", y0);
+
+          
+
+          gBracket.append("path")
+              .attr("class", "g-line g-primary")
+              .attr("d", line.y(function(d) { return y(d.primary); }));
+
+          gBracket.append("circle")
+              .attr("class", "g-value g-primary")
+              .attr("transform", function(d) {return "translate(" + x1(d[d.length - 1].date) + "," + y(d[d.length - 1].primary) + ")"; })
+              .attr("r", 2.5)
+              .style("display", "none");
+
+          gBracket.append("text")
+              .attr("class", "g-label-value g-primary g-start")
+              .call(valueLabel, date0);
+
+          gBracket.append("text")
+              .attr("class", "g-label-value g-primary g-end")
+              .call(valueLabel, date1);
+
+          gBracket.append("text")
+              .attr("class", "g-label-year g-start")
+              .attr("dy", ".71em")
+              .call(yearLabel, date0, false);
+
+          gBracket.append("text")
+              .attr("class", "g-label-year g-end")
+              .attr("dy", ".71em")
+              .call(yearLabel, date1, false);
+
+          gBracket.append("rect")
+              .attr("class", "g-overlay")
+              .attr("x", -4)
+              .attr("width", x0.rangeBand() + 8)
+              .attr("height", height + 18)
+              .on("mouseover", mouseover)
+              .on("mousemove", mousemove)
+              .on("mouseout", mouseout);
+
+          function mouseover() {
+            gBracket.selectAll(".g-end").style("display", "none");
+            gBracket.selectAll(".g-value").style("display", null);
+            mousemove.call(this);
+          }
+
+          function mousemove() {
+            var date = x1.invert(d3.mouse(this)[0]);
+            gBracket.selectAll(".g-label-value.g-start").call(valueLabel, date);
+            gBracket.selectAll(".g-label-year.g-start").call(yearLabel, date, true);
+            gBracket.selectAll(".g-value").attr("transform", function(d) {
+              var v = d[bisect(d, date, 0, d.length - 1)],
+                  k = "primary";
+              return "translate(" + x1(v.date) + "," + y(v[k]) + ")";
+            });
+          }
+
+          function mouseout() {
+            gBracket.selectAll(".g-end").style("display", null);
+            gBracket.selectAll(".g-label-value.g-start").call(valueLabel, date0);
+            gBracket.selectAll(".g-label-year.g-start").call(yearLabel, date0, false);
+            gBracket.selectAll(".g-label-year.g-end").call(yearLabel, date1, false);
+            gBracket.selectAll(".g-value").style("display", "none");
+          }
+
+          function valueLabel(text, date) {
+            var x2 = d3.scale.linear().domain(x1.range());
+
+            text.each(function(d) {
+              var text = d3.select(this),
+                  i = bisect(d, date, 0, d.length - 1),
+                  j = Math.round(i / (d.length - 1) * (d.length - 12)),
+                  v = d[i],
+                  x = x1(v.date),
+                  primary = "primary",
+                  secondary = "secondary",
+                  max = "max";
+
+              text.attr("dy", null).attr("y", -4);
+
+              text.text(format(v[primary]))
+                  .attr("transform", "translate("
+                    + x2.range([0, x0.rangeBand() - this.getComputedTextLength()])(x) + ","
+                    + (y(d3[max](d.slice(j, j + 12), function(d) { return d[primary]; })))
+                    + ")");
+            });
+          }
+
+          // hover to control the display mode
+          function yearLabel(text, date, hover) {
+            var x2 = d3.scale.linear().domain(x1.range());
+            text.each(function(d) {
+              var v = d[bisect(d, date, 0, d.length - 1)],
+                  x = x1(v.date),
+                  dateString = hover ? v.date.getFullYear() + "/" + (v.date.getMonth() + 1) : v.date.getFullYear();
+              d3.select(this)
+                  .text(dateString)
+                  .attr("transform", "translate(" + x2.range([0, x0.rangeBand() - this.getComputedTextLength()])(x) + "," + (h + 6) + ")")
+                  .style("display", hover || v.primary >= 0 ? null : "none");
+            });
+          }
+        });
+      }
+
+      function renderHeader(div) {
+        var svg = div.append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", 32);
+
+        var gBracket = svg.selectAll("g")
+            .data(x0.domain())
+          .enter().append("g")
+            .attr("class", "g-bracket")
+            .attr("transform", function(d) { return "translate(" + x0(d) + ",0)"; });
+
+        gBracket.append("path")
+            .attr("d", "M0,0H" + x0.rangeBand() + "V24L" + (x0.rangeBand() / 2) + ",32L0,24Z");
+
+        gBracket.append("text")
+            .attr("x", x0.rangeBand() / 2)
+            .attr("y", 12)
+            .attr("dy", ".35em")
+            .text(function(d) { return brackets[d]; });
+      }
+    });
+  });
+});
+
+
+})()</script>
+   
+</body>
+<link href="/static/chart.css" rel="stylesheet">
+</html>

@@ -1,8 +1,6 @@
-import json
-# import dml
 import pymongo
 import datetime
-import os, json
+import os
 
 def get_result(f,t,s,r):
 	client = pymongo.MongoClient()
@@ -50,25 +48,36 @@ def get_result(f,t,s,r):
 	top5 = result[0:5]
 
 	for i in range(5):
-		top5[i]['rank'] = i
+		top5[i]['rank'] = i + 1
 
 	# get crime num
 	crimeCount=[]
+
 	b=repo['minteng_tigerlei_zhidou.crimeCount'].find()
 	for i in b:
 		for j in top5:
 			if (j['box'] == i['box']):
 				temp = {}
-				temp['crimeNum'] = i['crimeNum']
-				temp['rank'] = j['rank']
+				temp['crimeRatio'] = i['crimeRatio']
+				temp['bracket'] = j['rank']
+				temp['area'] = j['area']
 				crimeCount.append(temp)
 
-	current_dir = os.getcwd()
+	output=sorted(crimeCount, key=lambda x: x['bracket'])
 
-	# Create datadir if does not exist
-	if not os.path.exists(os.path.join(current_dir, 'top5.json')):
-		with open('top5.json', 'w') as f:
-			json.dump(crimeCount,f)
+
+	with open('top5.tsv', 'w') as f:
+		f.write('year\tbracket\tcrimeRatio\n')
+		for i in range(48):
+			year = 2013 + i // 12
+			for block in output:
+				f.write(str(year) + '\t' + str(block['bracket']) + '\t' + str(block['crimeRatio'][i]) + '\n')
+
+
+	with open('top5Name.tsv', 'w') as f:
+		f.write('1\t2\t3\t4\t5\n')
+		for block in output:
+			f.write(str(block['bracket']) + ': ' +block['area'] + '\t')
 
 	# for mapping
 	for i in result:
@@ -82,4 +91,4 @@ def get_result(f,t,s,r):
 
 	return result
 
-#print(get_result(3,4,3,4)[0])
+get_result(3,4,3,4)

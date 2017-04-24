@@ -6,6 +6,10 @@
 <!-- pretty things for the visualization -->
 <style>
 body,h1 {font-family: "Raleway", sans-serif}
+svg {
+    display: block;
+    margin: 0 auto;
+}
 .line {
     stroke: #5e0000;
     fill: none;
@@ -38,7 +42,7 @@ div.text-form {
   color: #5e0000;
 }
 .button {
-    padding: 15px 32px;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -58,13 +62,13 @@ div.text-form {
 }
 </style>
 <head>
+    <form action="/" type="POST">
+        <input style="position: absolute; margin-top:0%;" type="submit" class="button" value="Back" />
+    </form>
 <center><h1>Obesity Percentage over Time to get to Healthy Location</h1></center>
 </head>
 <!-- graphic -->
 <body bgcolor="ffffff">
-    <form action="/" type="POST">
-        <input type="submit" class="button" value="Back" />
-    </form>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 	<script>
     var margin = {

@@ -9,7 +9,9 @@ def get_coordinates():
 		points = zip_to_points[zipcode]
 		for point in points:
 			if point != (0, 0):
-				coordinates += [list(tuple(reversed(point)))]
+				point = [list(tuple(reversed(point)))]
+				coordinates += point
+				print(point)
 
 	return coordinates
 
@@ -17,17 +19,20 @@ coordinates = get_coordinates()
 
 features = []
 for coordinate in coordinates:
-	properties = {'stroke': {'color': "green"}, 
+	properties = {'stroke': "#3d7e49", 
 				  'crime location': coordinate
 				   }
 	geometry = geojson.Point(coordinate)
 	features.append(geojson.Feature(geometry=geometry, properties=properties))
 
-properties = {'stroke': {'color': "red"}, 
+properties = {'stroke': "#8bef85", 
 			  'specific point': "Safest Point in Boston",
 			  'acheiving way': "k-means",
-			  'coordinates': [-71.08318212371852, 42.32110599965421]
-			   }
+			  'coordinates': [
+			    -71.0831821237185, 
+			    42.3211059996542
+			  ]
+			  }
 geometry = geojson.Point([-71.08318212371852, 42.32110599965421])
 features.append(geojson.Feature(geometry=geometry, properties=properties))
 

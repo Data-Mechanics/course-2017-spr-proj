@@ -20,7 +20,7 @@ def visual_1_with_bounds():
 	try:
 		maximum = int(maximum)
 	except (ValueError, TypeError):
-		maximum = 100000
+		maximum = 10000
 	data = VisualOne.get_data(minimum, maximum)
 	return render_template('plot.html', minimum=minimum, maximum=maximum, data=json.dumps(data))
 

@@ -170,12 +170,12 @@ div.text-form {
 {% set minimum = 0 %}
 <h3>The minimum is 0 and the maximum is {{ maximum }}</h3>
 {% elif minimum %}
-{% set maximum = 100000 %}
-<h3>The minimum is {{ minimum }} and the maximum is 100000</h3>
+{% set maximum = 10000 %}
+<h3>The minimum is {{ minimum }} and the maximum is 10000</h3>
 {% else %}
 {% set minimum = 0 %}
-{% set maximum = 100000 %}
-<h3>Please enter a valid minimum and maximum. Min and max have been reset to 0 and 100000.</h3>
+{% set maximum = 10000 %}
+<h3>Please enter a valid minimum and maximum. Min and max have been reset to 0 and 10000.</h3>
 {% endif %}
 <form>
 	Minimum: <input type="text" name="min"> Maximum: <input type="text" name="max"><br><br>

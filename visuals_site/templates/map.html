@@ -10,9 +10,17 @@
 
 <style>
 body,h1 {font-family: "Raleway", sans-serif}
+
+svg {
+    display: block;
+    margin: 0 auto;
+}
+
 </style>
 <head><center><h3>Obesity and Health Locations in Boston</h3></center></head>
 <body>
+
+<div align="center">
 
     <script>
     // our code will go here
@@ -71,10 +79,10 @@ body,h1 {font-family: "Raleway", sans-serif}
             tooltip.transition()
                 .duration(200)
                 .style("opacity", .9);
-            tooltip.html(d.properties.percentage + "% obese<br/>" + d.properties.population_size + " people")
+            tooltip.html(d.properties.percentage + "% obese<br/>" + "population: " + d.properties.population_size)
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px")
-                .style("width", "80px")
+                .style("width", "100px")
         })
         .on("mouseout", function(d) {
             d3.select(this).attr("opacity", "0.5");
@@ -121,5 +129,6 @@ body,h1 {font-family: "Raleway", sans-serif}
 
     </script>
 
+</div>
 </body>
 </html>

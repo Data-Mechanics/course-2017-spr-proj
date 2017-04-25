@@ -94,7 +94,7 @@ def get_result(f,t,s,r):
 				f.write(str(i['area']) + ',' + i['label'] + ',' + i['ind'] + ',' + str(i['emp']) + '\n')
 				f.flush()
 			for i in crimeTotal:
-				f.write(str(i['area']) + ',' + i['label'] + ',' + "rest" + ',' + str(max - i['emp']) + '\n')
+				f.write(str(i['area']) + ',' + i['label'] + ',' + "Difference with Max" + ',' + str(max - i['emp']) + '\n')
 				f.flush()
 
 	# for mapping

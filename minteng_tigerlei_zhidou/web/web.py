@@ -54,8 +54,8 @@ def optimize_result():
 @app.route("/map/")
 def get_map():
     global info
-    for dic in info:
-        dic.pop('_id', None)
+    # for dic in info:
+    #     dic.pop('_id', None)
     return render_template('map.html',a=info[0],b=info[1],c=info[2],d=info[3],e=info[4])
 
 

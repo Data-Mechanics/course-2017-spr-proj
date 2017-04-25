@@ -87,9 +87,8 @@ def get_result(f,t,s,r):
 		for block in output:
 			f.write(str(block['bracket']) + ': ' +block['area'] + '\t')
 
-	current_dir = os.getcwd()
-	if not os.path.exists(os.path.join(current_dir, 'static/crimeTotal.csv')):
-		with open('crimeTotal.csv', 'w') as f:
+	if not os.path.exists(os.path.join(curpath, 'static/crimeTotal.csv')):
+		with open(os.path.join(curpath, 'static/crimeTotal.csv'), 'w') as f:
 			f.write("area,label,ind,emp\n")
 			for i in crimeTotal:
 				f.write(str(i['area']) + ',' + i['label'] + ',' + i['ind'] + ',' + str(i['emp']) + '\n')

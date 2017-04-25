@@ -54,23 +54,23 @@ var a = {{a|tojson}},
     e = {{e|tojson}};
 
 //marker
-var temp='#1:  '+a.area;
+var temp='#1:  '+a.area + '(' + String(a['_id']) + ')';
 var marker = new L.Marker(new L.latLng(a.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false}).openPopup();
 
-var temp='#2:  '+b.area;
+var temp='#2:  '+b.area + '(' + String(b['_id']) + ')';
 var marker = new L.Marker(new L.latLng(b.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false});
 
-var temp='#3:  '+c.area;
+var temp='#3:  '+c.area + '(' + String(c['_id']) + ')';
 var marker = new L.Marker(new L.latLng(c.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false});
 
-var temp='#4:  '+d.area;
+var temp='#4:  '+d.area + '(' + String(d['_id']) + ')';
 var marker = new L.Marker(new L.latLng(d.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false});
 
-var temp='#5:  '+e.area;
+var temp='#5:  '+e.area + '(' + String(e['_id']) + ')';
 var marker = new L.Marker(new L.latLng(e.center));
 marker.addTo(map).bindPopup(temp, {autoClose:false});
 

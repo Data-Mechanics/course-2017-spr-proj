@@ -23,7 +23,7 @@
     <script type="text/javascript">
     
       var data = {{data|safe}}
-      var html = "<table border = 6 align='center'>";
+      var html = "<table border = 6  align='center'>";
       html+= "<tr><th>Area</th><th>Zipcode</th><th>Food</th><th>Transport</th><th>Safety</th><th>Rent</th></tr>"
       for (var i = 0; i < data.length; i++){
           html+="<tr><td>"+data[i].area+"</td><td>"+data[i].postal_code+"</td>";
@@ -59,7 +59,7 @@
 <br>
     </div>
     <div class="my-container">
-        <img src="../static/img/Boston.jpg">
+        <img src="/static/img/Boston.jpg">
     </div>
 
   </section>

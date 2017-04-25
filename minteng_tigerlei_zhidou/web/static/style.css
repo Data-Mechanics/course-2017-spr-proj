@@ -112,9 +112,10 @@ div.opt-res tr,th{
   text-align: center;
   font-size: 17px;
 }
+
 div.opt-res table{
   text-align: center;
-  margin-left: 20%; 
+  /*margin-left: 20%; */
   width: 60%; 
   text-align: center;
 }

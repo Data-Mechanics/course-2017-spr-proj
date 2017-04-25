@@ -72,16 +72,10 @@ def get_result(f,t,s,r):
 				crimeCount.append(temp)
 
 	output=sorted(crimeCount, key=lambda x: x['bracket'])
-<<<<<<< HEAD
 
 	curpath = os.path.abspath(os.curdir)
 	
 	with open(os.path.join(curpath, 'static/top5.tsv'), 'w') as f:
-=======
-	
-
-	with open('top5.tsv', 'w') as f:
->>>>>>> 1f3ee3ef18c81c81c0aef5a067f23570186db0f0
 		f.write('year\tbracket\tcrimeRatio\n')
 		for i in range(48):
 			year = 2013 + i // 12

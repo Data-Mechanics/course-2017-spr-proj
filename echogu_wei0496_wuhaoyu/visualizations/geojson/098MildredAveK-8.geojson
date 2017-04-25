@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.097211,
+            42.331065
+          ],
+          [
+            -71.08668,
+            42.31853
+          ],
+          [
+            -71.09371,
+            42.31737
+          ],
+          [
+            -71.09469,
+            42.31686
+          ],
+          [
+            -71.0942,
+            42.31551
+          ],
+          [
+            -71.095071,
+            42.314872
+          ],
+          [
+            -71.09783,
+            42.3127
+          ],
+          [
+            -71.09297,
+            42.31129
+          ],
+          [
+            -71.08786,
+            42.31242
+          ],
+          [
+            -71.08752,
+            42.30985
+          ],
+          [
+            -71.08696,
+            42.30903
+          ],
+          [
+            -71.0864,
+            42.30642
+          ],
+          [
+            -71.08564,
+            42.30595
+          ],
+          [
+            -71.08357,
+            42.307
+          ],
+          [
+            -71.084364,
+            42.302766
+          ],
+          [
+            -71.0904296,
+            42.27676066
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Mildred Ave K-8",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0904296,
+          42.27676066
+        ]
+      },
+      "properties": {
+        "school": "Mildred Ave K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

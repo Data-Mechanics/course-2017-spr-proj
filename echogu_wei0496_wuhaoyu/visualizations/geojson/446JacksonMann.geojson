@@ -1,0 +1,88 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.06879,
+            42.37988
+          ],
+          [
+            -71.06977,
+            42.38075
+          ],
+          [
+            -71.069362,
+            42.380811
+          ],
+          [
+            -71.06949,
+            42.38167
+          ],
+          [
+            -71.06984,
+            42.38238
+          ],
+          [
+            -71.068865,
+            42.383596
+          ],
+          [
+            -71.07773,
+            42.38294
+          ],
+          [
+            -71.13770062,
+            42.35205867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Jackson/Mann",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13770062,
+          42.35205867
+        ]
+      },
+      "properties": {
+        "school": "Jackson/Mann",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

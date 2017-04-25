@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.0401,
+            42.382248
+          ],
+          [
+            -71.07038,
+            42.38325
+          ],
+          [
+            -71.07058,
+            42.38333
+          ],
+          [
+            -71.078299,
+            42.384017
+          ],
+          [
+            -71.079371,
+            42.383046
+          ],
+          [
+            -71.103706,
+            42.342781
+          ],
+          [
+            -71.138988,
+            42.354638
+          ],
+          [
+            -71.140207,
+            42.350125
+          ],
+          [
+            -71.13959,
+            42.34916
+          ],
+          [
+            -71.139223,
+            42.349221
+          ],
+          [
+            -71.1389,
+            42.34843
+          ],
+          [
+            -71.13743,
+            42.34566
+          ],
+          [
+            -71.141201,
+            42.344524
+          ],
+          [
+            -71.14564,
+            42.34024
+          ],
+          [
+            -71.14544,
+            42.33987
+          ],
+          [
+            -71.1059155,
+            42.3051414
+          ]
+        ]
+      },
+      "properties": {
+        "school": "MATCH MS",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1059155,
+          42.3051414
+        ]
+      },
+      "properties": {
+        "school": "MATCH MS",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

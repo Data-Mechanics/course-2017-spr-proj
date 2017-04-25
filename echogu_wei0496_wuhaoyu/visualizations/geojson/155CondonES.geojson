@@ -1,0 +1,88 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.1132,
+            42.267599
+          ],
+          [
+            -71.10515,
+            42.26708
+          ],
+          [
+            -71.1061,
+            42.26614
+          ],
+          [
+            -71.104575,
+            42.262642
+          ],
+          [
+            -71.10258,
+            42.26251
+          ],
+          [
+            -71.10045,
+            42.265103
+          ],
+          [
+            -71.09893,
+            42.26435
+          ],
+          [
+            -71.05215122,
+            42.33802589
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Condon ES",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05215122,
+          42.33802589
+        ]
+      },
+      "properties": {
+        "school": "Condon ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

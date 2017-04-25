@@ -1,0 +1,116 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.05682,
+            42.35085
+          ],
+          [
+            -71.057103,
+            42.35133
+          ],
+          [
+            -71.06007,
+            42.35608
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.03906,
+            42.36742
+          ],
+          [
+            -71.03829,
+            42.36671
+          ],
+          [
+            -71.037633,
+            42.366418
+          ],
+          [
+            -71.036224,
+            42.367524
+          ],
+          [
+            -71.03841128,
+            42.33487071
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Tynan ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03841128,
+          42.33487071
+        ]
+      },
+      "properties": {
+        "school": "Tynan ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

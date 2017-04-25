@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.058022,
+            42.342463
+          ],
+          [
+            -71.05347,
+            42.32992
+          ],
+          [
+            -71.05599,
+            42.33107
+          ],
+          [
+            -71.05748,
+            42.32849
+          ],
+          [
+            -71.08363,
+            42.33518
+          ],
+          [
+            -71.087323,
+            42.329055
+          ],
+          [
+            -71.073119,
+            42.324483
+          ],
+          [
+            -71.07162,
+            42.31879
+          ],
+          [
+            -71.0712,
+            42.31806
+          ],
+          [
+            -71.07123,
+            42.31499
+          ],
+          [
+            -71.070829,
+            42.314872
+          ],
+          [
+            -71.07062,
+            42.28109
+          ],
+          [
+            -71.07459,
+            42.28266
+          ],
+          [
+            -71.07529,
+            42.28327
+          ],
+          [
+            -71.08653,
+            42.2803
+          ],
+          [
+            -71.08682,
+            42.28054
+          ],
+          [
+            -71.11235,
+            42.25019
+          ],
+          [
+            -71.08080771,
+            42.30739517
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Dearborn STEM Acad",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08080771,
+          42.30739517
+        ]
+      },
+      "properties": {
+        "school": "Dearborn STEM Acad",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

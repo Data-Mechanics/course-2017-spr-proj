@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.11021,
+            42.26553
+          ],
+          [
+            -71.11254,
+            42.27152
+          ],
+          [
+            -71.11493,
+            42.27952
+          ],
+          [
+            -71.11668,
+            42.28297
+          ],
+          [
+            -71.04274058,
+            42.31762867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Dever Elementary",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04274058,
+          42.31762867
+        ]
+      },
+      "properties": {
+        "school": "Dever Elementary",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

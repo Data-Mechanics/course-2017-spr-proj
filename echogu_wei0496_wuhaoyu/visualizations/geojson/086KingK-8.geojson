@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.10086,
+            42.26232
+          ],
+          [
+            -71.10466,
+            42.26391
+          ],
+          [
+            -71.10312,
+            42.26551
+          ],
+          [
+            -71.10294,
+            42.26569
+          ],
+          [
+            -71.10482,
+            42.26684
+          ],
+          [
+            -71.07619659,
+            42.31129966
+          ]
+        ]
+      },
+      "properties": {
+        "school": "King K-8",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07619659,
+          42.31129966
+        ]
+      },
+      "properties": {
+        "school": "King K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

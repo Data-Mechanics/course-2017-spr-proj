@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.05543,
+            42.330159
+          ],
+          [
+            -71.05548,
+            42.33056
+          ],
+          [
+            -71.057733,
+            42.331003
+          ],
+          [
+            -71.059122,
+            42.33695
+          ],
+          [
+            -71.05636,
+            42.34209
+          ],
+          [
+            -71.058022,
+            42.342463
+          ],
+          [
+            -71.081528,
+            42.342099
+          ],
+          [
+            -71.083668,
+            42.338113
+          ],
+          [
+            -71.11421891,
+            42.31868548
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Curley K-8",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11421891,
+          42.31868548
+        ]
+      },
+      "properties": {
+        "school": "Curley K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

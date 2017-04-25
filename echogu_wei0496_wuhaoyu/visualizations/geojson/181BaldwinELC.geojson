@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.057577,
+            42.307069
+          ],
+          [
+            -71.07498,
+            42.31542
+          ],
+          [
+            -71.099613,
+            42.316837
+          ],
+          [
+            -71.099381,
+            42.317414
+          ],
+          [
+            -71.100143,
+            42.320048
+          ],
+          [
+            -71.10558,
+            42.34525
+          ],
+          [
+            -71.04001,
+            42.37023
+          ],
+          [
+            -71.03901,
+            42.37805
+          ],
+          [
+            -71.03721,
+            42.37875
+          ],
+          [
+            -71.14051062,
+            42.34203867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Baldwin ELC",
+        "yard": "Read",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14051062,
+          42.34203867
+        ]
+      },
+      "properties": {
+        "school": "Baldwin ELC",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

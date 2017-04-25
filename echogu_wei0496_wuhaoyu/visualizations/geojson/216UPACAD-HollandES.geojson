@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.08326,
+            42.33601
+          ],
+          [
+            -71.08278,
+            42.33527
+          ],
+          [
+            -71.08215,
+            42.33204
+          ],
+          [
+            -71.08129,
+            42.33097
+          ],
+          [
+            -71.08,
+            42.32867
+          ],
+          [
+            -71.08054,
+            42.32808
+          ],
+          [
+            -71.080517,
+            42.32795
+          ],
+          [
+            -71.08214,
+            42.32422
+          ],
+          [
+            -71.08165,
+            42.32484
+          ],
+          [
+            -71.08535,
+            42.32378
+          ],
+          [
+            -71.08178,
+            42.32213
+          ],
+          [
+            -71.08326,
+            42.32145
+          ],
+          [
+            -71.08472,
+            42.32034
+          ],
+          [
+            -71.08456,
+            42.32002
+          ],
+          [
+            -71.08913,
+            42.31763
+          ],
+          [
+            -71.07385902,
+            42.30561813
+          ]
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD - Holland ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07385902,
+          42.30561813
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD - Holland ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

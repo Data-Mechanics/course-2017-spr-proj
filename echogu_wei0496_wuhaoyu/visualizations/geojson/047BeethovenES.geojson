@@ -1,0 +1,136 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.12239,
+            42.32172
+          ],
+          [
+            -71.09904,
+            42.320812
+          ],
+          [
+            -71.10137,
+            42.31857
+          ],
+          [
+            -71.099355,
+            42.316679
+          ],
+          [
+            -71.08913,
+            42.31763
+          ],
+          [
+            -71.08868,
+            42.31706
+          ],
+          [
+            -71.08912,
+            42.3168
+          ],
+          [
+            -71.09147,
+            42.31493
+          ],
+          [
+            -71.09127,
+            42.31404
+          ],
+          [
+            -71.09265,
+            42.31317
+          ],
+          [
+            -71.09321,
+            42.31306
+          ],
+          [
+            -71.09245,
+            42.31127
+          ],
+          [
+            -71.08972,
+            42.31131
+          ],
+          [
+            -71.08776,
+            42.30954
+          ],
+          [
+            -71.07264,
+            42.32065
+          ],
+          [
+            -71.078403,
+            42.295103
+          ],
+          [
+            -71.084359,
+            42.286911
+          ],
+          [
+            -71.08585,
+            42.28404
+          ],
+          [
+            -71.100877,
+            42.284187
+          ],
+          [
+            -71.15613062,
+            42.26343865
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Beethoven ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15613062,
+          42.26343865
+        ]
+      },
+      "properties": {
+        "school": "Beethoven ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

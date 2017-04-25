@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.13391,
+            42.30216
+          ],
+          [
+            -71.13304,
+            42.30232
+          ],
+          [
+            -71.131,
+            42.30427
+          ],
+          [
+            -71.12701,
+            42.30754
+          ],
+          [
+            -71.12469,
+            42.30763
+          ],
+          [
+            -71.12397,
+            42.30848
+          ],
+          [
+            -71.12308,
+            42.3116
+          ],
+          [
+            -71.12844,
+            42.31197
+          ],
+          [
+            -71.13146,
+            42.31142
+          ],
+          [
+            -71.12239,
+            42.32172
+          ],
+          [
+            -71.14961061,
+            42.26075865
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Ohrenberger",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14961061,
+          42.26075865
+        ]
+      },
+      "properties": {
+        "school": "Ohrenberger",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

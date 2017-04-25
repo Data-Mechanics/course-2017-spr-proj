@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.140163,
+            42.359498
+          ],
+          [
+            -71.1273,
+            42.35787
+          ],
+          [
+            -71.12952,
+            42.35547
+          ],
+          [
+            -71.13079,
+            42.35154
+          ],
+          [
+            -71.12851,
+            42.35083
+          ],
+          [
+            -71.138858,
+            42.349214
+          ],
+          [
+            -71.138858,
+            42.349214
+          ],
+          [
+            -71.140605,
+            42.346479
+          ],
+          [
+            -71.14025,
+            42.34402
+          ],
+          [
+            -71.143115,
+            42.342064
+          ],
+          [
+            -71.1082974,
+            42.2614165
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Match Community Day",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1082974,
+          42.2614165
+        ]
+      },
+      "properties": {
+        "school": "Match Community Day",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

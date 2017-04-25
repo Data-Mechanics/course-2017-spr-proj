@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.13123,
+            42.34906
+          ],
+          [
+            -71.145638,
+            42.353848
+          ],
+          [
+            -71.140177,
+            42.350005
+          ],
+          [
+            -71.139759,
+            42.349575
+          ],
+          [
+            -71.139044,
+            42.349227
+          ],
+          [
+            -71.13841,
+            42.34835
+          ],
+          [
+            -71.138326,
+            42.348325
+          ],
+          [
+            -71.13799,
+            42.3446
+          ],
+          [
+            -71.13933,
+            42.34611
+          ],
+          [
+            -71.14074,
+            42.34543
+          ],
+          [
+            -71.14192,
+            42.34341
+          ],
+          [
+            -71.142334,
+            42.343816
+          ],
+          [
+            -71.14438,
+            42.34348
+          ],
+          [
+            -71.14421,
+            42.34291
+          ],
+          [
+            -71.144662,
+            42.342595
+          ],
+          [
+            -71.144662,
+            42.342595
+          ],
+          [
+            -71.144662,
+            42.342595
+          ],
+          [
+            -71.144662,
+            42.342595
+          ],
+          [
+            -71.06492059,
+            42.34797867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Quincy ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06492059,
+          42.34797867
+        ]
+      },
+      "properties": {
+        "school": "Quincy ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

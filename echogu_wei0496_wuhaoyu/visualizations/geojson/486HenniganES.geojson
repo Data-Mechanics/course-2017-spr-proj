@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.07632,
+            42.32032
+          ],
+          [
+            -71.07679,
+            42.31987
+          ],
+          [
+            -71.076599,
+            42.319206
+          ],
+          [
+            -71.076356,
+            42.316393
+          ],
+          [
+            -71.06877,
+            42.31674
+          ],
+          [
+            -71.06967,
+            42.30877
+          ],
+          [
+            -71.06686,
+            42.30358
+          ],
+          [
+            -71.06803,
+            42.302
+          ],
+          [
+            -71.08562,
+            42.30635
+          ],
+          [
+            -71.10691069,
+            42.32562212
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Hennigan ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10691069,
+          42.32562212
+        ]
+      },
+      "properties": {
+        "school": "Hennigan ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

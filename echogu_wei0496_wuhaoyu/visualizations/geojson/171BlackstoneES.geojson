@@ -1,0 +1,136 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.06988,
+            42.38355
+          ],
+          [
+            -71.07512,
+            42.37986
+          ],
+          [
+            -71.069712,
+            42.379251
+          ],
+          [
+            -71.06934,
+            42.37938
+          ],
+          [
+            -71.06912,
+            42.37909
+          ],
+          [
+            -71.06694,
+            42.37873
+          ],
+          [
+            -71.06696,
+            42.37854
+          ],
+          [
+            -71.06654,
+            42.37629
+          ],
+          [
+            -71.06598,
+            42.37453
+          ],
+          [
+            -71.06606,
+            42.37392
+          ],
+          [
+            -71.0656,
+            42.37355
+          ],
+          [
+            -71.06456,
+            42.37375
+          ],
+          [
+            -71.06451,
+            42.37371
+          ],
+          [
+            -71.064763,
+            42.373196
+          ],
+          [
+            -71.06381,
+            42.37232
+          ],
+          [
+            -71.069547,
+            42.372617
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.07246107,
+            42.34073755
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Blackstone ES",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07246107,
+          42.34073755
+        ]
+      },
+      "properties": {
+        "school": "Blackstone ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.14523,
+            42.27258
+          ],
+          [
+            -71.14594,
+            42.27803
+          ],
+          [
+            -71.15082,
+            42.28755
+          ],
+          [
+            -71.14423,
+            42.28964
+          ],
+          [
+            -71.14143,
+            42.29019
+          ],
+          [
+            -71.14763,
+            42.29358
+          ],
+          [
+            -71.14688,
+            42.29326
+          ],
+          [
+            -71.144,
+            42.29415
+          ],
+          [
+            -71.14293,
+            42.2944
+          ],
+          [
+            -71.14074,
+            42.29367
+          ],
+          [
+            -71.13833,
+            42.29277
+          ],
+          [
+            -71.13916,
+            42.29203
+          ],
+          [
+            -71.13401,
+            42.29638
+          ],
+          [
+            -71.12447,
+            42.30808
+          ],
+          [
+            -71.12349,
+            42.30891
+          ],
+          [
+            -71.11386744,
+            42.30703515
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Mission Hill K-8",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11386744,
+          42.30703515
+        ]
+      },
+      "properties": {
+        "school": "Mission Hill K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

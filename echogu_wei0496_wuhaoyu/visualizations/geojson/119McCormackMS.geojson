@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.03746,
+            42.36707
+          ],
+          [
+            -71.0378,
+            42.36648
+          ],
+          [
+            -71.03829,
+            42.36671
+          ],
+          [
+            -71.03832,
+            42.36715
+          ],
+          [
+            -71.04019,
+            42.37056
+          ],
+          [
+            -71.04078,
+            42.37147
+          ],
+          [
+            -71.038788,
+            42.371621
+          ],
+          [
+            -71.051949,
+            42.373596
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.038813,
+            42.34848
+          ],
+          [
+            -71.0509,
+            42.3383
+          ],
+          [
+            -71.0512,
+            42.33546
+          ],
+          [
+            -71.05179,
+            42.33505
+          ],
+          [
+            -71.03437,
+            42.33219
+          ],
+          [
+            -71.04350058,
+            42.31802867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "McCormack MS",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04350058,
+          42.31802867
+        ]
+      },
+      "properties": {
+        "school": "McCormack MS",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

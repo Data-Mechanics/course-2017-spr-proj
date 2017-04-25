@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.057577,
+            42.307069
+          ],
+          [
+            -71.05948,
+            42.28013
+          ],
+          [
+            -71.0714,
+            42.27309
+          ],
+          [
+            -71.075908,
+            42.273736
+          ],
+          [
+            -71.10736,
+            42.27121
+          ],
+          [
+            -71.05819134,
+            42.3231762
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Clap ES",
+        "yard": "Read",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05819134,
+          42.3231762
+        ]
+      },
+      "properties": {
+        "school": "Clap ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

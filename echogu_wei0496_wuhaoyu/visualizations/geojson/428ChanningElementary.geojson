@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.057577,
+            42.307069
+          ],
+          [
+            -71.06685,
+            42.30047
+          ],
+          [
+            -71.0682,
+            42.30171
+          ],
+          [
+            -71.06867,
+            42.302
+          ],
+          [
+            -71.06846,
+            42.3033
+          ],
+          [
+            -71.06816,
+            42.30558
+          ],
+          [
+            -71.06509,
+            42.30657
+          ],
+          [
+            -71.06478,
+            42.30667
+          ],
+          [
+            -71.06556,
+            42.307815
+          ],
+          [
+            -71.07368,
+            42.31583
+          ],
+          [
+            -71.08305,
+            42.30527
+          ],
+          [
+            -71.09123,
+            42.30968
+          ],
+          [
+            -71.09212,
+            42.31033
+          ],
+          [
+            -71.09022,
+            42.312
+          ],
+          [
+            -71.08888,
+            42.31244
+          ],
+          [
+            -71.09032,
+            42.31438
+          ],
+          [
+            -71.0908,
+            42.3136
+          ],
+          [
+            -71.09254,
+            42.31409
+          ],
+          [
+            -71.09154,
+            42.3167
+          ],
+          [
+            -71.13332061,
+            42.25162865
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Channing Elementary",
+        "yard": "Read",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13332061,
+          42.25162865
+        ]
+      },
+      "properties": {
+        "school": "Channing Elementary",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.040531,
+            42.369509
+          ],
+          [
+            -71.08017,
+            42.34051
+          ],
+          [
+            -71.0569,
+            42.33986
+          ],
+          [
+            -71.054625,
+            42.3331
+          ],
+          [
+            -71.0575,
+            42.32913
+          ],
+          [
+            -71.07681,
+            42.32006
+          ],
+          [
+            -71.0763,
+            42.3195
+          ],
+          [
+            -71.07451,
+            42.31801
+          ],
+          [
+            -71.076579,
+            42.316433
+          ],
+          [
+            -71.0763,
+            42.31502
+          ],
+          [
+            -71.07364,
+            42.31597
+          ],
+          [
+            -71.07326,
+            42.31568
+          ],
+          [
+            -71.07326,
+            42.31514
+          ],
+          [
+            -71.06644,
+            42.30963
+          ],
+          [
+            -71.06832,
+            42.30615
+          ],
+          [
+            -71.06678,
+            42.30579
+          ],
+          [
+            -71.0904296,
+            42.27676066
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Mildred Ave K-8",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0904296,
+          42.27676066
+        ]
+      },
+      "properties": {
+        "school": "Mildred Ave K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

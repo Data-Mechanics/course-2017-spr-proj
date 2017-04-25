@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.10479,
+            42.2656
+          ],
+          [
+            -71.10436,
+            42.26421
+          ],
+          [
+            -71.10154,
+            42.26478
+          ],
+          [
+            -71.10096,
+            42.26378
+          ],
+          [
+            -71.05319154,
+            42.28655025
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Kenny ES",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05319154,
+          42.28655025
+        ]
+      },
+      "properties": {
+        "school": "Kenny ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

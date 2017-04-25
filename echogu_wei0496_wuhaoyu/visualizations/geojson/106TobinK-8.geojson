@@ -1,0 +1,116 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.078908,
+            42.383715
+          ],
+          [
+            -71.07795,
+            42.38321
+          ],
+          [
+            -71.07771,
+            42.38242
+          ],
+          [
+            -71.074622,
+            42.384017
+          ],
+          [
+            -71.06577,
+            42.37709
+          ],
+          [
+            -71.040055,
+            42.382432
+          ],
+          [
+            -71.0395,
+            42.38241
+          ],
+          [
+            -71.038668,
+            42.377428
+          ],
+          [
+            -71.04004,
+            42.37645
+          ],
+          [
+            -71.04012,
+            42.37269
+          ],
+          [
+            -71.03968,
+            42.37173
+          ],
+          [
+            -71.039351,
+            42.369961
+          ],
+          [
+            -71.03906,
+            42.36742
+          ],
+          [
+            -71.03561,
+            42.36595
+          ],
+          [
+            -71.0982906,
+            42.33301867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Tobin K-8",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0982906,
+          42.33301867
+        ]
+      },
+      "properties": {
+        "school": "Tobin K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

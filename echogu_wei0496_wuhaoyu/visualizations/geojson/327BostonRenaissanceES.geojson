@@ -1,0 +1,140 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.08033,
+            42.34017
+          ],
+          [
+            -71.08012,
+            42.34116
+          ],
+          [
+            -71.07933,
+            42.34151
+          ],
+          [
+            -71.07832,
+            42.34105
+          ],
+          [
+            -71.08044,
+            42.34281
+          ],
+          [
+            -71.081284,
+            42.342879
+          ],
+          [
+            -71.08131,
+            42.341947
+          ],
+          [
+            -71.081414,
+            42.342016
+          ],
+          [
+            -71.08228,
+            42.3417
+          ],
+          [
+            -71.082048,
+            42.341124
+          ],
+          [
+            -71.08164,
+            42.34099
+          ],
+          [
+            -71.082136,
+            42.340514
+          ],
+          [
+            -71.08156,
+            42.34013
+          ],
+          [
+            -71.081376,
+            42.33939
+          ],
+          [
+            -71.081376,
+            42.33939
+          ],
+          [
+            -71.0814,
+            42.33846
+          ],
+          [
+            -71.082924,
+            42.338252
+          ],
+          [
+            -71.082924,
+            42.338252
+          ],
+          [
+            -71.082924,
+            42.338252
+          ],
+          [
+            -71.082924,
+            42.338252
+          ],
+          [
+            -71.1526401,
+            42.2994837
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Boston Renaissance ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1526401,
+          42.2994837
+        ]
+      },
+      "properties": {
+        "school": "Boston Renaissance ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

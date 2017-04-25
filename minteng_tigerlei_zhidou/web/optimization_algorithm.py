@@ -52,9 +52,17 @@ def get_result(f,t,s,r):
 
 	# get crime num
 	crimeCount=[]
-
+	crimeTotal=[]
+	max = 0
 	b=repo['minteng_tigerlei_zhidou.crimeCount'].find()
 	for i in b:
+		tempT = {}
+		tempT['label'] = i['area'] + "(" + str(i['_id']) + ")"
+		tempT['emp'] = sum(i['crimeNum'])
+		tempT['area'] = i['_id']
+		tempT['ind'] = "crimeNum"
+		max = tempT['emp'] if tempT['emp'] > max else max
+		crimeTotal.append(tempT)
 		for j in top5:
 			if (j['box'] == i['box']):
 				temp = {}
@@ -64,10 +72,16 @@ def get_result(f,t,s,r):
 				crimeCount.append(temp)
 
 	output=sorted(crimeCount, key=lambda x: x['bracket'])
+<<<<<<< HEAD
 
 	curpath = os.path.abspath(os.curdir)
 	
 	with open(os.path.join(curpath, 'static/top5.tsv'), 'w') as f:
+=======
+	
+
+	with open('top5.tsv', 'w') as f:
+>>>>>>> 1f3ee3ef18c81c81c0aef5a067f23570186db0f0
 		f.write('year\tbracket\tcrimeRatio\n')
 		for i in range(48):
 			year = 2013 + i // 12
@@ -78,6 +92,17 @@ def get_result(f,t,s,r):
 		f.write('1\t2\t3\t4\t5\n')
 		for block in output:
 			f.write(str(block['bracket']) + ': ' +block['area'] + '\t')
+
+	current_dir = os.getcwd()
+	if not os.path.exists(os.path.join(current_dir, 'crimeTotal.csv')):
+		with open('crimeTotal.csv', 'w') as f:
+			f.write("area,label,ind,emp\n")
+			for i in crimeTotal:
+				f.write(str(i['area']) + ',' + i['label'] + ',' + i['ind'] + ',' + str(i['emp']) + '\n')
+				f.flush()
+			for i in crimeTotal:
+				f.write(str(i['area']) + ',' + i['label'] + ',' + "rest" + ',' + str(max - i['emp']) + '\n')
+				f.flush()
 
 	# for mapping
 	for i in result:

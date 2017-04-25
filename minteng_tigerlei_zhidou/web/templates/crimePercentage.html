@@ -11,9 +11,15 @@ var formatWholePercent = d3.format(".0%"),
     formatTenthPercent = d3.format(".1%"),
     formatPercent = function(d) { return (d < .1 ? formatTenthPercent : formatWholePercent)(d); };
 
+<<<<<<< HEAD
 d3.tsv('/static/top5Name.tsv', function(error, name){   
   d3.tsv("/static/charts.tsv", function(error1, charts){
     d3.tsv("/static/top5.tsv", function(error2, data){
+=======
+d3.tsv('/top5Name.tsv', function(error, name){   
+  d3.tsv("/static/charts.tsv", function(error1, charts){
+    d3.tsv("/top5.tsv", function(error2, data){
+>>>>>>> 1f3ee3ef18c81c81c0aef5a067f23570186db0f0
 
       var brackets = name[0];
 

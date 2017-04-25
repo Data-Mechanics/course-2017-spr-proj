@@ -5,30 +5,48 @@
 ## 1. Introduction
 The City of Boston has performed a significant effort on collecting data over different services and other public information. The diversity of these publicly available datasets allows us to explore various areas in Boston. Particularly, in this project we are focusing on building a website to help people find the best living area in Boston and provide correspnding analysis to their choices.
 
-Our database is based on `MongoDB` and web server is supported by `flask`.
+Since it is a really complex problem to define which area of boston is most suitable for living, we simplify it by four main factors: `Rent`, `Transport`, `Food`, `Safety` and map them to ratings in 1~5. Through our website, users could customize the ratings of these four aspects based on their personal requirements so that they could find the idea place of living.
+
+Besides, interative statistical analysis is provided. Users could either view the overall analysis of four aspects based on great boston area or get a 4-year-long detailed crime analsis graph based on their possible targets, which could help them make better decisions. 
 
 ## 2. Datasets
 
 - [Average Rent](http://datamechanics.io/data/minteng_zhidou/rent.txt)
 - [MBTA Stops](http://datamechanics.io/data/minteng_zhidou/stops.txt)
-- [Food Data](https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq)
-- [Safety(Crime 2015-2017)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-August-2015-To-Date-Source-/fqn4-4qap)
+- [Active Food Establishment Licenses](https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq)
+- [Crime Incidents In Boston(2012-2015)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-July-2012-August-2015-Sourc/7cdf-6fgx)
+- [Crime Incidents In Boston(2015-2017)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-August-2015-To-Date-Source-/fqn4-4qap)
 
 ## 3. Preprocessing
 The preprocessing steps were performed based on relational data and map-reduce paradigm.
-1. Combine rent table with zipcode of accorsponding area. To achieve that goal, we fetch longitude and latitude based on the name of area in rent table via google maps api and then using this location information as input to fetch zipcode also with the help of google maps api. Then we combine location table with rent table and implement aggregation to get the final data set with rent and the zipcode.
+1. Combine rent data with zipcode of accorsponding area. To achieve that goal, we fetch longitude and latitude based on the name of area in rent dataset via google maps API and then using this location information as input to fetch zipcode also with the help of google maps api. Then we combine location information with rent data and implement aggregation to get the final data set with rent and the zipcode. The data looks like as below:
+```json
+{   "_id" : ObjectId("58ff92514d0fd1f99d53557e"), 
+    "avg_rent" : 2359, 
+    "area" : "Allston", 
+    "postal_code" : "02134" }
+```
 2. Projecting MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then we create a union of three datasets into the second new dataset. After union operation, selection is used to to remove data with invalid locations (for example, with longitude and latitude equal to 0).
+```json
+{   "_id" : ObjectId("58ff922b4d0fd1f99d51c49e"), 
+    "address" : "1159 Washington", 
+    "location" : [ 42.272239, -71.068856 ], 
+    "type" : "food", 
+    "zip" : "02126", 
+    "businessname" : "SPUKIES PIZZA RESTAURANT", 
+    "city" : "Mattapan" }
+```
 
 ## 4. Methodologies 
 
-### Problem 1: Optimization
-Following the idea of project 1, our goal is to find a best office location for a new company. Since a detailed coordinate is meaningless, we try to find a suitable area. Project 1 has helped us gather all the licensed restaurants/ crime incidents/ MBTA stops/ rent price in boston area. We gonna find the best area that maximize **```#restaurant```**, **```#MBTA stops```** and minimize **```#crime incidents```** and **```rent price```**. 
+### Optimization
+Given all the licensed restaurants/ crime incidents/ MBTA stops/ rent price in boston area, We gonna find the best living area with maximizing **`#restaurant`**, **`#MBTA stops`** and minimize **`#crime incidents`** and **`rent price`**. 
 
 We use googlemaps api to find the left bottom/ right top coordinates of boston area. With these coordinates, we could build a big rectangle containing boston area. Then we separate this rectangle into 10 x 10 grids(user could set this scale manually). 
 
 ![boston_grid](http://datamechanics.io/data/minteng_zhidou/Boston_grid.png)
 
-Removing those blank grids which don't contain any useful data, we have 52 grids left. Each grid represents a possible target area which contains a suitable place for opening a company. Therefore, we could count the number of restaurant/ crime incidents/ MBTA stops(including buses and subway) in every grid and evaluate these numbers by mapping them into scores from 1-5. And according to the center coordinate of this grid, googlemaps api could help us to find it belongs to which area(like Allston/ Back Bay/ Fenway/...). 
+Removing those blank grids which don't belong to boston area, we have 52 grids left. Each grid represents a possible target area which contains a potential place for living. Therefore, we could count the number of restaurant/ crime incidents/ MBTA stops(including buses and subway) in every grid and evaluate these numbers by mapping them into scores from 1-5(safety score is reversed by crime). And according to the center coordinate of this grid, googlemaps api could help us to find it belongs to which area(like Allston/ Back Bay/ Fenway/...). 
 
 ![box_count](http://datamechanics.io/data/minteng_zhidou/map_with_label.png) 
 
@@ -38,50 +56,19 @@ Then our database would search and find matched rent price, which also should be
 ```
 (transport, food, safety, rent) 
 ```
-All these data would be stored in a new collection named ```box_count```.
-
-User could customize rating due to their preference in ```optimization.py```. It would search user's ratings requirement in database. If it finds results with every rating of ```(transport, food, safety, rent)``` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. 
-
-We provide an example that our algorithm rank all 52 grid area according to user's requirement of grades: **```(3, 4, 3, 4)```** and provide top choices as well as its bound coordinates, area name & zipcode, average rent and ratings.
+All these data would be stored in a new collection named ```box_count``` as follow.
+```json
+{   "_id" : 1, 
+    "avg_rent" : 1597, 
+    "box" : [ [ 42.22788, -71.1642177 ], [ 42.2450451, -71.1373224 ] ],
+    "postal_code" : "02136", 
+    "grade" : { "transport" : 1, "food" : 1, "safety" : 4, "rent" : 3 }, 
+    "area" : "Hyde Park", 
+    "count" : { "transport" : 15, "food" : 14, "crime" : 96 } }
 ```
-Top fitted areas:
-Bound: [[42.2622102, -71.0835318], [42.2793753, -71.0566365]]
-Area: Mattapan 02126    Avg rent: 1403
-Grades: {'safety': 3, 'rent': 5, 'food': 4, 'transport': 4} 
+User could customize rating due to their preference in website. It would search user's ratings requirement in database. If it finds results with every rating of `(transport, food, safety, rent)` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. Detailed algorithm could be found under `web/optimization_algorithm.py`
 
-Bound: [[42.2622102, -71.1642177], [42.2793753, -71.1373224]]
-Area: West Roxbury 02132    Avg rent: 1476
-Grades: {'safety': 3, 'rent': 4, 'food': 4, 'transport': 3} 
-
-Bound: [[42.2793753, -71.0566365], [42.2965404, -71.0297412]]
-Area: Dorchester 02122    Avg rent: 1524
-Grades: {'safety': 2, 'rent': 4, 'food': 4, 'transport': 3} 
-
-Bound: [[42.2622102, -71.1373224], [42.2793753, -71.11042710000001]]
-Area: Roslindale 02131    Avg rent: 1685
-Grades: {'safety': 2, 'rent': 3, 'food': 4, 'transport': 3} 
-
-Bound: [[42.3137055, -71.1373224], [42.330870600000004, -71.11042710000001]]
-Area: Jamaica Plain 02130    Avg rent: 2214
-Grades: {'safety': 3, 'rent': 3, 'food': 5, 'transport': 2} 
-```
-
-Assuming ```rent.py```, ```location.py```, ```salary.py```, ```crime.py```(retrieve and transformations procedure) has been run.
-
-To solve this optimization problem, first run the ```box_count.py```:
-```python
-python3 box_count.py
-```
-And then run ```optimization.py```:
-```python
-python3 optimization.py
-```
-Remember to uncomment the last lines in the file:
-```python
-# <filename>.execute()
-```
-
-### Problem 2: Statistical Analysis
+### Statistical Analysis (need to add more on new parts of analysis on website)
 After finding ideal area for a new company, we would like to dig deeper into those areas, because this area might be the best choice for now, but it might change, with the variation of rental, crime and transportations. So based on current data, we want to study on the trend of these factors, and for now we mainly focus on crime in different blocks(grids). A new dataset [Safety(Crime 2012-2015)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-July-2012-August-2015-Sourc/7cdf-6fgx) has been added.
 
 Now let *X<sub>ij</sub>* as the the number of crimes happens in block *i* in year *j*. If *X<sub>ij</sub>* and *X<sub>i(j + 1)</sub>* are highly correlated, then we could claim the number of crimes of these two year in this block have similar distribution. Thus if these random variables continuously related to each other, then we could use such correlation to predict the trend of the criminal events in this year.
@@ -109,37 +96,23 @@ Because this data of these four year have strong linear relationship, there is a
 
 *(This graph is generated by fitting.ipynb)*
 
-To solve this analysis problem, first run the ```crime.py```:
-```python
-python3 crime.py
-```
-And then run ```crimeAnalysis.py```:
-```python
-python3 crimeAnalysis.py
-```
-Remember to uncomment the last lines in the file:
-```python
-# <filename>.execute()
-```
+
 
 ## 5. Results
-
-
-We use Flask and MongoDB to implement the web service. 
-The first new feature/component is to visualize the optimization problem in project2. After we get the top fitted location results, we use Leaflet to show them in an interactive map, with labeled blocks filled in different colors. Also, we implement and show the crime analysis for those location results, the user could get the crime ratio of certain block in the total crime number for different month/year.
+We use Flask and MongoDB to implement the web service. The first new feature/component is to visualize the optimization problem in project2. After we get the top fitted location results, we use Leaflet to show them in an interactive map, with labeled blocks filled in different colors. Also, we implement and show the crime analysis for those location results, the user could get the crime ratio of certain block in the total crime number for different month/year.
 
 The second new feature/component is statistical analysis. We randomly choose 30 blocks and use D3 to show four grades for each block in a bar chart. Next, we compute the correlation coefficient and p-value between four attributes, we we visualize their relationship by setting four attributes as the nodes and the value of (1-abs(Correlation Coefficient))*500 as the edge length, which means that if two attributes have higher Correlation Coefficient, they will be much closer than others. The last plot is to ……..(project 2)
-
 
 ## 6. Future Work
 
 ## Reference
-
+1. http://flask.pocoo.org/docs/0.12/
+2. 
 
 
 # Instructions
 
-All scripts and files are new folder ```minteng_tigerlei_zhidou```. All ```.ipynb``` files are just used to plot and show graphs in case of running error inspected by ```execute.py```.
+All scripts and files are new folder ```minteng_tigerlei_zhidou```. All ```.ipynb``` files are just used to plot and show graphs in case of running error inspected by ```initial.py```.
 
 ### auth.json
 This project use app token from ```boston data portal``` and ```googlemaps geocoding API```. To retrieve data automatically, app token should be added into `auth.json` file as follow format:
@@ -166,7 +139,7 @@ This project provide a trial mode to complete data retrieve and transformations 
 
 To run trial mode on all files:
 ```python
-python3 execute.py --trial
+python3 initial.py --trial
 ```
 
 To run trial mode on seperate files, remember to uncomment last few lines of the file

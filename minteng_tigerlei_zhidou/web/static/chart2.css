@@ -1,0 +1,168 @@
+body {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+
+h3 {
+    margin-left: 4px;
+}
+
+.arc text {
+    text-anchor: middle;
+}
+
+.arc path {
+    stroke: #fff;
+}
+
+#pie-chart {
+    background-color: #ffffff;
+    height: 370px;
+    text-shadow: none;
+    margin-right: 0;
+}
+
+    #pie-chart .total {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #pie-chart .units {
+        fill: gray;
+        font-size: 12px;
+    }
+
+    #pie-chart .label {
+        fill: #CCC;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    #pie-chart .value {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+.toolTip {
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+
+.bar text {
+    font-size: 1em;
+    font-weight: 300;
+    cursor: default;
+}
+
+.axis line {
+    stroke: #AAA;
+    stroke-width: 1;
+}
+
+line.median {
+    stroke: #777;
+    stroke-width: 1;
+}
+
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+
+.bar {
+    fill: #74c476;
+}
+
+    .bar:hover {
+        fill: #a1d99b;
+    }
+
+.axisR {
+    font: 0.625em sans-serif;
+}
+
+.axisL {
+    font: 0.625em sans-serif;
+}
+
+.axis {
+    font: 0.625em sans-serif;
+}
+
+.axisR path,
+.axisR line,
+.axisL path,
+.axisL line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.chartLine {
+    fill: red;
+    stroke: red;
+}
+
+.chartLineText {
+    font: 0.625em sans-serif;
+    pointer-events: none;
+}
+
+.barText {
+    font: 0.7em sans-serif;
+    font-weight: 500;
+    color: lightgray;
+    visibility: hidden;
+}
+
+a {
+    color: dimgray;
+}
+
+.source {
+    font-size: 0.625em;
+    color: grey;
+    line-height: 80%;
+}
+
+.prepaired {
+    font-size: 0.625em;
+    color: grey;
+    line-height: 80%;
+}
+
+.update {
+    font-size: 0.625em;
+    color: grey;
+    line-height: 80%;
+}
+
+.notes {
+    font-size: 0.625em;
+    color: grey;
+    line-height: 80%;
+}
+
+.def {
+    font-size: .75em;
+    color: grey;
+}

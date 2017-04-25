@@ -2,7 +2,7 @@ import dml, prov.model
 import datetime, uuid
 import numpy as np
 from scipy import stats
-import warnings
+import warnings, os
 
 class crimeAnalysis(dml.Algorithm):
     contributor = 'minteng_tigerlei_zhidou'
@@ -65,15 +65,19 @@ class crimeAnalysis(dml.Algorithm):
                                     'corcof': corrfP[i][j][0] if corrfP[i][j][0] != None else 0,
                                     'p': corrfP[i][j][1]} for j in range(3) ]
             ret.append(tempDict)
-        print(corrfP)
-        with open('corAndP.csv', 'w') as f:
-            f.write('area,periodyear,avgemp,changeemp\n')
-            for i in range(districtNum):
-                for j in range(3):
-                    f.write(str(i + 1) + ',' + str(2013 + j) + ',' + 
-                            str(abs(corrfP[i][j][0]) if not np.isnan(corrfP[i][j][0]) else 0) + ',' + 
-                            str(corrfP[i][j][1]) + '\n')
-                    f.flush()
+        
+        current_dir = os.getcwd()
+        # Create datadir if does not exist
+        print(current_dir)
+        if not os.path.exists(os.path.join(current_dir, 'minteng_tigerlei_zhidou/web/static/corAndP.csv')):
+            with open(os.path.join(current_dir, 'minteng_tigerlei_zhidou/web/static/corAndP.csv'), 'w') as f:
+                f.write('area,periodyear,avgemp,changeemp\n')
+                for i in range(districtNum):
+                    for j in range(3):
+                        f.write(str(i + 1) + ',' + str(2013 + j) + ',' + 
+                                str(abs(corrfP[i][j][0]) if not np.isnan(corrfP[i][j][0]) else 0) + ',' + 
+                                str(corrfP[i][j][1]) + '\n')
+                        f.flush()
 
 
 
@@ -151,4 +155,4 @@ class crimeAnalysis(dml.Algorithm):
         repo.logout()
         return doc
 
-crimeAnalysis.execute()
+# crimeAnalysis.execute()

@@ -130,16 +130,6 @@ Remember to uncomment the last lines in the file:
 
 
 
-
-## 3.a 
-### Provenance information
-All provenance information could be seen in ```provenance.html``` after running:
-```python
-python3 execute.py minteng_tigerlei_zhidou
-```
-
-
-
 # Instructions
 
 All scripts and files are new folder ```minteng_tigerlei_zhidou```. All ```.ipynb``` files are just used to plot and show graphs in case of running error inspected by ```execute.py```.
@@ -201,5 +191,9 @@ python3 web.py
 ```
 To view the website, open a browser on your machine and type `127.0.0.1:5000` in address bar.
 
-
+### Provenance Information
+All provenance information could be seen in ```provenance.html``` after running:
+```python
+python3 initiate.py minteng_tigerlei_zhidou
+```
 

@@ -142,6 +142,73 @@ d3.json("CarCrashData.json", function(error, data) {
 			return [minLat, minLong];
 		};
 
+		function getRoute(startlat, startlong) {
+			var origin = new google.maps.LatLng(startlat, startlong);
+			var dests = [];
+
+			for (var i = 0; i < data1.length; i++) {//item in data) {
+				var lat = data1[i]["Latitude"];
+				var long = data1[i]["Longitude"];
+				var dest = new google.maps.LatLng(lat, long);
+				dests.push(dest);
+			};
+
+			var service = new google.maps.DistanceMatrixService();
+			service.getDistanceMatrix(
+			{
+				origins: [origin],
+				destinations: dests,
+				travelMode: 'DRIVING',
+			}, callback);
+
+
+			function callback(response, status) {
+
+				//console.log(response);
+				if (status == 'OK') {
+					var origins = response.originAddresses;
+					var destinations = response.destinationAddresses;
+					var results = response.rows[0].elements;
+					
+					var minDuration = 9999;
+					var minDestination;
+
+					for (var j = 0; j < results.length; j++) {
+						var element = results[j];
+						if (element.status == "OK") {
+							var distance = element.distance.text;
+							var duration = element.duration.text;
+							duration = parseInt(duration.substring(0, duration.length - 4));
+							var from = origins[0];
+							var to = destinations[j];
+
+							if (duration < minDuration) {
+								minDuration = duration;
+								minDestination = to;
+							}
+						}
+					}
+
+					var request = {
+						origin: origins[0],
+						destination: minDestination,
+						travelMode: google.maps.TravelMode.DRIVING
+					};
+					console.log(request);
+					directionsService.route(request, function(result, status) {
+						if (status == google.maps.DirectionsStatus.OK) {
+							directionsDisplay.setDirections(result);
+							console.log(result);
+						} else {
+							console.log("couldn't get directions:" + status);
+						}
+					});
+		
+				}
+			};
+
+		};
+
 		// Add the container when the overlay is added to the map
 		overlay.onAdd = function() {
 	  		var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "crashes");
@@ -158,8 +225,10 @@ d3.json("CarCrashData.json", function(error, data) {
 				.each(transform)
 				.attr("class", "marker")
 				.on("click", function(d) { 
-					var latlong = findShortestDistance(d.value["Latitude"], d.value["Longitude"]);
-					Route(latlong[0], latlong[1], d.value["Latitude"], d.value["Longitude"]);
+					//var latlong = findShortestDistance(d.value["Latitude"], d.value["Longitude"]);
+					//Route(latlong[0], latlong[1], d.value["Latitude"], d.value["Longitude"]);
+					var test = getRoute(d.value["Latitude"], d.value["Longitude"]);
+					console.log(test);
 				});
 
 				// Add a circle.

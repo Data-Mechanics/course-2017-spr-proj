@@ -281,9 +281,10 @@ d3.tsv('/static/top5Name.tsv', function(error, name){
             .attr("d", "M0,0H" + x0.rangeBand() + "V24L" + (x0.rangeBand() / 2) + ",32L0,24Z");
 
         gBracket.append("text")
-            .attr("x", x0.rangeBand() / 2)
+            .attr("x", x0.rangeBand() / 6)
             .attr("y", 12)
             .attr("dy", ".35em")
+            .attr("fill", "white")
             .text(function(d) { return brackets[d]; });
       }
     });

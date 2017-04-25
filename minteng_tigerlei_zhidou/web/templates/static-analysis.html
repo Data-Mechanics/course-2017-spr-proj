@@ -237,10 +237,10 @@ legend.append("text")
 <br>
 <br>
 <p style="text-align: left;width: 70%;margin-left: 15%;"><strong>With these values, we visualize their relationship by setting four attributes as the nodes and the value of (1-abs(Correlation Coefficient))*500 as the edge length, which means that if two attributes have higher Correlation Coefficient, they will be much closer than others.</strong></p>
-<div align="center">
+<div class='tt' style="margin-left: auto; margin-right: auto; width: 70%;">
 <script type="text/javascript">
     var w = 1000;
-    var h = 680;
+    var h = 550;
     var linkDistance=200;
     var colors = d3.scale.category10();
     var dataset = {
@@ -261,7 +261,7 @@ legend.append("text")
     };
 
     var margin = {top: 10, right: 100, bottom: 100, left: 100};
-    var svg = d3.select("body").append("svg").attr({"width":w,"height":h}).attr("align","center")
+    var svg = d3.select(".tt").append("svg").attr({"width":w,"height":h}).attr("align","center")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     var force = d3.layout.force()

@@ -1,0 +1,100 @@
+[
+  {
+    "Address": "225 Franklin Street",
+    "City": "Financial District",
+    "Latitude": "42.356307064972761",
+    "Longitude": "-71.05408091488215"
+  },
+  {
+    "Address": "120 Hamilton Street",
+    "City": "Dorchester",
+    "Latitude": "42.30723310780143",
+    "Longitude": "-71.068210519148948"
+  },
+  {
+    "Address": "156 Wellington Hill Street",
+    "City": "Mattapan",
+    "Latitude": "42.285057942857144",
+    "Longitude": "-71.093641565714265"
+  },
+  {
+    "Address": "70-98 Lenoxdale Avenue",
+    "City": "Dorchester",
+    "Latitude": "42.279854965591383",
+    "Longitude": "-71.053579495698941"
+  },
+  {
+    "Address": "549 Albany Street",
+    "City": "South End",
+    "Latitude": "42.337922305070464",
+    "Longitude": "-71.067623621126742"
+  },
+  {
+    "Address": "5-9 Westmount Avenue",
+    "City": "West Roxbury",
+    "Latitude": "42.283602903614458",
+    "Longitude": "-71.159528032530105"
+  },
+  {
+    "Address": "95-70-95-99 Von Hillern Street",
+    "City": "South Boston",
+    "Latitude": "42.322870664467018",
+    "Longitude": "-71.053422775380625"
+  },
+  {
+    "Address": "200 Harborside Drive",
+    "City": "Jeffries Point",
+    "Latitude": "42.365178574358978",
+    "Longitude": "-71.02541980512818"
+
+  },
+  {
+    "Address": "Theodore Glynn Way @ Newmarket Sq.",
+    "City": "Boston",
+    "Latitude": "42.331107899999999",
+    "Longitude": "71.068314100000009"
+  },
+  {
+    "Address": "2771 Conley Street",
+    "City": "Dorchester",
+    "Latitude": "42.292833520512808",
+    "Longitude": "-71.046538249572734"
+  },
+  {
+    "Address": "85-87 Fuller Street",
+    "City": "Dorchester",
+    "Latitude": "42.282593003623191",
+    "Longitude": "-71.069553961594195"
+
+  },
+  {
+    "Address": "2 Storey Place",
+    "City": "Jamaica Plain",
+    "Latitude": "42.309222517085438",
+    "Longitude": "-71.113645893467336"
+  },
+  {
+    "Address": "74 Franklin Street",
+    "City": "Allston",
+    "Latitude": "42.358418403359224",
+    "Longitude": "-71.133180427131876"
+  },
+  {
+    "Address": "1 North Point Boulevard",
+    "City": "East Cambridge",
+    "Latitude": "42.368495060692467 ",
+    "Longitude": "-71.0689552046844"
+  },
+  {
+    "Address": "1291-1293 Boylston Street",
+    "City": "West Fens",
+    "Latitude": "42.344895834935897",
+    "Longitude": "-71.097364251923054"
+  },
+  {
+    "Address": "27A Business Street",
+    "City": "Hyde Park",
+    "Latitude": "42.254740693421041",
+    "Longitude": "-71.126787906578912"
+  }
+]

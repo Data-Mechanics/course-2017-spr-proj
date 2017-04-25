@@ -21,14 +21,14 @@ Besides, interative statistical analysis is provided. Users could either view th
 The preprocessing steps were performed based on relational data and map-reduce paradigm.
 1. Combine rent data with zipcode of accorsponding area. To achieve that goal, we fetch longitude and latitude based on the name of area in rent dataset via google maps API and then using this location information as input to fetch zipcode also with the help of google maps api. Then we combine location information with rent data and implement aggregation to get the final data set with rent and the zipcode. The data looks like as below:
 ```json
-{   "_id" : ObjectId("58ff92514d0fd1f99d53557e"), 
+{ 
     "avg_rent" : 2359, 
     "area" : "Allston", 
     "postal_code" : "02134" }
 ```
 2. Projecting MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then we create a union of three datasets into the second new dataset. After union operation, selection is used to to remove data with invalid locations (for example, with longitude and latitude equal to 0).
 ```json
-{   "_id" : ObjectId("58ff922b4d0fd1f99d51c49e"), 
+{   
     "address" : "1159 Washington", 
     "location" : [ 42.272239, -71.068856 ], 
     "type" : "food", 
@@ -68,7 +68,9 @@ All these data would be stored in a new collection named ```box_count``` as foll
 ```
 User could customize rating due to their preference in website. It would search user's ratings requirement in database. If it finds results with every rating of `(transport, food, safety, rent)` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. Detailed algorithm could be found under `web/optimization_algorithm.py`
 
-### Statistical Analysis (need to add more on new parts of analysis on website)
+**(need to add some screenshots of website)**
+
+### Statistical Analysis (need to review and add more on new parts of analysis on website)
 After finding ideal area for a new company, we would like to dig deeper into those areas, because this area might be the best choice for now, but it might change, with the variation of rental, crime and transportations. So based on current data, we want to study on the trend of these factors, and for now we mainly focus on crime in different blocks(grids). A new dataset [Safety(Crime 2012-2015)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-July-2012-August-2015-Sourc/7cdf-6fgx) has been added.
 
 Now let *X<sub>ij</sub>* as the the number of crimes happens in block *i* in year *j*. If *X<sub>ij</sub>* and *X<sub>i(j + 1)</sub>* are highly correlated, then we could claim the number of crimes of these two year in this block have similar distribution. Thus if these random variables continuously related to each other, then we could use such correlation to predict the trend of the criminal events in this year.
@@ -98,14 +100,14 @@ Because this data of these four year have strong linear relationship, there is a
 
 
 
-## 5. Results
+## 5. Results (need to add more)
 We use Flask and MongoDB to implement the web service. The first new feature/component is to visualize the optimization problem in project2. After we get the top fitted location results, we use Leaflet to show them in an interactive map, with labeled blocks filled in different colors. Also, we implement and show the crime analysis for those location results, the user could get the crime ratio of certain block in the total crime number for different month/year.
 
 The second new feature/component is statistical analysis. We randomly choose 30 blocks and use D3 to show four grades for each block in a bar chart. Next, we compute the correlation coefficient and p-value between four attributes, we we visualize their relationship by setting four attributes as the nodes and the value of (1-abs(Correlation Coefficient))*500 as the edge length, which means that if two attributes have higher Correlation Coefficient, they will be much closer than others. The last plot is to ……..(project 2)
 
 ## 6. Future Work
 
-## Reference
+## Reference (need to add more)
 1. http://flask.pocoo.org/docs/0.12/
 2. 
 

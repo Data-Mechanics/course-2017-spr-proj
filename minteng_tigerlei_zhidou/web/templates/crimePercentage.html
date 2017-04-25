@@ -7,6 +7,7 @@
 <br>
 
 <body id="interactiveABC" class="interactiveABC">
+<br><br>
 <div align="center" class="g-header-placeholder"><div class="g-header"></div></div>
 <div align="center" class="g-body"></div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -35,9 +36,9 @@ d3.tsv('/static/top5Name.tsv', function(error, name){
           date0 = new Date(2013, 0, 1),
           date1 = new Date(2017, 0, 1);
 
-      var margin = {top: 30, right: 5, bottom: 30, left: 5},
+      var margin = {top: 20, right: 5, bottom: 20, left: 5},
           width = 730 - margin.left - margin.right,
-          height = 600 - margin.bottom - margin.top;
+          height = 300 - margin.bottom - margin.top;
 
       var x0 = d3.scale.ordinal()
           .domain([1, 2, 3, 4, 5])

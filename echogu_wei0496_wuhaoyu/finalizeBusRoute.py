@@ -9,11 +9,12 @@ import uuid
 import math
 import random
 import geojson
+import re
 #import xlsxwriter
 
 class finalizBusRoute(dml.Algorithm):
     contributor = 'echogu_wei0496_wuhaoyu'
-    reads = ['echogu_wei0496_wuhaoyu.bus_route', 'echogu_wei0496_wuhaoyu.schools']
+    reads = ['echogu_wei0496_wuhaoyu.bus_route']
     writes = ['echogu_wei0496_wuhaoyu.bus_route_final']
 
     @staticmethod
@@ -33,76 +34,80 @@ class finalizBusRoute(dml.Algorithm):
 
         # convert to geojson
         features = []
-        features_routes = []     # collection of routes
+        features_routes = []    # collection of routes
         features_schools = []   # collection of schools
         features_yards = []     # collection of yards
+        schools = []            # handle duplicates
         yards = []              # handle duplicates
+        count = 1
 
         for r in bus_route:
+            features_one_school = []
+
+            # extract properties
             colors = "0123456"
             random_color = ''.join(random.choices(colors, k = 6))
-            properties_routes = {'school': r['school'],
+            properties = {'school': r['school'],
                                  'yard': r['bus yard'],
                                  'stroke': '#' + random_color,
                                  'stroke-width': 1,
                                  'stroke-opacity': 0.3}
-            properties = {'school': r['school'],
-                          'yard': r['bus yard'],
-                          'stroke': '#428d8c',
-                          'stroke-width': 1}
+            properties_one_school = {'school': r['school'],
+                                     'yard': r['bus yard'],
+                                     'stroke': '#003534',
+                                     'stroke-width': 2}
 
+            # extract routes info: yard -> student -> school
             sequence = r['pickup_sequence']
             route = []
-            # from bus yard to first student
             yard = tuple(reversed(r['yard location']))
-            start = tuple((sequence[0]['longitude'], sequence[0]['latitude']))
-            route += [yard, start]
-
-            # from the first student to the last student
-            if len(sequence) > 1:
-                for i in range(len(sequence) - 1):
-                    s1 = tuple((sequence[i]['longitude'], sequence[i]['latitude']))
-                    s2 = tuple(([sequence[i + 1]['longitude'], sequence[i + 1]['latitude']]))
-                    route += [s1, s2]
-
-                # from the last student to school
-                end = (sequence[-1]['longitude'], sequence[-1]['latitude'])
-                school = tuple(reversed(r['school location']))
-                route += [end, school]
-
-            else:
-                student = (sequence[0]['longitude'], sequence[0]['latitude'])
-                school = tuple(reversed(r['school location']))
-                route += [student, school]
-
+            route += [yard]
+            for s in sequence:
+                s = tuple((s['longitude'], s['latitude']))
+                route += [s]
+            school = tuple(reversed(r['school location']))
+            route += [school]
             geometry = geojson.LineString(route)
-            features_routes.append(geojson.Feature(geometry=geometry, properties=properties_routes))
-            features.append(geojson.Feature(geometry=geometry, properties=properties))
 
-            # handle duplicate yards
+            # save routes
+            filename = r['school']
+            filename = re.sub('[ ?.!/;:]', '', filename)
+            features_one_school.append(geojson.Feature(geometry=geometry, properties=properties_one_school))      # graph for each school
+            features_routes.append(geojson.Feature(geometry=geometry, properties=properties))    # graph with routes only
+            features.append(geojson.Feature(geometry=geometry, properties=properties))                  # graph with routes, schools and yards
+
+            # extract school info
+            properties_schools = {'school': r['school'],
+                                  'marker-size': 'small',
+                                  'marker-symbol': 'college',
+                                  'marker-color': '#8cbdbc'}
+            features_one_school.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['school location']))), properties=properties_schools))
+
+            # extract yard info
+            properties_yards = {'yard': r['bus yard'],
+                                'address': r['yard address'],
+                                'marker-size': 'small',
+                                'marker-symbol': 'bus',
+                                'marker-color': '#d8b0e2'}
+            features_one_school.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['yard location']))), properties=properties_yards))
+
+            # handle duplicate schools and yards
+            if r['school'] not in schools:
+                features_schools.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['school location']))), properties=properties_schools))
+                schools += [r['school']]
             if r['bus yard'] not in yards:
-                properties = {'yard': r['bus yard'],
-                              'address': r['yard address'],
-                              'marker-size': 'small',
-                              'marker-symbol': 'bus',
-                              'marker-color': '#ace'}
-                features_yards.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['yard location']))), properties=properties))
+                features_yards.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['yard location']))), properties=properties_yards))
                 yards += [r['bus yard']]
 
-        for s in schools:
-            properties = {'school': s['properties']['name'],
-                          'address': s['properties']['address'],
-                          'marker-size': 'small',
-                          'marker-symbol': 'college',
-                          'marker-color': '#8cbdbc'}
-            geometry = geojson.Point(s['geometry']['coordinates'])
-            features_schools.append(geojson.Feature(geometry=geometry, properties=properties))
+            open('echogu_wei0496_wuhaoyu/visualizations/geojson/' + "%03d" % count + filename + '.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_one_school), indent=2))
+            count += 1
+            # end of for
 
         features += features_schools
         features += features_yards
 
-        open('echogu_wei0496_wuhaoyu/visualizations/bus_route.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_routes), indent=2))
-        open('echogu_wei0496_wuhaoyu/visualizations/bus_route_schools.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features), indent=2))
+        open('echogu_wei0496_wuhaoyu/visualizations/geojson/bus_route.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_routes), indent=2))
+        open('echogu_wei0496_wuhaoyu/visualizations/geojson/bus_route_schools.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features), indent=2))
 
         # store bus route into database in geojson format
         repo.dropCollection('bus_route_final')
@@ -136,7 +141,6 @@ class finalizBusRoute(dml.Algorithm):
         # define entity to represent resources
         this_script = doc.agent('alg:echogu_wei0496_wuhaoyu#finalizeBusRoute', {prov.model.PROV_TYPE: prov.model.PROV['SoftwareAgent'], 'ont:Extension': 'py'})
         resource_bus_route = doc.entity('dat:echogu_wei0496_wuhaoyu#bus_route', {'prov:label': 'bus_route', prov.model.PROV_TYPE: 'ont:DataSet'})
-        resource_schools = doc.entity('dat:echogu_wei0496_wuhaoyu#schools', {'prov:label': 'bus_route', prov.model.PROV_TYPE: 'ont:DataSet'})
 
         # define activity to represent invocaton of the script
         run_finalizeBusRoute = doc.activity('log:uuid' + str(uuid.uuid4()), startTime, endTime)
@@ -144,14 +148,12 @@ class finalizBusRoute(dml.Algorithm):
         doc.wasAssociatedWith(run_finalizeBusRoute, this_script)
         # indicate that an activity used the entity
         doc.usage(run_finalizeBusRoute, resource_bus_route, startTime, None, {prov.model.PROV_TYPE: 'ont:Computation'})
-        doc.usage(run_finalizeBusRoute, resource_schools, startTime, None, {prov.model.PROV_TYPE: 'ont:Computation'})
 
         # for the data obtained, indicate that the entity was attributed to what agent, was generated by which activity and was derived from what entity
         bus_route_final = doc.entity('dat:echogu_wei0496_wuhaoyu#bus_route_final', {prov.model.PROV_LABEL: 'bus_route_final', prov.model.PROV_TYPE: 'ont:DataSet'})
         doc.wasAttributedTo(bus_route_final, this_script)
         doc.wasGeneratedBy(bus_route_final, run_finalizeBusRoute, endTime)
         doc.wasDerivedFrom(bus_route_final, resource_bus_route, run_finalizeBusRoute, run_finalizeBusRoute, run_finalizeBusRoute)
-        doc.wasDerivedFrom(bus_route_final, resource_schools, run_finalizeBusRoute, run_finalizeBusRoute, run_finalizeBusRoute)
 
         repo.logout()
 

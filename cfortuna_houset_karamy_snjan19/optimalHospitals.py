@@ -231,11 +231,13 @@ class optimalHospitals(dml.Algorithm):
                 result = data['results'][0]
             return result
 
-        df_centroids.drop('lng',axis=1,inplace=True)
-        df_centroids.drop('lat',axis=1,inplace=True)
+        # df_centroids.drop('lng',axis=1,inplace=True)
+        # df_centroids.drop('lat',axis=1,inplace=True)
+        df_centroids.drop('latlng',axis=1,inplace=True)
         df_centroids.drop('json_response',axis=1,inplace=True)
 
-        df_centroids.to_json('optimalHospitalLocations.json')
+        df_centroids.to_json('optimalHospitalLocations.json', orient='index')
+
 
         with open('optimalHospitalLocations.json') as data_file:    
             all_data = json.load(data_file)

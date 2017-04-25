@@ -3,78 +3,24 @@
  *by Minteng Xie, Yue Lei, Zhi Dou*
 
 ## 1. Introduction
-The City of Boston has performed a significant effort on collecting data over different services and other public information. The diversity of these publicly available datasets allows us to explore various areas in Boston. Particularly, in this project we are focusing on finding the best living area in Boston and . 
+The City of Boston has performed a significant effort on collecting data over different services and other public information. The diversity of these publicly available datasets allows us to explore various areas in Boston. Particularly, in this project we are focusing on building a website to help people find the best living area in Boston and provide correspnding analysis to their choices.
 
-We want to find a best office location for a new company. The first factor we consider is the rent of the location, so we find the data of average rent for different cities in Greater-Boston. The second factor is convenient transportation, then we fetch the MBTA data, and we assume that the location will be more convenient if there are more stops around this location. The third factor is food, we think the location is better if there are many restaurants around it. Similarly, the fourth factor is safety, we do not want too many crimes appeared near the location. The last factor is salary, we may add some fuctions related to different types of jobs.
+Our database is based on `MongoDB` and web server is supported by `flask`.
 
 ## 2. Datasets
 
-1. [Average Rent](http://datamechanics.io/data/minteng_zhidou/rent.txt)
-2. [MBTA Stops](http://datamechanics.io/data/minteng_zhidou/stops.txt)
-3. [Food Data](https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq)
-4. [Safety(Crime 2015-2017)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-August-2015-To-Date-Source-/fqn4-4qap)
-5. [Salary 2015](https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2015/ah28-sywy)
-6. [Salary 2014](https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8)
-7. [Goolge Maps](https://www.google.com/maps)
+- [Average Rent](http://datamechanics.io/data/minteng_zhidou/rent.txt)
+- [MBTA Stops](http://datamechanics.io/data/minteng_zhidou/stops.txt)
+- [Food Data](https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq)
+- [Safety(Crime 2015-2017)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-August-2015-To-Date-Source-/fqn4-4qap)
 
 ## 3. Preprocessing
+The preprocessing steps were performed based on relational data and map-reduce paradigm.
+1. Combine rent table with zipcode of accorsponding area. To achieve that goal, we fetch longitude and latitude based on the name of area in rent table via google maps api and then using this location information as input to fetch zipcode also with the help of google maps api. Then we combine location table with rent table and implement aggregation to get the final data set with rent and the zipcode.
+2. Projecting MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then we create a union of three datasets into the second new dataset. After union operation, selection is used to to remove data with invalid locations (for example, with longitude and latitude equal to 0).
 
 ## 4. Methodologies 
 
-## 5. Results
-
-## 6. Future Work
-
-## Reference
-
-1. In first transformations, we combine rent table with zipcode of accorsponding area. First we fetch longitude and latitude based on the name of area in rent table via google maps api and then using this location information as input to fetch zipcode also with the help of google maps api. Then combine location table with rent table and implement aggregation to get the final data set with rent and the zipcode.
-
-To run this transformation:
-```python
-python3 rent.py
-```
-
-2. Project MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then implement union of three datasets into the second new dataset. After union, implement selection to remove data with invalid locations (for example, with longitude and latitude equal to 0).
-
-To run this transformation:
-```python
-python3 location.py
-```
-
-3. After project the needed information, combine the two Salary data, then aggragate the dataset using the job title as the key, get the average salary for different jobs. The third new dataset contain the key: job title, values: average salary and other infomation such as company name, year and so on.
-
-To run this transformation:
-```python
-python3 salary.py
-```
-
-# Project 2
-### *by Minteng Xie, Yue Lei, Zhi Dou*
-
-## 1.
-A new team is formed by Minteng Xie, Yue Lei and Zhi Dou. All scripts and files of project 2 is under new folder ```minteng_tigerlei_zhidou```. We modify part of ```location.py``` in project 1 and add a new transformation ```crime.py``` to retrieve and store new crime data into database. All ```.ipynb``` files are just used to plot and show graphs in case of running error inspected by ```execute.py```.
-
-### auth.json
-This project use app token from ```boston data portal``` and ```googlemaps geocoding API```. To retrieve data automatically, app token should be added into `auth.json` file as follow format:
-```
-{
-    "services": {
-        "googlemapsportal": {
-            "service": "https://developers.google.com/maps/",
-            "username": "alice_bob@example.org",
-            "key": "xxXxXXXXXXxxXXXxXXXXXXxxXxxxxXXxXxxX"
-        },
-        "cityofbostondataportal": {
-            "service": "https://data.cityofboston.gov/",
-            "username": "alice_bob@example.org",
-            "token": "XxXXXXxXxXxXxxXXXXxxXxXxX",
-            "key": "xxXxXXXXXXxxXXXxXXXXXXxxXxxxxXXxXxxX"
-        }
-    }
-}
-```
-
-## 2. Narrative & Problems
 ### Problem 1: Optimization
 Following the idea of project 1, our goal is to find a best office location for a new company. Since a detailed coordinate is meaningless, we try to find a suitable area. Project 1 has helped us gather all the licensed restaurants/ crime incidents/ MBTA stops/ rent price in boston area. We gonna find the best area that maximize **```#restaurant```**, **```#MBTA stops```** and minimize **```#crime incidents```** and **```rent price```**. 
 
@@ -176,6 +122,15 @@ Remember to uncomment the last lines in the file:
 # <filename>.execute()
 ```
 
+## 5. Results
+
+## 6. Future Work
+
+## Reference
+
+
+
+
 ## 3.a 
 ### Provenance information
 All provenance information could be seen in ```provenance.html``` after running:
@@ -183,23 +138,68 @@ All provenance information could be seen in ```provenance.html``` after running:
 python3 execute.py minteng_tigerlei_zhidou
 ```
 
-## 3.b 
-### Trial mode
-In trial mode, the algorithm would complete its execution very quickly (in at most a few seconds) by operating on a very small portion of the input data set(s). All retreieve and transformation are limited to 500 records.
 
-Remember to uncomment last few lines of the file
-```python
-# if 'trial' in sys.argv:
-#     <filename>.execute(True)
-# else:
-#     <filename>.execute()
+
+# Instructions
+
+All scripts and files are new folder ```minteng_tigerlei_zhidou```. All ```.ipynb``` files are just used to plot and show graphs in case of running error inspected by ```execute.py```.
+
+### auth.json
+This project use app token from ```boston data portal``` and ```googlemaps geocoding API```. To retrieve data automatically, app token should be added into `auth.json` file as follow format:
 ```
+{
+    "services": {
+        "googlemapsportal": {
+            "service": "https://developers.google.com/maps/",
+            "username": "alice_bob@example.org",
+            "key": "xxXxXXXXXXxxXXXxXXXXXXxxXxxxxXXxXxxX"
+        },
+        "cityofbostondataportal": {
+            "service": "https://data.cityofboston.gov/",
+            "username": "alice_bob@example.org",
+            "token": "XxXXXXxXxXxXxxXXXXxxXxXxX",
+            "key": "xxXxXXXXXXxxXXXxXXXXXXxxXxxxxXXxXxxX"
+        }
+    }
+}
+```
+
+### Trial mode
+This project provide a trial mode to complete data retrieve and transformations very quickly (in at most a few seconds) by operating on a very small portion of the input data set(s). All retreieve requests and transformations are limited to 500 records.
+
 To run trial mode on all files:
 ```python
 python3 execute.py --trial
 ```
 
-To run trial mode on separate files:
+To run trial mode on seperate files, remember to uncomment last few lines of the file
+```python
+if 'trial' in sys.argv:
+     <filename>.execute(True)
+else:
+     <filename>.execute()
+```
+Then run it with :
 ```python
 python3 <filename>.py --trial
 ```
+
+### Prepare Database
+First, make sure `mongod` process is running on your machine. Then run the following command:
+```python
+python3 initiate.py minteng_tigerlei_zhidou
+```
+
+### Start Web Server
+Locate to target folder with:
+```shell
+cd minteng_tigerlei_zhidou/web
+```
+Then run the following command:
+```python
+python3 web.py
+```
+To view the website, open a browser on your machine and type `127.0.0.1:5000` in address bar.
+
+
+

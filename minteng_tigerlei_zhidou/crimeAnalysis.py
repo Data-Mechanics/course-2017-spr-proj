@@ -20,20 +20,18 @@ class crimeAnalysis(dml.Algorithm):
         # every entry is one year, and inside the year, there will be 
         # the number of crime
         districtNum = repo['minteng_tigerlei_zhidou.box_count'].count()
-        crimeVector = np.zeros([6, districtNum, 12])
+        crimeVector = np.zeros([districtNum, 4, 12])
         crimeCount = []
         monthlyCount = np.zeros(48)
 
 
-        for data, dNum in zip(repo['minteng_tigerlei_zhidou.box_count'].find(), range(districtNum)):
-            crimeBox = {}
-            crimeBox['box'] = data['box']
+        for data in repo['minteng_tigerlei_zhidou.box_count'].find():
+            crimeBox = {'_id': data['_id'], 'box': data['box'], 'area': data['area'], 'crimeNum': np.zeros(48, np.int)}
             # count crime from 2013 to 2017 48 month
-            crimeBox['crimeNum'] = np.zeros(48, np.int)
             area = repo['minteng_tigerlei_zhidou.crime'].find({'location':{'$geoWithin':{ '$box': data['box']}}})
             for event in area:
-                crimeVector[event['year'] - 2012][dNum][event['month'] - 1] += 1
                 if event['year'] in [2012, 2017]: continue
+                crimeVector[data['_id'] - 1][event['year'] - 2013][event['month'] - 1] += 1
                 monthlyCount[(event['year'] - 2013) * 12 + (event['month'] - 1)] += 1
                 crimeBox['crimeNum'][(event['year'] - 2013) * 12 + (event['month'] - 1)] += 1
             crimeBox['crimeNum'] = crimeBox['crimeNum'].tolist()
@@ -51,23 +49,34 @@ class crimeAnalysis(dml.Algorithm):
         # compute the correlation coefficient and p-value
         # of same district but different year
         warnings.filterwarnings("ignore")
-        corrfP = [ [stats.pearsonr(crimeVector[i][k], crimeVector[i + 1][k]) for k in range(districtNum)] for i in range(5) ]
+        corrfP = [ [stats.pearsonr(crimeVector[k][i], crimeVector[k][i + 1]) for i in range(3)] for k in range(districtNum) ]
 
         # print("                    corrf             p-value      ")
         # for i in range(5):
         #     for block, dnum in zip(corrfP[i], range(districtNum)):
         #         print(str(i + 12) + ' - block {}:  '.format(dnum) + str(block[0]) + "   " + str(block[1]))
-
+        
         ret = []
-        pattern = dict(year = 0, block = 0, corcof = 0, p = 0)
-        for i in range(5):
-            for block, dnum in zip(corrfP[i], range(districtNum)):
-                tempDict = dict(pattern)
-                tempDict['year'] = 2012 + i
-                tempDict['block'] = dnum
-                tempDict['corcof'] = block[0]
-                tempDict['p'] = block[1]
-                ret.append(tempDict)
+        pattern = dict(_id = 0, value = 0)
+        for i in range(districtNum):
+            tempDict = dict(pattern)
+            tempDict['_id'] = i + 1
+            tempDict['value'] = [ {'year': str(2013 + j) + '-' + str(2013 + j + 1), 
+                                    'corcof': corrfP[i][j][0] if corrfP[i][j][0] != None else 0,
+                                    'p': corrfP[i][j][1]} for j in range(3) ]
+            ret.append(tempDict)
+        print(corrfP)
+        with open('corAndP.csv', 'w') as f:
+            f.write('area,periodyear,avgemp,changeemp\n')
+            for i in range(districtNum):
+                for j in range(3):
+                    f.write(str(i + 1) + ',' + str(2013 + j) + ',' + 
+                            str(abs(corrfP[i][j][0]) if not np.isnan(corrfP[i][j][0]) else 0) + ',' + 
+                            str(corrfP[i][j][1]) + '\n')
+                    f.flush()
+
+
+
 
         repo.dropCollection("statsresult")
         repo.createCollection("statsresult")

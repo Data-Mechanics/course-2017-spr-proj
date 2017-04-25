@@ -96,7 +96,7 @@
             // Update color scale domain based on data
             color.domain([0, d3.max(features, nameLength)]);
 
-            // Draw each province as a path
+            // Draw each neighborhood as a path
             mapLayer.selectAll('path')
                 .data(features)
               .enter().append('path')
@@ -108,23 +108,23 @@
                 .on('click', clicked);
         });
 
-        // Get province name
+        // Get neighborhood name
         function nameFn(d) {
             return d && d.properties ? d.properties.name : null;
         }
 
-        // Get province data
+        // Get neighborhood data
         function dataFn(d) {
             return d && d.properties ? d.properties.shape_area : null;
         }
 
-        // Get province name length
+        // Get neighborhood name length
         function nameLength(d) {
             var n = nameFn(d);
             return n ? n.length : 0;
         }
 
-        // Get province color
+        // Get neighborhood color
         function fillFn(d) {
             return color(nameLength(d));
         }
@@ -147,7 +147,7 @@
                 centered = null;
             }
 
-            // Highlight the clicked province
+            // Highlight the clicked neighborhood
             mapLayer.selectAll('path')
               .style('fill', function (d) { return centered && d === centered ? '#D5708B' : fillFn(d); });
 
@@ -158,7 +158,7 @@
         }
 
         function mouseover(d) {
-            // Highlight hovered province
+            // Highlight hovered neighborhood
             d3.select(this).style('fill', 'orange');
 
             // Draw effects
@@ -166,7 +166,7 @@
         }
 
         function mouseout(d) {
-            // Reset province color
+            // Reset neighborhood color
             mapLayer.selectAll('path')
               .style('fill', function (d) { return centered && d === centered ? '#D5708B' : fillFn(d); });
 

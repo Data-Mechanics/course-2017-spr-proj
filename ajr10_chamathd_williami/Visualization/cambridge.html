@@ -53,7 +53,7 @@
             // Scale the map
           .scale(75000)
           // Center the Map
-          .center([-71.05, 42.31])
+          .center([-71.1, 42.368])
           .translate([width / 2, height / 2]);
 
         var path = d3.geo.path()
@@ -90,7 +90,7 @@
             .attr('y', 60);
 
         // Load map data
-        d3.json('Boston.geo.json', function (error, mapData) {
+        d3.json('Cambridge.geo.json', function (error, mapData) {
             var features = mapData.features;
 
             // Update color scale domain based on data

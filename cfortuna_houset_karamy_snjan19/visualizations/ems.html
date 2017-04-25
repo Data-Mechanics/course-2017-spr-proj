@@ -43,9 +43,14 @@ html, body, #map {
 var map = new google.maps.Map(d3.select("#map").node(), {
   zoom: 12,
   center: new google.maps.LatLng(42.314145, -71.09),
-  mapTypeId: google.maps.MapTypeId.TERRAIN
+  mapTypeId: google.maps.MapTypeId.TERRAIN,
 });
 
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+directionsDisplay = new google.maps.DirectionsRenderer();
+
+ directionsDisplay.setMap(map);
 
 
 
@@ -56,19 +61,17 @@ function Route(startlat, startlong, endlat, endlong) {
   var request = {
     origin: start,
     destination: end,
-    travelMode: google.maps.TravelMode.WALKING
+    travelMode: google.maps.TravelMode.DRIVING
   };
   directionsService.route(request, function(result, status) {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(result);
+      console.log(result);
     } else {
-      alert("couldn't get directions:" + status);
+      console.log("couldn't get directions:" + status);
     }
   });
 }
-
-
-
 
 // Load the station data. When the data comes back, create an overlay.
 d3.json("CarCrashData.json", function(error, data) {
@@ -92,7 +95,7 @@ d3.json("CarCrashData.json", function(error, data) {
         .enter().append("svg")
           .each(transform)
           .attr("class", "marker")
-          .on("click", function(d) { console.log(d); });
+          .on("click", function(d) { Route(d.value["Latitude"], d.value["Longitude"], 42.3096982, -71.1043113); });
 
       // Add a circle.
       marker.append("circle")

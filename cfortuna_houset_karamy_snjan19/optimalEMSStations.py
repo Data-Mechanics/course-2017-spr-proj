@@ -52,8 +52,8 @@ class optimalEMSStations(dml.Algorithm):
         # reading the hospital locations into a pandas dataframe  
         # adjusting to proper format of x and y coordinate data
 
-        df['Longitude'] = df['Longitude'].apply(lambda x: float(x)*-0.000001)
-        df['Latitude'] = df['Latitude'].apply(lambda x: float(x)*0.000001)
+        df['Longitude'] = df['Longitude'].apply(lambda x: float(x)*1)
+        df['Latitude'] = df['Latitude'].apply(lambda x: float(x)*1)
 
         df['long_lat'] = list(zip(df.Longitude, df.Latitude))
 
@@ -210,7 +210,7 @@ class optimalEMSStations(dml.Algorithm):
         df2['latlng'] = list(zip(df2['Latitude'], df2['Longitude']))
         df2['latlng'] = df2['latlng'].map(stringCoord)
 
-        # helper function for retrieving distance matrix between crash point and all possible Boston hospitals. For use in Part 3 project.
+        # helper function for retrieving distance matrix between crash point and all possible Boston EMS Stations. 
 
         def getDistanceMatrix(origin, destination):
             result = {}
@@ -221,11 +221,12 @@ class optimalEMSStations(dml.Algorithm):
                 result = data['results'][0]
             return result
 
-        df_centroids.drop('lng',axis=1,inplace=True)
-        df_centroids.drop('lat',axis=1,inplace=True)
+        #df_centroids.drop('lng',axis=1,inplace=True)
+        #df_centroids.drop('lat',axis=1,inplace=True)
+        df_centroids.drop('latlng',axis=1,inplace=True)
         df_centroids.drop('json_response',axis=1,inplace=True)
 
-        df_centroids.to_json('optimalEMSStationLocations.json')
+        df_centroids.to_json('optimalEMSStationLocations.json', orient ='index')
 
         with open('optimalEMSStationLocations.json') as data_file:    
             all_data = json.load(data_file)

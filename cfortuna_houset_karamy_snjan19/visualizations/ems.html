@@ -53,7 +53,7 @@ directionsDisplay.setMap(map);
 // Load the car crash data and overlays it onto the Google Map
 d3.json("CarCrashData.json", function(error, data) {
 	// Loads the EMS station for use when routing
-	d3.json("EMSStationsData.json", function(error, data1) {
+	d3.json("OptimalEMSStations.json", function(error, data1) {
 		if (error) throw error;
 
 		var overlay = new google.maps.OverlayView();
@@ -170,7 +170,7 @@ d3.json("CarCrashData.json", function(error, data) {
 	});
 });
 
-d3.json("EMSStationsData.json", function(error, data) {
+d3.json("OptimalEMSStations.json", function(error, data) {
 	if (error) throw error;
 
 	var overlay = new google.maps.OverlayView();

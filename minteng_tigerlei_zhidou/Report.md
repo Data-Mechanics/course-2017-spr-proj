@@ -124,6 +124,13 @@ Remember to uncomment the last lines in the file:
 
 ## 5. Results
 
+
+We use Flask and MongoDB to implement the web service. 
+The first new feature/component is to visualize the optimization problem in project2. After we get the top fitted location results, we use Leaflet to show them in an interactive map, with labeled blocks filled in different colors. Also, we implement and show the crime analysis for those location results, the user could get the crime ratio of certain block in the total crime number for different month/year.
+
+The second new feature/component is statistical analysis. We randomly choose 30 blocks and use D3 to show four grades for each block in a bar chart. Next, we compute the correlation coefficient and p-value between four attributes, we we visualize their relationship by setting four attributes as the nodes and the value of (1-abs(Correlation Coefficient))*500 as the edge length, which means that if two attributes have higher Correlation Coefficient, they will be much closer than others. The last plot is to ……..(project 2)
+
+
 ## 6. Future Work
 
 ## Reference

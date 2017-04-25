@@ -151,4 +151,4 @@ class crimeAnalysis(dml.Algorithm):
         repo.logout()
         return doc
 
-crimeAnalysis.execute()
+# crimeAnalysis.execute()

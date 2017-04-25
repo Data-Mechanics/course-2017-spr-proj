@@ -1,18 +1,10 @@
-// content of index.js
-const http = require('http')  
-const port = 3000
+var http = require('http');
+var fs = require('fs');
+var d3 = require("d3");
 
-const requestHandler = (request, response) => {  
-  console.log(request.url)
-  response.end('Hello Node.js Server!')
-}
+var html = fs.readFileSync('test.html');
 
-const server = http.createServer(requestHandler)
-
-server.listen(port, (err) => {  
-  if (err) {
-    return console.log('something bad happened', err)
-  }
-
-  console.log(`server is listening on ${port}`)
-})
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(html);
+}).listen(8888);

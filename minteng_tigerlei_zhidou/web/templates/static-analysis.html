@@ -552,7 +552,11 @@ legend.append("text")
                     div.style("left", d3.event.pageX + 10 + "px");
                     div.style("top", d3.event.pageY - 25 + "px");
                     div.style("display", "inline-block");
-                    div.html((d.ind) + " of " + d.label + ': ' + (formatMoney(d.emp)));
+                    if (d.ind == "crimeNum") {
+                      div.html((d.ind) + " of " + d.label + ': ' + (formatMoney(d.emp)));}
+                    else {
+                      div.html((d.ind) + ': ' + (formatMoney(d.emp)));
+                    }
                 });
 
                 paths.on("mouseout", function (d) {

@@ -30,7 +30,6 @@ class finalizBusRoute(dml.Algorithm):
 
         # loads the collection
         bus_route = repo['echogu_wei0496_wuhaoyu.bus_route'].find()
-        schools = repo['echogu_wei0496_wuhaoyu.schools'].find()
 
         # convert to geojson
         features = []

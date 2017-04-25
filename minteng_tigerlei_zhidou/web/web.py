@@ -63,12 +63,7 @@ def get_map():
 def static_analysis():
     return render_template('static-analysis.html')
 
-@app.route("/report/")
-def report():
-    return render_template('report.html')
-
 @app.route("/crimePercentage/")
-
 def crimePercentage():
     return render_template('crimePercentage.html')
 

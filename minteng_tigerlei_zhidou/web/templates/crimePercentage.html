@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+
+{% block title %}CrimePercentage{% endblock %}
+
+{% block body %}
+<link href="/static/chart.css" rel="stylesheet">
+<br>
 
 <body id="interactiveABC" class="interactiveABC">
-<div class="g-header-placeholder"><div class="g-header"></div></div>
-<div class="g-body"></div>
+<div align="center" class="g-header-placeholder"><div class="g-header"></div></div>
+<div align="center" class="g-body"></div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>(function(){
 
@@ -289,6 +294,14 @@ d3.tsv('/static/top5Name.tsv', function(error, name){
 })()</script>
    
 </body>
-<link href="/static/chart.css" rel="stylesheet">
+<div id="outer">
+    <div class="inner"><a href="/optimize/" class="button">Back to ratings<i class="icon-chevron-right"></i></a></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="inner"><a href="/" class="button">Home Page<i class="icon-chevron-right"></i></a></div> 
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-</html> 
+{% endblock %}

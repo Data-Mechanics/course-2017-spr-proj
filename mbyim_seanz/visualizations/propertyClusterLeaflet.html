@@ -8,6 +8,24 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <style>
     #map{ height: 100% }
+    .legend {
+      line-height: 18px;
+      color: #555;
+    }
+    .legend i {
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+    .info {
+      padding: 6px 8px;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -17,6 +35,16 @@
   <script>
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  
+  function getColor(d) {
+    return d > 3000000 ? '#CE4A65' :
+           d > 2000000  ? '#E85C5E' :
+           d > 1000000  ? '#FA8067' :
+           d > 750000  ? '#FBAC74' :
+           d > 500000   ? '#FBC67F' :
+           d > 0   ? '#FBE19C' :
+                      '#f7f7f7';
   }
 
   // initialize the map
@@ -35,13 +63,7 @@
       style: function(feature){
         var fillColor,
             density = feature.properties.density;
-        if ( density > 3000000 ) fillColor = "#CE4A65";
-        else if ( density > 2000000 ) fillColor = "#E85C5E";
-        else if ( density > 1000000 ) fillColor = "#FA8067";
-        else if ( density > 750000 ) fillColor = "#FBAC74";
-        else if ( density > 500000 ) fillColor = "#FBC67F";
-        else if ( density > 0 ) fillColor = "#FBE19C";
-        else fillColor = "#f7f7f7";  // no data
+        fillColor = getColor(density);
         return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
       },
       onEachFeature: function( feature, layer ){
@@ -66,7 +88,26 @@
       map.addLayer(clusters);
 
   });
- 
+  
+  var legend = L.control({position: 'bottomright'});
+
+  legend.onAdd = function (map) {
+
+      var div = L.DomUtil.create('div', 'info legend'),
+          grades = [0, 500000, 750000, 1000000, 2000000, 3000000],
+          labels = [];
+
+      // loop through our density intervals and generate a label with a colored square for each interval
+      for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+              '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+              grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+      }
+
+      return div;
+  };
+
+  legend.addTo(map);
   </script>
 </body>
 </html>

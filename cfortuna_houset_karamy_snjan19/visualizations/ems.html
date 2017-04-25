@@ -35,15 +35,14 @@
 
 </style>
 <div id="map"></div>
-<script src="https://maps.google.com/maps/api/js?key=AIzaSyC-0O4MhBbdDM-Nl_ZnDlhEJTgfqj7Llw0&libraries=geometry"></script>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyAG_CVsVlnWjwoVI-z_eLI0pLOLyXfct24&libraries=geometry"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
 // Create the Google Map
 var map = new google.maps.Map(d3.select("#map").node(), {
 	zoom: 12,
-	center: new google.maps.LatLng(42.314145, -71.09),
-	mapTypeId: google.maps.MapTypeId.TERRAIN,
+	center: new google.maps.LatLng(42.314145, -71.09)
 });
 
 // Initialize routing services
@@ -60,22 +59,22 @@ d3.json("CarCrashData.json", function(error, data) {
 		var overlay = new google.maps.OverlayView();
 
 		// Calculates and plots the route from the closests EMS station to the crash site
-		function getRoute(startlat, startlong) {
-			var origin = new google.maps.LatLng(startlat, startlong);
-			var dests = [];
+		function getRoute(endlat, endlong) {
+			var destination = new google.maps.LatLng(endlat, endlong);
+			var starts = [];
 
 			for (var i = 0; i < data1.length; i++) {
 				var lat = data1[i]["Latitude"];
 				var long = data1[i]["Longitude"];
-				var dest = new google.maps.LatLng(lat, long);
-				dests.push(dest);
+				var start = new google.maps.LatLng(lat, long);
+				starts.push(start);
 			};
 
 			var service = new google.maps.DistanceMatrixService();
 			service.getDistanceMatrix(
 			{
-				origins: [origin],
-				destinations: dests,
+				origins: starts,
+				destinations: [destination],
 				travelMode: 'DRIVING',
 			}, callback);
 
@@ -87,39 +86,42 @@ d3.json("CarCrashData.json", function(error, data) {
 					var results = response.rows[0].elements;
 	
 					var minDuration = Infinity;
-					var minDestination;
+					var minOrigin;
 
-					for (var j = 0; j < results.length; j++) {
-						var element = results[j];
+					for (var i = 0; i < origins.length; i++) {
+						var results = response.rows[i].elements;
+						for (var j = 0; j < results.length; j++) {
+							var element = results[j];
 
-						if (element.status == "OK") {
-							var distance = element.distance.text;
-							var duration = element.duration.text;
-							duration = parseInt(duration.substring(0, duration.length - 4));
-						
-							var from = origins[0];
-							var to = destinations[j];
+							if (element.status == "OK") {
+								var distance = element.distance.text;
+								var duration = element.duration.text;
+								duration = parseInt(duration.substring(0, duration.length - 4));
 
-							if (duration < minDuration) {
-								minDuration = duration;
-								minDestination = to;
+								var from = origins[i];
+								var to = destinations[j];
+
+								if (duration < minDuration) {
+									minDuration = duration;
+									minOrigin = from;
+								}
 							}
 						}
 					}
 
 					var request = {
-						origin: minDestination,
-						destination: origins[0],
+						origin: minOrigin,
+						destination: destinations[0],
 						travelMode: google.maps.TravelMode.DRIVING
 					};
 
 					directionsService.route(request, function(result, status) {
 						if (status == google.maps.DirectionsStatus.OK) {
 							directionsDisplay.setDirections(result);
-							console.log(result);
-						} else {
-							console.log("couldn't get directions:" + status);
-						}
+							//console.log(result);
+						} //else {
+							//console.log("couldn't get directions:" + status);
+						//}
 					});
 				}
 			};
@@ -142,6 +144,7 @@ d3.json("CarCrashData.json", function(error, data) {
 				.each(transform)
 				.attr("class", "marker")
 				.on("click", function(d) { 
+	//				console.log(d.value["Latitude"], d.value["Longitude"]);
 					getRoute(d.value["Latitude"], d.value["Longitude"]);
 				});
 

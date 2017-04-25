@@ -65,16 +65,16 @@ def get_result(f,t,s,r):
 
 	output=sorted(crimeCount, key=lambda x: x['bracket'])
 
-
-	with open('top5.tsv', 'w') as f:
+	curpath = os.path.abspath(os.curdir)
+	
+	with open(os.path.join(curpath, 'static/top5.tsv'), 'w') as f:
 		f.write('year\tbracket\tcrimeRatio\n')
 		for i in range(48):
 			year = 2013 + i // 12
 			for block in output:
 				f.write(str(year) + '\t' + str(block['bracket']) + '\t' + str(block['crimeRatio'][i]) + '\n')
 
-
-	with open('top5Name.tsv', 'w') as f:
+	with open(os.path.join(curpath, 'static/top5Name.tsv'), 'w') as f:
 		f.write('1\t2\t3\t4\t5\n')
 		for block in output:
 			f.write(str(block['bracket']) + ': ' +block['area'] + '\t')

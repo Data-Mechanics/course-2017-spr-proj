@@ -1,21 +1,34 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import optimization_algorithm
 import json
 
 app = Flask(__name__)
 
 info=None
-
-
+@app.after_request
+def add_header(r):
+    """
+    Add headers to both force latest IE rendering engine or Chrome Frame,
+    and also to cache the rendered page for 10 minutes.
+    """
+    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    r.headers["Pragma"] = "no-cache"
+    r.headers["Expires"] = "0"
+    r.headers['Cache-Control'] = 'public, max-age=0'
+    return r
 @app.route("/")
 def index():
     return render_template('index.html')
+
+def send_file(path):
+    return send_from_directory('/', path)
 
 @app.route("/optimize/", methods=["GET"])
 def optimize():
     return render_template('optimize.html')
 
 @app.route("/optimize-result/", methods=["GET"])
+
 def optimize_result():
 
     food=request.args["Food"]
@@ -54,6 +67,10 @@ def static_analysis():
 def report():
     return render_template('report.html')
 
+@app.route("/crimePercentage/")
+
+def crimePercentage():
+    return render_template('crimePercentage.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

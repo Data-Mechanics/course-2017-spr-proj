@@ -51,41 +51,41 @@ var directionsDisplay = new google.maps.DirectionsRenderer();;
 var directionsService = new google.maps.DirectionsService();
 directionsDisplay.setMap(map);
 
-// Find the distance from a crash to an EMS station
-function calcDistance(startlat, startlong, endlat, endlong) {
-	var p1 = new google.maps.LatLng(startlat, startlong);
-	var p2 = new google.maps.LatLng(endlat, endlong);
-	return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
-}
+// // Find the distance from a crash to an EMS station
+// function calcDistance(startlat, startlong, endlat, endlong) {
+// 	var p1 = new google.maps.LatLng(startlat, startlong);
+// 	var p2 = new google.maps.LatLng(endlat, endlong);
+// 	return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
+// }
 
 // Find the coordinates of the EMS station closest to the crash
-function findShortestDistance(startlat, startlong) {
-	
-	d3.json("EMSStationsData.json", function(error, data) {
-		if (error) throw error;
+// d3.json("EMSStationsData.json", function(error, data) {
+// 	function findShortestDistance(startlat, startlong) {
 
-		var minDist = 9999;
-		var minLat = 0;
-		var minLong = 0;
+// //		if (error) throw error;
 
-		for (var i = 0; i < data.length; i++) {//item in data) {
-			var lat = data[i]["Latitude"];
-			var long = data[i]["Longitude"];
-			var dist = calcDistance(startlat, startlong, lat, long);
-			//console.log(lat, long, dist);
-			if (dist < minDist)	{
-				minDist = dist;
-				minLat = lat;
-				minLong = long;
-				//console.log(minLat, minLong, minDist);
-			}
-		}
-		console.log([minLat, minLong]);
-		return [minLat, minLong];
-	});
-	console.log("How did I get here?");
+// 		var minDist = 9999;
+// 		var minLat = 0;
+// 		var minLong = 0;
 
-}
+// 		for (var i = 0; i < data.length; i++) {//item in data) {
+// 			var lat = data[i]["Latitude"];
+// 			var long = data[i]["Longitude"];
+// 			var dist = calcDistance(startlat, startlong, lat, long);
+// 			//console.log(lat, long, dist);
+// 			if (dist < minDist)	{
+// 				minDist = dist;
+// 				minLat = lat;
+// 				minLong = long;
+// 				//console.log(minLat, minLong, minDist);
+// 			}
+// 		}
+// 		console.log([minLat, minLong]);
+// 		return [minLat, minLong];
+// 	};
+// console.log("How did I get here?");
+
+// });
 
 // Routes from the EMS station to the crash site on the map
 function Route(startlat, startlong, endlat, endlong) {
@@ -108,49 +108,80 @@ function Route(startlat, startlong, endlat, endlong) {
 
 // Load the car crash data and overlays it onto the Google Map
 d3.json("CarCrashData.json", function(error, data) {
-	if (error) throw error;
+	d3.json("EMSStationsData.json", function(error, data1) {
+		if (error) throw error;
 
-	var overlay = new google.maps.OverlayView();
+		var overlay = new google.maps.OverlayView();
 
-  // Add the container when the overlay is added to the map
-  overlay.onAdd = function() {
-  	var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "crashes");
-
-	// Draw each marker as a separate SVG element
-	overlay.draw = function() {
-		var projection = this.getProjection(),
-		padding = 10;
-
-		var marker = layer.selectAll("svg")
-		.data(d3.entries(data))
-		.each(transform) // update existing markers
-		.enter().append("svg")
-		.each(transform)
-		.attr("class", "marker")
-		.on("click", function(d) { 
-			var latlong = findShortestDistance(d.value["Latitude"], d.value["Longitude"]);
-			console.log("latlong", latlong);
-			Route(42.3096982, -71.1043113, d.value["Latitude"], d.value["Longitude"]);
-		});
-
-		// Add a circle.
-		marker.append("circle")
-		.attr("r", 2)
-		.attr("cx", padding)
-		.attr("cy", padding);
-
-		function transform(d) {
-			d = new google.maps.LatLng(d.value["Latitude"], d.value["Longitude"]);
-			d = projection.fromLatLngToDivPixel(d);
-			return d3.select(this)
-			.style("left", (d.x - padding) + "px")
-			.style("top", (d.y - padding) + "px");
+		// Find the distance from a crash to an EMS station
+		function calcDistance(startlat, startlong, endlat, endlong) {
+			var p1 = new google.maps.LatLng(startlat, startlong);
+			var p2 = new google.maps.LatLng(endlat, endlong);
+			return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
 		}
-	};
-};
 
-  // Put the overlay on the map
-  overlay.setMap(map);
+		function findShortestDistance(startlat, startlong) {
+			// if (error) throw error;
+			var minDist = 9999;
+			var minLat = 0;
+			var minLong = 0;
+
+			for (var i = 0; i < data1.length; i++) {//item in data) {
+				var lat = data1[i]["Latitude"];
+				var long = data1[i]["Longitude"];
+				var dist = calcDistance(startlat, startlong, lat, long);
+				console.log(lat, long, dist);
+				if (dist < minDist)	{
+					minDist = dist;
+					minLat = lat;
+					minLong = long;
+					//console.log(minLat, minLong, minDist);
+				}
+			}
+			console.log([minLat, minLong]);
+			return [minLat, minLong];
+		};
+
+		// Add the container when the overlay is added to the map
+		overlay.onAdd = function() {
+	  		var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "crashes");
+
+			// Draw each marker as a separate SVG element
+			overlay.draw = function() {
+				var projection = this.getProjection(),
+				padding = 10;
+
+				var marker = layer.selectAll("svg")
+				.data(d3.entries(data))
+				.each(transform) // update existing markers
+				.enter().append("svg")
+				.each(transform)
+				.attr("class", "marker")
+				.on("click", function(d) { 
+					var latlong = findShortestDistance(d.value["Latitude"], d.value["Longitude"]);
+					Route(latlong[0], latlong[1], d.value["Latitude"], d.value["Longitude"]);
+				});
+
+				// Add a circle.
+				marker.append("circle")
+				.attr("r", 2)
+				.attr("cx", padding)
+				.attr("cy", padding);
+
+				function transform(d) {
+					d = new google.maps.LatLng(d.value["Latitude"], d.value["Longitude"]);
+					d = projection.fromLatLngToDivPixel(d);
+					return d3.select(this)
+					.style("left", (d.x - padding) + "px")
+					.style("top", (d.y - padding) + "px");
+				};
+			};
+		};
+
+	// Put the overlay on the map
+	overlay.setMap(map);
+
+	});
 });
 
 d3.json("EMSStationsData.json", function(error, data) {
@@ -158,38 +189,38 @@ d3.json("EMSStationsData.json", function(error, data) {
 
 	var overlay = new google.maps.OverlayView();
 
-  // Add the container when the overlay is added to the map
-  overlay.onAdd = function() {
-  	var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "stations");
+  	// Add the container when the overlay is added to the map
+ 	overlay.onAdd = function() {
+	  	var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "stations");
 
-	// Draw each marker as a separate SVG element
-	overlay.draw = function() {
-		var projection = this.getProjection(),
-		padding = 10;
+		// Draw each marker as a separate SVG element
+		overlay.draw = function() {
+			var projection = this.getProjection(),
+			padding = 10;
 
-		var marker = layer.selectAll("svg")
-		.data(d3.entries(data))
-		.each(transform) // update existing markers
-		.enter().append("svg")
-		.each(transform)
-		.attr("class", "marker")
-		.on("click", function(d) { console.log(d); });
+			var marker = layer.selectAll("svg")
+			.data(d3.entries(data))
+			.each(transform) // update existing markers
+			.enter().append("svg")
+			.each(transform)
+			.attr("class", "marker")
+			.on("click", function(d) { console.log(d); });
 
-		// Add a circle.
-		marker.append("circle")
-		.attr("r", 10)
-		.attr("cx", padding)
-		.attr("cy", padding);
+			// Add a circle.
+			marker.append("circle")
+			.attr("r", 10)
+			.attr("cx", padding)
+			.attr("cy", padding);
 
-		function transform(d) {
-			d = new google.maps.LatLng(d.value["Latitude"], d.value["Longitude"]);
-			d = projection.fromLatLngToDivPixel(d);
-			return d3.select(this)
-			.style("left", (d.x - padding) + "px")
-			.style("top", (d.y - padding) + "px");
-		}
+			function transform(d) {
+				d = new google.maps.LatLng(d.value["Latitude"], d.value["Longitude"]);
+				d = projection.fromLatLngToDivPixel(d);
+				return d3.select(this)
+				.style("left", (d.x - padding) + "px")
+				.style("top", (d.y - padding) + "px");
+			}
+		};
 	};
-};
 
   // Put the overlay on the map
   overlay.setMap(map);

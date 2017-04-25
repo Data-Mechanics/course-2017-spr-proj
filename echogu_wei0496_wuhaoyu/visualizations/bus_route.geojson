@@ -267,9 +267,9 @@
       "properties": {
         "school": "Conservatory Lab Hancock",
         "yard": "Ctwn",
-        "stroke": "#606652",
+        "stroke": "#164114",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -906,9 +906,9 @@
       "properties": {
         "school": "Conservatory Lab Hancock",
         "yard": "Frpt",
-        "stroke": "#162302",
+        "stroke": "#610111",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -1273,9 +1273,9 @@
       "properties": {
         "school": "Conservatory Lab Hancock",
         "yard": "Frpt",
-        "stroke": "#630032",
+        "stroke": "#163405",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -1352,9 +1352,9 @@
       "properties": {
         "school": "Conservatory Lab Hancock",
         "yard": "Wash",
-        "stroke": "#053466",
+        "stroke": "#542150",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -1583,9 +1583,9 @@
       "properties": {
         "school": "Excel Acad 2 (EB)",
         "yard": "Wash",
-        "stroke": "#635406",
+        "stroke": "#466443",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -1638,9 +1638,9 @@
       "properties": {
         "school": "Kenny ES",
         "yard": "Ctwn",
-        "stroke": "#100621",
+        "stroke": "#613250",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -2213,9 +2213,9 @@
       "properties": {
         "school": "Kenny ES",
         "yard": "Read",
-        "stroke": "#231066",
+        "stroke": "#551265",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -2916,9 +2916,9 @@
       "properties": {
         "school": "Kenny ES",
         "yard": "Read",
-        "stroke": "#640612",
+        "stroke": "#426663",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -3235,9 +3235,9 @@
       "properties": {
         "school": "Kenny ES",
         "yard": "Read",
-        "stroke": "#446213",
+        "stroke": "#166334",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -3458,9 +3458,9 @@
       "properties": {
         "school": "Mason ES",
         "yard": "Read",
-        "stroke": "#432040",
+        "stroke": "#003223",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -3865,9 +3865,9 @@
       "properties": {
         "school": "Mason ES",
         "yard": "Frpt",
-        "stroke": "#105304",
+        "stroke": "#500160",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -4272,9 +4272,9 @@
       "properties": {
         "school": "Mason ES",
         "yard": "Wash",
-        "stroke": "#355206",
+        "stroke": "#056650",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -4311,9 +4311,9 @@
       "properties": {
         "school": "Bradley ES",
         "yard": "Read",
-        "stroke": "#251105",
+        "stroke": "#616363",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -4342,9 +4342,9 @@
       "properties": {
         "school": "Bradley ES",
         "yard": "Wash",
-        "stroke": "#616326",
+        "stroke": "#621546",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -4549,9 +4549,9 @@
       "properties": {
         "school": "Bradley ES",
         "yard": "Wash",
-        "stroke": "#504453",
+        "stroke": "#245054",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -5820,9 +5820,9 @@
       "properties": {
         "school": "Bradley ES",
         "yard": "Wash",
-        "stroke": "#221220",
+        "stroke": "#102245",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -6003,9 +6003,9 @@
       "properties": {
         "school": "Excel HS",
         "yard": "Wash",
-        "stroke": "#003013",
+        "stroke": "#420210",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -6242,9 +6242,9 @@
       "properties": {
         "school": "Boston Collegiate Lower",
         "yard": "Read",
-        "stroke": "#043430",
+        "stroke": "#512543",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -6345,9 +6345,9 @@
       "properties": {
         "school": "Boston Collegiate Lower",
         "yard": "Read",
-        "stroke": "#031206",
+        "stroke": "#225306",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -7032,9 +7032,9 @@
       "properties": {
         "school": "Boston Collegiate Lower",
         "yard": "Read",
-        "stroke": "#403052",
+        "stroke": "#501510",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -7319,9 +7319,9 @@
       "properties": {
         "school": "Boston Collegiate Lower",
         "yard": "Frpt",
-        "stroke": "#604461",
+        "stroke": "#203500",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -7630,9 +7630,9 @@
       "properties": {
         "school": "Davis Leadership Acad",
         "yard": "Read",
-        "stroke": "#446521",
+        "stroke": "#043131",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -7861,9 +7861,9 @@
       "properties": {
         "school": "Davis Leadership Acad",
         "yard": "Frpt",
-        "stroke": "#241141",
+        "stroke": "#631506",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -8308,9 +8308,9 @@
       "properties": {
         "school": "HENDERSON K-2",
         "yard": "Ctwn",
-        "stroke": "#562155",
+        "stroke": "#563014",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -8643,9 +8643,9 @@
       "properties": {
         "school": "HENDERSON K-2",
         "yard": "Read",
-        "stroke": "#136526",
+        "stroke": "#206530",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -8850,9 +8850,9 @@
       "properties": {
         "school": "HENDERSON K-2",
         "yard": "Read",
-        "stroke": "#562256",
+        "stroke": "#206442",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -9097,9 +9097,9 @@
       "properties": {
         "school": "Codman Acad Lower",
         "yard": "Ctwn",
-        "stroke": "#264016",
+        "stroke": "#160203",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -9680,9 +9680,9 @@
       "properties": {
         "school": "Codman Acad Lower",
         "yard": "Read",
-        "stroke": "#111404",
+        "stroke": "#523646",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -10047,9 +10047,9 @@
       "properties": {
         "school": "Lyon K-8",
         "yard": "Wash",
-        "stroke": "#124400",
+        "stroke": "#522314",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -10102,9 +10102,9 @@
       "properties": {
         "school": "Clap ES",
         "yard": "Read",
-        "stroke": "#506132",
+        "stroke": "#165506",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -10645,9 +10645,9 @@
       "properties": {
         "school": "Clap ES",
         "yard": "Read",
-        "stroke": "#064630",
+        "stroke": "#410604",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -10940,9 +10940,9 @@
       "properties": {
         "school": "Clap ES",
         "yard": "Read",
-        "stroke": "#032130",
+        "stroke": "#412215",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -11211,9 +11211,9 @@
       "properties": {
         "school": "Comm Acad Sci & Health",
         "yard": "Read",
-        "stroke": "#054651",
+        "stroke": "#105124",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -11554,9 +11554,9 @@
       "properties": {
         "school": "Comm Acad Sci & Health",
         "yard": "Wash",
-        "stroke": "#226302",
+        "stroke": "#621441",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -11865,9 +11865,9 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Ctwn",
-        "stroke": "#460345",
+        "stroke": "#124146",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -12560,9 +12560,9 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Read",
-        "stroke": "#550534",
+        "stroke": "#654262",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -13551,9 +13551,9 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Read",
-        "stroke": "#400026",
+        "stroke": "#312352",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -13846,9 +13846,9 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Frpt",
-        "stroke": "#315461",
+        "stroke": "#351620",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -14205,9 +14205,9 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Frpt",
-        "stroke": "#305345",
+        "stroke": "#264534",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -14292,9 +14292,9 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Frpt",
-        "stroke": "#430343",
+        "stroke": "#562254",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -14363,9 +14363,9 @@
       "properties": {
         "school": "Lee ES",
         "yard": "Frpt",
-        "stroke": "#160453",
+        "stroke": "#623633",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -14650,9 +14650,9 @@
       "properties": {
         "school": "St John",
         "yard": "Frpt",
-        "stroke": "#140215",
+        "stroke": "#421043",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -15001,9 +15001,9 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Ctwn",
-        "stroke": "#524622",
+        "stroke": "#022464",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -15424,9 +15424,9 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Ctwn",
-        "stroke": "#303346",
+        "stroke": "#440430",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -15647,9 +15647,9 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Ctwn",
-        "stroke": "#423516",
+        "stroke": "#204046",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -16286,9 +16286,9 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Frpt",
-        "stroke": "#264650",
+        "stroke": "#633603",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -16461,9 +16461,9 @@
       "properties": {
         "school": "Beethoven ES",
         "yard": "Frpt",
-        "stroke": "#541326",
+        "stroke": "#565456",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -16876,9 +16876,9 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Ctwn",
-        "stroke": "#200446",
+        "stroke": "#215151",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -16971,9 +16971,9 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Ctwn",
-        "stroke": "#630104",
+        "stroke": "#013361",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -18282,9 +18282,9 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Ctwn",
-        "stroke": "#302041",
+        "stroke": "#564344",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -18417,9 +18417,9 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Frpt",
-        "stroke": "#111053",
+        "stroke": "#435524",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -18592,9 +18592,9 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Frpt",
-        "stroke": "#206312",
+        "stroke": "#134162",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -18639,9 +18639,9 @@
       "properties": {
         "school": "Lyndon K-8",
         "yard": "Frpt",
-        "stroke": "#444414",
+        "stroke": "#040402",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -18694,9 +18694,9 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Ctwn",
-        "stroke": "#423313",
+        "stroke": "#661042",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -19245,9 +19245,9 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Read",
-        "stroke": "#322314",
+        "stroke": "#614056",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -19676,9 +19676,9 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Read",
-        "stroke": "#231316",
+        "stroke": "#413663",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -20043,9 +20043,9 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Read",
-        "stroke": "#316361",
+        "stroke": "#626625",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -20810,9 +20810,9 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Frpt",
-        "stroke": "#660542",
+        "stroke": "#544136",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -21329,9 +21329,9 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Frpt",
-        "stroke": "#542342",
+        "stroke": "#355653",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -21552,9 +21552,9 @@
       "properties": {
         "school": "Dever Elementary",
         "yard": "Frpt",
-        "stroke": "#454151",
+        "stroke": "#624036",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -22295,9 +22295,9 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Ctwn",
-        "stroke": "#246531",
+        "stroke": "#554602",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -22526,9 +22526,9 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Ctwn",
-        "stroke": "#342401",
+        "stroke": "#642554",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -22645,9 +22645,9 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Read",
-        "stroke": "#163665",
+        "stroke": "#323012",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -23700,9 +23700,9 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Ctwn",
-        "stroke": "#634116",
+        "stroke": "#603410",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -23803,9 +23803,9 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Frpt",
-        "stroke": "#234362",
+        "stroke": "#643664",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -24186,9 +24186,9 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Frpt",
-        "stroke": "#522225",
+        "stroke": "#544420",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -24225,9 +24225,9 @@
       "properties": {
         "school": "Ohrenberger",
         "yard": "Frpt",
-        "stroke": "#160061",
+        "stroke": "#604024",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -24312,9 +24312,9 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Ctwn",
-        "stroke": "#406520",
+        "stroke": "#645062",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -24911,9 +24911,9 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Read",
-        "stroke": "#161112",
+        "stroke": "#343014",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -25598,9 +25598,9 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Read",
-        "stroke": "#156324",
+        "stroke": "#421001",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -25837,9 +25837,9 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Frpt",
-        "stroke": "#320616",
+        "stroke": "#326353",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -25948,9 +25948,9 @@
       "properties": {
         "school": "Russell ES",
         "yard": "Wash",
-        "stroke": "#103621",
+        "stroke": "#266623",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -26371,9 +26371,9 @@
       "properties": {
         "school": "West Zone ELC",
         "yard": "Frpt",
-        "stroke": "#614556",
+        "stroke": "#332300",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -26762,9 +26762,9 @@
       "properties": {
         "school": "Frederick MS",
         "yard": "Ctwn",
-        "stroke": "#514533",
+        "stroke": "#111453",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -27033,9 +27033,9 @@
       "properties": {
         "school": "Frederick MS",
         "yard": "Frpt",
-        "stroke": "#453651",
+        "stroke": "#535005",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -27136,9 +27136,9 @@
       "properties": {
         "school": "HENDERSON 3-12",
         "yard": "Ctwn",
-        "stroke": "#612644",
+        "stroke": "#505321",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -27519,9 +27519,9 @@
       "properties": {
         "school": "HENDERSON 3-12",
         "yard": "Read",
-        "stroke": "#435021",
+        "stroke": "#226055",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -27918,9 +27918,9 @@
       "properties": {
         "school": "HENDERSON 3-12",
         "yard": "Read",
-        "stroke": "#603246",
+        "stroke": "#144436",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -28669,9 +28669,9 @@
       "properties": {
         "school": "HENDERSON 3-12",
         "yard": "Wash",
-        "stroke": "#215633",
+        "stroke": "#343535",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -28796,9 +28796,9 @@
       "properties": {
         "school": "Edwards Middle",
         "yard": "Read",
-        "stroke": "#400152",
+        "stroke": "#036011",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -29515,9 +29515,9 @@
       "properties": {
         "school": "Edwards Middle",
         "yard": "Wash",
-        "stroke": "#224361",
+        "stroke": "#125133",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -29890,9 +29890,9 @@
       "properties": {
         "school": "Perry K-8",
         "yard": "Ctwn",
-        "stroke": "#625220",
+        "stroke": "#204406",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -30337,9 +30337,9 @@
       "properties": {
         "school": "Perry K-8",
         "yard": "Wash",
-        "stroke": "#422605",
+        "stroke": "#046052",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -30512,9 +30512,9 @@
       "properties": {
         "school": "Madison Park HS",
         "yard": "Ctwn",
-        "stroke": "#320445",
+        "stroke": "#021561",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -30791,9 +30791,9 @@
       "properties": {
         "school": "Madison Park HS",
         "yard": "Wash",
-        "stroke": "#244113",
+        "stroke": "#030602",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -30854,9 +30854,9 @@
       "properties": {
         "school": "King K-8",
         "yard": "Ctwn",
-        "stroke": "#541262",
+        "stroke": "#056534",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -30941,9 +30941,9 @@
       "properties": {
         "school": "King K-8",
         "yard": "Ctwn",
-        "stroke": "#033460",
+        "stroke": "#634316",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -31420,9 +31420,9 @@
       "properties": {
         "school": "King K-8",
         "yard": "Read",
-        "stroke": "#340440",
+        "stroke": "#564666",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -31979,9 +31979,9 @@
       "properties": {
         "school": "King K-8",
         "yard": "Frpt",
-        "stroke": "#031015",
+        "stroke": "#625255",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -32586,9 +32586,9 @@
       "properties": {
         "school": "King K-8",
         "yard": "Read",
-        "stroke": "#442333",
+        "stroke": "#340326",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -32841,9 +32841,9 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Ctwn",
-        "stroke": "#205544",
+        "stroke": "#531463",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -33704,9 +33704,9 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Read",
-        "stroke": "#513510",
+        "stroke": "#426623",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -33847,9 +33847,9 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Ctwn",
-        "stroke": "#446235",
+        "stroke": "#510315",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -34550,9 +34550,9 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Wash",
-        "stroke": "#236436",
+        "stroke": "#613250",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -34597,9 +34597,9 @@
       "properties": {
         "school": "Neighborhood House",
         "yard": "Frpt",
-        "stroke": "#416361",
+        "stroke": "#320300",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -35260,9 +35260,9 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Read",
-        "stroke": "#231501",
+        "stroke": "#334301",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -36091,9 +36091,9 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Read",
-        "stroke": "#053312",
+        "stroke": "#266005",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -36234,9 +36234,9 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Frpt",
-        "stroke": "#052344",
+        "stroke": "#303122",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -36385,9 +36385,9 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Wash",
-        "stroke": "#642150",
+        "stroke": "#236656",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -36440,9 +36440,9 @@
       "properties": {
         "school": "Mildred Ave K-8",
         "yard": "Frpt",
-        "stroke": "#654416",
+        "stroke": "#015135",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -36735,9 +36735,9 @@
       "properties": {
         "school": "West Roxbury Academy",
         "yard": "Frpt",
-        "stroke": "#333512",
+        "stroke": "#422353",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -37182,9 +37182,9 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Frpt",
-        "stroke": "#264243",
+        "stroke": "#006066",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -37717,9 +37717,9 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Frpt",
-        "stroke": "#353262",
+        "stroke": "#124142",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -38268,9 +38268,9 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Frpt",
-        "stroke": "#625154",
+        "stroke": "#632062",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -38379,9 +38379,9 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Frpt",
-        "stroke": "#266331",
+        "stroke": "#510601",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -38514,9 +38514,9 @@
       "properties": {
         "school": "Tobin K-8",
         "yard": "Wash",
-        "stroke": "#421054",
+        "stroke": "#350045",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -38553,9 +38553,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Ctwn",
-        "stroke": "#151126",
+        "stroke": "#063166",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -38784,9 +38784,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Read",
-        "stroke": "#533201",
+        "stroke": "#331302",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -38831,9 +38831,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Ctwn",
-        "stroke": "#310344",
+        "stroke": "#322153",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -39102,9 +39102,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Read",
-        "stroke": "#540125",
+        "stroke": "#363550",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -39317,9 +39317,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Read",
-        "stroke": "#536550",
+        "stroke": "#423332",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -39588,9 +39588,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Frpt",
-        "stroke": "#426535",
+        "stroke": "#300245",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -40075,9 +40075,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Frpt",
-        "stroke": "#364311",
+        "stroke": "#202604",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -42082,9 +42082,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Frpt",
-        "stroke": "#403656",
+        "stroke": "#434222",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -42305,9 +42305,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Wash",
-        "stroke": "#014321",
+        "stroke": "#650104",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -42376,9 +42376,9 @@
       "properties": {
         "school": "Edison K-8",
         "yard": "Wash",
-        "stroke": "#040236",
+        "stroke": "#413033",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -42471,9 +42471,9 @@
       "properties": {
         "school": "McCormack MS",
         "yard": "Ctwn",
-        "stroke": "#245006",
+        "stroke": "#223211",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -43382,9 +43382,9 @@
       "properties": {
         "school": "McCormack MS",
         "yard": "Frpt",
-        "stroke": "#642561",
+        "stroke": "#402460",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -43549,9 +43549,9 @@
       "properties": {
         "school": "McCormack MS",
         "yard": "Wash",
-        "stroke": "#161035",
+        "stroke": "#156416",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -44036,9 +44036,9 @@
       "properties": {
         "school": "Grew ES",
         "yard": "Ctwn",
-        "stroke": "#413003",
+        "stroke": "#032203",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -44515,9 +44515,9 @@
       "properties": {
         "school": "Grew ES",
         "yard": "Ctwn",
-        "stroke": "#554665",
+        "stroke": "#620300",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -44770,9 +44770,9 @@
       "properties": {
         "school": "Grew ES",
         "yard": "Frpt",
-        "stroke": "#454535",
+        "stroke": "#064552",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -45497,9 +45497,9 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Ctwn",
-        "stroke": "#112245",
+        "stroke": "#154013",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -45904,9 +45904,9 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Read",
-        "stroke": "#001001",
+        "stroke": "#616144",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -46447,9 +46447,9 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Read",
-        "stroke": "#003342",
+        "stroke": "#460343",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -46582,9 +46582,9 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Frpt",
-        "stroke": "#110342",
+        "stroke": "#162222",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -46645,9 +46645,9 @@
       "properties": {
         "school": "Tynan ES",
         "yard": "Wash",
-        "stroke": "#322455",
+        "stroke": "#463555",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -47004,9 +47004,9 @@
       "properties": {
         "school": "Timilty MS",
         "yard": "Ctwn",
-        "stroke": "#054101",
+        "stroke": "#213010",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -47243,9 +47243,9 @@
       "properties": {
         "school": "Timilty MS",
         "yard": "Wash",
-        "stroke": "#422540",
+        "stroke": "#033544",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -47314,9 +47314,9 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Read",
-        "stroke": "#263052",
+        "stroke": "#443656",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -47969,9 +47969,9 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Read",
-        "stroke": "#340646",
+        "stroke": "#316224",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -48496,9 +48496,9 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Read",
-        "stroke": "#236066",
+        "stroke": "#511040",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -48983,9 +48983,9 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Read",
-        "stroke": "#440000",
+        "stroke": "#023361",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -49694,9 +49694,9 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Frpt",
-        "stroke": "#030544",
+        "stroke": "#355223",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -49781,9 +49781,9 @@
       "properties": {
         "school": "Mather ES",
         "yard": "Frpt",
-        "stroke": "#254400",
+        "stroke": "#346405",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -50148,9 +50148,9 @@
       "properties": {
         "school": "TechBoston Academy",
         "yard": "Read",
-        "stroke": "#413522",
+        "stroke": "#006421",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -50867,9 +50867,9 @@
       "properties": {
         "school": "TechBoston Academy",
         "yard": "Frpt",
-        "stroke": "#531300",
+        "stroke": "#602456",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -50946,9 +50946,9 @@
       "properties": {
         "school": "TechBoston Academy",
         "yard": "Wash",
-        "stroke": "#365156",
+        "stroke": "#260463",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -51169,9 +51169,9 @@
       "properties": {
         "school": "Kennedy PJ ES",
         "yard": "Wash",
-        "stroke": "#544136",
+        "stroke": "#242414",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -51472,9 +51472,9 @@
       "properties": {
         "school": "Kennedy PJ ES",
         "yard": "Wash",
-        "stroke": "#350221",
+        "stroke": "#665224",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -51567,9 +51567,9 @@
       "properties": {
         "school": "Otis ES",
         "yard": "Wash",
-        "stroke": "#644361",
+        "stroke": "#615122",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -52094,9 +52094,9 @@
       "properties": {
         "school": "Otis ES",
         "yard": "Wash",
-        "stroke": "#601635",
+        "stroke": "#046440",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -52141,9 +52141,9 @@
       "properties": {
         "school": "Trotter ES",
         "yard": "Ctwn",
-        "stroke": "#134252",
+        "stroke": "#032566",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -52268,9 +52268,9 @@
       "properties": {
         "school": "Trotter ES",
         "yard": "Frpt",
-        "stroke": "#422666",
+        "stroke": "#301362",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -52707,9 +52707,9 @@
       "properties": {
         "school": "Trotter ES",
         "yard": "Read",
-        "stroke": "#212313",
+        "stroke": "#114023",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -53474,9 +53474,9 @@
       "properties": {
         "school": "Trotter ES",
         "yard": "Frpt",
-        "stroke": "#011435",
+        "stroke": "#025615",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -53625,9 +53625,9 @@
       "properties": {
         "school": "Winship ES",
         "yard": "Ctwn",
-        "stroke": "#025200",
+        "stroke": "#334606",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -54312,9 +54312,9 @@
       "properties": {
         "school": "Winship ES",
         "yard": "Frpt",
-        "stroke": "#611550",
+        "stroke": "#254054",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -54527,9 +54527,9 @@
       "properties": {
         "school": "Gardner Pilot Acad",
         "yard": "Frpt",
-        "stroke": "#003513",
+        "stroke": "#324010",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -54710,9 +54710,9 @@
       "properties": {
         "school": "Gardner Pilot Acad",
         "yard": "Frpt",
-        "stroke": "#062456",
+        "stroke": "#622015",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -55621,9 +55621,9 @@
       "properties": {
         "school": "Gardner Pilot Acad",
         "yard": "Frpt",
-        "stroke": "#115014",
+        "stroke": "#360634",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -55772,9 +55772,9 @@
       "properties": {
         "school": "Gardner Pilot Acad",
         "yard": "Wash",
-        "stroke": "#116541",
+        "stroke": "#126015",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -56163,9 +56163,9 @@
       "properties": {
         "school": "Horace Mann",
         "yard": "Wash",
-        "stroke": "#322444",
+        "stroke": "#104314",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -56370,9 +56370,9 @@
       "properties": {
         "school": "Pope JP II Col Rd",
         "yard": "Read",
-        "stroke": "#324225",
+        "stroke": "#204262",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -56449,9 +56449,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Ctwn",
-        "stroke": "#456632",
+        "stroke": "#450361",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -56664,9 +56664,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#026213",
+        "stroke": "#122503",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -56887,9 +56887,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#416006",
+        "stroke": "#115432",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -57278,9 +57278,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#306655",
+        "stroke": "#342161",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -57885,9 +57885,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#111145",
+        "stroke": "#215211",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -58108,9 +58108,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#600031",
+        "stroke": "#514360",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -58739,9 +58739,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Read",
-        "stroke": "#065500",
+        "stroke": "#000324",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -59090,9 +59090,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Frpt",
-        "stroke": "#235536",
+        "stroke": "#316605",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -59833,9 +59833,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Frpt",
-        "stroke": "#323322",
+        "stroke": "#621466",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -60472,9 +60472,9 @@
       "properties": {
         "school": "Condon ES",
         "yard": "Frpt",
-        "stroke": "#360006",
+        "stroke": "#333535",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -60519,9 +60519,9 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Ctwn",
-        "stroke": "#612640",
+        "stroke": "#541005",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -60590,9 +60590,9 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Read",
-        "stroke": "#654224",
+        "stroke": "#335330",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -61293,9 +61293,9 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Frpt",
-        "stroke": "#552246",
+        "stroke": "#262305",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -62148,9 +62148,9 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Frpt",
-        "stroke": "#461343",
+        "stroke": "#650214",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -62227,9 +62227,9 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Frpt",
-        "stroke": "#063455",
+        "stroke": "#640652",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -62866,9 +62866,9 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Wash",
-        "stroke": "#404650",
+        "stroke": "#125200",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -63041,9 +63041,9 @@
       "properties": {
         "school": "Blackstone ES",
         "yard": "Wash",
-        "stroke": "#031360",
+        "stroke": "#534616",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -63232,9 +63232,9 @@
       "properties": {
         "school": "McKinley Middle",
         "yard": "Frpt",
-        "stroke": "#144434",
+        "stroke": "#044306",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -63479,9 +63479,9 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Ctwn",
-        "stroke": "#654234",
+        "stroke": "#110404",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -64038,9 +64038,9 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Ctwn",
-        "stroke": "#062550",
+        "stroke": "#016213",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -64253,9 +64253,9 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Ctwn",
-        "stroke": "#324362",
+        "stroke": "#025642",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -64756,9 +64756,9 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Read",
-        "stroke": "#503101",
+        "stroke": "#201166",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -65219,9 +65219,9 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Read",
-        "stroke": "#420060",
+        "stroke": "#626621",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -65434,9 +65434,9 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Ctwn",
-        "stroke": "#511162",
+        "stroke": "#323623",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -66297,9 +66297,9 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Frpt",
-        "stroke": "#651644",
+        "stroke": "#050235",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -66496,9 +66496,9 @@
       "properties": {
         "school": "E BROOKE #1 (RS)",
         "yard": "Frpt",
-        "stroke": "#554323",
+        "stroke": "#632235",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -66583,9 +66583,9 @@
       "properties": {
         "school": "Baldwin ELC",
         "yard": "Read",
-        "stroke": "#506661",
+        "stroke": "#515010",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -67190,9 +67190,9 @@
       "properties": {
         "school": "Baldwin ELC",
         "yard": "Frpt",
-        "stroke": "#040013",
+        "stroke": "#045522",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -67797,9 +67797,9 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Ctwn",
-        "stroke": "#036060",
+        "stroke": "#310600",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -68140,9 +68140,9 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Read",
-        "stroke": "#336361",
+        "stroke": "#162516",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -68387,9 +68387,9 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Ctwn",
-        "stroke": "#620630",
+        "stroke": "#604206",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -69098,9 +69098,9 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Read",
-        "stroke": "#425516",
+        "stroke": "#505213",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -69489,9 +69489,9 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Read",
-        "stroke": "#661254",
+        "stroke": "#355404",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -69760,9 +69760,9 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Read",
-        "stroke": "#200450",
+        "stroke": "#644025",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -70127,9 +70127,9 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Frpt",
-        "stroke": "#361346",
+        "stroke": "#560305",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -70198,9 +70198,9 @@
       "properties": {
         "school": "Young Achievers",
         "yard": "Frpt",
-        "stroke": "#251364",
+        "stroke": "#503111",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -70581,9 +70581,9 @@
       "properties": {
         "school": "Quincy Upper School",
         "yard": "Frpt",
-        "stroke": "#011616",
+        "stroke": "#463046",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -71084,9 +71084,9 @@
       "properties": {
         "school": "UP ACAD / S BOSTON",
         "yard": "Read",
-        "stroke": "#235041",
+        "stroke": "#505403",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -71459,9 +71459,9 @@
       "properties": {
         "school": "UP ACAD / S BOSTON",
         "yard": "Read",
-        "stroke": "#113401",
+        "stroke": "#416532",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -71690,9 +71690,9 @@
       "properties": {
         "school": "UP ACAD / S BOSTON",
         "yard": "Frpt",
-        "stroke": "#253021",
+        "stroke": "#165354",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -71953,9 +71953,9 @@
       "properties": {
         "school": "UP ACAD / S BOSTON",
         "yard": "Frpt",
-        "stroke": "#221015",
+        "stroke": "#351660",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -72472,9 +72472,9 @@
       "properties": {
         "school": "Manning ES",
         "yard": "Ctwn",
-        "stroke": "#213230",
+        "stroke": "#613341",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -72567,9 +72567,9 @@
       "properties": {
         "school": "Manning ES",
         "yard": "Read",
-        "stroke": "#026022",
+        "stroke": "#624100",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -72894,9 +72894,9 @@
       "properties": {
         "school": "Manning ES",
         "yard": "Frpt",
-        "stroke": "#114623",
+        "stroke": "#316235",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -73245,9 +73245,9 @@
       "properties": {
         "school": "Bridge Boston 2-4",
         "yard": "Ctwn",
-        "stroke": "#611314",
+        "stroke": "#520352",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -73620,9 +73620,9 @@
       "properties": {
         "school": "Bridge Boston 2-4",
         "yard": "Frpt",
-        "stroke": "#221263",
+        "stroke": "#211332",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -73883,9 +73883,9 @@
       "properties": {
         "school": "Bridge Boston 2-4",
         "yard": "Frpt",
-        "stroke": "#251024",
+        "stroke": "#522130",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -74258,9 +74258,9 @@
       "properties": {
         "school": "BCLA - Boston Comm Lead Acad",
         "yard": "Frpt",
-        "stroke": "#620425",
+        "stroke": "#111243",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -74593,9 +74593,9 @@
       "properties": {
         "school": "McKinley Elementary",
         "yard": "Wash",
-        "stroke": "#616022",
+        "stroke": "#360444",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -74928,9 +74928,9 @@
       "properties": {
         "school": "Boston Prep",
         "yard": "Ctwn",
-        "stroke": "#633252",
+        "stroke": "#231525",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -75335,9 +75335,9 @@
       "properties": {
         "school": "Irving MS",
         "yard": "Read",
-        "stroke": "#505124",
+        "stroke": "#553465",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -75446,9 +75446,9 @@
       "properties": {
         "school": "Irving MS",
         "yard": "Frpt",
-        "stroke": "#316100",
+        "stroke": "#430463",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -75837,9 +75837,9 @@
       "properties": {
         "school": "Irving MS",
         "yard": "Frpt",
-        "stroke": "#353366",
+        "stroke": "#242154",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -76204,9 +76204,9 @@
       "properties": {
         "school": "Brighton HS",
         "yard": "Frpt",
-        "stroke": "#612551",
+        "stroke": "#263601",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -76235,9 +76235,9 @@
       "properties": {
         "school": "East Boston EEC",
         "yard": "Frpt",
-        "stroke": "#613464",
+        "stroke": "#644402",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -76866,9 +76866,9 @@
       "properties": {
         "school": "East Boston EEC",
         "yard": "Wash",
-        "stroke": "#053634",
+        "stroke": "#554106",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -77553,9 +77553,9 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#554431",
+        "stroke": "#256416",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -78032,9 +78032,9 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#335235",
+        "stroke": "#203242",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -78591,9 +78591,9 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#605414",
+        "stroke": "#220624",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -79014,9 +79014,9 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#440644",
+        "stroke": "#523260",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -79557,9 +79557,9 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Read",
-        "stroke": "#204443",
+        "stroke": "#506121",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -79700,9 +79700,9 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Frpt",
-        "stroke": "#103240",
+        "stroke": "#340424",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -79851,9 +79851,9 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Frpt",
-        "stroke": "#141633",
+        "stroke": "#022644",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -79914,9 +79914,9 @@
       "properties": {
         "school": "UP ACAD - Holland ES",
         "yard": "Wash",
-        "stroke": "#221144",
+        "stroke": "#052344",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -80393,9 +80393,9 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Ctwn",
-        "stroke": "#140250",
+        "stroke": "#630466",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -80776,9 +80776,9 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Read",
-        "stroke": "#562034",
+        "stroke": "#405315",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -81079,9 +81079,9 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Read",
-        "stroke": "#201543",
+        "stroke": "#026142",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -82030,9 +82030,9 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Frpt",
-        "stroke": "#164356",
+        "stroke": "#116141",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -82357,9 +82357,9 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Read",
-        "stroke": "#362356",
+        "stroke": "#111254",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -82556,9 +82556,9 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Frpt",
-        "stroke": "#536154",
+        "stroke": "#624450",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -82595,9 +82595,9 @@
       "properties": {
         "school": "KIPP Academy Boston",
         "yard": "Wash",
-        "stroke": "#022302",
+        "stroke": "#303235",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -82754,9 +82754,9 @@
       "properties": {
         "school": "Dearborn STEM Acad",
         "yard": "Frpt",
-        "stroke": "#011420",
+        "stroke": "#235245",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -83001,9 +83001,9 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Read",
-        "stroke": "#011605",
+        "stroke": "#115424",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -83272,9 +83272,9 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Read",
-        "stroke": "#111103",
+        "stroke": "#343141",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -83551,9 +83551,9 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Frpt",
-        "stroke": "#236562",
+        "stroke": "#605162",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -83718,9 +83718,9 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Read",
-        "stroke": "#020224",
+        "stroke": "#511366",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -84597,9 +84597,9 @@
       "properties": {
         "school": "E BROOKE #3 (EB)",
         "yard": "Wash",
-        "stroke": "#356543",
+        "stroke": "#064051",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -84916,9 +84916,9 @@
       "properties": {
         "school": "Park Street Sch",
         "yard": "Wash",
-        "stroke": "#310562",
+        "stroke": "#252056",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -84947,9 +84947,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Ctwn",
-        "stroke": "#630533",
+        "stroke": "#320651",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -85042,9 +85042,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Ctwn",
-        "stroke": "#454063",
+        "stroke": "#133622",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -85225,9 +85225,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Read",
-        "stroke": "#666634",
+        "stroke": "#251010",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -86912,9 +86912,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Read",
-        "stroke": "#100435",
+        "stroke": "#364462",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -86943,9 +86943,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Ctwn",
-        "stroke": "#123262",
+        "stroke": "#133113",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -87678,9 +87678,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Read",
-        "stroke": "#623662",
+        "stroke": "#622166",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -88397,9 +88397,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Read",
-        "stroke": "#545043",
+        "stroke": "#316106",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -88428,9 +88428,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Frpt",
-        "stroke": "#145404",
+        "stroke": "#021550",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -88507,9 +88507,9 @@
       "properties": {
         "school": "Murphy K-8",
         "yard": "Wash",
-        "stroke": "#251504",
+        "stroke": "#333323",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -88778,9 +88778,9 @@
       "properties": {
         "school": "Bridge Boston",
         "yard": "Ctwn",
-        "stroke": "#414040",
+        "stroke": "#263163",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -88969,9 +88969,9 @@
       "properties": {
         "school": "Bridge Boston",
         "yard": "Frpt",
-        "stroke": "#460443",
+        "stroke": "#032133",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -89200,9 +89200,9 @@
       "properties": {
         "school": "Ellis ES",
         "yard": "Read",
-        "stroke": "#322310",
+        "stroke": "#646160",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -89727,9 +89727,9 @@
       "properties": {
         "school": "Ellis ES",
         "yard": "Read",
-        "stroke": "#003526",
+        "stroke": "#130015",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -90046,9 +90046,9 @@
       "properties": {
         "school": "Ellis ES",
         "yard": "Frpt",
-        "stroke": "#063264",
+        "stroke": "#343255",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -90653,9 +90653,9 @@
       "properties": {
         "school": "Ellis ES",
         "yard": "Frpt",
-        "stroke": "#032255",
+        "stroke": "#120064",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -90980,9 +90980,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Ctwn",
-        "stroke": "#533421",
+        "stroke": "#066350",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -91667,9 +91667,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Ctwn",
-        "stroke": "#410022",
+        "stroke": "#151246",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -91882,9 +91882,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#134341",
+        "stroke": "#444563",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -92201,9 +92201,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Read",
-        "stroke": "#151461",
+        "stroke": "#630042",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -92424,9 +92424,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#263412",
+        "stroke": "#362600",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -92623,9 +92623,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Read",
-        "stroke": "#661526",
+        "stroke": "#163450",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -93606,9 +93606,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Read",
-        "stroke": "#110226",
+        "stroke": "#650456",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -94877,9 +94877,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Read",
-        "stroke": "#115020",
+        "stroke": "#064411",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -95308,9 +95308,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#211214",
+        "stroke": "#302433",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -95395,9 +95395,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#423326",
+        "stroke": "#425124",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -95450,9 +95450,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#331335",
+        "stroke": "#150333",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -95513,9 +95513,9 @@
       "properties": {
         "school": "Curley K-8",
         "yard": "Frpt",
-        "stroke": "#255233",
+        "stroke": "#002654",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -95544,9 +95544,9 @@
       "properties": {
         "school": "Adams ES",
         "yard": "Frpt",
-        "stroke": "#333240",
+        "stroke": "#634265",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -95575,9 +95575,9 @@
       "properties": {
         "school": "Adams ES",
         "yard": "Wash",
-        "stroke": "#664124",
+        "stroke": "#666402",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -96014,9 +96014,9 @@
       "properties": {
         "school": "Adams ES",
         "yard": "Wash",
-        "stroke": "#200606",
+        "stroke": "#535001",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -96813,9 +96813,9 @@
       "properties": {
         "school": "Adams ES",
         "yard": "Wash",
-        "stroke": "#200023",
+        "stroke": "#344604",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -96924,9 +96924,9 @@
       "properties": {
         "school": "Umana Acad K-8",
         "yard": "Read",
-        "stroke": "#612235",
+        "stroke": "#161050",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -97003,9 +97003,9 @@
       "properties": {
         "school": "Umana Acad K-8",
         "yard": "Frpt",
-        "stroke": "#254053",
+        "stroke": "#001120",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -97946,9 +97946,9 @@
       "properties": {
         "school": "Umana Acad K-8",
         "yard": "Wash",
-        "stroke": "#516160",
+        "stroke": "#465043",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -98233,9 +98233,9 @@
       "properties": {
         "school": "Boston Teachers Union K-8",
         "yard": "Ctwn",
-        "stroke": "#112144",
+        "stroke": "#231500",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -98504,9 +98504,9 @@
       "properties": {
         "school": "Boston Teachers Union K-8",
         "yard": "Frpt",
-        "stroke": "#510156",
+        "stroke": "#065455",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -98727,9 +98727,9 @@
       "properties": {
         "school": "Boston Teachers Union K-8",
         "yard": "Read",
-        "stroke": "#552033",
+        "stroke": "#556166",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -99302,9 +99302,9 @@
       "properties": {
         "school": "Boston Teachers Union K-8",
         "yard": "Frpt",
-        "stroke": "#251413",
+        "stroke": "#312160",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -99661,9 +99661,9 @@
       "properties": {
         "school": "Alighieri Elementary",
         "yard": "Wash",
-        "stroke": "#024543",
+        "stroke": "#056163",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -99740,9 +99740,9 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Read",
-        "stroke": "#300041",
+        "stroke": "#551565",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -99795,9 +99795,9 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#626444",
+        "stroke": "#154640",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -100458,9 +100458,9 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#511603",
+        "stroke": "#266110",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -101441,9 +101441,9 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#165635",
+        "stroke": "#033223",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -101608,9 +101608,9 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#543130",
+        "stroke": "#134663",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -101775,9 +101775,9 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Frpt",
-        "stroke": "#115102",
+        "stroke": "#555463",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -102230,9 +102230,9 @@
       "properties": {
         "school": "Quincy ES",
         "yard": "Wash",
-        "stroke": "#364222",
+        "stroke": "#431555",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -102701,9 +102701,9 @@
       "properties": {
         "school": "Bates ES",
         "yard": "Ctwn",
-        "stroke": "#550124",
+        "stroke": "#441013",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -103260,9 +103260,9 @@
       "properties": {
         "school": "Bates ES",
         "yard": "Read",
-        "stroke": "#156256",
+        "stroke": "#450252",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -103675,9 +103675,9 @@
       "properties": {
         "school": "Bates ES",
         "yard": "Ctwn",
-        "stroke": "#225404",
+        "stroke": "#255010",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -103786,9 +103786,9 @@
       "properties": {
         "school": "Bates ES",
         "yard": "Frpt",
-        "stroke": "#525360",
+        "stroke": "#305612",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -104025,9 +104025,9 @@
       "properties": {
         "school": "Advent School",
         "yard": "Frpt",
-        "stroke": "#662503",
+        "stroke": "#210462",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -104336,9 +104336,9 @@
       "properties": {
         "school": "Advent School",
         "yard": "Wash",
-        "stroke": "#505350",
+        "stroke": "#540213",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -104543,9 +104543,9 @@
       "properties": {
         "school": "Philbrick ES",
         "yard": "Ctwn",
-        "stroke": "#320566",
+        "stroke": "#631120",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -105214,9 +105214,9 @@
       "properties": {
         "school": "Philbrick ES",
         "yard": "Read",
-        "stroke": "#442546",
+        "stroke": "#463236",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -105333,9 +105333,9 @@
       "properties": {
         "school": "Philbrick ES",
         "yard": "Read",
-        "stroke": "#453456",
+        "stroke": "#354223",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -106044,9 +106044,9 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Read",
-        "stroke": "#040022",
+        "stroke": "#141200",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -106227,9 +106227,9 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Ctwn",
-        "stroke": "#205342",
+        "stroke": "#461150",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -106666,9 +106666,9 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Frpt",
-        "stroke": "#222263",
+        "stroke": "#233124",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -106929,9 +106929,9 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Read",
-        "stroke": "#036100",
+        "stroke": "#254362",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -107072,9 +107072,9 @@
       "properties": {
         "school": "MATCH MS",
         "yard": "Wash",
-        "stroke": "#550551",
+        "stroke": "#601604",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -107279,9 +107279,9 @@
       "properties": {
         "school": "Mission Hill K-8",
         "yard": "Read",
-        "stroke": "#135663",
+        "stroke": "#332245",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -107422,9 +107422,9 @@
       "properties": {
         "school": "Mission Hill K-8",
         "yard": "Ctwn",
-        "stroke": "#366541",
+        "stroke": "#030324",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -107949,9 +107949,9 @@
       "properties": {
         "school": "Mission Hill K-8",
         "yard": "Read",
-        "stroke": "#042403",
+        "stroke": "#342411",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -108244,9 +108244,9 @@
       "properties": {
         "school": "Holmes ES",
         "yard": "Read",
-        "stroke": "#121631",
+        "stroke": "#432226",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -108499,9 +108499,9 @@
       "properties": {
         "school": "Holmes ES",
         "yard": "Read",
-        "stroke": "#436666",
+        "stroke": "#054065",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -109034,9 +109034,9 @@
       "properties": {
         "school": "Holmes ES",
         "yard": "Read",
-        "stroke": "#511133",
+        "stroke": "#206505",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -109457,9 +109457,9 @@
       "properties": {
         "school": "Holmes ES",
         "yard": "Wash",
-        "stroke": "#130345",
+        "stroke": "#004300",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -109560,9 +109560,9 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Read",
-        "stroke": "#200321",
+        "stroke": "#113252",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -109751,9 +109751,9 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Frpt",
-        "stroke": "#136165",
+        "stroke": "#130643",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -109974,9 +109974,9 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Frpt",
-        "stroke": "#204545",
+        "stroke": "#554326",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -110773,9 +110773,9 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Frpt",
-        "stroke": "#521332",
+        "stroke": "#455255",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -111308,9 +111308,9 @@
       "properties": {
         "school": "Harvard/Kent ES",
         "yard": "Wash",
-        "stroke": "#106656",
+        "stroke": "#624430",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -111795,9 +111795,9 @@
       "properties": {
         "school": "Greenwood S K-8",
         "yard": "Ctwn",
-        "stroke": "#556010",
+        "stroke": "#442556",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -112394,9 +112394,9 @@
       "properties": {
         "school": "Greenwood S K-8",
         "yard": "Read",
-        "stroke": "#111241",
+        "stroke": "#542003",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -112793,9 +112793,9 @@
       "properties": {
         "school": "Greenwood S K-8",
         "yard": "Frpt",
-        "stroke": "#505360",
+        "stroke": "#436612",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -112936,9 +112936,9 @@
       "properties": {
         "school": "Greenwood S K-8",
         "yard": "Frpt",
-        "stroke": "#141216",
+        "stroke": "#061664",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -113295,9 +113295,9 @@
       "properties": {
         "school": "Pope JP II Lower Mills",
         "yard": "Ctwn",
-        "stroke": "#632131",
+        "stroke": "#554535",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -113718,9 +113718,9 @@
       "properties": {
         "school": "McKinley SEA",
         "yard": "Frpt",
-        "stroke": "#256551",
+        "stroke": "#500463",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -113901,9 +113901,9 @@
       "properties": {
         "school": "McKinley SEA",
         "yard": "Frpt",
-        "stroke": "#242554",
+        "stroke": "#066003",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -114244,9 +114244,9 @@
       "properties": {
         "school": "Warren Prescott K-8",
         "yard": "Ctwn",
-        "stroke": "#356450",
+        "stroke": "#444462",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -114563,9 +114563,9 @@
       "properties": {
         "school": "Warren Prescott K-8",
         "yard": "Wash",
-        "stroke": "#004404",
+        "stroke": "#644154",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -115010,9 +115010,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Ctwn",
-        "stroke": "#653533",
+        "stroke": "#361643",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -115737,9 +115737,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Ctwn",
-        "stroke": "#603461",
+        "stroke": "#602436",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -115880,9 +115880,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Ctwn",
-        "stroke": "#003514",
+        "stroke": "#223615",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -116783,9 +116783,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#021512",
+        "stroke": "#311034",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -117198,9 +117198,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Ctwn",
-        "stroke": "#051612",
+        "stroke": "#201113",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -118421,9 +118421,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#435035",
+        "stroke": "#132420",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -118596,9 +118596,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#142624",
+        "stroke": "#305544",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -119219,9 +119219,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#343123",
+        "stroke": "#413655",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -120346,9 +120346,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Read",
-        "stroke": "#015311",
+        "stroke": "#414546",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -120721,9 +120721,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#202065",
+        "stroke": "#034431",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -120800,9 +120800,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#513343",
+        "stroke": "#616241",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -120855,9 +120855,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#044646",
+        "stroke": "#401262",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -120902,9 +120902,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#325215",
+        "stroke": "#633346",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -121085,9 +121085,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Frpt",
-        "stroke": "#025231",
+        "stroke": "#042655",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -121116,9 +121116,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Wash",
-        "stroke": "#515612",
+        "stroke": "#133145",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -121187,9 +121187,9 @@
       "properties": {
         "school": "Boston Renaissance ES",
         "yard": "Wash",
-        "stroke": "#461142",
+        "stroke": "#232266",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -121418,9 +121418,9 @@
       "properties": {
         "school": "Boston Green Acad",
         "yard": "Ctwn",
-        "stroke": "#206232",
+        "stroke": "#611146",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -121761,9 +121761,9 @@
       "properties": {
         "school": "Boston Green Acad",
         "yard": "Read",
-        "stroke": "#316043",
+        "stroke": "#500145",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -122192,9 +122192,9 @@
       "properties": {
         "school": "Boston Green Acad",
         "yard": "Frpt",
-        "stroke": "#412002",
+        "stroke": "#033253",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -122495,9 +122495,9 @@
       "properties": {
         "school": "Kilmer 4-8",
         "yard": "Ctwn",
-        "stroke": "#056246",
+        "stroke": "#451005",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -123022,9 +123022,9 @@
       "properties": {
         "school": "Kilmer 4-8",
         "yard": "Ctwn",
-        "stroke": "#115424",
+        "stroke": "#000013",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -123117,9 +123117,9 @@
       "properties": {
         "school": "Kilmer 4-8",
         "yard": "Read",
-        "stroke": "#162601",
+        "stroke": "#662643",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -123532,9 +123532,9 @@
       "properties": {
         "school": "Roosevelt K-8 (K1-1)",
         "yard": "Ctwn",
-        "stroke": "#240306",
+        "stroke": "#466020",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -123835,9 +123835,9 @@
       "properties": {
         "school": "Roosevelt K-8 (K1-1)",
         "yard": "Ctwn",
-        "stroke": "#141060",
+        "stroke": "#561325",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -124466,9 +124466,9 @@
       "properties": {
         "school": "Mozart Elementary",
         "yard": "Ctwn",
-        "stroke": "#636344",
+        "stroke": "#633445",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -124569,9 +124569,9 @@
       "properties": {
         "school": "Mozart Elementary",
         "yard": "Read",
-        "stroke": "#104201",
+        "stroke": "#405424",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -124888,9 +124888,9 @@
       "properties": {
         "school": "Conservatory Lab Carney",
         "yard": "Ctwn",
-        "stroke": "#550332",
+        "stroke": "#650255",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -125167,9 +125167,9 @@
       "properties": {
         "school": "Conservatory Lab Carney",
         "yard": "Frpt",
-        "stroke": "#546345",
+        "stroke": "#226561",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -125814,9 +125814,9 @@
       "properties": {
         "school": "Conservatory Lab Carney",
         "yard": "Wash",
-        "stroke": "#431206",
+        "stroke": "#640262",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -126013,9 +126013,9 @@
       "properties": {
         "school": "Conservatory Lab Carney",
         "yard": "Frpt",
-        "stroke": "#316354",
+        "stroke": "#313533",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -126324,9 +126324,9 @@
       "properties": {
         "school": "East Boston HS",
         "yard": "Ctwn",
-        "stroke": "#325242",
+        "stroke": "#105512",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -127011,9 +127011,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Ctwn",
-        "stroke": "#051016",
+        "stroke": "#114022",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -127650,9 +127650,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Read",
-        "stroke": "#051065",
+        "stroke": "#503015",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -128025,9 +128025,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Ctwn",
-        "stroke": "#302640",
+        "stroke": "#302101",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -129208,9 +129208,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Read",
-        "stroke": "#506206",
+        "stroke": "#244104",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -129599,9 +129599,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Read",
-        "stroke": "#446444",
+        "stroke": "#044133",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -129830,9 +129830,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Frpt",
-        "stroke": "#203441",
+        "stroke": "#231240",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -130125,9 +130125,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Read",
-        "stroke": "#045334",
+        "stroke": "#002664",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -130204,9 +130204,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Frpt",
-        "stroke": "#230443",
+        "stroke": "#113644",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -130275,9 +130275,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Frpt",
-        "stroke": "#364013",
+        "stroke": "#204604",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -130314,9 +130314,9 @@
       "properties": {
         "school": "Mattahunt ES",
         "yard": "Frpt",
-        "stroke": "#641310",
+        "stroke": "#123435",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -130345,9 +130345,9 @@
       "properties": {
         "school": "Guild ES",
         "yard": "Read",
-        "stroke": "#400363",
+        "stroke": "#051443",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -130448,9 +130448,9 @@
       "properties": {
         "school": "Guild ES",
         "yard": "Wash",
-        "stroke": "#356425",
+        "stroke": "#220066",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -130759,9 +130759,9 @@
       "properties": {
         "school": "Guild ES",
         "yard": "Wash",
-        "stroke": "#123042",
+        "stroke": "#631166",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -131726,9 +131726,9 @@
       "properties": {
         "school": "Guild ES",
         "yard": "Wash",
-        "stroke": "#663601",
+        "stroke": "#451530",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -132237,9 +132237,9 @@
       "properties": {
         "school": "Roxbury Prep Dorchester Campus",
         "yard": "Read",
-        "stroke": "#123056",
+        "stroke": "#646141",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -132500,9 +132500,9 @@
       "properties": {
         "school": "Roxbury Prep Dorchester Campus",
         "yard": "Wash",
-        "stroke": "#425434",
+        "stroke": "#363056",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -133451,9 +133451,9 @@
       "properties": {
         "school": "Roosevelt K-8 (2-8)",
         "yard": "Read",
-        "stroke": "#622041",
+        "stroke": "#642144",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -133530,9 +133530,9 @@
       "properties": {
         "school": "Roosevelt K-8 (2-8)",
         "yard": "Ctwn",
-        "stroke": "#033405",
+        "stroke": "#140263",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -133673,9 +133673,9 @@
       "properties": {
         "school": "Roosevelt K-8 (2-8)",
         "yard": "Frpt",
-        "stroke": "#602125",
+        "stroke": "#111206",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -133936,9 +133936,9 @@
       "properties": {
         "school": "Excel Acad 1 (EB)",
         "yard": "Wash",
-        "stroke": "#604214",
+        "stroke": "#510564",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -134351,9 +134351,9 @@
       "properties": {
         "school": "Hurley K-8",
         "yard": "Read",
-        "stroke": "#534642",
+        "stroke": "#516242",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -134654,9 +134654,9 @@
       "properties": {
         "school": "Hurley K-8",
         "yard": "Frpt",
-        "stroke": "#634234",
+        "stroke": "#426210",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -134837,9 +134837,9 @@
       "properties": {
         "school": "Mendell ES",
         "yard": "Ctwn",
-        "stroke": "#461610",
+        "stroke": "#616654",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -135196,9 +135196,9 @@
       "properties": {
         "school": "Mendell ES",
         "yard": "Frpt",
-        "stroke": "#340206",
+        "stroke": "#624642",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -135539,9 +135539,9 @@
       "properties": {
         "school": "Mendell ES",
         "yard": "Frpt",
-        "stroke": "#466234",
+        "stroke": "#325434",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -135914,9 +135914,9 @@
       "properties": {
         "school": "SHAW ES",
         "yard": "Ctwn",
-        "stroke": "#036231",
+        "stroke": "#041666",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -136273,9 +136273,9 @@
       "properties": {
         "school": "SHAW ES",
         "yard": "Frpt",
-        "stroke": "#412522",
+        "stroke": "#234066",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -136776,9 +136776,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Read",
-        "stroke": "#355144",
+        "stroke": "#645002",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -137775,9 +137775,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Read",
-        "stroke": "#502530",
+        "stroke": "#544143",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -138014,9 +138014,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Read",
-        "stroke": "#304463",
+        "stroke": "#522633",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -138285,9 +138285,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Read",
-        "stroke": "#313145",
+        "stroke": "#221613",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -139236,9 +139236,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Frpt",
-        "stroke": "#262066",
+        "stroke": "#226525",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -139523,9 +139523,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Frpt",
-        "stroke": "#512662",
+        "stroke": "#422104",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -139554,9 +139554,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Frpt",
-        "stroke": "#500143",
+        "stroke": "#423555",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -139657,9 +139657,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Frpt",
-        "stroke": "#532414",
+        "stroke": "#426013",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -139776,9 +139776,9 @@
       "properties": {
         "school": "Match Community Day",
         "yard": "Wash",
-        "stroke": "#532515",
+        "stroke": "#510513",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -140087,9 +140087,9 @@
       "properties": {
         "school": "ODonnell ES",
         "yard": "Wash",
-        "stroke": "#350654",
+        "stroke": "#660151",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -140510,9 +140510,9 @@
       "properties": {
         "school": "English HS",
         "yard": "Wash",
-        "stroke": "#513530",
+        "stroke": "#520423",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -140789,9 +140789,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Ctwn",
-        "stroke": "#322654",
+        "stroke": "#344332",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -141228,9 +141228,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Read",
-        "stroke": "#024143",
+        "stroke": "#245520",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -141787,9 +141787,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Read",
-        "stroke": "#360010",
+        "stroke": "#132224",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -142234,9 +142234,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Read",
-        "stroke": "#100124",
+        "stroke": "#262500",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -142785,9 +142785,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Read",
-        "stroke": "#623331",
+        "stroke": "#234235",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -142872,9 +142872,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Frpt",
-        "stroke": "#013615",
+        "stroke": "#601115",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -143535,9 +143535,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Frpt",
-        "stroke": "#462320",
+        "stroke": "#412152",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -143910,9 +143910,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Frpt",
-        "stroke": "#544502",
+        "stroke": "#020266",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -143941,9 +143941,9 @@
       "properties": {
         "school": "UP ACAD / Dorchester",
         "yard": "Frpt",
-        "stroke": "#632512",
+        "stroke": "#031164",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -144212,9 +144212,9 @@
       "properties": {
         "school": "Higginson K-2 (Harrishoff St)",
         "yard": "Read",
-        "stroke": "#613300",
+        "stroke": "#310453",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -144379,9 +144379,9 @@
       "properties": {
         "school": "Higginson K-2 (Harrishoff St)",
         "yard": "Frpt",
-        "stroke": "#424005",
+        "stroke": "#325624",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -144834,9 +144834,9 @@
       "properties": {
         "school": "Higginson K-2 (Harrishoff St)",
         "yard": "Frpt",
-        "stroke": "#466240",
+        "stroke": "#023042",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -145017,9 +145017,9 @@
       "properties": {
         "school": "Charlestown High School",
         "yard": "Ctwn",
-        "stroke": "#460325",
+        "stroke": "#243606",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -145504,9 +145504,9 @@
       "properties": {
         "school": "Charlestown High School",
         "yard": "Frpt",
-        "stroke": "#245660",
+        "stroke": "#362260",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -145735,9 +145735,9 @@
       "properties": {
         "school": "Charlestown High School",
         "yard": "Frpt",
-        "stroke": "#225223",
+        "stroke": "#330200",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -146134,9 +146134,9 @@
       "properties": {
         "school": "Conley ES",
         "yard": "Ctwn",
-        "stroke": "#643626",
+        "stroke": "#605431",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -146477,9 +146477,9 @@
       "properties": {
         "school": "Conley ES",
         "yard": "Ctwn",
-        "stroke": "#624413",
+        "stroke": "#110646",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -146868,9 +146868,9 @@
       "properties": {
         "school": "Conley ES",
         "yard": "Frpt",
-        "stroke": "#562530",
+        "stroke": "#043431",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -147051,9 +147051,9 @@
       "properties": {
         "school": "Conley ES",
         "yard": "Frpt",
-        "stroke": "#665105",
+        "stroke": "#006520",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -147098,9 +147098,9 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Read",
-        "stroke": "#526051",
+        "stroke": "#304644",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -147129,9 +147129,9 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Frpt",
-        "stroke": "#113235",
+        "stroke": "#323561",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -147160,9 +147160,9 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Frpt",
-        "stroke": "#163341",
+        "stroke": "#315031",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -147215,9 +147215,9 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Wash",
-        "stroke": "#444540",
+        "stroke": "#124003",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -148790,9 +148790,9 @@
       "properties": {
         "school": "McKay K-8",
         "yard": "Wash",
-        "stroke": "#404424",
+        "stroke": "#621415",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -149173,9 +149173,9 @@
       "properties": {
         "school": "Ellison/Parks EES",
         "yard": "Read",
-        "stroke": "#034465",
+        "stroke": "#602524",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -149300,9 +149300,9 @@
       "properties": {
         "school": "Ellison/Parks EES",
         "yard": "Read",
-        "stroke": "#646611",
+        "stroke": "#646536",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -149995,9 +149995,9 @@
       "properties": {
         "school": "Ellison/Parks EES",
         "yard": "Read",
-        "stroke": "#302314",
+        "stroke": "#054222",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -151010,9 +151010,9 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Ctwn",
-        "stroke": "#614421",
+        "stroke": "#315126",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -151201,9 +151201,9 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Ctwn",
-        "stroke": "#552652",
+        "stroke": "#223133",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -151760,9 +151760,9 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Read",
-        "stroke": "#566455",
+        "stroke": "#423036",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -151895,9 +151895,9 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Read",
-        "stroke": "#660143",
+        "stroke": "#323231",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -152470,9 +152470,9 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Read",
-        "stroke": "#620601",
+        "stroke": "#052012",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -152997,9 +152997,9 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Frpt",
-        "stroke": "#611064",
+        "stroke": "#612540",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -153244,9 +153244,9 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Frpt",
-        "stroke": "#161052",
+        "stroke": "#503355",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -153275,9 +153275,9 @@
       "properties": {
         "school": "E BROOKE #2 (MT)",
         "yard": "Wash",
-        "stroke": "#656445",
+        "stroke": "#523360",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -153570,9 +153570,9 @@
       "properties": {
         "school": "Urban Science Academy",
         "yard": "Ctwn",
-        "stroke": "#402150",
+        "stroke": "#502626",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -154257,9 +154257,9 @@
       "properties": {
         "school": "Winthrop ES",
         "yard": "Frpt",
-        "stroke": "#624206",
+        "stroke": "#330412",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -154656,9 +154656,9 @@
       "properties": {
         "school": "Winthrop ES",
         "yard": "Read",
-        "stroke": "#226333",
+        "stroke": "#434532",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -154687,9 +154687,9 @@
       "properties": {
         "school": "Winthrop ES",
         "yard": "Frpt",
-        "stroke": "#000240",
+        "stroke": "#323123",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -154958,9 +154958,9 @@
       "properties": {
         "school": "Haynes EEC",
         "yard": "Read",
-        "stroke": "#311606",
+        "stroke": "#026051",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -155269,9 +155269,9 @@
       "properties": {
         "school": "Haynes EEC",
         "yard": "Read",
-        "stroke": "#554031",
+        "stroke": "#345305",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -155572,9 +155572,9 @@
       "properties": {
         "school": "Haynes EEC",
         "yard": "Frpt",
-        "stroke": "#405620",
+        "stroke": "#050563",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -156147,9 +156147,9 @@
       "properties": {
         "school": "Channing Elementary",
         "yard": "Ctwn",
-        "stroke": "#255003",
+        "stroke": "#023362",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -156546,9 +156546,9 @@
       "properties": {
         "school": "Channing Elementary",
         "yard": "Ctwn",
-        "stroke": "#442001",
+        "stroke": "#634134",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -156825,9 +156825,9 @@
       "properties": {
         "school": "Channing Elementary",
         "yard": "Ctwn",
-        "stroke": "#630041",
+        "stroke": "#442253",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -156992,9 +156992,9 @@
       "properties": {
         "school": "Channing Elementary",
         "yard": "Read",
-        "stroke": "#313642",
+        "stroke": "#514164",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -157383,9 +157383,9 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Ctwn",
-        "stroke": "#116606",
+        "stroke": "#351646",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -158230,9 +158230,9 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Read",
-        "stroke": "#350651",
+        "stroke": "#444161",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -158757,9 +158757,9 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Read",
-        "stroke": "#130156",
+        "stroke": "#231526",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -159436,9 +159436,9 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Read",
-        "stroke": "#613421",
+        "stroke": "#216364",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -159675,9 +159675,9 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Read",
-        "stroke": "#465241",
+        "stroke": "#415134",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -159706,9 +159706,9 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Frpt",
-        "stroke": "#304336",
+        "stroke": "#554016",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -159993,9 +159993,9 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Frpt",
-        "stroke": "#242245",
+        "stroke": "#464641",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -160024,9 +160024,9 @@
       "properties": {
         "school": "Taylor ES",
         "yard": "Wash",
-        "stroke": "#034453",
+        "stroke": "#456320",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -160247,9 +160247,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Ctwn",
-        "stroke": "#654645",
+        "stroke": "#535000",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -160918,9 +160918,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Read",
-        "stroke": "#046566",
+        "stroke": "#165013",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -161173,9 +161173,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Read",
-        "stroke": "#240441",
+        "stroke": "#125326",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -161636,9 +161636,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#200114",
+        "stroke": "#605654",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -162715,9 +162715,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#331233",
+        "stroke": "#324215",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -162818,9 +162818,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#652336",
+        "stroke": "#540246",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -163185,9 +163185,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#565044",
+        "stroke": "#225625",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -163616,9 +163616,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Frpt",
-        "stroke": "#551213",
+        "stroke": "#150022",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -163783,9 +163783,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Wash",
-        "stroke": "#442333",
+        "stroke": "#100024",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -163862,9 +163862,9 @@
       "properties": {
         "school": "Jackson/Mann",
         "yard": "Wash",
-        "stroke": "#444655",
+        "stroke": "#333554",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -164253,9 +164253,9 @@
       "properties": {
         "school": "Lee Acad",
         "yard": "Ctwn",
-        "stroke": "#135014",
+        "stroke": "#320004",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -164676,9 +164676,9 @@
       "properties": {
         "school": "Lee Acad",
         "yard": "Wash",
-        "stroke": "#223121",
+        "stroke": "#536604",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -165131,9 +165131,9 @@
       "properties": {
         "school": "Roxbury Prep Lucy Stone",
         "yard": "Frpt",
-        "stroke": "#050351",
+        "stroke": "#532055",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -165450,9 +165450,9 @@
       "properties": {
         "school": "Roxbury Prep Lucy Stone",
         "yard": "Read",
-        "stroke": "#252433",
+        "stroke": "#136612",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -165785,9 +165785,9 @@
       "properties": {
         "school": "Roxbury Prep Lucy Stone",
         "yard": "Frpt",
-        "stroke": "#166010",
+        "stroke": "#035023",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -166184,9 +166184,9 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Read",
-        "stroke": "#634605",
+        "stroke": "#050226",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -166823,9 +166823,9 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Read",
-        "stroke": "#502025",
+        "stroke": "#503625",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -166886,9 +166886,9 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Frpt",
-        "stroke": "#635260",
+        "stroke": "#101413",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -167349,9 +167349,9 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Read",
-        "stroke": "#123154",
+        "stroke": "#460524",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -167604,9 +167604,9 @@
       "properties": {
         "school": "Dudley Street Neighborhood",
         "yard": "Frpt",
-        "stroke": "#040520",
+        "stroke": "#426145",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -167715,9 +167715,9 @@
       "properties": {
         "school": "Hale ES",
         "yard": "Read",
-        "stroke": "#105340",
+        "stroke": "#550401",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -168250,9 +168250,9 @@
       "properties": {
         "school": "Hale ES",
         "yard": "Frpt",
-        "stroke": "#261321",
+        "stroke": "#203033",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -168457,9 +168457,9 @@
       "properties": {
         "school": "Kilmer K-3",
         "yard": "Ctwn",
-        "stroke": "#220635",
+        "stroke": "#562221",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -168728,9 +168728,9 @@
       "properties": {
         "school": "Kilmer K-3",
         "yard": "Ctwn",
-        "stroke": "#453521",
+        "stroke": "#220142",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -169455,9 +169455,9 @@
       "properties": {
         "school": "Kilmer K-3",
         "yard": "Ctwn",
-        "stroke": "#166654",
+        "stroke": "#643111",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -169590,9 +169590,9 @@
       "properties": {
         "school": "Kilmer K-3",
         "yard": "Ctwn",
-        "stroke": "#465214",
+        "stroke": "#313225",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -170085,9 +170085,9 @@
       "properties": {
         "school": "Chittick ES",
         "yard": "Ctwn",
-        "stroke": "#366565",
+        "stroke": "#611442",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -170836,9 +170836,9 @@
       "properties": {
         "school": "Chittick ES",
         "yard": "Ctwn",
-        "stroke": "#124403",
+        "stroke": "#303344",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -171139,9 +171139,9 @@
       "properties": {
         "school": "Chittick ES",
         "yard": "Read",
-        "stroke": "#612651",
+        "stroke": "#401416",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -171186,9 +171186,9 @@
       "properties": {
         "school": "Chittick ES",
         "yard": "Frpt",
-        "stroke": "#255222",
+        "stroke": "#354322",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -171681,9 +171681,9 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Ctwn",
-        "stroke": "#600134",
+        "stroke": "#401346",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -171912,9 +171912,9 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Read",
-        "stroke": "#430433",
+        "stroke": "#441012",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -172607,9 +172607,9 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Ctwn",
-        "stroke": "#150540",
+        "stroke": "#232360",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -172870,9 +172870,9 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Frpt",
-        "stroke": "#414612",
+        "stroke": "#052664",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -173237,9 +173237,9 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Read",
-        "stroke": "#526445",
+        "stroke": "#025510",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -173644,9 +173644,9 @@
       "properties": {
         "school": "Haley K-8",
         "yard": "Frpt",
-        "stroke": "#655622",
+        "stroke": "#164111",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -174115,9 +174115,9 @@
       "properties": {
         "school": "Perkins ES",
         "yard": "Ctwn",
-        "stroke": "#660350",
+        "stroke": "#150253",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -174442,9 +174442,9 @@
       "properties": {
         "school": "Perkins ES",
         "yard": "Frpt",
-        "stroke": "#621605",
+        "stroke": "#041560",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -174729,9 +174729,9 @@
       "properties": {
         "school": "Perkins ES",
         "yard": "Frpt",
-        "stroke": "#414633",
+        "stroke": "#631151",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -175384,9 +175384,9 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Ctwn",
-        "stroke": "#035602",
+        "stroke": "#506645",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -175775,9 +175775,9 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Ctwn",
-        "stroke": "#655125",
+        "stroke": "#554326",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -176158,9 +176158,9 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Read",
-        "stroke": "#335263",
+        "stroke": "#556506",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -176693,9 +176693,9 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Ctwn",
-        "stroke": "#100533",
+        "stroke": "#511323",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -176820,9 +176820,9 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Frpt",
-        "stroke": "#426335",
+        "stroke": "#001545",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -177195,9 +177195,9 @@
       "properties": {
         "school": "Sumner ES",
         "yard": "Read",
-        "stroke": "#054403",
+        "stroke": "#510556",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -177626,9 +177626,9 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Ctwn",
-        "stroke": "#153422",
+        "stroke": "#325260",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -177889,9 +177889,9 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Read",
-        "stroke": "#021232",
+        "stroke": "#403133",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -177992,9 +177992,9 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Ctwn",
-        "stroke": "#606131",
+        "stroke": "#623466",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -178183,9 +178183,9 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Read",
-        "stroke": "#122063",
+        "stroke": "#211263",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -178278,9 +178278,9 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Frpt",
-        "stroke": "#651134",
+        "stroke": "#066152",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -179493,9 +179493,9 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Frpt",
-        "stroke": "#363016",
+        "stroke": "#261256",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -179812,9 +179812,9 @@
       "properties": {
         "school": "Hennigan ES",
         "yard": "Frpt",
-        "stroke": "#432504",
+        "stroke": "#600560",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -179955,9 +179955,9 @@
       "properties": {
         "school": "McKinley Prep HS",
         "yard": "Read",
-        "stroke": "#411520",
+        "stroke": "#560101",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -179986,9 +179986,9 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Ctwn",
-        "stroke": "#602200",
+        "stroke": "#350566",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -180017,9 +180017,9 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Read",
-        "stroke": "#222060",
+        "stroke": "#126341",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -180200,9 +180200,9 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Frpt",
-        "stroke": "#450453",
+        "stroke": "#202033",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -180783,9 +180783,9 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Frpt",
-        "stroke": "#305134",
+        "stroke": "#316661",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -180838,9 +180838,9 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Wash",
-        "stroke": "#541432",
+        "stroke": "#310650",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -182141,9 +182141,9 @@
       "properties": {
         "school": "Eliot K-8",
         "yard": "Wash",
-        "stroke": "#435215",
+        "stroke": "#412661",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -182612,9 +182612,9 @@
       "properties": {
         "school": "Everett ES",
         "yard": "Read",
-        "stroke": "#664013",
+        "stroke": "#126536",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -183179,9 +183179,9 @@
       "properties": {
         "school": "Everett ES",
         "yard": "Read",
-        "stroke": "#530125",
+        "stroke": "#404254",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -183274,9 +183274,9 @@
       "properties": {
         "school": "Everett ES",
         "yard": "Wash",
-        "stroke": "#220335",
+        "stroke": "#466412",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -183745,9 +183745,9 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Read",
-        "stroke": "#203611",
+        "stroke": "#415266",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -184560,9 +184560,9 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Read",
-        "stroke": "#533001",
+        "stroke": "#266312",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -185175,9 +185175,9 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#441340",
+        "stroke": "#532413",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -185774,9 +185774,9 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#630614",
+        "stroke": "#126013",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -186125,9 +186125,9 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#142421",
+        "stroke": "#550502",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -186164,9 +186164,9 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#215253",
+        "stroke": "#460264",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -186267,9 +186267,9 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Frpt",
-        "stroke": "#316013",
+        "stroke": "#400443",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -186498,9 +186498,9 @@
       "properties": {
         "school": "Orchard Gardens K-8",
         "yard": "Wash",
-        "stroke": "#135133",
+        "stroke": "#244213",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -186953,9 +186953,9 @@
       "properties": {
         "school": "Higginson/Lewis K-8",
         "yard": "Read",
-        "stroke": "#163342",
+        "stroke": "#623120",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -187352,9 +187352,9 @@
       "properties": {
         "school": "Higginson/Lewis K-8",
         "yard": "Frpt",
-        "stroke": "#362316",
+        "stroke": "#603444",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -187599,9 +187599,9 @@
       "properties": {
         "school": "Higginson/Lewis K-8",
         "yard": "Wash",
-        "stroke": "#644013",
+        "stroke": "#056430",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -188310,9 +188310,9 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Ctwn",
-        "stroke": "#062632",
+        "stroke": "#413110",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -188741,9 +188741,9 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Ctwn",
-        "stroke": "#636122",
+        "stroke": "#405146",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -189532,9 +189532,9 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Frpt",
-        "stroke": "#312660",
+        "stroke": "#155355",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -189563,9 +189563,9 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Frpt",
-        "stroke": "#446521",
+        "stroke": "#352342",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -189658,9 +189658,9 @@
       "properties": {
         "school": "HERNANDEZ K-8",
         "yard": "Frpt",
-        "stroke": "#454150",
+        "stroke": "#566424",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -190065,9 +190065,9 @@
       "properties": {
         "school": "Kennedy JF ES",
         "yard": "Ctwn",
-        "stroke": "#453321",
+        "stroke": "#216123",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -190424,9 +190424,9 @@
       "properties": {
         "school": "Kennedy JF ES",
         "yard": "Read",
-        "stroke": "#543524",
+        "stroke": "#313321",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -191039,9 +191039,9 @@
       "properties": {
         "school": "Kennedy JF ES",
         "yard": "Frpt",
-        "stroke": "#041144",
+        "stroke": "#310306",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     },
     {
@@ -191270,9 +191270,9 @@
       "properties": {
         "school": "Kennedy JF ES",
         "yard": "Wash",
-        "stroke": "#020402",
+        "stroke": "#013564",
         "stroke-width": 1,
-        "stroke-opacity": 0.8
+        "stroke-opacity": 0.3
       }
     }
   ]

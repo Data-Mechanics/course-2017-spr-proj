@@ -45,7 +45,7 @@ class finalizBusRoute(dml.Algorithm):
                                  'yard': r['bus yard'],
                                  'stroke': '#' + random_color,
                                  'stroke-width': 1,
-                                 'stroke-opacity': 0.8}
+                                 'stroke-opacity': 0.3}
             properties = {'school': r['school'],
                           'yard': r['bus yard'],
                           'stroke': '#428d8c',
@@ -82,10 +82,10 @@ class finalizBusRoute(dml.Algorithm):
             # handle duplicate yards
             if r['bus yard'] not in yards:
                 properties = {'yard': r['bus yard'],
-                                   'address': r['yard address'],
-                                   'marker-size': 'small',
-                                   'marker-symbol': 'bus',
-                                   'marker-color': '#ace'}
+                              'address': r['yard address'],
+                              'marker-size': 'small',
+                              'marker-symbol': 'bus',
+                              'marker-color': '#ace'}
                 features_yards.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['yard location']))), properties=properties))
                 yards += [r['bus yard']]
 

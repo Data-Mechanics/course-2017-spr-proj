@@ -104,9 +104,31 @@ Because this data of these four year have strong linear relationship, there is a
 We use Flask and MongoDB to implement the web service. The homepage:
 ![homepage](http://datamechanics.io/data/minteng_zhidou/web_pages/1_home.png) 
 
-The first new feature/component is to visualize the optimization problem in project2. After we get the top fitted location results, we use Leaflet to show them in an interactive map, with labeled blocks filled in different colors. Also, we implement and show the crime analysis for those location results, the user could get the crime ratio of certain block in the total crime number for different month/year.
+The first new feature/component is to visualize the optimization problem in project2. 
+Users could select and choose their preferred grades for 4 attributes, the ratings are in 1 ~ 5, the higher the better:
+![input](http://datamechanics.io/data/minteng_zhidou/web_pages/3_input1.png)
 
-The second new feature/component is statistical analysis. We randomly choose 30 blocks and use D3 to show four grades for each block in a bar chart. Next, we compute the correlation coefficient and p-value between four attributes, we we visualize their relationship by setting four attributes as the nodes and the value of (1-abs(Correlation Coefficient))*500 as the edge length, which means that if two attributes have higher Correlation Coefficient, they will be much closer than others. The last plot is to ……..(project 2)
+Then, we could get the top fitted location results using the algorithms described in the above Methodologies:
+![table](http://datamechanics.io/data/minteng_zhidou/web_pages/5_table1.png)
+
+Next, we use Leaflet to show them in an interactive map, with labeled blocks filled in different colors:
+![map](http://datamechanics.io/data/minteng_zhidou/web_pages/6_map.png)
+
+Also, we implement and show the crime analysis for those location results, the user could get the crime ratio of certain block in the total crime number for different month/year:
+![crime-analysis](http://datamechanics.io/data/minteng_zhidou/web_pages/7_crime-analysis.png)
+
+The second new feature/component is statistical analysis. We randomly choose 30 blocks and use D3 to show four grades for each block in a bar chart:
+![grades](http://datamechanics.io/data/minteng_zhidou/web_pages/9_grade1.png)
+
+To study on the relationship between these four attributes, correlation coefficient and p-value were calculated based on these 30 random blocks:
+![values](http://datamechanics.io/data/minteng_zhidou/web_pages/10_four-nodes-cc.png)
+
+With these values, we visualize their relationship by setting four attributes as the nodes and the value of (1-abs(Correlation Coefficient))*500 as the edge length, which means that if two attributes have higher Correlation Coefficient, they will be much closer than others:
+![4nodes](http://datamechanics.io/data/minteng_zhidou/web_pages/11_four-nodes-plot.png)
+As the graph shows above, it is quite obviously that "Transport" and "Safety" has high Correlation Coefficient
+
+At last, we do some more interesting things focus on predicting the potential development of each block, especially on crime. Assuming the number of crime of one certain block within one month in certain year as random variable. To find out the relationship of such random variable with next year, coorelation coeffients and P-value were computed:
+![plots](http://datamechanics.io/data/minteng_zhidou/web_pages/12_cc-pvalue.png)
 
 ## 6. Future Work
 

@@ -38,7 +38,26 @@ The preprocessing steps were performed based on relational data and map-reduce p
     "city" : "Mattapan" 
 }
 ```
-
+3. Postal code and area in the first dataset imply the location, thus taking location as key, via the help of google maps, we aggregate above two datasets. After that, selection is applied to get data in with in certain square then sum aggregation used to compute the total number of crime, food and transpotation in this area. Finally, based on certain function, project these sum to grade. 
+```json
+{
+    "postal_code" : "02136", 
+    "area" : "Hyde Park", 
+    "avg_rent" : 1597, 
+    "count" : { "crime" : 96, "transport" : 15, "food" : 14 },
+    "grade" : { "rent" : 3, "safety" : 4, "transport" : 1, "food" : 1 },
+    "box" : [ [ 42.22788, -71.1642177 ], [ 42.2450451, -71.1373224 ] ] 
+}
+```
+4. Then based on dataset "box_count", more analysis could be implied. Taking box attribute in "box_count" and selector, go throught crime dataset, a new dataset about monthly total number of crime each block could be built.
+```json
+{
+    "area" : "Dorchester", 
+    "box" : [ [ 42.2793753, -71.0835318 ], [ 42.2965404, -71.0566365 ] ],
+    "crimeNum":[ 396, 328, 380, ..., 497, 456, 393 ],
+    "crimeRatio" : [ 0.05765, 0.05664, ..., 0.05242]
+}
+```
 ## 4. Methodologies 
 
 ### Optimization
@@ -60,49 +79,43 @@ Then our database would search and find matched rent price, which also should be
 ```
 All these data would be stored in a new collection named ```box_count``` as follow.
 ```json
-{   
-    "_id" : 1, 
+{   "_id" : 1, 
     "avg_rent" : 1597, 
     "box" : [ [ 42.22788, -71.1642177 ], [ 42.2450451, -71.1373224 ] ],
     "postal_code" : "02136", 
     "grade" : { "transport" : 1, "food" : 1, "safety" : 4, "rent" : 3 }, 
     "area" : "Hyde Park", 
-    "count" : { "transport" : 15, "food" : 14, "crime" : 96 } 
-}
+    "count" : { "transport" : 15, "food" : 14, "crime" : 96 } }
 ```
 User could customize rating due to their preference in website. It would search user's ratings requirement in database. If it finds results with every rating of `(transport, food, safety, rent)` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. Detailed algorithm could be found under `web/optimization_algorithm.py`
 
 **(need to add some screenshots of website)**
 
 ### Statistical Analysis (need to review and add more on new parts of analysis on website)
-After finding ideal area for a new company, we would like to dig deeper into those areas, because this area might be the best choice for now, but it might change, with the variation of rental, crime and transportations. So based on current data, we want to study on the trend of these factors, and for now we mainly focus on crime in different blocks(grids). A new dataset [Safety(Crime 2012-2015)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-July-2012-August-2015-Sourc/7cdf-6fgx) has been added.
+After finding ideal area for a new company, we would like to dig deeper into those areas, because this area might be the best choice for now, but it might change, with the variation of rental, crime and transportations. So based on current data, we want to study on the trend of these factors, and for now we mainly focus on crime in different blocks(grids). (A new dataset [Safety(Crime 2012-2015)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-July-2012-August-2015-Sourc/7cdf-6fgx) has been added.)
 
-Now let *X<sub>ij</sub>* as the the number of crimes happens in block *i* in year *j*. If *X<sub>ij</sub>* and *X<sub>i(j + 1)</sub>* are highly correlated, then we could claim the number of crimes of these two year in this block have similar distribution. Thus if these random variables continuously related to each other, then we could use such correlation to predict the trend of the criminal events in this year.
+Now let *X<sub>ij</sub>* as the the number of crimes happens in block *i* in year *j*. If *X<sub>ij</sub>* and *X<sub>i(j + 1)</sub>* are highly correlated, then we could claim the number of crime of these two year in this block have similar distribution. Thus if these random variables continuously related to each other, then we could use such correlation to predict the trend of the criminal events in this year.
 
-For each block(grid), we could count the number of crime incidents of each month in different years(2013- 2016). We build a matrix with **```year```** x  **```#blocks```** x **```#month```**(5 x 52 x 12). Then we calculate **correlation coefficient** and **p-value** for each block so that we could compare them in consistent years. We find that for some blocks, these **correlation coefficient** are close to 0 and **p-value** are close to 1, which means for these blocks, their crime incidents in consistent years are not related. However, we have the ability to do reasonable prediction for those blocks which have high **correlation coefficient** and low **p-value** year by year. 
+For each block(grid), we could count the number of crime incidents of each month in different years(2013- 2016). We build a matrix with **```year```** x  **```#blocks```** x **```#month```**(5 x 52 x 12). Then we calculate **correlation coefficient** to the degree these two variable linearly related. Since this linear property may happen coincidentally, we want to compute how much we could trust this result. Thus Hypothesis testing is applied. Assume the correlation coefficient is wrong, then by computing **p-value** to test our assumption. We find that for some blocks, these **correlation coefficient** are close to 0 and **p-value** are close to 1, which means for these blocks, their crime incidents in consistent years are not related. However, we have the ability to do reasonable prediction for those blocks which have high **correlation coefficient** and low **p-value** year by year. 
 
-For example, block 27```[[42.34893792999999, -71.0586156], [42.36623191999999, -71.0144498]]```(02109) has a good performance as follow: 
+For example, block 42 -- Downtown```[ [ 42.348035700000004, -71.0566365 ], [ 42.365200800000004, -71.0297412 ] ]```(02109) has a good performance as follow: 
+|     year      | correlation coefficient |       P-value     |
+|:-------------:|:-----------------------:|:-----------------:|
+|   2013-2014   |  0.782569291953         |  0.0026219859084  |
+|   2014-2015   |  0.796445834967         |  0.0019334569301  |
+|   2015-2016   |  0.928294156304         |  0.0000132251510  |
 
-|     year      | correlation coefficient |       p value       |
-|:-------------:|:-----------------------:|:-------------------:|
-|   2012-2013   |  0.764868546433         |  0.000643432484115  |
-|   2013-2014   |  0.836472540464         |  0.003345903249322  |
-|   2014-2015   |  0.735134468067         |  0.006447586595446  |
-|   2015-2016   |  0.882368732529         |  0.001234912479238  |
+From the graph below we could see the trend of block 42 in the consistent four years(2013-2016) are in similar mode.
 
-From the graph below we could see the trend of block 27 in the consistent four years(2013-2016) are in similar mode.
-
-![block27](http://datamechanics.io/data/minteng_zhidou/Block27.png) 
+![block42](http://datamechanics.io/data/minteng_zhidou/block42.png) 
 
 *(This graph is generated by fitting.ipynb)*
 
-Because this data of these four year have strong linear relationship, there is a high probability that their criminal records have the same tendency through the entire year. Therefore, we fit all the data in four year to find a common pattern of block 27. Now assume, 2016-2017 could still maintain such strong linear relationship, and then we could use this fitting funtion to simulate the trend of crime of block 27 in this year.
+Because this data of these four year have strong linear relationship, and their P-value is very smalle, thus we should deny the assumption, wihch means there is a high probability that their criminal records have the same tendency through the entire year. Therefore, we fit all the data in four year to find a common pattern of block 42. Now assume, 2016-2017 could still maintain such strong linear relationship, and then we could use this fitting funtion to simulate the trend of crime of block 42 in this year.
 
 ![fitting](http://datamechanics.io/data/minteng_zhidou/fitting.png) 
 
 *(This graph is generated by fitting.ipynb)*
-
-
 
 ## 5. Results (need to add more)
 We use Flask and MongoDB to implement the web service. The homepage:

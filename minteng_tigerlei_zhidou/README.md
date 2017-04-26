@@ -3,11 +3,11 @@
  *by Minteng Xie, Yue Lei, Zhi Dou*
 
 ## 1. Introduction
-The City of Boston has performed a significant effort on collecting data over different services and other public information. The diversity of these publicly available datasets allows us to explore various areas in Boston. Particularly, in this project we are focusing on building a website to help people find the best living area in Boston and provide correspnding analysis to their choices.
+The City of Boston has performed a significant effort on collecting data over different services and other public information. The diversity of these publicly available datasets allows us to explore various areas in Boston. Particularly, in this project we are focusing on building a website to help people find the best living area in Boston and provide corresponding analysis to their choices.
 
 Since it is a really complex problem to define which area of boston is most suitable for living, we simplify it by four main factors: `Rent`, `Transport`, `Food`, `Safety` and map them to ratings in 1~5. Through our website, users could customize the ratings of these four aspects based on their personal requirements so that they could find the idea place of living.
 
-Besides, interative statistical analysis is provided. Users could either view the overall analysis of four aspects based on great boston area or get a 4-year-long detailed crime analsis graph based on their possible targets, which could help them make better decisions. 
+Besides, interactive statistical analysis is provided. Users could either view the overall analysis of four aspects based on great boston area or get a 4-year-long detailed crime analysis graph based on their possible targets, which could help them make better decisions. 
 
 ## 2. Datasets
 

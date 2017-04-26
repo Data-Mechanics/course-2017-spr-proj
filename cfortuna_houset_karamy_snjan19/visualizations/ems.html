@@ -58,8 +58,7 @@ directionsDisplay[0] = new google.maps.DirectionsRenderer({
 		strokeColor: "blue",
 		strokeWeight: 7
 	},
-	suppressMarkers: true,
-	preserveViewport: true
+	suppressMarkers: true
 });
 
 directionsDisplay[1] = new google.maps.DirectionsRenderer({
@@ -67,8 +66,7 @@ directionsDisplay[1] = new google.maps.DirectionsRenderer({
 		strokeColor: "green",
 		strokeWeight: 5
 	},
-	suppressMarkers: true,
-	preserveViewport: true
+	suppressMarkers: true
 });
 
 // Initialize routing services
@@ -78,6 +76,7 @@ var directionsService = new google.maps.DirectionsService();
 d3.json("CarCrashData.json", function(carCrashError, data) {
 	if (carCrashError) throw carCrashError;
 
+	// Loads the optimal and actual EMS locations for routing
 	d3.json("OptimalEMSStations.json", function(optimalError, data1) {
 		if (optimalError) throw optimalError;
 
@@ -86,12 +85,19 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 
 			var overlay = new google.maps.OverlayView();
 
+
+
+			
+
+
+
 			// Calculates and plots the route from the closests EMS station to the crash site
 			function getRoute(endlat, endlong, opt, renderer, type) {
-				console.log("in getRoute", endlat, endlong);
 				var destination = new google.maps.LatLng(endlat, endlong);
+				console.log(destination.lat(), destination.lng());
 				var starts = [];
 
+				// Gather the EMS coordinates as destinations
 				for (var i = 0; i < opt.length; i++) {
 					var lat = opt[i].Latitude;
 					var long = opt[i].Longitude;
@@ -99,6 +105,7 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 					starts.push(start);
 				}
 
+				// Query the Distance Matrix API
 				var service = new google.maps.DistanceMatrixService();
 				service.getDistanceMatrix({
 					origins: starts,
@@ -107,6 +114,7 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 					unitSystem: google.maps.UnitSystem.IMPERIAL
 				}, callback);
 
+				// Parse response from the Distance Matrix
 				function callback(response, status) {
 					if (status == 'OK') {
 						var origins = response.originAddresses;
@@ -117,9 +125,11 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 						var minDistance = Infinity;
 						var minOrigin;
 
+						// For each origin
 						for (var i = 0; i < origins.length; i++) {
 							var results = response.rows[i].elements;
 
+							// For each destination
 							for (var j = 0; j < results.length; j++) {
 								var element = results[j];
 
@@ -132,7 +142,6 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 
 									var from = origins[i];
 									var to = destinations[j];
-									console.log("in callback", to);
 
 									if (duration < minDuration) {
 										minDuration = duration;
@@ -159,11 +168,25 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 						// 	console.log("\n");
 						// }
 
-						console.log(destinations[0]);
+						
+						var geocoder = new google.maps.Geocoder();
+						var dst = destinations[0];
 
+						geocoder.geocode({address: destinations[0]}, function(results, status) {
+
+							if (status == google.maps.GeocoderStatus.OK) {
+								lat = results[0].geometry.location.lat();
+								lng = results[0].geometry.location.lng();
+								console.log(lat,lng);
+							}
+						});
+
+					
+				
+						// Query the route from Google Maps
 						var request = {
 							origin: minOrigin,
-							destination: destinations[0],
+							destination: dst,
 							travelMode: google.maps.TravelMode.DRIVING
 						};
 
@@ -178,6 +201,8 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 				};
 
 			};
+
+			// Add the small markers for each crash site
 
 			// Add the container when the overlay is added to the map
 			overlay.onAdd = function() {
@@ -195,7 +220,6 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 					.each(transform)
 					.attr("class", "marker")
 					.on("click", function(d) { 
-						console.log("on click", d.value.Latitude, d.value.Longitude);
 						getRoute(d.value.Latitude, d.value.Longitude, data1, directionsDisplay[0], "Optimal");
 						getRoute(d.value.Latitude, d.value.Longitude, data2, directionsDisplay[1], "Actual");
 					});
@@ -223,6 +247,7 @@ d3.json("CarCrashData.json", function(carCrashError, data) {
 	});
 });
 
+// Add the optimal EMS locations as markers on map
 d3.json("OptimalEMSStations.json", function(error, data) {
 	if (error) throw error;
 
@@ -266,6 +291,7 @@ d3.json("OptimalEMSStations.json", function(error, data) {
 
 });
 
+// Add the actual EMS locations on the map
 d3.json("EMSStationsData.json", function(error, data) {
 	if (error) throw error;
 

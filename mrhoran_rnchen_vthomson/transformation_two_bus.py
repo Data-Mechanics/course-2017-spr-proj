@@ -25,7 +25,7 @@ class transformation_two_bus(dml.Algorithm):
 
 
     @staticmethod
-    def execute(trial = True):
+    def execute(trial = False):
         
         startTime = datetime.datetime.now()
 
@@ -41,6 +41,7 @@ class transformation_two_bus(dml.Algorithm):
 
         ## getting coordinates of sc
         S = project([x for x in repo.mrhoran_rnchen_vthomson.schools.find({})], get_school_locations)
+        #print(S)
 
         
         def k_means(P,M):
@@ -88,21 +89,45 @@ class transformation_two_bus(dml.Algorithm):
                         
                 cost_array[j] = closest_k
                     
-    
+                
             ## find the cost by adding up all the distances and diving it by the number of distances to get the average
             ## cost value for each point.. ie how close do the means get and is there a drop off in terms of productivity
-
-            ## use this shit for a graph
-
+           
             overall_cost = 0
 
             for i in range(len(cost_array)):
 
-                #print(cost_array[i])
-
                 overall_cost += cost_array[i]
 
             return((overall_cost/len(cost_array)))
+
+        ## added function to make our map nicer
+        
+        ## the closest mean array tells us which points match up to which mean: I want it to give a count so that
+        ## when we go to graph cirles on a map, I want the size of the circle to reflect how may schools are serviced
+        ## by that mean
+        
+        def close_mean_count(S, M):
+            
+            closest_mean = [0]*(len(S))
+            
+            closest_k = 1000
+
+            #print(vincenty(newport_ri, cleveland_oh).miles)
+        
+            for j in range(len(S)):
+                closest_k = 1000
+                for i in range(len(M)):
+
+                    distance = (vincenty(S[j], M[i]).miles)
+                
+                    if (distance < closest_k):
+                        
+                        closest_k = distance
+                        closest_mean[j] = M[i]
+
+                
+            return(closest_mean)
 
 
         # if trial is true then we want to do it on a small subset of the data
@@ -150,7 +175,7 @@ class transformation_two_bus(dml.Algorithm):
 
             # picking the number of means from a random selection of the data
 
-            M = [None]*num_means;
+            M = [None]*num_means
 
             for i in range(0, num_means):
 
@@ -160,21 +185,31 @@ class transformation_two_bus(dml.Algorithm):
 
                 
             mean = k_means(S, M)
-            
+
+            # now we find the cost between the dataset S and the mean
             cost_combined = (costs(S, mean))
-           
 
-            # now we want to insert the means into a dictionanry
+            # lastly we want to insert the means into a dictionanry
 
-            new_means = mean# + mean2
+            closest_mean = close_mean_count(S, mean)
 
-            k_means = project(new_means, lambda t: ("1", (t[0], t[1])))
+            closest_mean_2 = project(closest_mean, lambda t: ((t[0] ,t[1]), 1))
+            
+            closest_mean_3 = aggregate(closest_mean_2, sum)
+
+            # formating to put in the database
+            for i in range(len(closest_mean_3)):
+                str_ = "bus_yard" + str(i)
+                closest_mean_3[i] = (str_, ((closest_mean_3[i][0][0],  closest_mean_3[i][0][1]), closest_mean_3[i][1]))
+
             
             repo.dropCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs')
             repo.createCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs')
 
-            repo.mrhoran_rnchen_vthomson.kmeans_school_hubs.insert(dict(k_means))
-#
+            repo.mrhoran_rnchen_vthomson.kmeans_school_hubs.insert(dict(closest_mean_3))
+
+           # now we want to find how many schools there are for each mean
+           
             repo.logout()
 
             endTime = datetime.datetime.now()
@@ -245,6 +280,7 @@ def product(R, S):
 def aggregate(R, f):
     keys = {r[0] for r in R}
     return [(key, f([v for (k,v) in R if k == key])) for key in keys]
+
 
 def get_school_locations(schools):
 

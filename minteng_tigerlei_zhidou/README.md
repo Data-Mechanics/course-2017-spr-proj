@@ -99,11 +99,14 @@ Now let *X<sub>ij</sub>* as the the number of crimes happens in block *i* in yea
 For each block(grid), we could count the number of crime incidents of each month in different years(2013- 2016). We build a matrix with **```year```** x  **```#blocks```** x **```#month```**(5 x 52 x 12). Then we calculate **correlation coefficient** to the degree these two variable linearly related. Since this linear property may happen coincidentally, we want to compute how much we could trust this result. Thus Hypothesis testing is applied. Assume the correlation coefficient is wrong, then by computing **p-value** to test our assumption. We find that for some blocks, these **correlation coefficient** are close to 0 and **p-value** are close to 1, which means for these blocks, their crime incidents in consistent years are not related. However, we have the ability to do reasonable prediction for those blocks which have high **correlation coefficient** and low **p-value** year by year. 
 
 For example, block 42 -- Downtown```[ [ 42.348035700000004, -71.0566365 ], [ 42.365200800000004, -71.0297412 ] ]```(02109) has a good performance as follow:
+
+
 |     year      | correlation coefficient |      P-value      |
 |:-------------:|:-----------------------:|:-----------------:|
 |   2013-2014   |  0.782569291953         |  0.0026219859084  |
 |   2014-2015   |  0.796445834967         |  0.0019334569301  |
 |   2015-2016   |  0.928294156304         |  0.0000132251510  |
+
 
 From the graph below we could see the trend of block 42 in the consistent four years(2013-2016) are in similar mode.
 

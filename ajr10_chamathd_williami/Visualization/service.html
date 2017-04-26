@@ -53,7 +53,7 @@
             // Scale the map
           .scale(75000)
           // Center the Map
-          .center([-71.1, 42.368])
+          .center([-71.05, 42.31])
           .translate([width / 2, height / 2]);
 
         var path = d3.geo.path()
@@ -90,7 +90,7 @@
             .attr('y', 60);
 
         // Load map data
-        d3.json('Cambridge.geo.json', function (error, mapData) {
+        d3.json('BostonCambridge.geo.json', function (error, mapData) {
             var features = mapData.features;
 
             // Update color scale domain based on data
@@ -108,8 +108,8 @@
                 .on('click', clicked);
         });
 
-        // Load safe points data
-        d3.json('CambridgePoints.geo.json', function (error, pointData) {
+        // Load service points data
+        d3.json('ServicePoints.geo.json', function (error, pointData) {
             var features = pointData.features;
 
             svg.append("path")
@@ -119,6 +119,7 @@
                 .attr("transform", function (d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
                 .attr("dy", ".35em")
         });
+
         // Get neighborhood name
         function nameFn(d) {
             return d && d.properties ? d.properties.name : null;

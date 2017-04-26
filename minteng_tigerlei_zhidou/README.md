@@ -90,7 +90,7 @@ All these data would be stored in a new collection named ```box_count``` as foll
 User could customize rating due to their preference in website. It would search user's ratings requirement in database. If it finds results with every rating of `(transport, food, safety, rent)` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. Detailed algorithm could be found under `web/optimization_algorithm.py`
 
 
-### Statistical Analysis (need to review and add more on new parts of analysis on website)
+### Statistical Analysis
 After finding ideal area for a living place, we would like to dig deeper into those areas because this area might be the best choice for now, but it might change, with the variation of rental, crime and transportations. So based on current data, we want to study on the trend of these factors, and for now we mainly focus on crime in different blocks(grids). 
 
 Now let *X<sub>ij</sub>* as the the number of crimes happens in block *i* in year *j*. If *X<sub>ij</sub>* and *X<sub>i(j + 1)</sub>* are highly correlated, then we could claim the number of crime of these two year in this block have similar distribution. Thus if these random variables continuously related to each other, then we could use such correlation to predict the trend of the criminal events in this year.
@@ -155,10 +155,11 @@ As for `Project Link` part, it will direct to our github folder.
 - Due to the limitation of data resource, our analysis particular emphasize on crime part. For instance, we just got average rent price of last year so that we could't analyze more detailed information from that. In the future, the City of Boston may post more datasets publicly, which means more useful data will be collected. We plan to extend our factors deeper and richer to make our model more accurate. Traffic condition or accidents can be added as a supplement for parts of transportation. Besides, more influence factor will be counted such as entertainment, public facility and so on.
 - With sufficient data resources, way better analytical approaches can be applied in our project. Correlation coefficient and ratio have many limitations and deficiency in statistical analysis. We can do factor analysis to figure out which of these factors are the most important. And time series analysis is a powerful tool to present the changes and trend of different factors. 
 
-## Reference (need to add more)
+## Reference
 1. http://flask.pocoo.org/docs/0.12/
-2. 
-
+2. Grouped bar chart. http://bl.ocks.org/juan-cb/ac731adaeadd3e855d26
+3. Directed Graph. https://bl.ocks.org/mbostock/4062045
+4. Bar Chart and Line Chart on Same D3 Plot http://bl.ocks.org/ndobie/878f34d2810058c5b821
 
 # Instructions
 

@@ -33,45 +33,74 @@ class safe_points(dml.Algorithm):
 
         # Perform initialization for the new repository
         colName = "ajr10_chamathd_williami.safe_points"
-        repo.dropCollection(colName)
-        repo.createCollection(colName)
+        ##repo.dropCollection(colName)
+        ##repo.createCollection(colName)
 
         # Operational code here:
 
-        kmeans = repo["ajr10_chamathd_williami.k_means"]["8_means"].find()
+        grid_points = []
 
-        safe_points_five = []
-        safe_points_seven = []
+        min_lat = 42.228754
+        max_lat = 42.404375
+        min_lon = -71.190906
+        max_lon = -71.023710
+        lat_range = max_lat - min_lat
+        lon_range = max_lon - min_lon
+
+        lat_increment = (lat_range / 10)
+        lon_increment = (lon_range / 10)
+
+        for x in range(10):
+            for y in range(10):
+                point_x = min_lon + (lon_increment * x)
+                point_y = min_lat + (lat_increment * y)
+                grid_points += [(point_x, point_y)]
+
+        kmeans = repo["ajr10_chamathd_williami.k_means"]["36_means"].find()
+
+        #safe_points_five = []
+        safe_points_seven = set()
         
-        print("Calculating safe points for five foot rise...")
-        sea_level_five_col = repo["ajr10_chamathd_williami.sea_level_five"].find().limit(0)
-        for polygon in sea_level_five_col:
-            seaPoly = shape(polygon["geometry"])
-            for mean in kmeans:
-                kmean = Point(mean[0], mean[1])
-                if seaPoly.contains(kmean):
-                    safe_point = closest_point_on_border(seaPoly, kmean)
-                    safe_points_five += [safe_point]
-                    print("Safe point", safe_point, "Original", kmean.xy)
+##        print("Calculating safe points for five foot rise...")
+##        sea_level_five_col = repo["ajr10_chamathd_williami.sea_level_five"].find().limit(0)
+##        for polygon in sea_level_five_col:
+##            seaPoly = shape(polygon["geometry"])
+##            for mean in kmeans:
+##                kmean = Point(mean[0], mean[1])
+##                if seaPoly.contains(kmean):
+##                    safe_point = closest_point_on_border(seaPoly, kmean)
+##                    safe_points_five += [safe_point]
+##                    print("Safe point", safe_point, "Original", kmean.xy)
 
-        print("Calculating safe points for seven foot rise...")
-        sea_level_seven_col = repo["ajr10_chamathd_williami.sea_level_seven"].find().limit(0)
-        for polygon in sea_level_seven_col:
-            seaPoly = shape(polygon["geometry"])
-            for mean in kmeans:
-                kmean = Point(mean[0], mean[1])
-                if seaPoly.contains(kmean):
-                    safe_point = closest_point_on_border(seaPoly, kmean)
-                    safe_points_seven += [safe_point]
-                    print("Safe point", safe_point, "Original", kmean.xy)
+        print("Calculating safe points for 7.5 foot rise...")
+        count = 0
+        for point in grid_points:
+            print("Testing point:", count)
+            test_point = Point(point[0], point[1])
+            contained = False
+            sea_level_seven_col = repo["ajr10_chamathd_williami.sea_level_seven"].find().limit(0)
+            for polygon in sea_level_seven_col:
+                seaPoly = shape(polygon["geometry"])
+                if seaPoly.contains(test_point):
+                    contained = True
+                    break
+                    #safe_point = closest_point_on_border(seaPoly, test_point)
+            if not contained:
+                safe_points_seven.add((test_point.x, test_point.y))
+            count += 1
 
-        print("Saving data to safe_points")
+        print(len(safe_points_seven))
+        text_file = open("safe_points.txt", "w")
+        text_file.write(str(safe_points_seven))
+        text_file.close()
 
-        pts_five = {"safe_points_five": safe_points_five}
-        pts_seven = {"safe_points_seven": safe_points_seven}
-
-        repo["ajr10_chamathd_williami.safe_points"].insert(pts_five)
-        repo["ajr10_chamathd_williami.safe_points"].insert(pts_seven)
+##        print("Saving data to safe_points")
+##
+##        pts_five = {"safe_points_five": safe_points_five}
+##        pts_seven = {"safe_points_seven": safe_points_seven}
+##
+##        repo["ajr10_chamathd_williami.safe_points"].insert(pts_five)
+##        repo["ajr10_chamathd_williami.safe_points"].insert(pts_seven)
 
         # Logout and end
         repo.logout()
@@ -120,9 +149,9 @@ class safe_points(dml.Algorithm):
                   
         return doc
 
-##safe_points.execute()
+safe_points.execute()
 ##doc = safe_points.provenance()
 ##print(doc.get_provn())
 ##print(json.dumps(json.loads(doc.serialize()), indent=4))
-##print("Safe point", safe_point, "Original", kmean.xy
+##print("Safe point", safe_point, "Original", kmean.xy)
 ## eof

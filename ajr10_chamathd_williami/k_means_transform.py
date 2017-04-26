@@ -74,13 +74,16 @@ class k_means_transform(dml.Algorithm):
 
         NUM_MEANS = 4    # Modify this value to vary number of means
         print("Retrieving data from the neighborhood sea level data collection")
-        nhood_data = repo["ajr10_chamathd_williami.neighborhood_sea_level_data"].find({}, {"center_x": 1, "center_y": 1}).limit(5) if trial else repo["ajr10_chamathd_williami.neighborhood_sea_level_data"].find({}, {"center_x": 1, "center_y": 1}).limit(50)
+        nhood_data = repo["ajr10_chamathd_williami.neighborhood_sea_level_data"].find({}, {"center_x": 1, "center_y": 1, "name": 1, "severity_index": 1}).limit(5) if trial else repo["ajr10_chamathd_williami.neighborhood_sea_level_data"].find({}, {"center_x": 1, "center_y": 1, "name": 1, "severity_index": 1}).limit(50)
         print()
         points = []
         for nhood in nhood_data:
-            points += [(nhood["center_x"], nhood["center_y"])]
+            for i in range(int(nhood["severity_index"])):
+                points += [(nhood["center_x"], nhood["center_y"])]
 
-        while NUM_MEANS < 21:
+        print(len(points), "points for clustering\n")
+
+        while NUM_MEANS < 37:
             if trial and NUM_MEANS > 4: break
             else: pass
             print("Running k-means with " + str(NUM_MEANS) + " means")
@@ -171,7 +174,7 @@ class k_means_transform(dml.Algorithm):
                   
         return doc
 
-##k_means_transform.execute(trial=True)
+##k_means_transform.execute()
 ##doc = transformation1.provenance()
 ##print(doc.get_provn())
 ##print(json.dumps(json.loads(doc.serialize()), indent=4))

@@ -21,6 +21,7 @@ import ast
 import sodapy
 import time 
 import rtree
+import numpy as np
 from tqdm import tqdm
 import shapely.geometry
 from geopy.distance import vincenty
@@ -92,12 +93,9 @@ class transformation_one_bus(dml.Algorithm):
 
         
         avgs = []
-<<<<<<< HEAD
         #average distance to nearest other students for each student
-=======
         student_radius = []
-        #average distance to nearest 10 other students for each student
->>>>>>> 538f93b57f9a170374e9b6a690585c34495563b9
+        
         for i in tqdm(range(len(student_locations))):
               #print(student_locations[i][0]['geometry']['coordinates'])
 
@@ -105,24 +103,13 @@ class transformation_one_bus(dml.Algorithm):
               m = (sv[0][0],sv[0][1],sv[0][0],sv[0][1])
               near = list(student_tree.nearest(m,1,True))
               n = [x.bbox for x in near]
-<<<<<<< HEAD
-             
-              avgs.append(sum([vincenty((m[0],m[1]),(c[0],c[1])).miles for c in n])/len(n))
-=======
-              #print(len(n))
 
-              #print(m,(n[0][0],n[0][1])) 
-              #print([vincenty((m[0],m[1]),(c[0],c[1])) for c in n])
-              #avgs.append(sum([vincenty((m[0],m[1]),(c[0],c[1])).miles for c in n])/len(n))
               d = [vincenty((m[0],m[1]),(c[0],c[1])).miles for c in n]
               d.sort()
               student_radius.append([s for s in d if s < 0.5])
  
               avgs.append(np.sum([d[i] for i in range(min(10,len(d)))])/10)
-              #print(avgs[i])
-              #r = [(((m[0]-l[0])**2) + ((m[1]-l[1])**2)**(1/2)) for l in n]
               
->>>>>>> 538f93b57f9a170374e9b6a690585c34495563b9
  
         #print(avgs[0])
         print("Average Distance to 10 nearest students of student 0: ") 
@@ -165,14 +152,8 @@ class transformation_one_bus(dml.Algorithm):
         # idea here is to see what conditions buses are like for differents start times
         
         # also want to keep track of the worst distance between a student (possibly)
-<<<<<<< HEAD
-       
-       #vincentie geopy
-        """ 
-=======
 
         """
->>>>>>> 538f93b57f9a170374e9b6a690585c34495563b9
         b = select(product(A,A), lambda t: t[0][0][0] == t[1][0][0])
 
         c = select(project(b, lambda t: (t[0][0], dist(t[0][1],t[1][1]))), lambda t: t[1] > 0.0)
@@ -184,16 +165,6 @@ class transformation_one_bus(dml.Algorithm):
         f = aggregate(d, sum)
 
         average_distance_students = project(select(product(f,g), lambda t: (t[0][0] == t[1][0])), lambda t: (t[0][0], (t[1][1]/t[0][1])))
-<<<<<<< HEAD
-
-        """
-
-        
-
-=======
-        """
-      
->>>>>>> 538f93b57f9a170374e9b6a690585c34495563b9
         repo.dropCollection('average_distance_students')
         repo.createCollection('average_distance_students')
 
@@ -214,7 +185,7 @@ class transformation_one_bus(dml.Algorithm):
         bus_per_school = project(select(product(Y,Y3), lambda t: t[0][0] == t[1][0]), lambda t: (t[0][0],(t[0][1], t[1][1])))
 
         #print(bus_per_school[0])
-           
+         
         repo.dropCollection('buses_per_yard')
         repo.createCollection('buses_per_yard')
         
@@ -223,6 +194,7 @@ class transformation_one_bus(dml.Algorithm):
 
         repo.logout()
 
+        """
         endTime = datetime.datetime.now()
 
         return {"start":startTime, "end":endTime}
@@ -329,18 +301,8 @@ def find_location_students(student):
     lat = float(student["Latitude"])
     lon = float(student["Longitude"])
     school_start_time = ["Current School Start Time"]
-<<<<<<< HEAD
 
-#
-    return((school_start_time, (lat,long)))
-
-    return([school_start_time, (lat,lon)])
-
-    
-=======
- 
     return((school_start_time,(lat,lon)))  
->>>>>>> 538f93b57f9a170374e9b6a690585c34495563b9
 
 def get_students(student): # want to return the coordinates of the towns in and around Boston
 
@@ -356,17 +318,10 @@ def get_buses(bus): # want to return the coordinates of the towns in and around 
 
     lat = bus['Bus Yard Latitude']
     lon = bus['Bus Yard Longitude']
-<<<<<<< HEAD
-    name =  bus['Bus Yard']
 
-    return((name, (lat,long)))
-
-
-=======
     name = bus['Bus Yard']
 
     return((name,(lat,lon)))
->>>>>>> 538f93b57f9a170374e9b6a690585c34495563b9
 
 transformation_one_bus.execute()
 doc = transformation_one_bus.provenance()

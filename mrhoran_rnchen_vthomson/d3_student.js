@@ -49,16 +49,9 @@ $.ajax({
 
 var random = Math.random,
     //data = d3.range(2500).map(function() { return [random() * width, random() * height]; });
-    $.ajax({
-      type: "POST",
-      url: "./transformation_one_bus.py",
-      data: {param: text}
-    }).done(function(o) {
-   
-    });
     data = d3.map([]) //points already in array, figure out scale and how to get data here. 
 
-var quadtree = d3.quadtree()
+var quadtree = d3.quadtree() //find a way to make this the rtree we already have
     .extent([[-1, -1], [width + 1, height + 1]])
     .addAll(data);
 

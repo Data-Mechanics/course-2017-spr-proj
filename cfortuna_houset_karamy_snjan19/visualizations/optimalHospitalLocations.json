@@ -1,0 +1,122 @@
+{  
+   "0":{  
+      "lng":-71.0797895167,
+      "lat":42.283125337,
+      "address":"18-98 Dyer Street, Mattapan, 02124"
+   },
+   "1":{  
+      "lng":-71.0896777727,
+      "lat":42.3494326838,
+      "address":"381 Commonwealth Avenue, Back Bay, 02115"
+   },
+   "2":{  
+      "lng":-71.0633616855,
+      "lat":42.3048423919,
+      "address":"99 Percival Street, Dorchester, 02122"
+   },
+   "3":{  
+      "lng":-71.1146978139,
+      "lat":42.3182008792,
+      "address":"39 Lochstead Avenue, Jamaica Plain, 02130"
+   },
+   "4":{  
+      "lng":-71.126174374,
+      "lat":42.2534099795,
+      "address":"22-24 Factory Street, Hyde Park, 02136"
+   },
+   "5":{  
+      "lng":-71.0628942216,
+      "lat":42.3378252872,
+      "address":"74-106 Widett Circle, South Boston, 02118"
+   },
+   "6":{  
+      "lng":-71.0849990887,
+      "lat":42.3095923014,
+      "address":"8 Maple Street, Roxbury, 02121"
+   },
+   "7":{  
+      "lng":-71.0729336075,
+      "lat":42.3564478385,
+      "address":"1 David G Mugar Way, , 02114"
+   },
+   "8":{  
+      "lng":-71.1388912094,
+      "lat":42.355411217,
+      "address":"52 Everett Street, Allston, 02134"
+   },
+   "9":{  
+      "lng":-71.1091963812,
+      "lat":42.3359595917,
+      "address":"72-198 Fenwood Road, Mission Hill, 02115"
+   },
+   "10":{  
+      "lng":-71.048087967,
+      "lat":42.2896814011,
+      "address":"272-278 Neponset Avenue, Dorchester, 02122"
+   },
+   "11":{  
+      "lng":-71.0526153603,
+      "lat":42.3545724411,
+      "address":" John F Fitzgerald Expressway, Downtown, "
+   },
+   "12":{  
+      "lng":-71.1587553987,
+      "lat":42.2828846925,
+      "address":"98 Pleasant Avenue, Brook Farm, 02132"
+   },
+   "13":{  
+      "lng":-71.1601910164,
+      "lat":42.352559774,
+      "address":"236 Faneuil Street, Brighton, 02135"
+   },
+   "14":{  
+      "lng":-71.0627627313,
+      "lat":42.3676946959,
+      "address":" U.S. 1, Downtown, 02114"
+   },
+   "15":{  
+      "lng":-71.090484777,
+      "lat":42.3291786852,
+      "address":"1-99 Willoughby Place, Roxbury, 02119"
+   },
+   "16":{  
+      "lng":-71.1176940103,
+      "lat":42.299026981,
+      "address":"360 South Street, Roslindale, 02131"
+   },
+   "17":{  
+      "lng":-71.0532110187,
+      "lat":42.3225693709,
+      "address":"95-70-95-99 Von Hillern Street, South Boston, 02125"
+   },
+   "18":{  
+      "lng":-71.0251792605,
+      "lat":42.3656598728,
+      "address":" Massachusetts Turnpike, East Boston, 02128"
+   },
+   "19":{  
+      "lng":-71.1236328645,
+      "lat":42.3684624803,
+      "address":" Soldiers Field Road, Lower Allston, "
+   },
+   "20":{  
+      "lng":-71.1201489353,
+      "lat":42.3579986581,
+      "address":" Massachusetts Turnpike, Allston, 02134"
+   },
+   "21":{  
+      "lng":-71.104863255,
+      "lat":42.3472736088,
+      "address":" , Fenway\/Kenmore, 02215"
+   },
+   "22":{  
+      "lng":-71.0751856298,
+      "lat":42.3827273036,
+      "address":"50 Cambridge Street, Charlestown, 02129"
+   },
+   "23":{  
+      "lng":-71.0732108013,
+      "lat":42.3284076938,
+      "address":"51-55 Kemble Street, Roxbury, 02119"
+   }
+}

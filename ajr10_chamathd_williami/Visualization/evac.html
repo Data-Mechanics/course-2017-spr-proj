@@ -118,7 +118,24 @@
                 .attr("class", "place")
                 .attr("transform", function (d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
                 .attr("dy", ".35em")
+
+            // Trying to plot circles
+            // add circles to svg
+            // points
+            aa = [-71.05, 42.31];
+            bb = [-122.389809, 37.72728];
+            svg.selectAll("circle")
+                .data([aa,bb]).enter()
+                .append("circle")
+                .attr("cx", function (d) { console.log(projection(d)); return projection(d)[0]; })
+                .attr("cy", function (d) { return projection(d)[1]; })
+                .attr("r", "4px")
+                .attr("fill", "red")
         });
+
+       
+
+
         // Get neighborhood name
         function nameFn(d) {
             return d && d.properties ? d.properties.name : null;

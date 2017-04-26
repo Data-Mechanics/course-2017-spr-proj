@@ -112,7 +112,7 @@ Then, we could get the top fitted location results using the algorithms describe
 ![table](http://datamechanics.io/data/minteng_zhidou/web_pages/5_table1.png)
 
 Next, we use Leaflet to show them in an interactive map, with labeled blocks filled in different colors:
-
+![map1](http://datamechanics.io/data/minteng_zhidou/web_pages/6_map.png)
 
 Also, we implement and show the crime analysis for those location results, the user could get the crime ratio of certain block in the total crime number for different month/year:
 ![crime-analysis](http://datamechanics.io/data/minteng_zhidou/web_pages/7_crime-analysis.png)

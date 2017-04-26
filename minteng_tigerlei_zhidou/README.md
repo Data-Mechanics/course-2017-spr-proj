@@ -19,7 +19,7 @@ Besides, interative statistical analysis is provided. Users could either view th
 
 ## 3. Preprocessing
 The preprocessing steps were performed based on relational data and map-reduce paradigm.
-1. Combine rent data with zipcode of accorsponding area. To achieve that goal, we fetch longitude and latitude based on the name of area in rent dataset via google maps API and then using this location information as input to fetch zipcode also with the help of google maps api. Then we combine location information with rent data and implement aggregation to get the final data set with rent and the zipcode. The data looks like as below:
+- Combine rent data with zipcode of accorsponding area. To achieve that goal, we fetch longitude and latitude based on the name of area in rent dataset via google maps API and then using this location information as input to fetch zipcode also with the help of google maps api. Then we combine location information with rent data and implement aggregation to get the final data set with rent and the zipcode. The data looks like as below:
 ```json
 { 
     "avg_rent" : 2359, 
@@ -27,7 +27,7 @@ The preprocessing steps were performed based on relational data and map-reduce p
     "postal_code" : "02134" 
 }
 ```
-2. Projecting MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then we create a union of three datasets into the second new dataset. After union operation, selection is used to to remove data with invalid locations (for example, with longitude and latitude equal to 0).
+- Projecting MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then we create a union of three datasets into the second new dataset. After union operation, selection is used to to remove data with invalid locations (for example, with longitude and latitude equal to 0).
 ```json
 {   
     "address" : "1159 Washington", 
@@ -38,7 +38,7 @@ The preprocessing steps were performed based on relational data and map-reduce p
     "city" : "Mattapan" 
 }
 ```
-3. Postal code and area in the first dataset imply the location, thus taking location as key, via the help of google maps, we aggregate above two datasets. After that, selection is applied to get data in with in certain square then sum aggregation used to compute the total number of crime, food and transpotation in this area. Finally, based on certain function, project these sum to grade. 
+- Postal code and area in the first dataset imply the location, thus taking location as key, via the help of google maps, we aggregate above two datasets. After that, selection is applied to get data in with in certain square then sum aggregation used to compute the total number of crime, food and transpotation in this area. Finally, based on certain function, project these sum to grade. 
 ```json
 {
     "postal_code" : "02136", 
@@ -49,7 +49,7 @@ The preprocessing steps were performed based on relational data and map-reduce p
     "box" : [ [ 42.22788, -71.1642177 ], [ 42.2450451, -71.1373224 ] ] 
 }
 ```
-4. Then based on dataset "box_count", more analysis could be implied. Taking box attribute in "box_count" and selector, go throught crime dataset, a new dataset about monthly total number of crime each block could be built.
+- Then based on dataset "box_count", more analysis could be implied. Taking box attribute in "box_count" and selector, go throught crime dataset, a new dataset about monthly total number of crime each block could be built.
 ```json
 {
     "area" : "Dorchester", 
@@ -89,10 +89,9 @@ All these data would be stored in a new collection named ```box_count``` as foll
 ```
 User could customize rating due to their preference in website. It would search user's ratings requirement in database. If it finds results with every rating of `(transport, food, safety, rent)` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. Detailed algorithm could be found under `web/optimization_algorithm.py`
 
-**(need to add some screenshots of website)**
 
 ### Statistical Analysis (need to review and add more on new parts of analysis on website)
-After finding ideal area for a new company, we would like to dig deeper into those areas, because this area might be the best choice for now, but it might change, with the variation of rental, crime and transportations. So based on current data, we want to study on the trend of these factors, and for now we mainly focus on crime in different blocks(grids). (A new dataset [Safety(Crime 2012-2015)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-July-2012-August-2015-Sourc/7cdf-6fgx) has been added.)
+After finding ideal area for a living place, we would like to dig deeper into those areas because this area might be the best choice for now, but it might change, with the variation of rental, crime and transportations. So based on current data, we want to study on the trend of these factors, and for now we mainly focus on crime in different blocks(grids). 
 
 Now let *X<sub>ij</sub>* as the the number of crimes happens in block *i* in year *j*. If *X<sub>ij</sub>* and *X<sub>i(j + 1)</sub>* are highly correlated, then we could claim the number of crime of these two year in this block have similar distribution. Thus if these random variables continuously related to each other, then we could use such correlation to predict the trend of the criminal events in this year.
 
@@ -120,11 +119,11 @@ Because this data of these four year have strong linear relationship, and their 
 
 *(This graph is generated by fitting.ipynb)*
 
-## 5. Results (need to add more)
+## 5. Results 
 We use [Flask](http://flask.pocoo.org/docs/0.12/) and [MongoDB](https://www.mongodb.com/) to implement the web service. The homepage:
 ![homepage](http://datamechanics.io/data/minteng_zhidou/web_pages/1_home.png) 
 
-The first new feature/component under `Optimization` is to visualize the optimization problem in project2. 
+The first new feature/component under `Optimization` part is to visualize the optimization problem in project2. 
 Users could select and choose their preferred grades for 4 attributes, the ratings are in 1 ~ 5, the higher the better:
 ![input11](http://datamechanics.io/data/minteng_zhidou/web_pages/3_input11.png)
 
@@ -137,7 +136,7 @@ Users could view these areas on an interactive map with labeled blocks filled in
 Besides, crime analysis for those results is present by clicking on `Crime analysis` button. User could get the crime ratio of certain block in the total crime number for different month/year:
 ![crime-analysis](http://datamechanics.io/data/minteng_zhidou/web_pages/7_crime-analysis.png)
 
-The second new feature/component is under `statistical analysis`. We randomly choose 30 blocks and use [D3.js](https://d3js.org/) to show four grades for each block in a bar chart:
+The second new feature/component is under `Statistical Analysis` part. We randomly choose 30 blocks and use [D3.js](https://d3js.org/) to show four grades for each block in a bar chart:
 ![grades](http://datamechanics.io/data/minteng_zhidou/web_pages/9_grade1.png)
 
 To study on the relationship between these four attributes, correlation coefficient and p-value were calculated based on these 30 random blocks:
@@ -150,6 +149,7 @@ As the graph shows above, it is quite obviously that "Transport" and "Safety" ha
 At last, we do some more interesting things focus on predicting the potential development of each block, especially on crime. Assuming the number of crime of one certain block within one month in certain year as random variable. To find out the relationship of such random variable with next year, coorelation coeffients and P-value were computed: 
 ![plots](http://datamechanics.io/data/minteng_zhidou/web_pages/12_cc-pvalue.png)
 
+As for `Project Link` part, it will direct to our github folder.
 
 ## 6. Future Work
 - Due to the limitation of data resource, our analysis particular emphasize on crime part. For instance, we just got average rent price of last year so that we could't analyze more detailed information from that. In the future, the City of Boston may post more datasets publicly, which means more useful data will be collected. We plan to extend our factors deeper and richer to make our model more accurate. Traffic condition or accidents can be added as a supplement for parts of transportation. Besides, more influence factor will be counted such as entertainment, public facility and so on.

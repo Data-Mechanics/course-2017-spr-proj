@@ -130,6 +130,7 @@ As the graph shows above, it is quite obviously that "Transport" and "Safety" ha
 At last, we do some more interesting things focus on predicting the potential development of each block, especially on crime. Assuming the number of crime of one certain block within one month in certain year as random variable. To find out the relationship of such random variable with next year, coorelation coeffients and P-value were computed:
 ![plots](http://datamechanics.io/data/minteng_zhidou/web_pages/12_cc-pvalue.png)
 
+
 ## 6. Future Work
 
 ## Reference (need to add more)

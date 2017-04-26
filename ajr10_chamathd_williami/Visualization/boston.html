@@ -1,4 +1,4 @@
-<!-- Modeled after tutorial found at https://bl.ocks.org/john-guerra/43c7656821069d00dcbc -->
+﻿<!-- Modeled after tutorial found at https://bl.ocks.org/john-guerra/43c7656821069d00dcbc -->
 
 <!DOCTYPE html>
 <meta charset="utf-8">
@@ -106,6 +106,18 @@
                 .on('mouseover', mouseover)
                 .on('mouseout', mouseout)
                 .on('click', clicked);
+        });
+
+        // Load safe points data
+        d3.json('BostonPoints.geo.json', function (error, pointData) {
+            var features = pointData.features;
+
+            svg.append("path")
+                .data(features)
+                .attr("d", path)
+                .attr("class", "place")
+                .attr("transform", function (d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+                .attr("dy", ".35em")
         });
 
         // Get neighborhood name

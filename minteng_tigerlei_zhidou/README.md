@@ -106,13 +106,13 @@ We use Flask and MongoDB to implement the web service. The homepage:
 
 The first new feature/component is to visualize the optimization problem in project2. 
 Users could select and choose their preferred grades for 4 attributes, the ratings are in 1 ~ 5, the higher the better:
-![input](http://datamechanics.io/data/minteng_zhidou/web_pages/3_input1.png)
+![input1](http://datamechanics.io/data/minteng_zhidou/web_pages/3_input1.png)
 
 Then, we could get the top fitted location results using the algorithms described in the above Methodologies:
 ![table](http://datamechanics.io/data/minteng_zhidou/web_pages/5_table1.png)
 
 Next, we use Leaflet to show them in an interactive map, with labeled blocks filled in different colors:
-![map](http://datamechanics.io/data/minteng_zhidou/web_pages/6_map.png)
+![map1](http://datamechanics.io/data/minteng_zhidou/web_pages/6_map.png)
 
 Also, we implement and show the crime analysis for those location results, the user could get the crime ratio of certain block in the total crime number for different month/year:
 ![crime-analysis](http://datamechanics.io/data/minteng_zhidou/web_pages/7_crime-analysis.png)

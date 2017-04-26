@@ -24,7 +24,8 @@ The preprocessing steps were performed based on relational data and map-reduce p
 { 
     "avg_rent" : 2359, 
     "area" : "Allston", 
-    "postal_code" : "02134" }
+    "postal_code" : "02134" 
+}
 ```
 2. Projecting MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then we create a union of three datasets into the second new dataset. After union operation, selection is used to to remove data with invalid locations (for example, with longitude and latitude equal to 0).
 ```json
@@ -34,7 +35,8 @@ The preprocessing steps were performed based on relational data and map-reduce p
     "type" : "food", 
     "zip" : "02126", 
     "businessname" : "SPUKIES PIZZA RESTAURANT", 
-    "city" : "Mattapan" }
+    "city" : "Mattapan" 
+}
 ```
 
 ## 4. Methodologies 
@@ -58,13 +60,15 @@ Then our database would search and find matched rent price, which also should be
 ```
 All these data would be stored in a new collection named ```box_count``` as follow.
 ```json
-{   "_id" : 1, 
+{   
+    "_id" : 1, 
     "avg_rent" : 1597, 
     "box" : [ [ 42.22788, -71.1642177 ], [ 42.2450451, -71.1373224 ] ],
     "postal_code" : "02136", 
     "grade" : { "transport" : 1, "food" : 1, "safety" : 4, "rent" : 3 }, 
     "area" : "Hyde Park", 
-    "count" : { "transport" : 15, "food" : 14, "crime" : 96 } }
+    "count" : { "transport" : 15, "food" : 14, "crime" : 96 } 
+}
 ```
 User could customize rating due to their preference in website. It would search user's ratings requirement in database. If it finds results with every rating of `(transport, food, safety, rent)` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. Detailed algorithm could be found under `web/optimization_algorithm.py`
 
@@ -106,7 +110,7 @@ We use Flask and MongoDB to implement the web service. The homepage:
 
 The first new feature/component is to visualize the optimization problem in project2. 
 Users could select and choose their preferred grades for 4 attributes, the ratings are in 1 ~ 5, the higher the better:
-![input11](http://datamechanics.io/data/minteng_zhidou/web_pages/3_input1.png)
+![input11](http://datamechanics.io/data/minteng_zhidou/web_pages/3_input11.png)
 
 Then, we could get the top fitted location results using the algorithms described in the above Methodologies:
 ![table](http://datamechanics.io/data/minteng_zhidou/web_pages/5_table1.png)
@@ -132,6 +136,8 @@ At last, we do some more interesting things focus on predicting the potential de
 
 
 ## 6. Future Work
+- Due to the limitation of data resource, our analysis particular emphasize on crime part. For instance, we just got average rent price of last year so that we could't analyze more detailed information from that. In the future, the City of Boston may post more datasets publicly, which means more useful data will be collected. We plan to extend our factors deeper and richer to make our model more accurate. Traffic condition or accidents can be added as a supplement for parts of transportation. Besides, more influence factor will be counted such as entertainment, public facility and so on.
+- With sufficient data resources, way better analytical approaches can be applied in our project. Correlation coefficient and ratio have many limitations and deficiency in statistical analysis. We can do factor analysis to figure out which of these factors are the most important. And time series analysis is a powerful tool to present the changes and trend of different factors. 
 
 ## Reference (need to add more)
 1. http://flask.pocoo.org/docs/0.12/

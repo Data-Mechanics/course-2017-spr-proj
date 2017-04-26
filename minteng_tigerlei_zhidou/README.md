@@ -63,7 +63,7 @@ The preprocessing steps were performed based on relational data and map-reduce p
 ### Optimization
 Given all the licensed restaurants/ crime incidents/ MBTA stops/ rent price in boston area, We gonna find the best living area with maximizing **`#restaurant`**, **`#MBTA stops`** and minimize **`#crime incidents`** and **`rent price`**. 
 
-We use googlemaps api to find the left bottom/ right top coordinates of boston area. With these coordinates, we could build a big rectangle containing boston area. Then we separate this rectangle into 10 x 10 grids(user could set this scale manually). 
+We use googlemaps api to find the left bottom/ right top coordinates of boston area. With these coordinates, we could build a big rectangle containing boston area. Then we separate this rectangle into 10 x 10 grids. 
 
 ![boston_grid](http://datamechanics.io/data/minteng_zhidou/Boston_grid.png)
 

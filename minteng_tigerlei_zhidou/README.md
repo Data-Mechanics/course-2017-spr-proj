@@ -156,10 +156,13 @@ As for `Project Link` part, it will direct to our github folder.
 - With sufficient data resources, way better analytical approaches can be applied in our project. Correlation coefficient and ratio have many limitations and deficiency in statistical analysis. We can do factor analysis to figure out which of these factors are the most important. And time series analysis is a powerful tool to present the changes and trend of different factors. 
 
 ## Reference
-1. http://flask.pocoo.org/docs/0.12/
-2. Grouped bar chart. http://bl.ocks.org/juan-cb/ac731adaeadd3e855d26
-3. Directed Graph. https://bl.ocks.org/mbostock/4062045
-4. Bar Chart and Line Chart on Same D3 Plot http://bl.ocks.org/ndobie/878f34d2810058c5b821
+[1] http://flask.pocoo.org/docs/0.12/
+
+[2] http://bl.ocks.org/juan-cb/ac731adaeadd3e855d26
+
+[3] https://bl.ocks.org/mbostock/4062045
+
+[4] http://bl.ocks.org/ndobie/878f34d2810058c5b821
 
 # Instructions
 

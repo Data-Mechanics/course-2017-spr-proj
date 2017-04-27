@@ -1,3 +1,41 @@
+<!-- 
+//    var bus_yard = [ {"bus_yard29" : [[ 42.3448185, -71.09702899999999], 3] } , 
+//                      {"bus_yard18" :  [[ 42.276169499999995, -71.131324], 2] }, 
+//                      {"bus_yard28" :  [[ 42.2822015, -71.165963 ], 4] }, 
+//                      {"bus_yard1" :  [[ 42.378453, -71.06269825 ], 4] }, 
+//                      {"bus_yard5" :  [[ 42.305137333333334, -71.06109233333335 ], 3] }, 
+//                      {"bus_yard16" :  [[ 42.26739, -71.104443 ], 1] }, 
+//                      {"bus_yard6" :  [[ 42.387044, -71.014781 ], 3] }, 
+//                      {"bus_yard3" :  [[ 42.33418366666667, -71.10232933333333 ], 3] },
+//                      {"bus_yard20" :  [[ 42.2848405, -71.1165505 ], 1] }, 
+//                      {"bus_yard14" :  [[ 42.29976766666667, -71.07638466666666 ], 3] }, 
+//                      {"bus_yard12" :  [[ 42.340473, -71.08306 ], 1] }, 
+//                      {"bus_yard22" :  [[ 42.338748, -71.077747 ], 1] }, 
+//                      {"bus_yard31" :  [[ 42.311533499999996, -71.1013725 ], 3] }, 
+//                      {"bus_yard15" :  [[ 42.32320525, -71.108206 ], 4 ]}, 
+//                      {"bus_yard32" :  [[ 42.331165666666664, -71.09014633333334 ], 3] }, 
+//                      {"bus_yard0" :  [[ 42.350581875, -71.146225125 ], 7] }, 
+//                      {"bus_yard30" :  [[ 42.2821215, -71.13371599999999 ], 3] }, 
+//                      {"bus_yard2" :  [[ 42.307318, -71.114485 ], 2] }, 
+//                      {"bus_yard13" :  [[ 42.2574915, -71.144606 ], 2] }, 
+//                      {"bus_yard23" :  [[ 42.281352500000004, -71.07881875 ], 4] }, 
+//                      {"bus_yard26" : [[ 42.346349999999994, -71.07498333333332 ], 3] }, 
+//                      {"bus_yard4" :  [[ 42.31298125, -71.0835065 ], 3 ]}, 
+//                      {"bus_yard11" :  [[ 42.3393755, -71.088389 ], 2] }, 
+//                      {"bus_yard25" :  [[ 42.26189075, -71.12007075 ], 4] }, 
+//                      {"bus_yard33" :  [[ 42.324826, -71.0720905 ], 2 ]}, 
+//                      {"bus_yard10" :  [[ 42.3262835, -71.086401 ], 3 ]}, 
+//                      {"bus_yard17" :  [[ 42.31281200000001, -71.07590266666666 ], 3 ]}, 
+//                      {"bus_yard19" :  [[ 42.238504500000005, -71.1285075 ], 2 ]}, 
+//                      {"bus_yard7" :  [[ 42.306584, -71.109228 ], 1 ]}, 
+//                      {"bus_yard8" :  [[ 42.281235, -71.069592 ], 1 ]}, 
+//                      {"bus_yard24" :  [[ 42.333301500000005, -71.0477525 ], 2 ]}, 
+//                      {"bus_yard9" :  [[ 42.317506, -71.04334700000001 ], 2] }, 
+//                      {"bus_yard27" :  [[ 42.348618, -71.0685395 ], 2 ]}, 
+//                      {"bus_yard21" :  [[ 42.316183333333335, -71.09390766666667 ], 2] }
+//                   ]-->
+    
+
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
@@ -42,11 +80,6 @@
 </head>
 
 <body>
-
-    <nav>
-      <a id="circle" class="active">draw circle</a>
-    </nav>
-
     <div id='map'></div>
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiY3J5YW5jaGVuIiwiYSI6ImNqMXliaHZjcjAwZ2kyd255bzdpNGdoMG0ifQ.ziTuL7n4s50VsuAbm_xVFQ';
@@ -56,14 +89,12 @@
        center: [-71.104, 42.3504],
        zoom: 13.5,
     });
-
 //    map.dragPan.disable();
 //    map.scrollZoom.disable();
     
     // Setup our svg layer that we can manipulate with d3
     var container = map.getCanvasContainer()
     var svg = d3.select(container).append("svg")
-
     var active = true;
     var circleControl = new circleSelector(svg)
       .projection(project)
@@ -108,7 +139,6 @@
       })
       .transition().duration(1000)
       .attr("r", 6)
-
       circleControl.on("update", function() {
         svg.selectAll("circle.dot").style({
           fill: function(d) {
@@ -122,25 +152,24 @@
           }
         })
       })
-      circleControl.on("clear", function() {
-        svg.selectAll("circle.dot").style("fill", "#0082a3")
-      })
-      
-      function render() {
-        dots.attr({
-          cx: function(d) { 
-            var x = project(d).x;
-            return x
-          },
-          cy: function(d) { 
-            var y = project(d).y;
-            return y
-          },
-        })
-        
-        circleControl.update(svg)
-      }
-
+//      circleControl.on("clear", function() {
+//        svg.selectAll("circle.dot").style("fill", "#0082a3")
+//      })
+//      
+//      function render() {
+//        dots.attr({
+//          cx: function(d) { 
+//            var x = project(d).x;
+//            return x
+//          },
+//          cy: function(d) { 
+//            var y = project(d).y;
+//            return y
+//          },
+//        })
+//        
+//        circleControl.update(svg)
+//      }
       // re-render our visualization whenever the view changes
       map.on("viewreset", function() {
         render()
@@ -148,11 +177,8 @@
       map.on("move", function() {
         render()
       })
-
       // render our initial visualization
       render()
     })
   </script>
 </body>
-
-

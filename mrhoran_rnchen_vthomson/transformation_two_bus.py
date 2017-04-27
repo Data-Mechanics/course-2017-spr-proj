@@ -185,6 +185,7 @@ class transformation_two_bus(dml.Algorithm):
 
                 
             mean = k_means(S, M)
+            print(mean)
 
             # now we find the cost between the dataset S and the mean
             cost_combined = (costs(S, mean))
@@ -202,7 +203,8 @@ class transformation_two_bus(dml.Algorithm):
                 str_ = "bus_yard" + str(i)
                 closest_mean_3[i] = (str_, ((closest_mean_3[i][0][0],  closest_mean_3[i][0][1]), closest_mean_3[i][1]))
 
-            
+            print("******")
+            print(closest_mean_3)
             repo.dropCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs')
             repo.createCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs')
 

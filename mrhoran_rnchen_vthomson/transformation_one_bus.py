@@ -60,7 +60,19 @@ class transformation_one_bus(dml.Algorithm):
 
         # 72 is the average # of buses we think we need
         
-        students_per_school = project(select(product(X,X3), lambda t: t[0][0] == t[1][0]), lambda t: (t[0][0],(t[0][1], t[1][1], (t[1][1]/72))))
+        students_per_school = project(select(product(X,X3), lambda t: t[0][0] == t[1][0]), lambda t: (t[0][0],(t[0][1], t[1][1])))
+
+        # I just want to get the average number of students per school for a bu_yard optimization graph
+        x = project(students_per_school, lambda t: t[1][1])
+
+        averagenum_studentsperschool = 0
+        
+        for i in range(len(x)):
+            averagenum_studentsperschool += x[i]
+            
+        averagenum_studentsperschool = averagenum_studentsperschool/ (len(x))
+        print("this is the average number of students per school:")
+        print(averagenum_studentsperschool)
                         
         repo.dropCollection('student_per_school')
         repo.createCollection('student_per_school')

@@ -40,7 +40,8 @@ class crimeAnalysis(dml.Algorithm):
         for crimeBox in crimeCount:
             crimeBox['crimeRatio'] = np.zeros(48)
             for i in range(48):
-                crimeBox['crimeRatio'][i] = crimeBox['crimeNum'][i] / monthlyCount[i]
+                if monthlyCount[i] != 0:
+                    crimeBox['crimeRatio'][i] = crimeBox['crimeNum'][i] / monthlyCount[i]
 
             crimeBox['crimeRatio'] = crimeBox['crimeRatio'].tolist()
 
@@ -68,7 +69,7 @@ class crimeAnalysis(dml.Algorithm):
         
         current_dir = os.getcwd()
         # Create datadir if does not exist
-        print(current_dir)
+        # print(current_dir)
         if not os.path.exists(os.path.join(current_dir, 'minteng_tigerlei_zhidou/web/static/corAndP.csv')):
             with open(os.path.join(current_dir, 'minteng_tigerlei_zhidou/web/static/corAndP.csv'), 'w') as f:
                 f.write('area,periodyear,avgemp,changeemp\n')

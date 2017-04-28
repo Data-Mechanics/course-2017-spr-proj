@@ -245,5 +245,5 @@ To view the website, open a browser on your machine and type:
 ### Provenance Information
 All provenance information could be seen in ```provenance.html``` after running:
 ```python
-python3 initiate.py minteng_tigerlei_zhidou
+python3 initiate.py 
 ```

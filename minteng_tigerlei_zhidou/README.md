@@ -166,7 +166,7 @@ As for `Project Link` part, it will direct to our GitHub folder.
 
 # Instructions
 
-All scripts and files are under folder `minteng_tigerlei_zhidou`. We modified `execute.py` into `initiate.py` so that it won't traverse subdirectory like `/web`. It takes the job of automatically retrieving data into MongoDB and does all transformations. All `.ipynb` files are just used to plot and show graphs in the case of running error inspected by `initial.py`.
+All scripts and files are under folder `minteng_tigerlei_zhidou`. We modified `execute.py` into `initiate.py` so that it won't traverse subdirectory like `/web`, which contains all the scripts of running web server. It just takes the job of automatically retrieving data into MongoDB and does all transformations. So you just need to run it once and control web server mannully every time. All `.ipynb` files are just used to plot and show graphs in the case of running error inspected by `initial.py`.
 
 ### auth.json
 This project use app token from `Boston data portal` and `google maps geocoding API`. To retrieve data automatically, app token should be added into `auth.json` file as following the format:
@@ -191,6 +191,11 @@ This project use app token from `Boston data portal` and `google maps geocoding 
 ### Trial mode
 This project provides a trial mode to complete data retrieve and transformations very quickly (in at most a few seconds) by operating on a very small portion of the input data set(s). All retrieve requests and transformations are limited to 500 records.
 
+Locate to project folder with:
+```shell
+cd minteng_tigerlei_zhidou
+```
+
 To run trial mode on all files:
 ```python
 python3 initial.py --trial
@@ -209,13 +214,20 @@ python3 <filename>.py --trial
 ```
 
 ### Prepare Database
-First, make sure `mongod` process is running on your machine. Then run the following command:
+First, make sure `mongod` process is running on your machine. 
+
+Locate to project folder with:
+```shell
+cd minteng_tigerlei_zhidou
+```
+
+Then run the following command:
 ```python
-python3 initiate.py minteng_tigerlei_zhidou
+python3 initiate.py 
 ```
 
 ### Start Web Server
-Locate to target folder with:
+Locate to web service folder with:
 ```shell
 cd minteng_tigerlei_zhidou/web
 ```

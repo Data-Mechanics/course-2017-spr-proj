@@ -49,8 +49,12 @@ class statisticsanalysis(dml.Algorithm):
 
 		n = np.delete(observations,(idx_to_delete),axis=1)
 
+
 		# linear regression
 		n = n.astype(float)
+
+		print(np.corrcoef(n))
+
 		x = n[:2,:].T
 		y = n[2,:].T
 
@@ -102,4 +106,6 @@ class statisticsanalysis(dml.Algorithm):
 		repo.logout()
 				  
 		return doc
+
+statisticsanalysis.execute()
 ## eof

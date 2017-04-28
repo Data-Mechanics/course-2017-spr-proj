@@ -24,18 +24,16 @@
 <script type="text/javascript">
 
 var map = new google.maps.Map(d3.select("#map").node(), {
-  zoom: 13,
+  zoom: 12,
   center: new google.maps.LatLng(42.3504, -71.104),
-  mapTypeId: google.maps.MapTypeId.ROADMAP
+  mapTypeId: google.maps.MapTypeId.HYBRID
 });
 
 //var m = L.map("map").setView([42.3504, -71.104],9);
 
 //make the map
 
-d3.json("students.json", function(error, data){
-  alert("help");
-
+d3.json("../input_data/students.json", function(error, data){
   if (error) throw error;
   var overlay = new google.maps.OverlayView();
 
@@ -74,7 +72,11 @@ d3.json("students.json", function(error, data){
       d3.selectAll(".marker text").attr("fill", "black");
         
       function transform(d) {
-        d = new google.maps.LatLng(d.value["Latitude"], d.value["Longitude"]);
+      	console.log("test");
+
+	window.alert(d.value[0]);
+	
+        d = new google.maps.LatLng(d.value[0]["Latitude"], d.value[0]["Longitude"]);
         d = projection.fromLatLngToDivPixel(d);
         return d3.select(this)
             .style("left", (d.x - padding) + "px")

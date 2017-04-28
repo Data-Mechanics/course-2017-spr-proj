@@ -166,7 +166,7 @@ As for `Project Link` part, it will direct to our GitHub folder.
 
 # Instructions
 
-All scripts and files are under folder `minteng_tigerlei_zhidou`. We modified `execute.py` into `initiate.py` so that it won't traverse subdirectory like `/web`, which contains all the scripts of running web server. It just takes the job of automatically retrieving data into MongoDB and does all transformations. So you just need to run it once and control web server mannully every time. All `.ipynb` files are just used to plot and show graphs in the case of running error inspected by `initial.py`.
+All scripts and files are under folder `minteng_tigerlei_zhidou`. We modified `execute.py` into `initiate.py` so that it won't traverse subdirectory like `/web`, which contains all the scripts of running web server. `initiate.py` just takes the job of automatically retrieving data into MongoDB and does all transformations. So you just need to run it once and control web server mannully every time. All `.ipynb` files are just used to plot and show graphs in the case of running error inspected by `initial.py`.
 
 ### auth.json
 This project use app token from `Boston data portal` and `google maps geocoding API`. To retrieve data automatically, app token should be added into `auth.json` file as following the format:

@@ -2,6 +2,8 @@
 
  *by Minteng Xie, Yue Lei, Zhi Dou*
 
+>**IMPORTANT running instructions are at the end of README.md**
+
 ## 1. Introduction
 The City of Boston has performed a significant effort on collecting data over different services and other public information. The diversity of these publicly available datasets allows us to explore various areas in Boston. Particularly, in this project, we are focusing on building a website to help people find the best living area in Boston and provide corresponding analysis to their choices.
 

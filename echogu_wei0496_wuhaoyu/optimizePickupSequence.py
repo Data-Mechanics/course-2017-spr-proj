@@ -35,7 +35,7 @@ class optimizePickupSequence(dml.Algorithm):
 
         # Trial mode
         if trial:
-            if len(assigned_students) < 10:
+            if len(assigned_students) == 1:
                 pass
             else:
                 assigned_students = random.choices(assigned_students, k = 1)

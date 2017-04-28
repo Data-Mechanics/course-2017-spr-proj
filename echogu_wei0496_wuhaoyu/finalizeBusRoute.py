@@ -12,10 +12,10 @@ import geojson
 import re
 #import xlsxwriter
 
-class finalizBusRoute(dml.Algorithm):
+class finalizeBusRoute(dml.Algorithm):
     contributor = 'echogu_wei0496_wuhaoyu'
-    reads = ['echogu_wei0496_wuhaoyu.bus_route']
-    writes = ['echogu_wei0496_wuhaoyu.bus_route_final']
+    reads = ['echogu_wei0496_wuhaoyu.students']
+    writes = ['echogu_wei0496_wuhaoyu.assigned_students']
 
     @staticmethod
     def execute(trial = False):
@@ -31,31 +31,21 @@ class finalizBusRoute(dml.Algorithm):
         # loads the collection
         bus_route = repo['echogu_wei0496_wuhaoyu.bus_route'].find()
 
+        # Trial mode
+        if trial:
+            if len(bus_route) == 1:
+                pass
+            else:
+                bus_route = random.choices(bus_route, k = 1)
+
         # convert to geojson
         features = []
-        features_routes = []    # collection of routes
-        features_schools = []   # collection of schools
-        features_yards = []     # collection of yards
+        features_schools = []
+        features_yards = []
         schools = []            # handle duplicates
         yards = []              # handle duplicates
-        count = 1
 
         for r in bus_route:
-            features_one_school = []
-
-            # extract properties
-            colors = "0123456"
-            random_color = ''.join(random.choices(colors, k = 6))
-            properties = {'school': r['school'],
-                                 'yard': r['bus yard'],
-                                 'stroke': '#' + random_color,
-                                 'stroke-width': 1,
-                                 'stroke-opacity': 0.3}
-            properties_one_school = {'school': r['school'],
-                                     'yard': r['bus yard'],
-                                     'stroke': '#003534',
-                                     'stroke-width': 2}
-
             # extract routes info: yard -> student -> school
             sequence = r['pickup_sequence']
             route = []
@@ -66,52 +56,37 @@ class finalizBusRoute(dml.Algorithm):
                 route += [s]
             school = tuple(reversed(r['school location']))
             route += [school]
-            geometry = geojson.LineString(route)
 
-            # save routes
-            filename = r['school']
-            filename = re.sub('[ ?.!/;:]', '', filename)
-            features_one_school.append(geojson.Feature(geometry=geometry, properties=properties_one_school))      # graph for each school
-            features_routes.append(geojson.Feature(geometry=geometry, properties=properties))    # graph with routes only
-            features.append(geojson.Feature(geometry=geometry, properties=properties))                  # graph with routes, schools and yards
+            properties = {'school': r['school'],
+                          'yard': r['bus yard']}
+            geometry = geojson.LineString(tuple(route))
+            features.append(geojson.Feature(geometry=geometry, properties=properties))
 
-            # extract school info
-            properties_schools = {'school': r['school'],
-                                  'marker-size': 'small',
-                                  'marker-symbol': 'college',
-                                  'marker-color': '#8cbdbc'}
-            features_one_school.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['school location']))), properties=properties_schools))
-
-            # extract yard info
-            properties_yards = {'yard': r['bus yard'],
-                                'address': r['yard address'],
-                                'marker-size': 'small',
-                                'marker-symbol': 'bus',
-                                'marker-color': '#d8b0e2'}
-            features_one_school.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['yard location']))), properties=properties_yards))
-
-            # handle duplicate schools and yards
+            # extract schools and yards info, remove duplicates
             if r['school'] not in schools:
-                features_schools.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['school location']))), properties=properties_schools))
+                properties = {'type': 'school',
+                              'school': r['school']}
+                geometry = geojson.Point(tuple(reversed(r['school location'])))
+                features_schools.append(geojson.Feature(geometry=geometry, properties=properties))
                 schools += [r['school']]
-            if r['bus yard'] not in yards:
-                features_yards.append(geojson.Feature(geometry=geojson.Point(tuple(reversed(r['yard location']))), properties=properties_yards))
-                yards += [r['bus yard']]
 
-            open('echogu_wei0496_wuhaoyu/visualizations/geojson/' + "%03d" % count + filename + '.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_one_school), indent=2))
-            count += 1
-            # end of for
+            if r['bus yard'] not in yards:
+                properties = {'type': 'yard',
+                              'yard': r['bus yard'],
+                              'address': r['yard address']}
+                geometry = geojson.Point(tuple(reversed(r['yard location'])))
+                features_yards.append(geojson.Feature(geometry=geometry, properties=properties))
+                yards += [r['bus yard']]
 
         features += features_schools
         features += features_yards
 
-        open('echogu_wei0496_wuhaoyu/visualizations/geojson/bus_route.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_routes), indent=2))
-        open('echogu_wei0496_wuhaoyu/visualizations/geojson/bus_route_schools.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features), indent=2))
+        open('echogu_wei0496_wuhaoyu/visualizations/geojson/route.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features), indent=2))
 
         # store bus route into database in geojson format
         repo.dropCollection('bus_route_final')
         repo.createCollection('bus_route_final')
-        repo['echogu_wei0496_wuhaoyu.bus_route_final'].insert_many(features_routes)
+        repo['echogu_wei0496_wuhaoyu.bus_route_final'].insert_many(features)
         repo['echogu_wei0496_wuhaoyu.bus_route_final'].metadata({'complete': True})
         print(repo['echogu_wei0496_wuhaoyu.bus_route_final'].metadata(), "Saved Bus Route Final")
 
@@ -158,7 +133,7 @@ class finalizBusRoute(dml.Algorithm):
 
         return doc
 
-finalizBusRoute.execute()
+# finalizeBusRoute.execute()
 # doc = finalizeBusRoute.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

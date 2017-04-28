@@ -1,5 +1,5 @@
 import sys
-import os
+import os 
 import importlib
 import json
 import argparse
@@ -9,17 +9,23 @@ parser = argparse.ArgumentParser()
 parser.add_argument("contributor_folder")
 parser.add_argument("-t", "--trial", help="run all algorithms in trial mode", action="store_true")
 args = parser.parse_args()
-
 # Extract the algorithm classes from the modules in the
-# subdirectory specified on the command line.
+# subdirectory specified on the command line
+os.chdir("..")
+# print(os.getcwd())
 path = args.contributor_folder
 algorithms = []
 for file in os.listdir(path):
     # for file in f:
     if file.split(".")[-1] == "py":
-        name_module = ".".join(file.split(".")[0:-1])
-        module = importlib.import_module(path + "." + name_module)
-        algorithms.append(module.__dict__[name_module])
+    	if file.split(".")[0] == "initiate":
+    		pass
+    	else:
+    		# print(file)
+	        name_module = ".".join(file.split(".")[0:-1])
+	        # print(name_module)
+	        module = importlib.import_module(name_module)
+	        algorithms.append(module.__dict__[name_module])
 
 # Create an ordering of the algorithms based on the data
 # sets that they read and write.

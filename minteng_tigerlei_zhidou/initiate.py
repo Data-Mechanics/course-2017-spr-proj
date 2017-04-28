@@ -6,17 +6,16 @@ import argparse
 import prov.model
 
 parser = argparse.ArgumentParser()
-parser.add_argument("contributor_folder")
 parser.add_argument("-t", "--trial", help="run all algorithms in trial mode", action="store_true")
 args = parser.parse_args()
 # Extract the algorithm classes from the modules in the
 # subdirectory specified on the command line
 os.chdir("..")
 # print(os.getcwd())
-path = args.contributor_folder
+path = "minteng_tigerlei_zhidou"
 algorithms = []
-for file in os.listdir(path):
-    # for file in f:
+# We don't traverse the subdirectory, just run all python files under 'path'
+for file in os.listdir(path): 
     if file.split(".")[-1] == "py":
     	if file.split(".")[0] == "initiate":
     		pass

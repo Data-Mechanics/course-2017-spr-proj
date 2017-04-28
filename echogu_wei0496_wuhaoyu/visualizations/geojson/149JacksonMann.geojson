@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.05691,
+            42.34252
+          ],
+          [
+            -71.05691,
+            42.34252
+          ],
+          [
+            -71.056421,
+            42.33538
+          ],
+          [
+            -71.05378,
+            42.33513
+          ],
+          [
+            -71.05414,
+            42.33397
+          ],
+          [
+            -71.052171,
+            42.33309
+          ],
+          [
+            -71.0513,
+            42.33315
+          ],
+          [
+            -71.0471,
+            42.33061
+          ],
+          [
+            -71.05712,
+            42.32896
+          ],
+          [
+            -71.05745,
+            42.32855
+          ],
+          [
+            -71.13770062,
+            42.35205867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Jackson/Mann",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13770062,
+          42.35205867
+        ]
+      },
+      "properties": {
+        "school": "Jackson/Mann",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

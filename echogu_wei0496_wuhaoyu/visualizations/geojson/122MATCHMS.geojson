@@ -1,0 +1,104 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.079371,
+            42.383046
+          ],
+          [
+            -71.078299,
+            42.384017
+          ],
+          [
+            -71.07058,
+            42.38333
+          ],
+          [
+            -71.07038,
+            42.38325
+          ],
+          [
+            -71.0401,
+            42.382248
+          ],
+          [
+            -71.03801,
+            42.3804
+          ],
+          [
+            -71.04153,
+            42.37165
+          ],
+          [
+            -71.0419,
+            42.36964
+          ],
+          [
+            -71.03906,
+            42.36915
+          ],
+          [
+            -71.05691,
+            42.34252
+          ],
+          [
+            -71.058022,
+            42.342463
+          ],
+          [
+            -71.1059155,
+            42.3051414
+          ]
+        ]
+      },
+      "properties": {
+        "school": "MATCH MS",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1059155,
+          42.3051414
+        ]
+      },
+      "properties": {
+        "school": "MATCH MS",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

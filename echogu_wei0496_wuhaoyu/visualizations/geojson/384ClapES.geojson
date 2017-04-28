@@ -1,0 +1,124 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.04718,
+            42.33138
+          ],
+          [
+            -71.04841,
+            42.33243
+          ],
+          [
+            -71.04841,
+            42.33243
+          ],
+          [
+            -71.0492,
+            42.33283
+          ],
+          [
+            -71.04928,
+            42.333047
+          ],
+          [
+            -71.04935,
+            42.3353
+          ],
+          [
+            -71.04787,
+            42.33521
+          ],
+          [
+            -71.04551,
+            42.33695
+          ],
+          [
+            -71.048251,
+            42.337957
+          ],
+          [
+            -71.04876,
+            42.33965
+          ],
+          [
+            -71.050748,
+            42.340892
+          ],
+          [
+            -71.068152,
+            42.342311
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.05819134,
+            42.3231762
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Clap ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05819134,
+          42.3231762
+        ]
+      },
+      "properties": {
+        "school": "Clap ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

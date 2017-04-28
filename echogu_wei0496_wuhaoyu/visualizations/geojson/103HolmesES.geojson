@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.083357,
+            42.336134
+          ],
+          [
+            -71.0575,
+            42.32913
+          ],
+          [
+            -71.05124,
+            42.33306
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.0587,
+            42.3594
+          ],
+          [
+            -71.07560026,
+            42.2967885
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Holmes ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07560026,
+          42.2967885
+        ]
+      },
+      "properties": {
+        "school": "Holmes ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

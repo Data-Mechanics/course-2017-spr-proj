@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.14289,
+            42.28902
+          ],
+          [
+            -71.13832,
+            42.29334
+          ],
+          [
+            -71.11799,
+            42.28119
+          ],
+          [
+            -71.114474,
+            42.280858
+          ],
+          [
+            -71.1143,
+            42.28179
+          ],
+          [
+            -71.10678,
+            42.28592
+          ],
+          [
+            -71.10868,
+            42.28618
+          ],
+          [
+            -71.10895,
+            42.28604
+          ],
+          [
+            -71.11018,
+            42.28593
+          ],
+          [
+            -71.11255,
+            42.28845
+          ],
+          [
+            -71.11313,
+            42.28824
+          ],
+          [
+            -71.115092,
+            42.286991
+          ],
+          [
+            -71.1173,
+            42.28828
+          ],
+          [
+            -71.12177,
+            42.29366
+          ],
+          [
+            -71.10488,
+            42.31195
+          ],
+          [
+            -71.14025,
+            42.34402
+          ],
+          [
+            -71.141201,
+            42.344524
+          ],
+          [
+            -71.0556393,
+            42.2933291
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Neighborhood House",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0556393,
+          42.2933291
+        ]
+      },
+      "properties": {
+        "school": "Neighborhood House",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

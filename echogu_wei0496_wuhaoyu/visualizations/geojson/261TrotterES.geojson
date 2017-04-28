@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.11039,
+            42.25303
+          ],
+          [
+            -71.10307,
+            42.26118
+          ],
+          [
+            -71.10775,
+            42.26888
+          ],
+          [
+            -71.11542,
+            42.27889
+          ],
+          [
+            -71.11334,
+            42.28159
+          ],
+          [
+            -71.11191,
+            42.28288
+          ],
+          [
+            -71.10974,
+            42.28615
+          ],
+          [
+            -71.11443,
+            42.28482
+          ],
+          [
+            -71.11395,
+            42.28763
+          ],
+          [
+            -71.1148,
+            42.28878
+          ],
+          [
+            -71.12077,
+            42.28606
+          ],
+          [
+            -71.11791,
+            42.28508
+          ],
+          [
+            -71.13467,
+            42.29584
+          ],
+          [
+            -71.14135,
+            42.29143
+          ],
+          [
+            -71.14407,
+            42.29379
+          ],
+          [
+            -71.08784105,
+            42.31574003
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Trotter ES",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08784105,
+          42.31574003
+        ]
+      },
+      "properties": {
+        "school": "Trotter ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

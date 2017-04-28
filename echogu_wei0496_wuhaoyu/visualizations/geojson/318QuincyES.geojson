@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.10106,
+            42.31098
+          ],
+          [
+            -71.10088,
+            42.31362
+          ],
+          [
+            -71.103873,
+            42.321709
+          ],
+          [
+            -71.09745,
+            42.33013
+          ],
+          [
+            -71.09807,
+            42.33067
+          ],
+          [
+            -71.09767,
+            42.33104
+          ],
+          [
+            -71.09713,
+            42.33154
+          ],
+          [
+            -71.09814,
+            42.33181
+          ],
+          [
+            -71.06492059,
+            42.34797867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Quincy ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06492059,
+          42.34797867
+        ]
+      },
+      "properties": {
+        "school": "Quincy ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.031067,
+            42.364181
+          ],
+          [
+            -71.03104,
+            42.36456
+          ],
+          [
+            -71.02964,
+            42.36501
+          ],
+          [
+            -71.02951,
+            42.36537
+          ],
+          [
+            -71.02983,
+            42.36575
+          ],
+          [
+            -71.031101,
+            42.366245
+          ],
+          [
+            -71.03286,
+            42.36684
+          ],
+          [
+            -71.03246,
+            42.37131
+          ],
+          [
+            -71.051949,
+            42.373596
+          ],
+          [
+            -71.051949,
+            42.373596
+          ],
+          [
+            -71.00412057,
+            42.38879868
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Guild ES",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.00412057,
+          42.38879868
+        ]
+      },
+      "properties": {
+        "school": "Guild ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

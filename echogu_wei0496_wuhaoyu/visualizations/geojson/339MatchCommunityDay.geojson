@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.10542,
+            42.3453
+          ],
+          [
+            -71.10664,
+            42.32809
+          ],
+          [
+            -71.10794,
+            42.32836
+          ],
+          [
+            -71.10756,
+            42.32788
+          ],
+          [
+            -71.10753,
+            42.32774
+          ],
+          [
+            -71.10748,
+            42.32772
+          ],
+          [
+            -71.10741,
+            42.3277
+          ],
+          [
+            -71.10713,
+            42.32735
+          ],
+          [
+            -71.106593,
+            42.327455
+          ],
+          [
+            -71.10606,
+            42.32703
+          ],
+          [
+            -71.10462,
+            42.32669
+          ],
+          [
+            -71.104443,
+            42.327236
+          ],
+          [
+            -71.102948,
+            42.326579
+          ],
+          [
+            -71.10258,
+            42.32686
+          ],
+          [
+            -71.10076,
+            42.32692
+          ],
+          [
+            -71.1005,
+            42.32657
+          ],
+          [
+            -71.09897,
+            42.32241
+          ],
+          [
+            -71.09485,
+            42.32384
+          ],
+          [
+            -71.1082974,
+            42.2614165
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Match Community Day",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1082974,
+          42.2614165
+        ]
+      },
+      "properties": {
+        "school": "Match Community Day",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

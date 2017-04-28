@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.057577,
+            42.307069
+          ],
+          [
+            -71.08308,
+            42.3021
+          ],
+          [
+            -71.08369,
+            42.30303
+          ],
+          [
+            -71.07592,
+            42.31954
+          ],
+          [
+            -71.09456,
+            42.32213
+          ],
+          [
+            -71.09401,
+            42.32149
+          ],
+          [
+            -71.09034,
+            42.31715
+          ],
+          [
+            -71.088862,
+            42.314371
+          ],
+          [
+            -71.0925,
+            42.31443
+          ],
+          [
+            -71.09314,
+            42.31303
+          ],
+          [
+            -71.10041,
+            42.31582
+          ],
+          [
+            -71.11276,
+            42.29876
+          ],
+          [
+            -71.12786,
+            42.30665
+          ],
+          [
+            -71.12584,
+            42.31055
+          ],
+          [
+            -71.13533061,
+            42.27776866
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Bates ES",
+        "yard": "Read",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13533061,
+          42.27776866
+        ]
+      },
+      "properties": {
+        "school": "Bates ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

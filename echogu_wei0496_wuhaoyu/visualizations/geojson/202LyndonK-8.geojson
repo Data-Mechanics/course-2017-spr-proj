@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.10526,
+            42.27056
+          ],
+          [
+            -71.10377,
+            42.27091
+          ],
+          [
+            -71.10256,
+            42.2689
+          ],
+          [
+            -71.09233,
+            42.28619
+          ],
+          [
+            -71.079823,
+            42.285047
+          ],
+          [
+            -71.08612,
+            42.28751
+          ],
+          [
+            -71.08763,
+            42.28797
+          ],
+          [
+            -71.092578,
+            42.288773
+          ],
+          [
+            -71.09114,
+            42.29417
+          ],
+          [
+            -71.15837062,
+            42.28299866
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Lyndon K-8",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15837062,
+          42.28299866
+        ]
+      },
+      "properties": {
+        "school": "Lyndon K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

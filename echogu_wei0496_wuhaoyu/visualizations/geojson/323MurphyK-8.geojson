@@ -1,0 +1,108 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.057577,
+            42.307069
+          ],
+          [
+            -71.08394,
+            42.27188
+          ],
+          [
+            -71.09916,
+            42.26407
+          ],
+          [
+            -71.09965,
+            42.26395
+          ],
+          [
+            -71.101143,
+            42.264469
+          ],
+          [
+            -71.10283,
+            42.2617
+          ],
+          [
+            -71.11768,
+            42.26126
+          ],
+          [
+            -71.10121,
+            42.26552
+          ],
+          [
+            -71.10603,
+            42.26789
+          ],
+          [
+            -71.10873,
+            42.2668
+          ],
+          [
+            -71.11302,
+            42.27098
+          ],
+          [
+            -71.11758,
+            42.27702
+          ],
+          [
+            -71.14407,
+            42.29117
+          ],
+          [
+            -71.04919406,
+            42.29420618
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Murphy K-8",
+        "yard": "Read",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04919406,
+          42.29420618
+        ]
+      },
+      "properties": {
+        "school": "Murphy K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

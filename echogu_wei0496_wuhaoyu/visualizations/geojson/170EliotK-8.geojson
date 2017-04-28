@@ -1,0 +1,124 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.07607,
+            42.32284
+          ],
+          [
+            -71.075502,
+            42.327016
+          ],
+          [
+            -71.07368,
+            42.32622
+          ],
+          [
+            -71.07018,
+            42.32998
+          ],
+          [
+            -71.071,
+            42.3233
+          ],
+          [
+            -71.069049,
+            42.323273
+          ],
+          [
+            -71.0684,
+            42.32448
+          ],
+          [
+            -71.06032,
+            42.32308
+          ],
+          [
+            -71.05976,
+            42.32389
+          ],
+          [
+            -71.058129,
+            42.323593
+          ],
+          [
+            -71.0573,
+            42.32249
+          ],
+          [
+            -71.05736,
+            42.32537
+          ],
+          [
+            -71.05526,
+            42.33697
+          ],
+          [
+            -71.05311,
+            42.33639
+          ],
+          [
+            -71.05083,
+            42.33522
+          ],
+          [
+            -71.04986,
+            42.33667
+          ],
+          [
+            -71.05336967,
+            42.36610274
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Eliot K-8",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05336967,
+          42.36610274
+        ]
+      },
+      "properties": {
+        "school": "Eliot K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

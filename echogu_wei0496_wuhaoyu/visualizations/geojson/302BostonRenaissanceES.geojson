@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.12566,
+            42.26558
+          ],
+          [
+            -71.12557,
+            42.26684
+          ],
+          [
+            -71.12787,
+            42.26635
+          ],
+          [
+            -71.12809,
+            42.26526
+          ],
+          [
+            -71.13047,
+            42.26744
+          ],
+          [
+            -71.13056,
+            42.26756
+          ],
+          [
+            -71.13104,
+            42.26815
+          ],
+          [
+            -71.13068,
+            42.26919
+          ],
+          [
+            -71.12793,
+            42.27035
+          ],
+          [
+            -71.12719,
+            42.2721
+          ],
+          [
+            -71.14965,
+            42.27017
+          ],
+          [
+            -71.14924,
+            42.26889
+          ],
+          [
+            -71.15106,
+            42.26799
+          ],
+          [
+            -71.15255,
+            42.26799
+          ],
+          [
+            -71.15384,
+            42.26704
+          ],
+          [
+            -71.1526401,
+            42.2994837
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Boston Renaissance ES",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1526401,
+          42.2994837
+        ]
+      },
+      "properties": {
+        "school": "Boston Renaissance ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

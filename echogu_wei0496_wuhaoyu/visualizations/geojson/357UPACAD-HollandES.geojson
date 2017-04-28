@@ -1,0 +1,84 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.10213,
+            42.26189
+          ],
+          [
+            -71.10466,
+            42.26391
+          ],
+          [
+            -71.10339,
+            42.26525
+          ],
+          [
+            -71.10045,
+            42.265103
+          ],
+          [
+            -71.10438,
+            42.26829
+          ],
+          [
+            -71.118631,
+            42.276896
+          ],
+          [
+            -71.07385902,
+            42.30561813
+          ]
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD - Holland ES",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07385902,
+          42.30561813
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD - Holland ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

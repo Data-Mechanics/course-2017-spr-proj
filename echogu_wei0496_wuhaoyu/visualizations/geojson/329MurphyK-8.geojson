@@ -1,0 +1,132 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.045529,
+            42.331525
+          ],
+          [
+            -71.046895,
+            42.331683
+          ],
+          [
+            -71.04723,
+            42.33088
+          ],
+          [
+            -71.0471,
+            42.33061
+          ],
+          [
+            -71.04885,
+            42.33177
+          ],
+          [
+            -71.049661,
+            42.332346
+          ],
+          [
+            -71.04764,
+            42.33347
+          ],
+          [
+            -71.048097,
+            42.333306
+          ],
+          [
+            -71.0499,
+            42.33387
+          ],
+          [
+            -71.05083,
+            42.33522
+          ],
+          [
+            -71.05151,
+            42.33405
+          ],
+          [
+            -71.05262,
+            42.33346
+          ],
+          [
+            -71.05152,
+            42.33295
+          ],
+          [
+            -71.05366,
+            42.32968
+          ],
+          [
+            -71.05375,
+            42.32978
+          ],
+          [
+            -71.05386,
+            42.3299
+          ],
+          [
+            -71.0695,
+            42.32899
+          ],
+          [
+            -71.0695,
+            42.32899
+          ],
+          [
+            -71.04919406,
+            42.29420618
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Murphy K-8",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04919406,
+          42.29420618
+        ]
+      },
+      "properties": {
+        "school": "Murphy K-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

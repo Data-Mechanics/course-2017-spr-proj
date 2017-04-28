@@ -1,0 +1,88 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.12895,
+            42.31124
+          ],
+          [
+            -71.12273,
+            42.31034
+          ],
+          [
+            -71.096743,
+            42.326098
+          ],
+          [
+            -71.09798,
+            42.31484
+          ],
+          [
+            -71.08913,
+            42.31763
+          ],
+          [
+            -71.08675,
+            42.31599
+          ],
+          [
+            -71.08844,
+            42.30877
+          ],
+          [
+            -71.15236762,
+            42.29266066
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Kilmer 4-8",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15236762,
+          42.29266066
+        ]
+      },
+      "properties": {
+        "school": "Kilmer 4-8",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

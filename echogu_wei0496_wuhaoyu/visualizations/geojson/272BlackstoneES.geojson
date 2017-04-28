@@ -1,0 +1,88 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.114845,
+            42.35244
+          ],
+          [
+            -71.126499,
+            42.351253
+          ],
+          [
+            -71.12543,
+            42.35454
+          ],
+          [
+            -71.12731,
+            42.36214
+          ],
+          [
+            -71.14569,
+            42.35265
+          ],
+          [
+            -71.140035,
+            42.349301
+          ],
+          [
+            -71.14042,
+            42.3464
+          ],
+          [
+            -71.07246107,
+            42.34073755
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Blackstone ES",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07246107,
+          42.34073755
+        ]
+      },
+      "properties": {
+        "school": "Blackstone ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

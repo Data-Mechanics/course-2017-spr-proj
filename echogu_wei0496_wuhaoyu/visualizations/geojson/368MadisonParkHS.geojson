@@ -1,0 +1,136 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.139795,
+            42.23739
+          ],
+          [
+            -71.14351,
+            42.28958
+          ],
+          [
+            -71.11313,
+            42.2685
+          ],
+          [
+            -71.10527,
+            42.26426
+          ],
+          [
+            -71.10465,
+            42.26487
+          ],
+          [
+            -71.10097,
+            42.26433
+          ],
+          [
+            -71.09893,
+            42.26435
+          ],
+          [
+            -71.11103,
+            42.27214
+          ],
+          [
+            -71.11158,
+            42.2733
+          ],
+          [
+            -71.110563,
+            42.2858
+          ],
+          [
+            -71.0926,
+            42.28566
+          ],
+          [
+            -71.08321,
+            42.286704
+          ],
+          [
+            -71.084052,
+            42.286317
+          ],
+          [
+            -71.08677,
+            42.28804
+          ],
+          [
+            -71.092804,
+            42.289934
+          ],
+          [
+            -71.09105,
+            42.29065
+          ],
+          [
+            -71.08967,
+            42.29337
+          ],
+          [
+            -71.08236,
+            42.29557
+          ],
+          [
+            -71.08118,
+            42.29519
+          ],
+          [
+            -71.07814,
+            42.29654
+          ],
+          [
+            -71.0902906,
+            42.33175867
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Madison Park HS",
+        "yard": "Ctwn",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0902906,
+          42.33175867
+        ]
+      },
+      "properties": {
+        "school": "Madison Park HS",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

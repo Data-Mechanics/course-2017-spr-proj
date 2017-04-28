@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.12714,
+            42.35016
+          ],
+          [
+            -71.09863,
+            42.33118
+          ],
+          [
+            -71.103579,
+            42.320964
+          ],
+          [
+            -71.10632,
+            42.31883
+          ],
+          [
+            -71.10156,
+            42.31523
+          ],
+          [
+            -71.09898,
+            42.31279
+          ],
+          [
+            -71.09898,
+            42.3104
+          ],
+          [
+            -71.09904,
+            42.31011
+          ],
+          [
+            -71.10143,
+            42.30974
+          ],
+          [
+            -71.07072943,
+            42.29992615
+          ]
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD / Dorchester",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07072943,
+          42.29992615
+        ]
+      },
+      "properties": {
+        "school": "UP ACAD / Dorchester",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

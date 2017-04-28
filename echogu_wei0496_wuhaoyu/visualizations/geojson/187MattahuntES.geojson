@@ -1,0 +1,84 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.057577,
+            42.307069
+          ],
+          [
+            -71.11158,
+            42.29757
+          ],
+          [
+            -71.11884,
+            42.29489
+          ],
+          [
+            -71.11982,
+            42.29394
+          ],
+          [
+            -71.121155,
+            42.292424
+          ],
+          [
+            -71.13808,
+            42.29556
+          ],
+          [
+            -71.14083,
+            42.2947
+          ],
+          [
+            -71.10408944,
+            42.27581531
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Mattahunt ES",
+        "yard": "Read",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10408944,
+          42.27581531
+        ]
+      },
+      "properties": {
+        "school": "Mattahunt ES",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.057577,
+            42.307069
+          ],
+          [
+            -71.066991,
+            42.299637
+          ],
+          [
+            -71.07467,
+            42.29889
+          ],
+          [
+            -71.0789,
+            42.3141
+          ],
+          [
+            -71.07076,
+            42.32251
+          ],
+          [
+            -71.06497,
+            42.31675
+          ],
+          [
+            -71.0583,
+            42.32565
+          ],
+          [
+            -71.072272,
+            42.330923
+          ],
+          [
+            -71.06736,
+            42.34139
+          ],
+          [
+            -71.06889,
+            42.3427
+          ],
+          [
+            -71.06836,
+            42.34362
+          ],
+          [
+            -71.065641,
+            42.346638
+          ],
+          [
+            -71.12683,
+            42.35435
+          ],
+          [
+            -71.141201,
+            42.344524
+          ],
+          [
+            -71.06723124,
+            42.37908036
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Edwards Middle",
+        "yard": "Read",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06723124,
+          42.37908036
+        ]
+      },
+      "properties": {
+        "school": "Edwards Middle",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

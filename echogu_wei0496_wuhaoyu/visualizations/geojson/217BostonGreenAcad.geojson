@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.075801,
+            42.382205
+          ],
+          [
+            -71.07143,
+            42.38112
+          ],
+          [
+            -71.0419,
+            42.36964
+          ],
+          [
+            -71.04045,
+            42.36961
+          ],
+          [
+            -71.03997,
+            42.37027
+          ],
+          [
+            -71.0525,
+            42.33551
+          ],
+          [
+            -71.05434,
+            42.33105
+          ],
+          [
+            -71.05572,
+            42.33169
+          ],
+          [
+            -71.056191,
+            42.330693
+          ],
+          [
+            -71.07841,
+            42.34175
+          ],
+          [
+            -71.08284,
+            42.34104
+          ],
+          [
+            -71.08273,
+            42.33951
+          ],
+          [
+            -71.082924,
+            42.338252
+          ],
+          [
+            -71.083734,
+            42.338159
+          ],
+          [
+            -71.14596106,
+            42.35044073
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Boston Green Acad",
+        "yard": "Wash",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14596106,
+          42.35044073
+        ]
+      },
+      "properties": {
+        "school": "Boston Green Acad",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.075801,
+          42.382205
+        ]
+      },
+      "properties": {
+        "yard": "Wash",
+        "address": "60-66 Cambridge Street, Boston, MA, 02129",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

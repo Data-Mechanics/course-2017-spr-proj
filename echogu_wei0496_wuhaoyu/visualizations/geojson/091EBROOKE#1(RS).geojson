@@ -1,0 +1,124 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.057577,
+            42.307069
+          ],
+          [
+            -71.11387,
+            42.28884
+          ],
+          [
+            -71.11384,
+            42.28952
+          ],
+          [
+            -71.11397,
+            42.28988
+          ],
+          [
+            -71.11258,
+            42.29786
+          ],
+          [
+            -71.11473,
+            42.30267
+          ],
+          [
+            -71.11677,
+            42.30464
+          ],
+          [
+            -71.1171,
+            42.3075
+          ],
+          [
+            -71.1171,
+            42.3075
+          ],
+          [
+            -71.11686,
+            42.30885
+          ],
+          [
+            -71.11876,
+            42.30754
+          ],
+          [
+            -71.119257,
+            42.308618
+          ],
+          [
+            -71.11873,
+            42.31
+          ],
+          [
+            -71.119223,
+            42.310241
+          ],
+          [
+            -71.12471,
+            42.31223
+          ],
+          [
+            -71.12925,
+            42.30571
+          ],
+          [
+            -71.13047,
+            42.3042
+          ],
+          [
+            -71.1238752,
+            42.2818339
+          ]
+        ]
+      },
+      "properties": {
+        "school": "E BROOKE #1 (RS)",
+        "yard": "Read",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1238752,
+          42.2818339
+        ]
+      },
+      "properties": {
+        "school": "E BROOKE #1 (RS)",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.057577,
+          42.307069
+        ]
+      },
+      "properties": {
+        "yard": "Read",
+        "address": "10-34 Freeport St, Dorchester, MA, 02125",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

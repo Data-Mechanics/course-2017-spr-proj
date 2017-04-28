@@ -1,0 +1,88 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.080309,
+            42.333189
+          ],
+          [
+            -71.13684,
+            42.29497
+          ],
+          [
+            -71.14505,
+            42.29354
+          ],
+          [
+            -71.1422,
+            42.29073
+          ],
+          [
+            -71.14271,
+            42.29033
+          ],
+          [
+            -71.13603,
+            42.28351
+          ],
+          [
+            -71.14789,
+            42.28229
+          ],
+          [
+            -71.14737,
+            42.27196
+          ],
+          [
+            -71.12493061,
+            42.28363866
+          ]
+        ]
+      },
+      "properties": {
+        "school": "Irving MS",
+        "yard": "Frpt",
+        "stroke": "#003534",
+        "stroke-width": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12493061,
+          42.28363866
+        ]
+      },
+      "properties": {
+        "school": "Irving MS",
+        "marker-size": "small",
+        "marker-symbol": "college",
+        "marker-color": "#8cbdbc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.080309,
+          42.333189
+        ]
+      },
+      "properties": {
+        "yard": "Frpt",
+        "address": "2000 Washington Street, Boston, MA, 02119",
+        "marker-size": "small",
+        "marker-symbol": "bus",
+        "marker-color": "#d8b0e2"
+      }
+    }
+  ]
+}

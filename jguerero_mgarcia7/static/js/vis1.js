@@ -4,11 +4,13 @@ queue()
 
 function makeGraphs(error, nbjson) {
 
+	var formatNumber = d3.format(",d");
+
 	var minimum = 0, maximum = 100;
 	var minimumColor = "#BFD3E6", maximumColor = "#88419D";
 	var color = d3.scale.linear().domain([minimum, maximum]).range([minimumColor, maximumColor]);
 
-	var width = 1000, height = 600;
+	var width = 1000, height = 1000;
 	var albersProjection = d3.geo.albers()
 	  .scale( 190000 )
 	  .rotate( [71.057,0] )
@@ -19,6 +21,28 @@ function makeGraphs(error, nbjson) {
 
 	var counties = nbjson['features'];
 
+
+	/*
+
+				item['FoodScore'] = nb_tups[3]
+				item['avg_num_food'] = nb_tups[0]
+				item['dist_closest'] = nb_tups[1]
+				item['quality_food'] = nb_tups[2] 
+	*/
+
+
+	tip = d3.tip()
+		.attr('class', 'd3-tip')
+		.offset([150, 100])
+		.direction('n')
+		.html(function(d) {
+		return d['properties']['name'] + "<br/>Avg # of Food Sources: " + d['properties']['avg_num_food'].toFixed(2) +
+    "<br/>Avg Distance of Closest Food Source: " + d['properties']['dist_closest'].toFixed(2) + "<br/>Avg Quality of Food Sources: " + d['properties']['quality_food'].toFixed(2) +
+    	"<br/>Overall Score: " + d['properties']['score'].toFixed(2)
+	});
+
+	svg.call(tip);
+
 	//counties
     svg.append("g")
     .attr("class", "Neighborhood")
@@ -27,6 +51,8 @@ function makeGraphs(error, nbjson) {
 	.enter()
     .append("path")
     .attr("d", path)
+    .on('mouseover',tip.show)
+    .on('mouseout', tip.hide)
     .style("fill", function(d) {
         return color(d['properties']['score']);
     });
@@ -49,5 +75,8 @@ function makeGraphs(error, nbjson) {
 	var yAxis = d3.svg.axis().scale(y).orient("right");
 
 	key.append("g").attr("class", "y axis").attr("transform", "translate(42,10)").call(yAxis).append("text").attr("transform", "rotate(-90)").attr("y", 30).attr("dy", ".71em").style("text-anchor", "end").text("Score");
+
+
+	var formatNumber = d3.format(",d");
 
 };

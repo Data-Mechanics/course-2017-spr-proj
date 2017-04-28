@@ -21,7 +21,7 @@ def nbstats():
 	repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 
 	# Get stats for neighborhoods
-	FIELDS = {'_id': False, 'Average Obesity (%)':True, "FoodScore":True, "Average Income ($)":True, "Neighborhood":True}
+	FIELDS = {'_id': False, 'Average Obesity (%)':True, "FoodScore":True, "Average Income ($)":True, "Neighborhood":True, "dist_closest": True, "avg_num_food": True, "quality_food":True}
 	stats = {n['Neighborhood']:n for n in repo['jguerero_mgarcia7.neighborhoodstatistics'].find(projection=FIELDS)}
 
 
@@ -32,8 +32,13 @@ def nbstats():
 		try:
 			pnb = stats[n["name"]]
 			neighborhoods.append({"type":"Feature", "id":idx, 
-								"properties": {"name":n["name"], "avg_obesity": pnb['Average Obesity (%)'], "score": pnb["FoodScore"], "avg_income": pnb["Average Income ($)"]}, 
+								"properties": {"name":n["name"], "avg_obesity": pnb['Average Obesity (%)'], 
+								"score": pnb["FoodScore"], "avg_income": pnb["Average Income ($)"], 
+								"dist_closest": pnb["dist_closest"], "avg_num_food":pnb["avg_num_food"], 
+								"quality_food":pnb["quality_food"] }, 
 								"geometry":n['the_geom']})
+
+			idx += 1
 		except KeyError:
 			continue
 

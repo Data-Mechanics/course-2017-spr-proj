@@ -149,13 +149,22 @@ class calcfoodacc(dml.Algorithm):
 		# Create list of tuples that can be used to update a dictionary
 		info = dict([(nb,score) for nb, score in zip(nbs,scores)])
 
+		tups = [info.update({nb: (arr[0],arr[1],arr[2],s)}) for nb,arr,s in zip(nbs,avg_metrics,scores)]
+
 
 		# Insert food accessbility score in the repo
 		nstats = repo['jguerero_mgarcia7.neighborhoodstatistics'].find()
 		nstats = [row for row in nstats]
 		for item in nstats:
 			nb = item['Neighborhood']
-			item['FoodScore'] = info.get(nb)
+			try:
+				nb_tups = info.get(nb)
+				item['FoodScore'] = nb_tups[3]
+				item['avg_num_food'] = nb_tups[0]
+				item['dist_closest'] = nb_tups[1]
+				item['quality_food'] = nb_tups[2] 
+			except:
+				continue
 
 		repo.dropCollection("neighborhoodstatistics")
 		repo.createCollection("neighborhoodstatistics")

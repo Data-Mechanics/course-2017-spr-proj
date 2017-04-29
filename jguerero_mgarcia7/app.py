@@ -32,7 +32,7 @@ def nbstats():
 		try:
 			pnb = stats[n["name"]]
 			neighborhoods.append({"type":"Feature", "id":idx, 
-								"properties": {"name":n["name"], "avg_obesity": pnb['Average Obesity (%)'], 
+								"properties": {"name":n["name"], "obesity": pnb['Average Obesity (%)'], 
 								"score": pnb["FoodScore"], "avg_income": pnb["Average Income ($)"], 
 								"dist_closest": pnb["dist_closest"], "avg_num_food":pnb["avg_num_food"], 
 								"quality_food":pnb["quality_food"] }, 

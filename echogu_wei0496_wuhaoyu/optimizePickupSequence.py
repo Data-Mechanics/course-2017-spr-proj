@@ -1,10 +1,9 @@
-import urllib.request
-import json
+# import urllib.request
+# import json
 import dml
 import prov.model
 import datetime
 import uuid
-import math
 import random
 from geopy.distance import vincenty
 from tsp_solver.greedy import solve_tsp
@@ -156,5 +155,3 @@ class optimizePickupSequence(dml.Algorithm):
 # doc = optimizePickupSequence.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))
-
-## eof

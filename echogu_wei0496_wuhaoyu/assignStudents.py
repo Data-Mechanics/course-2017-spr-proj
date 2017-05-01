@@ -1,5 +1,5 @@
-import urllib.request
-import json
+# import urllib.request
+# import json
 import dml
 import prov.model
 import datetime
@@ -271,5 +271,3 @@ class assignStudents(dml.Algorithm):
 # doc = assignStudents.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))
-
-## eof

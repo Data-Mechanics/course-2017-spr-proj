@@ -1,10 +1,9 @@
-import urllib.request
-import json
+# import urllib.request
+# import json
 import dml
 import prov.model
 import datetime
 import uuid
-import math
 import random
 from geopy.distance import vincenty
 
@@ -150,5 +149,3 @@ class assignBusYards(dml.Algorithm):
 # doc = assignBusYards.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))
-
-## eof

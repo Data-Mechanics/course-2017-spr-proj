@@ -4,7 +4,7 @@ Team: [Lingyi Gu][lyg], [Wei Wei][ww], [Haoyu Wu][hyw]
 ## Objective
 The [Boston Public Schools][bps] has announced a [Transportation Challenge][tc].  Our group is really interested in this challenge and starts this project. It contributes to Step 2 of the Routing Challenge, which aims to improve the school bus routing efficiency.  Specifically, we want to optimize the route for each school bus to get all students  to school as quickly as possible. We use the data set  of students who attend Boston Public Schools and optimize the bus routes based on their locations. Detailed methods are listed as follow.
 
-## Optimization Methods
+## Modeling, Optimization, and Statistical Analysis
 ### Overall Assumption
 Consider the project deadline and our capability, we made a few assumptions for the sake of simplicity:
 1. We assume that students are picked up from their home location.
@@ -26,10 +26,10 @@ We have not assigned a bus yard to each mean point yet, but it can be done by fi
 ###### Special Cases:
 Some students live very close to each other so they have the same coordination in the dataset. Therefore, the Minimum Spanning Tree will return 0 as the total distance.
 ###### Issue:
-Although MST returns the minimum weight of the tree, the issue regarding it is that 
-the bus would go "there and back" for every subtree. This may lead to redundant traveling route. Another approach to find the efficient routing is to rank each student 
-based on their distance from the starting point, represented by {S1, S2, S3, S4,..., Sn} and run Dijkstra algorithm 
-to between each point to find the shortest route. However, we did not implement this algorithm in this Project because we are not sure which approach would be more efficient. 
+Although MST returns the minimum weight of the tree, the issue regarding it is that
+the bus would go "there and back" for every subtree. This may lead to redundant traveling route. Another approach to find the efficient routing is to rank each student
+based on their distance from the starting point, represented by {S1, S2, S3, S4,..., Sn} and run Dijkstra algorithm
+to between each point to find the shortest route. However, we did not implement this algorithm in this Project because we are not sure which approach would be more efficient.
 This is a potential algorithm we may implement in the final project to compare with the MST algorithm and decide which algorithm is more efficient.
 ## Running Time
 It takes approximately 15 minutes to the entire project.
@@ -70,3 +70,5 @@ $ python execute.py echogu_wei0496_wuhaoyu
 [bps]: http://www.bostonpublicschools.org/
 [tc]: http://bostonpublicschools.org/transportationchallenge
 [dm]: https://github.com/Data-Mechanics/course-2017-spr-proj
+
+## Reference

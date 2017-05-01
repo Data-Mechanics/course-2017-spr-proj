@@ -1,4 +1,7 @@
-# Project 2: Modeling, Optimization, and Statistical Analysis
+# Boston Public School Transportation Challenge
+School Bus Routing System Optimizations
+
+## Modeling, Optimization, and Statistical Analysis
 Team: [Lingyi Gu][lyg], [Wei Wei][ww], [Haoyu Wu][hyw]
 
 ## Objective
@@ -49,7 +52,9 @@ If the input data set is small enough, we pass the trial; otherwise, we select `
 assigned_students = random.choice(assigned_students, k = 10)
 ```
 
-## Setting Up
+## Visualization
+
+## Installation
 Follows the procedure in [Data-Mechanics/course-2017-spr-proj][dm].
 
 ###### Required libraries

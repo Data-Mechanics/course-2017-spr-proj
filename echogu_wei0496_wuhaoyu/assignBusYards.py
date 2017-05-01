@@ -1,5 +1,3 @@
-# assignBusYards.py
-
 import urllib.request
 import json
 import dml
@@ -45,30 +43,51 @@ class assignBusYards(dml.Algorithm):
         # loads the bus yard information
         raw_buses = repo['echogu_wei0496_wuhaoyu.buses'].find()
         buses = []
+        yards = []
         for item in raw_buses:
-            buses.append({'coordinates': tuple(reversed(item['geometry']["coordinates"])),
-                          'yard': item['properties']['yard'],
-                          'address': item['properties']['address']})
+            if item['properties']['yard'] not in yards:
+                buses.append({'coordinates': tuple(reversed(item['geometry']["coordinates"])),
+                              'yard': item['properties']['yard'],
+                              'address': item['properties']['address']})
+                yards += [item['properties']['yard']]
 
         # find the closest bus yard to the first or last student in sequence
         route = []
         for s in pickup_sequence:
-            origin = []
+            origin = {}
             min_dis = float('inf')
             first_student = s['pickup_sequence'][0]
             first_student_loc = (first_student['latitude'], first_student['longitude'])
+            last_student = s['pickup_sequence'][-1]
+            last_student_loc = (last_student['latitude'], last_student['longitude'])
+            reverse_sequence = False
 
             for bus in buses:
-                temp_dis = assignBusYards.distance(bus['coordinates'], first_student_loc)
-                if(temp_dis < min_dis):
+                dis_to_first = assignBusYards.distance(bus['coordinates'], first_student_loc)
+                dis_to_last = assignBusYards.distance(bus['coordinates'], last_student_loc)
+                if(dis_to_first < min_dis):
                     origin = bus
-                    min_dis = temp_dis
-            route.append({'school': s['school'],
-                          'school location': s['location'],
-                          'bus yard': origin['yard'],
-                          'yard location': origin['coordinates'],
-                          'yard address': origin['address'],
-                          'pickup_sequence': s['pickup_sequence']})
+                    min_dis = dis_to_first
+                    reverse_sequence = False
+                if(dis_to_last < min_dis):
+                    origin = bus
+                    min_dis = dis_to_first
+                    reverse_sequence = True
+
+            if reverse_sequence:
+                route.append({'school': s['school'],
+                              'school location': s['location'],
+                              'bus yard': origin['yard'],
+                              'yard location': origin['coordinates'],
+                              'yard address': origin['address'],
+                              'pickup_sequence': list(reversed(s['pickup_sequence']))})
+            else:
+                route.append({'school': s['school'],
+                              'school location': s['location'],
+                              'bus yard': origin['yard'],
+                              'yard location': origin['coordinates'],
+                              'yard address': origin['address'],
+                              'pickup_sequence': s['pickup_sequence']})
 
         # store bus routes into the database
         repo.dropCollection('bus_route')

@@ -1,5 +1,3 @@
-# assignStudents.py
-
 import urllib.request
 import json
 import dml

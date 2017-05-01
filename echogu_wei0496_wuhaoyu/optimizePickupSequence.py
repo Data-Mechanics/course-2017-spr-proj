@@ -1,5 +1,3 @@
-# optimizePickupSequence.py
-
 import urllib.request
 import json
 import dml

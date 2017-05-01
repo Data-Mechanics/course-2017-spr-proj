@@ -1,5 +1,3 @@
-# optimizeBusRoute.py
-
 import urllib.request
 import json
 import dml
@@ -10,7 +8,6 @@ import math
 import random
 import geojson
 import re
-#import xlsxwriter
 
 class finalizeBusRoute(dml.Algorithm):
     contributor = 'echogu_wei0496_wuhaoyu'
@@ -78,10 +75,9 @@ class finalizeBusRoute(dml.Algorithm):
                 features_yards.append(geojson.Feature(geometry=geometry, properties=properties))
                 yards += [r['bus yard']]
 
-        features += features_schools
-        features += features_yards
-
         open('echogu_wei0496_wuhaoyu/visualizations/geojson/route.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features), indent=2))
+        open('echogu_wei0496_wuhaoyu/visualizations/geojson/schools.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_schools), indent=2))
+        open('echogu_wei0496_wuhaoyu/visualizations/geojson/yards.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_yards), indent=2))
 
         # store bus route into database in geojson format
         repo.dropCollection('bus_route_final')

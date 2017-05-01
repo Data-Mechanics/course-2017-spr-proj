@@ -45,6 +45,9 @@ class getRedLine(dml.Algorithm):
         for dic in res:
             repo['jgrishey.redlineStations'].insert(dic)
 
+        with open('./proj3/data/redline.json', 'w') as fp:
+            json.dump(res, fp)
+
         repo.logout()
 
         endTime = datetime.datetime.now()
@@ -88,8 +91,9 @@ class getRedLine(dml.Algorithm):
         repo.logout()
 
         return doc
-'''
+
 getRedLine.execute()
+'''
 doc = getRedLine.provenance()
 with open('getRedLineProvenance.json', 'w') as file:
     json.dump(json.loads(doc.serialize()), file, indent=4)

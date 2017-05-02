@@ -18,28 +18,15 @@ header {
     top: 0;
     right: 0;
     left: 0;
-    padding: 25px 90px;
-    -webkit-box-shadow: 0 4px 6px -6px #999;
-    -moz-box-shadow: 0 4px 6px -6px #999;
-    box-shadow: 0 4px 6px -6px #999;
-}
-.header {
-    float: left;
-    font-weight: bold;
-}
-#sitename {
-    font-size: 130%;
-}
-#tagline {
-    color: grey;
-    font-size: 110%;
+    height: 40px;
+    -webkit-box-shadow: 0 5px 6px -8px #999;
+    -moz-box-shadow: 0 5px 6px -8px #999;
+    box-shadow: 0 5px 6px -8px #999;
 }
 
 /* navigation */
 .nav {
     float: right;
-    padding-right: auto;
-    padding-top: 20px;
 }
 .nav ul {
     list-style: none;
@@ -61,7 +48,7 @@ header {
 .nav ul li a {
     position: relative;
     display: block;
-    padding: 8px 0;
+    padding: 12px 0;
     margin: 0 3px;
     font-size: 13px;
     letter-spacing: 1px;
@@ -74,7 +61,7 @@ header {
     display: block;
     position: absolute;
     left: 0;
-    bottom: 3px;
+    bottom: 9px;
     height: 3px;
     width: 100%;
     background-color: #ace;
@@ -92,16 +79,12 @@ header {
 
 /* content */
 #content {
-    text-align: center;
     clear: both;
-    padding: 110px 0;
-}
-#content h2 {
-    margin: 40px 0;
+    padding-top: 40px;
 }
 
 /* footer */
 footer {
     text-align: center;
-    padding: 20px;
+    /*padding: 20px;*/
 }

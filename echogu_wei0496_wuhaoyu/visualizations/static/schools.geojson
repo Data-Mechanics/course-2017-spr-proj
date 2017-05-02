@@ -1,0 +1,1881 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06107059,
+          42.38011868
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Charlestown High School"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1047806,
+          42.26725865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Chittick ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12732061,
+          42.25676865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Grew ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05749225,
+          42.37662852
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Harvard/Kent ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03492143,
+          42.38095746
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "East Boston HS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05215122,
+          42.33802589
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Condon ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0947344,
+          42.2948338
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "E BROOKE #2 (MT)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.00504508,
+          42.39161618
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Bradley ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13332061,
+          42.25162865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Channing Elementary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05319154,
+          42.28655025
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Kenny ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.17434062,
+          42.28226865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "West Roxbury Academy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07893913,
+          42.31496685
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Haynes EEC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08066202,
+          42.29656011
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Greenwood S K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03489031,
+          42.365563
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Adams ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1259805,
+          42.2548081
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Boston Prep"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05976976,
+          42.31368761
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Everett ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0875863,
+          42.3013299
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Bridge Boston 2-4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0608867,
+          42.3012901
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Davis Leadership Acad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07352059,
+          42.34436867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "McKinley Elementary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12345117,
+          42.24295076
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Roosevelt K-8 (2-8)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06905025,
+          42.34840829
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Quincy Upper School"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0742567,
+          42.3583139
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Advent School"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10676061,
+          42.34794867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "McKinley Middle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11421891,
+          42.31868548
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Curley K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1238752,
+          42.2818339
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "E BROOKE #1 (RS)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0986391,
+          42.3113024
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Conservatory Lab Carney"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07560026,
+          42.2967885
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Holmes ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0600473,
+          42.3206748
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Pope JP II Col Rd"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0909706,
+          42.33039867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Timilty MS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07300863,
+          42.28660893
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Lee Acad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06443059,
+          42.37799868
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Warren Prescott K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0628483,
+          42.3217541
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Boston Collegiate Lower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03794008,
+          42.37156844
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Alighieri Elementary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14105061,
+          42.28122866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Mozart Elementary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1059155,
+          42.3051414
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "MATCH MS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10693577,
+          42.32629276
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "West Zone ELC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13533061,
+          42.27776866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Bates ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06723124,
+          42.37908036
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Edwards Middle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0810657,
+          42.303422
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Roxbury Prep Dorchester Campus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07679145,
+          42.28779215
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "TechBoston Academy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07743057,
+          42.27786075
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Taylor ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14549062,
+          42.34908867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Brighton HS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13770062,
+          42.35205867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Jackson/Mann"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13770062,
+          42.35205867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Horace Mann"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06222064,
+          42.29396673
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "HENDERSON K-2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0209717,
+          42.3827059
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Excel Acad 1 (EB)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1016106,
+          42.31655866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Mendell ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1096006,
+          42.30600866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "English HS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0658083,
+          42.3112403
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Conservatory Lab Hancock"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0742432,
+          42.2894184
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Codman Acad Lower"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05336967,
+          42.36610274
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Eliot K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07541082,
+          42.30905402
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Frederick MS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03841128,
+          42.33487071
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Tynan ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10408944,
+          42.27581531
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Mattahunt ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07790902,
+          42.33027521
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Orchard Gardens K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15837062,
+          42.28299866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Lyndon K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07072943,
+          42.29992615
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "UP ACAD / Dorchester"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14596106,
+          42.35044073
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Boston Green Acad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0739924,
+          42.3564758
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Park Street Sch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0846368,
+          42.2778235
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Pope JP II Lower Mills"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09812021,
+          42.31393788
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "HERNANDEZ K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.16019062,
+          42.34558867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Edison K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0982906,
+          42.33301867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Tobin K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.16257013,
+          42.27188582
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Kilmer K-3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07337366,
+          42.32192747
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Dudley Street Neighborhood"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10691069,
+          42.32562212
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Hennigan ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11774061,
+          42.28540866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Philbrick ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08684033,
+          42.28212094
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "SHAW ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08784105,
+          42.31574003
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Trotter ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03019874,
+          42.33212077
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Perry K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07246107,
+          42.34073755
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Blackstone ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03389058,
+          42.37527868
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Otis ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0548936,
+          42.3639082
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "St John"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1553486,
+          42.3476017
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Winship ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13411062,
+          42.36076867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Gardner Pilot Acad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04032982,
+          42.37828999
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Umana Acad K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03048029,
+          42.3785453
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Kennedy PJ ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05954941,
+          42.32038241
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Russell ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.00412057,
+          42.38879868
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Guild ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13149061,
+          42.30558866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Manning ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1526401,
+          42.2994837
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Boston Renaissance ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06492059,
+          42.34797867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Quincy ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04919406,
+          42.29420618
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Murphy K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0910406,
+          42.32554867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Hale ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.17434062,
+          42.28226865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Urban Science Academy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1082974,
+          42.2614165
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Match Community Day"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0875863,
+          42.3013299
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Bridge Boston"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07352059,
+          42.34436867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "McKinley SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04489058,
+          42.33286867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Excel HS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0756266,
+          42.31820265
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Winthrop ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0904296,
+          42.27676066
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Mildred Ave K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07385902,
+          42.30561813
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "UP ACAD - Holland ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05054059,
+          42.33131867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Perkins ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0902906,
+          42.33175867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Madison Park HS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09289159,
+          42.3163343
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Ellis ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03801072,
+          42.37808862
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "ODonnell ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08037542,
+          42.2924381
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Lee ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05819134,
+          42.3231762
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Clap ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0732756,
+          42.2955009
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Roxbury Prep Lucy Stone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03430758,
+          42.36927368
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "McKay K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.03411995,
+          42.36967602
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "East Boston EEC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0777406,
+          42.33875867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Hurley K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08080771,
+          42.30739517
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Dearborn STEM Acad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1077206,
+          42.28675866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Haley K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.05042966,
+          42.33357372
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "UP ACAD / S BOSTON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.16150062,
+          42.35107867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Lyon K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06956993,
+          42.28126173
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "HENDERSON 3-12"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15613062,
+          42.26343865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Beethoven ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09500233,
+          42.28231466
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Young Achievers"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13288061,
+          42.23389865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Roosevelt K-8 (K1-1)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09202957,
+          42.31766019
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Higginson K-2 (Harrishoff St)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0298419,
+          42.3785464
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Excel Acad 2 (EB)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04350058,
+          42.31802867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "McCormack MS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08630957,
+          42.32094834
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Higginson/Lewis K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11386744,
+          42.30703515
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Mission Hill K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.04274058,
+          42.31762867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Dever Elementary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10583938,
+          42.32178533
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Kennedy JF ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12705061,
+          42.27479865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Conley ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15236762,
+          42.29266066
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Kilmer 4-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07619659,
+          42.31129966
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "King K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12493061,
+          42.28363866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Irving MS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07133141,
+          42.32621703
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Mason ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12684061,
+          42.28645866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Sumner ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06172942,
+          42.30112879
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Comm Acad Sci & Health"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14051062,
+          42.34203867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Baldwin ELC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1181739,
+          42.2946217
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Boston Teachers Union K-8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0992606,
+          42.34343867
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "McKinley Prep HS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0184877,
+          42.3827859
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "E BROOKE #3 (EB)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0918906,
+          42.27178866
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Ellison/Parks EES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06101177,
+          42.30839621
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Mather ES"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1375826,
+          42.2777394
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "BCLA - Boston Comm Lead Acad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0556393,
+          42.2933291
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Neighborhood House"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.094632,
+          42.2745321
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "KIPP Academy Boston"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14961061,
+          42.26075865
+        ]
+      },
+      "properties": {
+        "type": "school",
+        "school": "Ohrenberger"
+      }
+    }
+  ]
+}

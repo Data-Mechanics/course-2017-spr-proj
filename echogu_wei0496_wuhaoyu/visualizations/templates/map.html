@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>BPS Transportation Challenge</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+        <!-- Leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+        integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+        integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+        crossorigin="http"></script>
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/map">Map</a></li>
+                    <li><a href="https://github.com/lingyigu/course-2017-spr-proj/tree/master/echogu_wei0496_wuhaoyu">GitHub</a></li>
+                    <li><a href="http://datamechanics.org/">Data Mechanics</a></li>
+                    <li><a href="http://bostonpublicschools.org/transportationchallenge">Challenge</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="content">
+            <div id="form">
+                <form class="form-inline" method="POST" action="{{ url_for('select_school') }}">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">Please select</span>
+                            <select name="school" class="selectpicker form-control">
+                                {% for school in schools %}
+                                <option value="{{ school }}">{{ school }}</option>
+                                {% endfor %}
+                                </select>
+                            </div>
+                        <button type="submit" class="btn btn-default">Visualize</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="map" style="height: 100vh; width: 100vw;"></div>
+            <script>
+                var map = L.map('map').setView([42.3098, -71.0891], 12);
+                L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGluZ3lpZ3UiLCJhIjoiY2oyMHBpMGRmMDVsYTJ3cDg3cHZ6NXIwZSJ9.jXqXRJ1ZPsRlMvKJJslipA', {
+                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                    maxZoom: 18,
+                    minZoom: 10
+                }).addTo(map);
+
+                // routes
+                {% if route %}
+                var route = {{ route }};
+                L.geoJSON(route, {
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties) {
+                            layer.bindPopup("Yard: " + feature.properties.yard + " -> School: " + feature.properties.school);
+                        }
+                    },
+                    style: {
+                        "color": "#6E7783",
+                        "weight": 1.5,
+                        "opacity": 0.8
+                    }
+                }).addTo(map);
+                {% else %}
+                $.getJSON("{{ url_for('static', filename='route.geojson') }}", function(route) {
+                    L.geoJSON(route, {
+                        onEachFeature: function(feature, layer) {
+                            if (feature.properties) {
+                                layer.bindPopup("Yard: " + feature.properties.yard + " -> School: " + feature.properties.school);
+                            }
+                        },
+                        style: {
+                            "color": "#6E7783",
+                            "weight": 1.5,
+                            "opacity": 0.8
+                        }
+                    }).addTo(map);
+                });
+                {% endif %}
+
+                var styleYard = {
+                    radius: 5,
+                    fillColor: "#D1B6E1",
+                    color: "#000",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 1
+                };
+
+                var styleSchool = {
+                    radius: 5,
+                    fillColor: "#9DC8C8",
+                    color: "#000",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 1
+                };
+
+                // yard
+                $.getJSON("{{ url_for('static', filename='yards.geojson') }}", function(yards) {
+                    L.geoJSON(yards, {
+                        onEachFeature: function(feature, layer) {
+                            if (feature.properties) {
+                                layer.bindPopup("Yard: <b>" + feature.properties.yard + "</b><br>" + feature.properties.address);
+                            }
+                        },
+                        pointToLayer: function (feature, latlng) {
+                            return L.circleMarker(latlng, styleYard);
+                        }
+                    }).addTo(map);
+                });
+
+                // school
+                $.getJSON("{{ url_for('static', filename='schools.geojson') }}", function(schools) {
+                    L.geoJSON(schools, {
+                        onEachFeature: function(feature, layer) {
+                            if (feature.properties) {
+                                layer.bindPopup("School: <b>" + feature.properties.school);
+                            }
+                        },
+                        pointToLayer: function (feature, latlng) {
+                            return L.circleMarker(latlng, styleSchool);
+                        }
+                    }).addTo(map);
+                });
+
+            </script>
+        </div>
+
+        <footer>
+            <ul>
+                <p>&copy; CS591L1 Data Mechanics Spring 2017</p>
+            </ul>
+        <footer>
+    </body>
+</html>

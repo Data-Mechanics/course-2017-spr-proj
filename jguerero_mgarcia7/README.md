@@ -37,31 +37,31 @@ After finding these values for each house in the neighborhood, we calculated the
 
 | Neighborhood                |   Avg # of Food Sources* |   Avg Distance To Closest Food Source (km) |   Quality of Food Sources* |   Composite Z-score |
 |:----------------------------|-------------------------:|-------------------------------------------:|---------------------------:|--------------------:|
-| Mission Hill                |                    21.71 |                                       0.23 |                       0.62 |                1.96 |
-| Financial District/Downtown |                    21.25 |                                       0.23 |                       0.39 |                0.37 |
-| Allston/Brighton            |                   168.37 |                                       0.38 |                       0.11 |               -0.73 |
-| North End                   |                    53.38 |                                       0.15 |                       0.46 |                1.60 |
-| South End                   |                   194.94 |                                       0.19 |                       0.34 |                2.02 |
-| Bay Village                 |                     8.00 |                                       0.19 |                       0.33 |                0.07 |
-| Fenway/Kenmore              |                   131.82 |                                       0.20 |                       0.36 |                1.51 |
-| Charlestown                 |                    59.70 |                                       0.28 |                       0.40 |                0.64 |
-| South Boston                |                   118.53 |                                       0.36 |                       0.20 |               -0.50 |
-| Mattapan                    |                    77.00 |                                       0.42 |                       0.19 |               -1.39 |
-| Jamaica Plain               |                    84.76 |                                       0.45 |                       0.29 |               -0.75 |
-| Roslindale                  |                    64.98 |                                       0.48 |                       0.24 |               -1.42 |
-| Hyde Park                   |                    56.50 |                                       0.57 |                       0.12 |               -2.82 |
-| East Boston                 |                   174.04 |                                       0.23 |                       0.19 |                0.67 |
-| Back Bay                    |                    87.85 |                                       0.30 |                       0.62 |                2.26 |
-| Beacon Hill                 |                     9.00 |                                       0.30 |                       0.33 |               -0.51 |
-| Roxbury                     |                   200.25 |                                       0.38 |                       0.13 |               -0.25 |
-| West Roxbury                |                    20.95 |                                       1.05 |                       0.26 |               -4.76 |
-| Dorchester                  |                   423.66 |                                       0.37 |                       0.10 |                1.88 |
-| West End                    |                    10.00 |                                       0.29 |                       0.42 |                0.16 |
+| Financial District/Downtown |                     8.50 |                                       0.23 |                       0.39 |              100.00 |
+| Bay Village                 |                     2.00 |                                       0.19 |                       0.33 |               63.05 |
+| Dorchester                  |                     7.14 |                                       0.37 |                       0.10 |               61.93 |
+| Mission Hill                |                     2.86 |                                       0.23 |                       0.62 |               87.91 |
+| Beacon Hill                 |                     1.00 |                                       0.30 |                       0.33 |               50.89 |
+| Charlestown                 |                     5.70 |                                       0.28 |                       0.40 |               83.44 |
+| East Boston                 |                     6.83 |                                       0.23 |                       0.19 |               76.14 |
+| West End                    |                     4.00 |                                       0.29 |                       0.42 |               74.65 |
+| Mattapan                    |                     4.16 |                                       0.42 |                       0.19 |               49.59 |
+| Roxbury                     |                     4.26 |                                       0.38 |                       0.13 |               48.52 |
+| North End                   |                     4.86 |                                       0.15 |                       0.46 |               90.73 |
+| South End                   |                     7.88 |                                       0.19 |                       0.34 |               94.98 |
+| West Roxbury                |                     0.95 |                                       1.05 |                       0.26 |                0.00 |
+| Allston/Brighton            |                     4.26 |                                       0.38 |                       0.11 |               46.78 |
+| South Boston                |                     4.55 |                                       0.36 |                       0.20 |               56.93 |
+| Back Bay                    |                     4.12 |                                       0.30 |                       0.62 |               90.34 |
+| Fenway/Kenmore              |                     7.76 |                                       0.20 |                       0.36 |               95.94 |
+| Jamaica Plain               |                     4.70 |                                       0.45 |                       0.29 |               58.97 |
+| Hyde Park                   |                     2.82 |                                       0.57 |                       0.12 |               28.20 |
+| Roslindale                  |                     2.84 |                                       0.48 |                       0.24 |               43.50 |
 
 
 \* *Within walking distance of a residence, which we defined to be < 1km*
 
-The composite Z-score is what we are considering our food accessibility score per neighborhood. A high, positive score denotes that the food accessibility is better in that neighborhood compared to other neighborhoods in Boston.  In our case, the best neighborhood in regards to food accessibility belongs is Back Bay, whereas the worst is West Roxbury. 
+The composite Z-score is what we are considering our food accessibility score per neighborhood. This number is scaled between 0 and 100. A high score denotes that the food accessibility is better in that neighborhood compared to other neighborhoods in Boston.  In our case, the best neighborhood in regards to food accessibility belongs is Financial District/Downtown, whereas the worst is West Roxbury. 
 
 ### Determining Correlation: Our Coefficient Correlation Array ###
 
@@ -71,21 +71,11 @@ The composite Z-score is what we are considering our food accessibility score pe
 |**Income** | -0.0243795  |   1.0         |  -0.54327576  |                       
 |**Obesity** | -0.41433783 |   -0.54327576 |  1.0          |
 
-Shown above is our coefficient correlation array
-for our three variables containing data from foodscore, 
-income, and obesity. Our calculations have determined that
-each of our coefficient correlations have successfully fallen
-in between the values 1 and -1. It appears that between each
-pair of distinct variables, there is a slight negative assocation
-that each variable has with each other. The 1's that are shown
-are obviously the full association that each variable has with its 
-own self. The variables' own coefficient correlation with itself
-irrefutably lies on the positive line of best fit representing a 
-positive correlation. 
+Shown above is our coefficient correlation array for our three variables containing data from food score, income, and obesity. The correlation coefficient array shows that there is a relatively strong negative correlation between obesity and income, as well as between the food accessibility score and obesity. However, there doesn't seem to be any correlation between the food accessbility score and the income. 
 
-Specfically, the correlation coefficient array shows that there is a relatively strong negative correlation between obesity and income, as well as between the food accessibility score and obesity. However, there doesn't seem to be any correlation between the food accessbility score and the income. 
+# Conclusion/Future Work
 
-We also decided to create a linear regression model in order to give us an idea of how related the independent variables (food accessbility and income) were to the dependent variable (obesity). 
+Based on data characterizing Boston’s neighborhoods, we can conclude that there is a definite relationship between income and food accessibility on incidence of obesity. In both cases, it was found that the higher the income and the higher the food score, the lower the obesity. This resonates with research being done that frame obesity as a social problem, and one that  can thus be fixed by improving the overall economic outlook of a neighborhood, as well as increasing food accessibility to better quality food sources. However, though the results looks promising, our sample size of 20 neighborhoods is too small to really allow us to make any meaningful conclusions about the relationship between food accessibility,  income, and obesity. In the future, we would look to extend this method of analysis to more cities and their neighborhoods.
 
 # Required libraries and tools
 The libraries pyshp, shapely, geopy, numpy, pickle, scipy, sklearn will need to be installed before the program can be executed. They can be installed with these pip3 commands:

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Impact of Crime on Property Values</title>
+        <link rel="stylesheet" href="../static/main.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+        <!-- Leaflet -->
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+        integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+        integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+        crossorigin=""></script>
+        
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/map">Map</a></li>
+                    <li><a href="/relation">Relation Graph</a></li>
+                    <li><a href="https://github.com/sylvia0801/course-2017-spr-proj/tree/master/pt0713_silnuext">GitHub</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="content">
+        </div>
+
+        <footer>
+            <ul>
+                <p>&copy; CS 591 L1 Data Mechanics Spring 2017 @ Boston University</p>
+            </ul>
+        <footer>
+    </body>
+</html>

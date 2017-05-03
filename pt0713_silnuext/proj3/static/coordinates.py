@@ -16,13 +16,13 @@ def get_coordinates():
 coordinates = get_coordinates()
 
 features = []
-for coordinate in coordinates:
-	properties = {'marker_color': "#1007ED", 
-				  'marker_symbol': "danger-11",
-				  'crime location': coordinate
-				   }
-	geometry = geojson.Point(coordinate)
-	features.append(geojson.Feature(geometry=geometry, properties=properties))
+for zipcode in zip_to_points:
+	for point in zip_to_points[zipcode]:
+		properties = {'crime location': point,
+					  'zip code': zipcode
+					   }
+		geometry = geojson.Point(point)
+		features.append(geojson.Feature(geometry=geometry, properties=properties))
 
 
 open('map_to_points.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features)))

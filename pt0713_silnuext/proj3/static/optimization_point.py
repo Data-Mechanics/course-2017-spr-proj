@@ -1,9 +1,7 @@
 import geojson
 
 features = []
-properties = {'marker_color': "#FOO", 
-			  'marker_symbol': "embassy-11",
-			  'specific point': "Safest Point in Boston",
+properties = {'specific point': "Safest Point in Boston",
 			  'acheiving way': "k-means",
 			  'coordinates': [
 			    -71.0831821237185, 

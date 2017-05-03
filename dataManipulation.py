@@ -1,6 +1,4 @@
-from random import shuffle
-from math import sqrt
-
+#Helper functions taken from lecture
 def union(R, S):
     return R + S
 
@@ -29,13 +27,16 @@ def map(f, R):
 def reduce(f, R):
     keys = {k for (k,v) in R}
     return [f(k1, [v for (k2,v) in R if k1 == k2]) for k1 in keys]
+	
 
+
+#Additional helper functions
 def normalizeDict(X, keyName, valName):
     justVals = [int(i.get(valName)) for i in X]
     justKeys = [i.get(keyName) for i in X]
     avg = sum(justVals)/len(justVals)
     normalizedVals = project(justVals, lambda x: x/avg)
-    Y = [{"Zip Code":justKeys[i],"Crime Risk Index":normalizedVals[i]} for i in range(len(justKeys))]
+    Y = [{justKeys[i]:normalizedVals[i]} for i in range(len(justKeys))]
     return Y    
 
 def createTiers(X, A, k):
@@ -64,14 +65,14 @@ def assignTier(X, Y, A):
 def pullGrad(X, keyName, valName):
     justVals = [float(i.get(valName)) for i in X]
     justKeys = [i.get(keyName) for i in X]
-    Y = [{"Zip Code":justKeys[i],"College_Grad_Rate":justVals[i]} for i in range(len(justKeys))]
+    Y = [{justKeys[i]:justVals[i]} for i in range(len(justKeys))]
     
     return Y
 
 def pullAges(X, keyName, valName):
     justVals = [float(i.get(valName)) for i in X]
     justKeys = [i.get(keyName) for i in X]
-    Y = [(justKeys[i],justVals[i]) for i in range(len(justKeys))]
+    Y = [{justKeys[i]:justVals[i]} for i in range(len(justKeys))]
     
     return Y
 
@@ -104,36 +105,3 @@ def maxRate(X):
     tierToMax = [(1998,max1),(1806,max2),(1614,max3),(1422,max4),(1230,max5)]
     
     return tierToMax
-
-def permute(x):
-    shuffled = [xi for xi in x]
-    shuffle(shuffled)
-    return shuffled
-
-def avg(x): # Average
-    return sum(x)/len(x)
-
-def stddev(x): # Standard deviation.
-    m = avg(x)
-    return sqrt(sum([(xi-m)**2 for xi in x])/len(x))
-
-def cov(x, y): # Covariance.
-    return sum([(xi-avg(x))*(yi-avg(y)) for (xi,yi) in zip(x,y)])/len(x)
-
-def corr(x, y): # Correlation coefficient.
-    if stddev(x)*stddev(y) != 0:
-        return cov(x, y)/(stddev(x)*stddev(y))
-
-def p(x, y):
-    c0 = corr(x, y)
-    corrs = []
-    for k in range(0, 2000):
-        y_permuted = permute(y)
-        corrs.append(corr(x, y_permuted))
-    return len([c for c in corrs if abs(c) > c0])/len(corrs)
-
-    
-
-
-
-    

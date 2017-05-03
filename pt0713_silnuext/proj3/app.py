@@ -11,4 +11,11 @@ def home():
 	return render_template('index.html')
 
 
-# Interactive Scatter Plot
+# Interactive Map
+def get_crime_points():
+	crime_points = json.load(open('static/map_to_points.geojson', 'r'))
+	return crime_points
+
+def get_optimization_point():
+	optimization_point = json.load(open('static/optimization.geojson', 'r'))
+	return optimization_point

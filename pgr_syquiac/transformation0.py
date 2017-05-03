@@ -36,10 +36,14 @@ class transformation0(dml.Algorithm):
         locations = []
         print("Gathering all the hospitals in Boston...")
         # For each hospital, collect doctor visiting rates in the vicinity
+
+
         for i in bosHospitalsRepo.find():
             # Create an empty list of doctor visit rates
             i['doctorVisits'] = []
             locations.append(i)
+
+
 
         visits = []
         print("Collecting appropriate data from CDC data set...")
@@ -48,6 +52,10 @@ class transformation0(dml.Algorithm):
             if (i['measure'] == 'Visits to doctor for routine checkup within the past Year among adults aged >=18 Years' or
                 i['measureid'] == 'CHECKUP'):
                 visits.append(i)
+
+
+        print(visits[0])
+  
 
         print("Mapping rates to closest hospitals...")
         for i in visits:

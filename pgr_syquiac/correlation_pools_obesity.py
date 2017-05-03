@@ -10,7 +10,7 @@ Calculates the correlation between obesity rates and number of pools in proximit
 import urllib.request
 import json
 import dml
-import prov.model™
+import prov.model
 import datetime
 import uuid
 import sodapy
@@ -139,7 +139,7 @@ class correlation_pools_obesity(dml.Algorithm):
 
         return doc
 
-# correlation_pools_obesity.execute()
+correlation_pools_obesity.execute()
 # doc = correlation_pools_obesity.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

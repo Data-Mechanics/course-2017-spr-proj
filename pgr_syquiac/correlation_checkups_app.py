@@ -1,6 +1,6 @@
 '''
 Pauline Ramirez & Carlos Syquia
-correlation_checkups_hospital.py
+correlation_checkups_app.py
 
 Calculates the correlation between annual check ups and distance from a hospital
 
@@ -18,13 +18,13 @@ from geopy.distance import vincenty
 from geopy.geocoders import Nominatim
 import scipy.stats
 
-class correlation_checkups_hospital(dml.Algorithm):
+class correlation_checkups_app(dml.Algorithm):
     contributor = 'pgr_syquiac'
     reads = ['pgr_syquiac.hospitals_doctor_visits']
     writes = ['pgr_syquiac.visit_rate_distance']
 
     @staticmethod
-    def execute(trial = False):
+    def execute(distance, trial = False):
         startTime = datetime.datetime.now()
 
         # Set up the database connection.
@@ -37,36 +37,12 @@ class correlation_checkups_hospital(dml.Algorithm):
         # Append tuples of (distance_nearest_hospital, rate_of_checkup, name_of_hospital) to here
         rates = []
 
-        # Let the user choose the max distance from each hospital
-        distance = input("Please enter a distance in miles, or press enter to observe all data points: ")
-
-        if not distance == '':
-        	distance = float(distance)
-        	print("Observing data points within a " + str(distance) + " mile distance of their nearest hospital...")
-
-
-        # get the distance of each data point from their closest hospital
-        # get the rate of people going to the doctor for a checkup
-
-        count = 0
         for i in visits:
-        	if trial and count > 1000:
-        		break
-        	else:
-	        	for j in i['doctorVisits']:
-	        		rate_distance = vincenty(j['geolocation']['coordinates'], i['location']['coordinates']).miles
-	        		if 'data_value' in j:
-	        			# If the user doesn't decide a distance then add all the data points
-	        			if distance == '':
-	        				rates.append({'distance_nearest_hospital': rate_distance,
-	        				'rate_of_checkup': float(j['data_value']), 'name_of_hospital': i['name']})
-	        				count += 1
-	        			# Otherwise add all the data points within the specified distance
-	        			else:
-	        				if rate_distance < distance:
-	        					rates.append({'distance_nearest_hospital': rate_distance,
-	        					'rate_of_checkup': float(j['data_value']), 'name_of_hospital': i['name']})
-	        					count += 1
+            for j in i['doctorVisits']:
+                rate_distance = vincenty(j['geolocation']['coordinates'], i['location']['coordinates']).miles
+                if 'data_value' in j and rate_distance < float(distance):
+                    rates.append({'distance_nearest_hospital': rate_distance,
+                    'rate_of_checkup': float(j['data_value']), 'name_of_hospital': i['name']})
 
         repo.dropPermanent("visit_rate_distance")
         repo.createPermanent("visit_rate_distance")
@@ -74,7 +50,7 @@ class correlation_checkups_hospital(dml.Algorithm):
         print("Inserted new collection!")
 
 
-        print(rates[0])
+
         print("Calculating correlation coefficient and p-value...")
         x = []
         y = []
@@ -82,11 +58,11 @@ class correlation_checkups_hospital(dml.Algorithm):
         	x.append(i['distance_nearest_hospital'])
         	y.append(i['rate_of_checkup'])
 
-
         math = scipy.stats.pearsonr(x, y)
-        print("Correlation coefficient is " + str(math[0]))
-        print("P-value is " + str(math[1]))
+        # print("Correlation coefficient is " + str(math[0]))
+        # print("P-value is " + str(math[1]))
 
+        return math
 
     @staticmethod
     def provenance(doc = prov.model.ProvDocument(), startTime = None, endTime = None):
@@ -135,7 +111,7 @@ class correlation_checkups_hospital(dml.Algorithm):
 
         return doc
 
-correlation_checkups_hospital.execute()
+# correlation_checkups_hospital.execute()
 # doc = correlation_checkups_hospital.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

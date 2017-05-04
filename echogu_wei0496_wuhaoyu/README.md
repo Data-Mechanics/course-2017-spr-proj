@@ -1,11 +1,16 @@
-# Boston Public School Transportation Challenge
-School Bus Routing System Optimizations
-
-## Modeling, Optimization, and Statistical Analysis
-Team: [Lingyi Gu][lyg], [Wei Wei][ww], [Haoyu Wu][hyw]
+# Boston Public School Transportation Challenge - School Bus Routing System Optimizations
+Team: [Lingyi Gu](https://github.com/lingyigu), [Wei Wei](https://github.com/wei0496), [Haoyu(Jerry) Wu](https://github.com/wuhaoyujerry)
 
 ## Objective
-The [Boston Public Schools][bps] has announced a [Transportation Challenge][tc].  Our group is really interested in this challenge and starts this project. It contributes to Step 2 of the Routing Challenge, which aims to improve the school bus routing efficiency.  Specifically, we want to optimize the route for each school bus to get all students  to school as quickly as possible. We use the data set  of students who attend Boston Public Schools and optimize the bus routes based on their locations. Detailed methods are listed as follow.
+The [Boston Public Schools](http://www.bostonpublicschools.org/) has announced a [Transportation Challenge](http://bostonpublicschools.org/transportationchallenge).  Our group is really interested in this challenge and starts this project. It contributes to Step 2 of the Routing Challenge, which aims to improve the school bus routing efficiency.  Specifically, we want to optimize the route for each school bus to get all students  to school as quickly as possible. We use the data set  of students who attend Boston Public Schools and optimize the bus routes based on their locations. Detailed methods are listed as follow.
+
+In 2016, transportation costs accounted for for $110 million. Among them, Boston Public School’s transportation cost is the #2 highest. Our team utilizes the data mechanics techniques to solve this challenge. Our main objectives include:
+* Address the inefficiencies and rising costs in current transportation system
+* Improve the school bus routing efficiency to decrease students riding time § Reduce operational cost by systemically allocating resources
+
+
+## Data Retrieval, Storage, Provenance, and Transformations
+
 
 ## Modeling, Optimization, and Statistical Analysis
 ### Overall Assumption
@@ -52,10 +57,12 @@ If the input data set is small enough, we pass the trial; otherwise, we select `
 assigned_students = random.choice(assigned_students, k = 10)
 ```
 
-## Visualization
+
+## Visualizations and Web Services
+
 
 ## Installation
-Follows the procedure in [Data-Mechanics/course-2017-spr-proj][dm].
+Follows the procedure in [Data-Mechanics/course-2017-spr-proj](https://github.com/Data-Mechanics/course-2017-spr-proj).
 
 ###### Required libraries
 ```
@@ -69,11 +76,5 @@ $ pip install geopy
 $ python execute.py echogu_wei0496_wuhaoyu
 ```
 
-[lyg]: https://github.com/lingyigu
-[ww]: https://github.com/wei0496
-[hyw]: https://github.com/wuhaoyujerry
-[bps]: http://www.bostonpublicschools.org/
-[tc]: http://bostonpublicschools.org/transportationchallenge
-[dm]: https://github.com/Data-Mechanics/course-2017-spr-proj
 
 ## Reference

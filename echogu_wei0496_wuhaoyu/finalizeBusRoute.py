@@ -4,13 +4,12 @@ import dml
 import prov.model
 import datetime
 import uuid
-import random
 import geojson
 
 class finalizeBusRoute(dml.Algorithm):
     contributor = 'echogu_wei0496_wuhaoyu'
-    reads = ['echogu_wei0496_wuhaoyu.students']
-    writes = ['echogu_wei0496_wuhaoyu.assigned_students']
+    reads = ['echogu_wei0496_wuhaoyu.bus_route']
+    writes = ['echogu_wei0496_wuhaoyu.bus_route_final']
 
     @staticmethod
     def execute(trial = False):
@@ -25,14 +24,7 @@ class finalizeBusRoute(dml.Algorithm):
 
         # loads the collection
         bus_route = repo['echogu_wei0496_wuhaoyu.bus_route'].find()
-
-        # Trial mode
-        if trial:
-            if len(bus_route) == 1:
-                pass
-            else:
-                bus_route = random.choices(bus_route, k = 1)
-
+        
         # convert to geojson
         features = []
         features_schools = []
@@ -71,9 +63,9 @@ class finalizeBusRoute(dml.Algorithm):
                 features_yards.append(geojson.Feature(geometry=geometry, properties=properties))
                 yards += [r['bus yard']]
 
-        open('echogu_wei0496_wuhaoyu/visualizations/static/route.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features), indent=2))
-        open('echogu_wei0496_wuhaoyu/visualizations/static/schools.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_schools), indent=2))
-        open('echogu_wei0496_wuhaoyu/visualizations/static/yards.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_yards), indent=2))
+        open('echogu_wei0496_wuhaoyu/visualizations/geojson/routes.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features), indent=2))
+        open('echogu_wei0496_wuhaoyu/visualizations/geojson/schools.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_schools), indent=2))
+        open('echogu_wei0496_wuhaoyu/visualizations/geojson/yards.geojson', 'w').write(geojson.dumps(geojson.FeatureCollection(features_yards), indent=2))
 
         # store bus route into database in geojson format
         repo.dropCollection('bus_route_final')

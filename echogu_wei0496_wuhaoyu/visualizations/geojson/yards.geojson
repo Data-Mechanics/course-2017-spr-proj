@@ -6,6 +6,20 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -71.139795,
+          42.23739
+        ]
+      },
+      "properties": {
+        "yard": "Ctwn",
+        "address": "21 Industrial Dr, Boston, MA, 02136"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -71.057577,
           42.307069
         ]
@@ -41,20 +55,6 @@
       "properties": {
         "yard": "Frpt",
         "address": "2000 Washington Street, Boston, MA, 02119"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.139795,
-          42.23739
-        ]
-      },
-      "properties": {
-        "yard": "Ctwn",
-        "address": "21 Industrial Dr, Boston, MA, 02136"
       }
     }
   ]

@@ -3,7 +3,9 @@
 
 ## How to run visualizations
   cd into visualizations folder
+  
   python server.py
+  
   Visit localhost:8000
 
 ## The problem

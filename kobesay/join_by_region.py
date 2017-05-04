@@ -6,16 +6,16 @@ import datetime
 import uuid
 
 class join_by_region(dml.Algorithm):
-    contributor = 'heming'
+    contributor = 'demo'
     reads = [
-        'heming.regionincome',
-        'heming.regionhospital',
-        'heming.regionschool',
-        'heming.regionpublicschool',
-        'heming.regionnonpublicschool'
+        'demo.regionincome',
+        'demo.regionhospital',
+        'demo.regionschool',
+        'demo.regionpublicschool',
+        'demo.regionnonpublicschool'
     ]
     writes = [
-        'heming.income_infrastructure',
+        'demo.income_infrastructure',
     ]
 
     @staticmethod
@@ -26,24 +26,24 @@ class join_by_region(dml.Algorithm):
         # Set up the database connection.
         client = dml.pymongo.MongoClient()
         repo = client.repo
-        repo.authenticate('heming', 'heming')
+        repo.authenticate('demo', 'demo')
 
         repo.dropCollection("income_infrastructure")
         repo.createCollection("income_infrastructure")
 
-        regionincome = repo.heming.regionincome.find()
+        regionincome = repo.demo.regionincome.find()
         regionincome_info = {x['zipcode']: x['income'] for x in regionincome}
 
-        regionhospital = repo.heming.regionhospital.find()
+        regionhospital = repo.demo.regionhospital.find()
         regionhospital_info = {x['zipcode']: x['num'] for x in regionhospital}
 
-        regionschool = repo.heming.regionschool.find()
+        regionschool = repo.demo.regionschool.find()
         regionschool_info = {x['zipcode']: x['num'] for x in regionschool}
 
-        regionpublicschool = repo.heming.regionpublicschool.find()
+        regionpublicschool = repo.demo.regionpublicschool.find()
         regionpublicschool_info = {x['zipcode']: x['num'] for x in regionpublicschool}
 
-        regionnonpublicschool = repo.heming.regionnonpublicschool.find()
+        regionnonpublicschool = repo.demo.regionnonpublicschool.find()
         regionnonpublicschool_info = {x['zipcode']: x['num'] for x in regionnonpublicschool}
 
         zipcodes = regionincome_info.keys() | regionhospital_info.keys() | regionschool_info.keys() | regionpublicschool_info.keys() | regionnonpublicschool_info.keys()
@@ -67,7 +67,7 @@ class join_by_region(dml.Algorithm):
             }
             r.append(item)
         #print(r)
-        repo['heming.income_infrastructure'].insert_many(r)
+        repo['demo.income_infrastructure'].insert_many(r)
 
         repo.logout()
 
@@ -86,7 +86,7 @@ class join_by_region(dml.Algorithm):
         # Set up the database connection.
         client = dml.pymongo.MongoClient()
         repo = client.repo
-        repo.authenticate('heming', 'heming')
+        repo.authenticate('demo', 'demo')
         doc.add_namespace('alg', 'http://datamechanics.io/algorithm/') # The scripts are in <folder>#<filename> format.
         doc.add_namespace('dat', 'http://datamechanics.io/data/') # The data sets are in <user>#<collection> format.
         doc.add_namespace('ont', 'http://datamechanics.io/ontology#') # 'Extension', 'DataResource', 'DataSet', 'Retrieval', 'Query', or 'Computation'.
@@ -95,16 +95,16 @@ class join_by_region(dml.Algorithm):
         doc.add_namespace('bwod', 'https://boston.opendatasoft.com/explore/dataset/') # Boston Wicked Open Data
         doc.add_namespace('bod', 'http://bostonopendata.boston.opendata.arcgis.com/datasets/') # BostonMaps: Open Data
 
-        this_script = doc.agent('alg:heming#join_by_region', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
-        regionincome = doc.entity('dat:heming#regionincome', {'prov:label':'region income', prov.model.PROV_TYPE:'ont:DataSet'})
-        regionhospital = doc.entity('dat:heming#regionhospital', {'prov:label':'region hospital', prov.model.PROV_TYPE:'ont:DataSet'})
-        regionschool = doc.entity('dat:heming#regionschool', {'prov:label':'region school', prov.model.PROV_TYPE:'ont:DataSet'})
-        regionpublicschool = doc.entity('dat:heming#regionpublicschool', {'prov:label':'region public school', prov.model.PROV_TYPE:'ont:DataSet'})
-        regionnonpublicschool = doc.entity('dat:heming#regionnonpublicschool', {'prov:label':'region non public school', prov.model.PROV_TYPE:'ont:DataSet'})
+        this_script = doc.agent('alg:demo#join_by_region', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
+        regionincome = doc.entity('dat:demo#regionincome', {'prov:label':'region income', prov.model.PROV_TYPE:'ont:DataSet'})
+        regionhospital = doc.entity('dat:demo#regionhospital', {'prov:label':'region hospital', prov.model.PROV_TYPE:'ont:DataSet'})
+        regionschool = doc.entity('dat:demo#regionschool', {'prov:label':'region school', prov.model.PROV_TYPE:'ont:DataSet'})
+        regionpublicschool = doc.entity('dat:demo#regionpublicschool', {'prov:label':'region public school', prov.model.PROV_TYPE:'ont:DataSet'})
+        regionnonpublicschool = doc.entity('dat:demo#regionnonpublicschool', {'prov:label':'region non public school', prov.model.PROV_TYPE:'ont:DataSet'})
         get_income_infrastructure = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime, {'prov:label':'get relation of region income and infrastructure'})
         doc.wasAssociatedWith(get_income_infrastructure, this_script)
 
-        income_infrastructure = doc.entity('dat:heming#income_infrastructure', {prov.model.PROV_LABEL:'region income and infrastructure', prov.model.PROV_TYPE:'ont:DataSet'})
+        income_infrastructure = doc.entity('dat:demo#income_infrastructure', {prov.model.PROV_LABEL:'region income and infrastructure', prov.model.PROV_TYPE:'ont:DataSet'})
         doc.wasAttributedTo(income_infrastructure, this_script)
         doc.wasGeneratedBy(income_infrastructure, get_income_infrastructure, endTime)
         doc.wasDerivedFrom(income_infrastructure, regionincome, get_income_infrastructure, get_income_infrastructure, get_income_infrastructure)
@@ -113,14 +113,14 @@ class join_by_region(dml.Algorithm):
         doc.wasDerivedFrom(income_infrastructure, regionpublicschool, get_income_infrastructure, get_income_infrastructure, get_income_infrastructure)
         doc.wasDerivedFrom(income_infrastructure, regionnonpublicschool, get_income_infrastructure, get_income_infrastructure, get_income_infrastructure)
 
-        repo.record(doc.serialize())
         repo.logout()
                   
         return doc
-
+"""
+# TEST
 join_by_region.execute()
 doc = join_by_region.provenance()
 print(doc.get_provn())
 print(json.dumps(json.loads(doc.serialize()), indent=4))
-
+"""
 ## eof

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>region</title>
+    <script src="https://cdn.bootcss.com/echarts/3.5.3/echarts.common.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="hospital" style="width: 1400px;height:400px;"></div>
+    <div id="school" style="width: 1400px;height:400px;"></div>
+    <div id="income" style="width: 1400px;height:400px;"></div>
+    <script type="text/javascript">
+        $.get("http://127.0.0.1:5000/app/api/v1/region/hospital", function(res){
+            var jsonobj = eval('('+res+')');
+            var x = []; 
+            var y = []; 
+            for(var result in jsonobj){  
+                x.push(jsonobj[result].zipcode);
+                y.push(jsonobj[result].num);
+            }
+            var myChart = echarts.init(document.getElementById('hospital'));
+            var option = {
+                title: {
+                    text: 'Number of hospitals in different regions in Boston City'
+                },
+                tooltip: {},
+                legend: {
+                    data:['legend']
+                },
+                xAxis: {
+                    data: x
+                },
+                yAxis: {},
+                series: [{
+                    name: 'number',
+                    type: 'bar',
+                    data: y
+                }]
+            };
+            myChart.setOption(option);
+            
+        });
+        
+        $.get("http://127.0.0.1:5000/app/api/v1/region/school/all", function(res){
+            var jsonobj = eval('('+res+')');
+            var x = []; 
+            var y = []; 
+            for(var result in jsonobj){  
+                x.push(jsonobj[result].zipcode);
+                y.push(jsonobj[result].num);
+            }
+            var myChart = echarts.init(document.getElementById('school'));
+            var option = {
+                title: {
+                    text: 'Number of schools in different regions in Boston City'
+                },
+                tooltip: {},
+                legend: {
+                    data:['legend']
+                },
+                xAxis: {
+                    data: x
+                },
+                yAxis: {},
+                series: [{
+                    name: 'number',
+                    type: 'bar',
+                    data: y
+                }]
+            };
+            myChart.setOption(option);
+            
+        });
+
+        $.get("http://127.0.0.1:5000/app/api/v1/region/income", function(res){
+            var jsonobj = eval('('+res+')');
+            var x = []; 
+            var y = []; 
+            for(var result in jsonobj){  
+                x.push(jsonobj[result].zipcode);
+                y.push(jsonobj[result].income);
+            }
+            var myChart = echarts.init(document.getElementById('income'));
+            var option = {
+                title: {
+                    text: 'Average income in different regions in Boston City'
+                },
+                tooltip: {},
+                legend: {
+                    data:['legend']
+                },
+                xAxis: {
+                    data: x
+                },
+                yAxis: {},
+                series: [{
+                    name: 'number',
+                    type: 'bar',
+                    data: y
+                }]
+            };
+            myChart.setOption(option);
+            
+        });
+    </script>
+</body>
+</html>

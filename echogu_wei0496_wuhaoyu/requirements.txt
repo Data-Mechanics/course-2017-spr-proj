@@ -1,8 +1,7 @@
-prov --upgrade --no-cache-dir
-dml --upgrade --no-cache-dir
-protoql --upgrade --no-cache-dir
+prov
+dml
+protoql
 geojson
 geopy
 tsp_solver
 flask
-flask.ext.httpauth

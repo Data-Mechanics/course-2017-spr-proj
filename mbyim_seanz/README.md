@@ -1,5 +1,10 @@
-# CS591 Project #2 Proposal
+# CS591 Project #3 Proposal
 #### Sean Zhang & Martin Yim
+
+## How to run visualizations
+  cd into visualizations folder
+  python server.py
+  Visit localhost:8000
 
 ## The problem
   We are interested in discovering the feasibility of living in Boston in terms of walk time, commute time, and property/assessed value. 

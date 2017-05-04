@@ -59,15 +59,13 @@ class finalizeBusRoute(dml.Algorithm):
 
             # extract schools and yards info, remove duplicates
             if r['school'] not in schools:
-                properties = {'type': 'school',
-                              'school': r['school']}
+                properties = {'school': r['school']}
                 geometry = geojson.Point(tuple(reversed(r['school location'])))
                 features_schools.append(geojson.Feature(geometry=geometry, properties=properties))
                 schools += [r['school']]
 
             if r['bus yard'] not in yards:
-                properties = {'type': 'yard',
-                              'yard': r['bus yard'],
+                properties = {'yard': r['bus yard'],
                               'address': r['yard address']}
                 geometry = geojson.Point(tuple(reversed(r['yard location'])))
                 features_yards.append(geojson.Feature(geometry=geometry, properties=properties))

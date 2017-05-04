@@ -11,7 +11,6 @@
         ]
       },
       "properties": {
-        "type": "yard",
         "yard": "Read",
         "address": "10-34 Freeport St, Dorchester, MA, 02125"
       }
@@ -26,7 +25,6 @@
         ]
       },
       "properties": {
-        "type": "yard",
         "yard": "Wash",
         "address": "60-66 Cambridge Street, Boston, MA, 02129"
       }
@@ -41,7 +39,6 @@
         ]
       },
       "properties": {
-        "type": "yard",
         "yard": "Frpt",
         "address": "2000 Washington Street, Boston, MA, 02119"
       }
@@ -56,7 +53,6 @@
         ]
       },
       "properties": {
-        "type": "yard",
         "yard": "Ctwn",
         "address": "21 Industrial Dr, Boston, MA, 02136"
       }

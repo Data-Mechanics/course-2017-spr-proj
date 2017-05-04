@@ -3,31 +3,24 @@
 import urllib.request
 import json
 from flask import Flask, jsonify, abort, make_response, request, render_template
-from flask.ext.httpauth import HTTPBasicAuth
-# from flask import Flask, Response, request, render_template, redirect,
 
 app = Flask(__name__)
 
-# Home Page
-@app.route("/")
-def index():
-    return render_template("index.html")
-
 # Map
-@app.route("/map", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def map():
 	schools = get_schools()
-	schools_list = [s['properties']['school'] for s in schools]
-	school = request.form.get('school')
+	schools_list = sorted([s['properties']['school'] for s in schools])
 	routes = get_routes()
 	yards = get_yards()
-	
+
 	if request.method == "GET":
-		return render_template("map.html", routes=routes, schools=schools, yards=yards, schools_list=schools_list).encode("utf-8")
-	
+		return render_template("index.html", routes=routes, schools=schools, yards=yards, schools_list=schools_list)
 	else:
-		if school == "all":
-			return render_template("map.html", routes=routes, schools=schools, yards=yards, schools_list=schools_list)
+		school = request.form.get('school')
+
+		if school == "All":
+			return render_template("index.html", routes=routes, schools=schools, yards=yards, schools_list=schools_list)
 		else:
 			selected_routes = []
 			selected_yards = []
@@ -41,13 +34,13 @@ def map():
 			for s in schools:
 				if s['properties']['school'] == school:
 					selected_schools.append(s)
-			return render_template("map.html", routes=selected_routes, schools=selected_schools, yards=selected_yards, schools_list=schools_list).encode("utf-8")
+			return render_template("index.html", routes=selected_routes, schools=selected_schools, yards=selected_yards, schools_list=schools_list)
 
 # extract route, school and yard info from geojson
 def get_routes():
 	url = "http://datamechanics.io/data/echogu_wei0496_wuhaoyu/routes.geojson"
 	response = urllib.request.urlopen(url).read().decode("utf-8")
-	routes = json.loads(response)['features']        
+	routes = json.loads(response)['features']
 	return routes
 
 def get_yards():

@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>BPS Transportation Challenge</title>
-        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"> -->
         <!-- Leaflet -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
         integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
@@ -11,25 +10,130 @@
         <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
         integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
         crossorigin="http"></script>
-        <!-- jQuery -->
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body { padding-top: 50px;}
+            .legend {
+                line-height: 18px;
+                color: #555;
+            }
+            .legend i {
+                width: 18px;
+                height: 18px;
+                float: left;
+                margin-right: 8px;
+                opacity: 0.7;
+            }
+        </style>
     </head>
 
-    <body>
-        <header>
-            <div class="nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/map">Map</a></li>
+    <body class="bg-faded">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">School Bus Routing System</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
                     <li><a href="https://github.com/lingyigu/course-2017-spr-proj/tree/master/echogu_wei0496_wuhaoyu">GitHub</a></li>
                     <li><a href="http://datamechanics.org/">Data Mechanics</a></li>
                     <li><a href="http://bostonpublicschools.org/transportationchallenge">Challenge</a></li>
                 </ul>
+
+                <form class="navbar-form navbar-right" method="POST" action="{{url_for('map')}}">
+                    <div class="form-group">
+                         <select name="school" class="selectpicker form-control">
+                            <option selected value="All">Pick A School ...</option>
+                            {% for school in schools_list %}
+                            <option value="{{school}}">{{school}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Visualize</button>
+                </form>
             </div>
-        </header>
+        </nav>
 
-        <div id="content">
-        </div>
+        <div id="map" style="height: 100vh; width: 100vw;"></div>
+        <script>
+            var map = L.map('map').setView([42.3098, -71.0891], 12);
+            L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGluZ3lpZ3UiLCJhIjoiY2oyMHBpMGRmMDVsYTJ3cDg3cHZ6NXIwZSJ9.jXqXRJ1ZPsRlMvKJJslipA', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                maxZoom: 18,
+                minZoom: 10
+            }).addTo(map);
 
+            var routes = {{routes|safe}};
+            L.geoJSON(routes, {
+                onEachFeature: function(feature, layer) {
+                    if (feature.properties) {
+                        layer.bindPopup("Yard: " + feature.properties.yard + " -> School: " + feature.properties.school);
+                    }
+                },
+                style: {
+                    "color": "#6E7783",
+                    "weight": 1.5,
+                    "opacity": 0.8
+                }
+            }).addTo(map);
+
+            var styleYard = {
+                radius: 5,
+                fillColor: "#D1B6E1",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 1
+            };
+
+            var styleSchool = {
+                radius: 5,
+                fillColor: "#9DC8C8",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 1
+            };
+
+            // yards
+            var yards = {{yards|safe}};
+            L.geoJSON(yards, {
+                onEachFeature: function(feature, layer) {
+                    if (feature.properties) {
+                        layer.bindPopup("Yard: <b>" + feature.properties.yard + "</b><br>" + feature.properties.address);
+                    }
+                },
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, styleYard);
+                }
+            }).addTo(map);
+
+            // schools
+            var schools = {{schools|safe}};
+            L.geoJSON(schools, {
+                onEachFeature: function(feature, layer) {
+                    if (feature.properties) {
+                        layer.bindPopup("School: <b>" + feature.properties.school);
+                    }
+                },
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, styleSchool);
+                }
+            }).addTo(map);
+
+            // Legend
+            var legend = L.control({position: 'topright'});
+            legend.onAdd = function (map) {
+                var div = L.DomUtil.create('div', 'info legend');
+                div.innerHTML += '<i style="background:' + "#6E7783" + '"></i> ' + "Routes<br><br>";
+                div.innerHTML += '<i style="background:' + "#D1B6E1" + '"></i> ' + "Yards<br><br>";
+                div.innerHTML += '<i style="background:' + "#9DC8C8" + '"></i> ' + "Schools";
+                return div;
+            };
+            legend.addTo(map);
+        </script>
     </body>
 </html>

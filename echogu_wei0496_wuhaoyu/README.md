@@ -37,7 +37,7 @@ We have not assigned a bus yard to each mean point yet, but it can be done by fi
 
 ##### Issue with MST
 Although MST returns the minimum weight of the tree, the issue regarding it is that
-the bus would go "there and back" for every subtree. This may lead to redundant traveling route. 
+the bus would go "there and back" for every subtree. This may lead to redundant traveling route.
 
 #### Dynamic Programming
 We also implement the dynamic programming (DP) approach to find the shortest path among all the permutation of all the possible pick up sequences.
@@ -48,28 +48,42 @@ Although DP yields the optimal result, its running time is too high and grows ex
 #### Greedy Algorithm (Nearest Neighbor Heuristic)
 The algorithm randomly selects the starting point and consistently chooses the nearest students as the next stop. This algorithm is the optimal solution for our project because it yields shorter routes than Prim's algorithm and lower running time than DP.
 
-####Assigning Bus Yard to Each Route
+#### Assigning Bus Yard to Each Route
 This is a very straightforward problem. Since there's only a few bus yards, we simply apply a brute force algorithm to find its closest bus yard to either the first stop or last stop of the route and assign the bus yard to the route.
 
 #### Limitations and Future Work
 1. K-means algorithm can't guarantee that the number of students assigned to each cluster is equal.
 2. Incorporate the real road information of the map and expend the current solution by using Dijkstra algorithm instead of Euclidean distance.
-3. Creating gathering points for nearby students to furtherly reduce bus stops and the bus travelling distance.
+3. Creating gathering points for nearby students to further reduce bus stops and the bus traveling distance.
 
 ## Visualizations and Web Services
-We have created visualizations for all the generated bus routes using [Leaflet](http://leafletjs.com/).
+#### Visualization
+We have created a web-based interactive map for the generated bus routes using [Leaflet](http://leafletjs.com/). Users can see the detailed information of each route, school and yard by clicking on the grey line, green dot and purple dot respectively.
 
-![web-show-all](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/web-show-all.png)
+![visualization-all](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/visualization-all.png "Display Bus Routes")
 
-We also provide a service where users can specify a school and visualize the routes of that individual school.
+![visualization-route-info](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/vvisualization-route-info.png "Display Route Information")
 
-![web-pick-school](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/web-pick-school.png)
-![web-one-school](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/web-one-school.png)
+![visualization-school-info](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/vvisualization-school-info.png "Display School Information")
 
-To run the web service:
+![visualization-yard-info](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/visualization-yard-info.png "Display Yard Information")
+
+#### Web Service
+Based on the map, we have also provided a web service where users can choose a school from the drop down menu and visualize an individual school's bus routes. This is created using [Flask](http://flask.pocoo.org/) with [Jinja 2](http://jinja.pocoo.org/docs/2.9/).
+
+![web-pick-school](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/web-pick-school.png "Picking A School")
+
+![web-one-school](https://github.com/lingyigu/course-2017-spr-proj/blob/master/echogu_wei0496_wuhaoyu/visualizations/img/web-one-school.png "Display An Individual School's Routes")
+
+#### Usage
+To run the web service in the ```echogu_wei0496_wuhaoyu/visualizations``` directory:
 ```
 export FLASK_APP=app.py
 flask run
+```
+To Open in the browser:
+```
+http://localhost:5000/
 ```
 
 ## Reference

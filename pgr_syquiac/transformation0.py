@@ -53,10 +53,6 @@ class transformation0(dml.Algorithm):
                 i['measureid'] == 'CHECKUP'):
                 visits.append(i)
 
-
-        print(visits[0])
-  
-
         print("Mapping rates to closest hospitals...")
         for i in visits:
             # We want to iterate through all the visits rates and map them to the
@@ -116,4 +112,4 @@ class transformation0(dml.Algorithm):
 
         return doc
 
-transformation0.execute()
+# transformation0.execute()

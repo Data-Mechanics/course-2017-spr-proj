@@ -9,6 +9,7 @@
   Visit localhost:8000
 
   #### please keep in mind that the Leaflet map visual may take some time (5-10 seconds) to load, as there are a lot of data points
+
 ## The problem
   We are interested in discovering the feasibility of living in Boston in terms of walk time, commute time, and property/assessed value. 
 

@@ -9,7 +9,9 @@ import ast
 import random
 import sodapy
 from geopy.distance import vincenty
-import time 
+import time
+import numpy as np
+import csv
 
 # this transformation will check how many comm gardens and food pantries there are for each area
 # we want to take (zipcode, #comm gardens) (zipcode, #food pantries) --> (area, #food pantries#comm gardens)
@@ -88,6 +90,12 @@ class transformation_two_bus(dml.Algorithm):
                         closest_k = distance
                         
                 cost_array[j] = closest_k
+
+            # to find standard deviation for a graph
+           # for j in range(len(cost_array)):
+
+            standard_dev = np.std(cost_array)
+            #print(standard_dev)
                     
                 
             ## find the cost by adding up all the distances and diving it by the number of distances to get the average
@@ -99,7 +107,7 @@ class transformation_two_bus(dml.Algorithm):
 
                 overall_cost += cost_array[i]
 
-            return((overall_cost/len(cost_array)))
+            return([(overall_cost/len(cost_array)), standard_dev])
 
         ## added function to make our map nicer
         
@@ -170,27 +178,46 @@ class transformation_two_bus(dml.Algorithm):
         else:
 
             #after running various test, cost of more means dropped off around here
+            csv_row_cost = [None]*87
+            csv_row_std =  [None]*87
+            
+            for i in range(1, 87):
 
-            num_means =44
+                num_means = i
 
-            # picking the number of means from a random selection of the data
+                # picking the number of means from a random selection of the data
 
-            M = [None]*num_means
+                M = [None]*num_means
+                
 
-            for i in range(0, num_means):
+                for i in range(0, num_means):
 
-                x = random.randint(0, len(S)-1)
-                val = S[x]
-                M[i] = val
+                    x = random.randint(0, len(S)-1)
+                    val = S[x]
+                    M[i] = val
 
                 
-            mean = k_means(S, M)
-            print(mean)
+                mean = k_means(S, M)
+               
 
-            # now we find the cost between the dataset S and the mean
-            cost_combined = (costs(S, mean))
+                # now we find the average cost and standard deviation between all the points in the dataset, S ,and the its means
+            
+                cost_combined = (costs(S, mean))
+                # we want to update these arrays because will be outputed to a csv file for graph use
+                csv_row_cost[i] = cost_combined[0]
+                csv_row_std[i] = cost_combined[1]
 
-            # lastly we want to insert the means into a dictionanry
+            # writing to the csv file
+
+            with open("/Users/meganhoran/Desktop/cs591/kmeans_stats.csv", "w") as csv_file:
+
+                writer = csv.writer(csv_file, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+
+                for i in range(86):
+
+                    writer.writerow([csv_row_cost[i], csv_row_std[i], i])
+
+            # fianlly, we want to insert the means into a dictionanry
 
             closest_mean = close_mean_count(S, mean)
 

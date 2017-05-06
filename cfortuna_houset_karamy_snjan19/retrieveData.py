@@ -34,7 +34,7 @@ class retrieveData(dml.Algorithm):
         url = 'http://data.cityofboston.gov/resource/u6fv-m8v4.json'
         response = urllib.request.urlopen(url).read().decode("utf-8")
         r = json.loads(response)
-        with open('visualizations/data/BostonHospitalData.json', 'w') as outfile:
+        with open('visualizations/data/BostonHospitalsData.json', 'w') as outfile:
             json.dump(r, outfile, indent=2)
         #s = json.dumps(r, sort_keys=True, indent=2)
         repo.dropCollection("BostonHospitalsData")

@@ -236,10 +236,10 @@ class optimalHospitals(dml.Algorithm):
         df_centroids.drop('latlng',axis=1,inplace=True)
         df_centroids.drop('json_response',axis=1,inplace=True)
 
-        df_centroids.to_json('optimalHospitalLocations.json', orient='index')
+        df_centroids.to_json('visualizations/data/OptimalHospitalLocations.json', orient='index')
 
 
-        with open('optimalHospitalLocations.json') as data_file:    
+        with open('visualizations/data/OptimalHospitalLocations.json') as data_file:    
             all_data = json.load(data_file)
 
         repo['cfortuna_houset_karamy_snjan19.OptimalHospitals'].insert(all_data)

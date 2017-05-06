@@ -50,7 +50,7 @@ html, body, #map {
 // Create the Google Map…
 var map = new google.maps.Map(d3.select("#map").node(), {
   zoom: 12,
-  center: new google.maps.LatLng(42.3601, -71.0589),
+  center: new google.maps.LatLng(42.314145, -71.09),
   mapTypeId: google.maps.MapTypeId.TERRAIN
 });
 
@@ -222,7 +222,7 @@ var directionsService = new google.maps.DirectionsService();
 
 
 // Load the Hospitals data. When the data comes back, create an overlay.
-d3.json("CarCrashData.json", function(error, data) {
+d3.json("data/CarCrashData.json", function(error, data) {
   if (error) throw error;
 
   var overlay = new google.maps.OverlayView();
@@ -267,7 +267,7 @@ d3.json("CarCrashData.json", function(error, data) {
 });
 
 // Load the Hospitals data. When the data comes back, create an overlay.
-d3.json("BostonHospitalsData.json", function(error, data) {
+d3.json("data/BostonHospitalsData.json", function(error, data) {
   if (error) throw error;
 
   var overlay = new google.maps.OverlayView();
@@ -311,7 +311,7 @@ d3.json("BostonHospitalsData.json", function(error, data) {
   overlay.setMap(map);
 });
     
-d3.json("optimalHospitalLocations.json", function(error, data) {
+d3.json("data/OptimalHospitalLocations.json", function(error, data) {
   if (error) throw error;
 
   var overlay = new google.maps.OverlayView();

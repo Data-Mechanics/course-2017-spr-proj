@@ -23,12 +23,12 @@ We retrieved the following data sets from [datamechanics.io](http://datamechanic
 ### Assembled Data Sets
 We have assembled the following data sets using the previous data sets:
 
-| Data Sets         | Derived From       | Algorithm              |
-| :--------------:  |:------------------:| :---------------------:|
-| assigned_students | students-simulated | AssignStudents         |
-| pickup_sequence   | assigned_students  | OptimizePickupSequence |
-| bus_route         | pickup_sequence    | AssignBusYards         |
-| bus_route_final   | bus_route          | finalizeBusRoute       |
+| Data Sets         | Derived From           | Algorithm              |
+| :---------------: | :--------------------: | :--------------------: |
+| assigned_students | students-simulated     | AssignStudents         |
+| pickup_sequence   | assigned_students      | OptimizePickupSequence |
+| bus_route         | pickup_sequence, buses | AssignBusYards         |
+| bus_route_final   | bus_route              | finalizeBusRoute       |
 
 ## Modeling and Optimization
 ### Assumptions

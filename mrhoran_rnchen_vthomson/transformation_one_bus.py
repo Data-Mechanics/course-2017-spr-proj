@@ -1,15 +1,6 @@
-# part 1:minimum number of
-# bus trips would be needed for each school 
-# get # student per school
-#  {student, schoool, their_address(coordinates)
+# Author: Ryan Chen
+# Contributor: Megan Horan
 
-
-# part 2:
-#
-
-#from which yard those
-#buses should come
-# get the # bus yards and their coordinates
 
 import json
 import geojson

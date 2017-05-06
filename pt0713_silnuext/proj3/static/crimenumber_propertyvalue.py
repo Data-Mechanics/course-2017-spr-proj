@@ -15,15 +15,12 @@ def crimeNumber_price():
 
 crime_price = crimeNumber_price()
 
-features = []
+dat = []
 for zipcode in crime_price:
-	properties = {'zipcode': zipcode, 
-				  'crime number': crime_price[zipcode][0],
-				  'property price average': crime_price[zipcode][1]
-				   }
-	geometry = json.Point(coordinate)
-	features.append(geojson.Feature(geometry=geometry, properties=properties))
+	dat += {'zipcode': zipcode, 
+			 'crime number': crime_price[zipcode][0],
+			 'property price average': crime_price[zipcode][1]
+			}
 
-with open('data.txt', 'w') as outfile:
-     json.dump(jsonData, outfile, sort_keys = True, indent = 4,
-               ensure_ascii = False)
+file = json.load(open('plots.json'))
+file = json.dumps(data)

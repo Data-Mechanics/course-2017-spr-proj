@@ -45,6 +45,10 @@ We hope that in the future, other groups or interested parties will take this da
 
 dml
 provr
+prov.model
+geopy.distance import vincenty
+csv
+sodapy
 rtree (requires libspatialindex; see below)
 [libspatialindex] (https://libspatialindex.github.io/) * MAKE SURE YOU HAVE MONGOD RUNNING FIRST AND AUTH'D *
 

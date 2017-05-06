@@ -34,7 +34,7 @@ Overall, we implement two techniques: statistical analysis and optimization(k-me
 
 
 
-/Users/cengboyu/Desktop/1.png
+pt0713_silnuext/1.png
 
 
 

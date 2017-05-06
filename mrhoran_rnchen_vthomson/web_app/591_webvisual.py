@@ -16,7 +16,11 @@ def index():
 def getSchoolHubs():
 	'''returns json object of allschool hubs'''
 	schoolHubs = json.load(open('../visualization/kmeans-visual/kmeans_hubs.json','r'))
-	return jsonify(schoolHubs)
+        return jsonify(schoolHubs)
+
+#@app.route('/getCSV')
+#def getCSV():
+#	CSV = 
 
 @app.route('/kmeans_cost_graph', methods=['GET'])
 def kmeans_cost_graph():
@@ -24,7 +28,7 @@ def kmeans_cost_graph():
 
 @app.route('/kmeans_visual',  methods=['GET'])
 def kmeans_visual():
-
+    schoolHubs = getSchoolHubs()
     return render_template('kmeans_visual.html')
 
 if __name__ == '__main__':

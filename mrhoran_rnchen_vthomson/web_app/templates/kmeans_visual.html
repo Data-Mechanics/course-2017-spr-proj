@@ -46,7 +46,7 @@ var map = new google.maps.Map(d3.select("#map").node(), {
 //
 //    
 //// Load the kmeans data, we are going to use it as an overlay over googlemaps
-d3.json(school_hubs, function(error, data) {
+d3.json("/schoolHubs", function(error, data) {
   if (error) throw error;
 
   var overlay = new google.maps.OverlayView();

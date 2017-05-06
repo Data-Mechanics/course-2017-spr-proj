@@ -13,8 +13,11 @@ The problem our group chose to tackle was set forth by the Boston Public Schools
 
 ## Datasets used:
 [buses dataset](http://datamechanics.io/data/_bps_transportation_challenge/buses.json)
+
 [simulated students dataset json](http://datamechanics.io/data/_bps_transportation_challenge/students.json)
+
 [schools dataset geojson](http://datamechanics.io/data/_bps_transportation_challenge/schools.json)
+
 [Provided by Datamechanics.io repository](http://datamechanics.io/?prefix=_bps_transportation_challenge/)
 
 ## Optimization Algorithms

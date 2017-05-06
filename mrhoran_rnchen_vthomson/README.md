@@ -18,3 +18,6 @@ In order to analyze the bus yard locations, we used the **k-means algorithm** to
 
 ![alt-sytle](https://github.com/ryanscodebay/course-2017-spr-proj/blob/master/mrhoran_rnchen_vthomson/visualization/kmeans-visual/bus_yard_image.png "kmeans cost")
 
+Our k-means algorithm then returns a dataset that has the location of the bus yards and all the closest schools it would service. This graph below shows the visualization of that: the pink circles show where the ideal bus yard, where the radius of each circle is a representation of how many schools it would pick up students for. The blue circles are where the current bus yards are and how many schools they service, using the same function as the pink circles to calculate which schools are closest to which bus yard given the current configuration of bus yards.
+
+![alt-sytle](https://github.com/ryanscodebay/course-2017-spr-proj/blob/master/mrhoran_rnchen_vthomson/visualization/kmeans-visual/bus_yard_image.png "kmeans cost")

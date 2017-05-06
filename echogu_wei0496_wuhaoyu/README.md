@@ -98,6 +98,7 @@ To Open in the browser:
 ```
 http://localhost:5000/
 ```
+You do not need to run the scripts to obtain the data sets used in this visualization. The resulting data set has been uploaded to [datamechanics.io](http://datamechanics.io/?prefix=echogu_wei0496_wuhaoyu).
 
 ## Reference
 [1] K-Means Clustering Algorithm. **"Data Mechanics"**. [http://cs-people.bu.edu/lapets/591/s.php#2.2](http://cs-people.bu.edu/lapets/591/s.php#2.2)<br>

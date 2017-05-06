@@ -16,5 +16,5 @@ The problem our group chose to tackle was set forth by the Boston Public Schools
 #### Bus yard optimization:
 In order to analyze the bus yard locations, we used the **k-means algorithm** to find the hubs of where schools are located. We wanted to cluster the schools because if we could see where the schools were congregating, we would find out the locations for the bus yards that best served the largest amount of schools. If the bus yards were placed in their ideal areas, where they would be serving the most schools they possibly could, then the total travel time from start to finish for those buses would decrease drastically and shave off any unnecessary travel time. We then tried all the different means to find the **ideal number of k-values**, which would be a k-value after which adding more means would not decrease the cost significantly This graph below is the representation of data collected: on the x-axis is k values and on the y-axis is the average cost between all the schools and their respective means.
 
-
+![alt-sytle](https://github.com/ryanscodebay/course-2017-spr-proj/blob/master/mrhoran_rnchen_vthomson/visualization/kmeans-visual/bus_yard_image.png "kmeans cost")
 

@@ -7,6 +7,7 @@ import uuid
 import csv
 import json
 import requests 
+import os
 
 class retrieveData(dml.Algorithm):
     contributor = 'cfortuna_houset_karamy_snjan19'
@@ -23,15 +24,19 @@ class retrieveData(dml.Algorithm):
         repo = client.repo
         repo.authenticate('cfortuna_houset_karamy_snjan19', 'cfortuna_houset_karamy_snjan19')
 
+        # Set up a directory for storing the JSON files
+        if not os.path.exists("visualizations/data"):
+            os.makedirs("visualizations/data")
+
         ###### Importing Datasets and putting them inside the mongoDB database #####
-
-
 
         # Boston Hospitals
         url = 'http://data.cityofboston.gov/resource/u6fv-m8v4.json'
         response = urllib.request.urlopen(url).read().decode("utf-8")
         r = json.loads(response)
-        s = json.dumps(r, sort_keys=True, indent=2)
+        with open('visualizations/data/BostonHospitalData.json', 'w') as outfile:
+            json.dump(r, outfile, indent=2)
+        #s = json.dumps(r, sort_keys=True, indent=2)
         repo.dropCollection("BostonHospitalsData")
         repo.createCollection("BostonHospitalsData")
         repo['cfortuna_houset_karamy_snjan19.BostonHospitalsData'].insert_many(r)
@@ -40,7 +45,9 @@ class retrieveData(dml.Algorithm):
         url = 'http://datamechanics.io/data/cfortuna_houset_karamy_snjan19/EMSStationsData.json'
         response = urllib.request.urlopen(url).read().decode("utf-8")
         r = json.loads(response)
-        s = json.dumps(r, sort_keys=True, indent=2)
+        with open('visualizations/data/EMSStationsData.json', 'w') as outfile:
+            json.dump(r, outfile, indent=2)
+        #s = json.dumps(r, sort_keys=True, indent=2)
         repo.dropCollection("EMSStationsData")
         repo.createCollection("EMSStationsData")
         repo['cfortuna_houset_karamy_snjan19.EMSStationsData'].insert_many(r)
@@ -49,7 +56,9 @@ class retrieveData(dml.Algorithm):
         url = 'http://datamechanics.io/data/cfortuna_houset_karamy_snjan19/CarCrashData.json'
         response = urllib.request.urlopen(url).read().decode("utf-8")
         r = json.loads(response)
-        s = json.dumps(r, sort_keys=True, indent=2)
+        with open('visualizations/data/CarCrashData.json', 'w') as outfile:
+            json.dump(r, outfile, indent=2)
+        #s = json.dumps(r, sort_keys=True, indent=2)
         repo.dropCollection("CarCrashData")
         repo.createCollection("CarCrashData")
         repo['cfortuna_houset_karamy_snjan19.CarCrashData'].insert_many(r)

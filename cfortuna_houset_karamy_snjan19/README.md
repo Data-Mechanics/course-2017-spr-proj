@@ -1,7 +1,7 @@
-Chloe Fortuna
-Takumi House
-Ka ram Yang
-Shahrez Jan
+**Chloe Fortuna**
+**Takumi House**
+**Ka ram Yang**
+**Shahrez Jan**
 
 ### The Problem
 

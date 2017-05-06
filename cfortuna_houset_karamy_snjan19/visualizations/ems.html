@@ -17,11 +17,11 @@
 		padding: 0;
 	}
 
-	.crashes, .crashes svg, .stations, .stations svg, .stations1, .stations1 svg {
+	.crashes, .crashes svg, .optimalStations, .optimalStations svg, .actualStations, .actualStations svg {
 		position: absolute;
 	}
 
-	.crashes svg, .stations svg, .stations1 svg  {
+	.crashes svg, .optimalStations svg, .actualStations svg  {
 		width: 60px;
 		height: 20px;
 		padding-right: 100px;
@@ -34,13 +34,13 @@
 		stroke-width: 1.5px;
 	}
 
-	.stations circle {
+	.optimalStations circle {
 		fill: blue;
 		stroke: black;
 		stroke-width: 1.5px;
 	}
 
-	.stations1 circle {
+	.actualStations circle {
 		fill: green;
 		stroke: black;
 		stroke-width: 1.5px;
@@ -48,7 +48,7 @@
 
 </style>
 <header>
-   <p>Click on a red crash site to get the route from the closest optimal (green) and actual (blue) EMS stations.</p>
+	<p>Click on a red crash site to get the route from the closest optimal (green) and actual (blue) EMS stations.</p>
 </header>
 <div id="map"></div>
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyCGV5ENNMK_PsokKvQFIkM6XXEzhfh2eHU"></script>
@@ -69,7 +69,7 @@ directionsDisplay[0] = new google.maps.DirectionsRenderer({
 		strokeWeight: 7,
 		strokeOpacity: 0.5
 	},
-	suppressMarkers: true,
+	suppressMarkers: true
 });
 
 directionsDisplay[1] = new google.maps.DirectionsRenderer({
@@ -78,7 +78,7 @@ directionsDisplay[1] = new google.maps.DirectionsRenderer({
 		strokeWeight: 7,
 		strokeOpacity: 0.5
 	},
-	suppressMarkers: true,
+	suppressMarkers: true
 });
 
 // Initialize routing services
@@ -89,17 +89,17 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 	if (carCrashError) throw carCrashError;
 
 	// Loads the optimal and actual EMS locations for routing
-	d3.json("data/OptimalEMSStations.json", function(optimalError, data1) {
+	d3.json("data/OptimalEMSStations.json", function(optimalError, optimalData) {
 		if (optimalError) throw optimalError;
 
-		d3.json("data/EMSStationsData.json", function(actualError, data2) {
+		d3.json("data/EMSStationsData.json", function(actualError, actualData) {
 			if (actualError) throw actualError;
 
 			var overlay2 = new google.maps.OverlayView();
 
 		  	// Add the container when the overlay is added to the map
 		  	overlay2.onAdd = function() {
-		  		var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "stations1");
+		  		var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "actualStations");
 
 				// Draw each marker as a separate SVG element
 				overlay2.draw = function() {
@@ -107,7 +107,7 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 					padding = 10;
 
 					var marker = layer.selectAll("svg")
-					.data(d3.entries(data2))
+					.data(d3.entries(actualData))
 					.each(transform) // update existing markers
 					.enter().append("svg")
 					.each(transform)
@@ -133,12 +133,11 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 		 	// Put the overlay on the map
 		 	overlay2.setMap(map);
 
-
 		 	var overlay1 = new google.maps.OverlayView();
 
 		  	// Add the container when the overlay is added to the map
 		  	overlay1.onAdd = function() {
-		  		var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "stations");
+		  		var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "optimalStations");
 
 				// Draw each marker as a separate SVG element
 				overlay1.draw = function() {
@@ -146,7 +145,7 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 					padding = 10;
 
 					var marker = layer.selectAll("svg")
-					.data(d3.entries(data1))
+					.data(d3.entries(optimalData))
 					.each(transform) // update existing markers
 					.enter().append("svg")
 					.each(transform)
@@ -172,28 +171,26 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 		 	// Put the overlay on the map
 		 	overlay1.setMap(map);
 
-
-
 		 	var overlay = new google.maps.OverlayView();
 
 			// Calculates and plots the route from the closests EMS station to the crash site
-			function getRoute(endlat, endlong, opt, renderer, type) {
+			function getRoute(endlat, endlong, renderer, type) {
 				var destination = new google.maps.LatLng(endlat, endlong);
 				var starts = [];
 
 				// Gather the EMS coordinates as destinations
 				if (type == "Optimal") {
-					for (var key in opt) {
-						var lati = opt[key].lat;
-						var long = opt[key].lng;
+					for (var key in optimalData) {
+						var lati = optimalData[key].lat;
+						var long = optimalData[key].lng;
 						var start = new google.maps.LatLng(lati, long);
 						starts.push(start);
 					}
 				} 
 				if (type == "Actual") {
-					for (var i = 0; i < opt.length; i++) {
-						var lat = data2[i].Latitude;
-						var long = data2[i].Longitude;
+					for (var i = 0; i < actualData.length; i++) {
+						var lat = actualData[i].Latitude;
+						var long = actualData[i].Longitude;
 						var start = new google.maps.LatLng(lat, long);
 						starts.push(start);
 					}
@@ -249,33 +246,6 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 							}
 						}
 
-						// if (type == "Optimal") {
-						// 	console.log("Optimal:")
-						// 	console.log("Duration:", minDuration + " min");
-						// 	console.log("Distance:", minDistance + " mi");
-						// 	console.log("\n");
-						// }
-						// if (type == "Actual") {
-						// 	console.log("Actual:")
-						// 	console.log("Duration:", minDuration + " min");
-						// 	console.log("Distance:", minDistance + " mi");
-						// 	console.log("\n");
-						// }
-
-						
-						// var geocoder = new google.maps.Geocoder();
-						// var dst = destinations[0];
-
-						// geocoder.geocode({address: destinations[0]}, function(results, status) {
-
-						// 	if (status == google.maps.GeocoderStatus.OK) {
-						// 		lat = results[0].geometry.location.lat();
-						// 		lng = results[0].geometry.location.lng();
-						// 		console.log("geo",lat,lng);
-						// 	}
-						// });
-
-
 						// Query the route from Google Maps
 						var request = {
 							origin: minOrigin,
@@ -313,8 +283,8 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 					.each(transform)
 					.attr("class", "marker")
 					.on("click", function(d) { 
-						getRoute(d.value.Latitude, d.value.Longitude, data1, directionsDisplay[0], "Optimal");
-						getRoute(d.value.Latitude, d.value.Longitude, data2, directionsDisplay[1], "Actual");
+						getRoute(d.value.Latitude, d.value.Longitude, directionsDisplay[0], "Optimal");
+						getRoute(d.value.Latitude, d.value.Longitude, directionsDisplay[1], "Actual");
 					});
 
 					// Add a circle.
@@ -339,95 +309,7 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 
 		});
 
+	});
 });
-});
-
-// // Add the optimal EMS locations as markers on map
-// d3.json("OptimalEMSStations.json", function(error, data) {
-// 	if (error) throw error;
-
-// 	var overlay = new google.maps.OverlayView();
-
-//   	// Add the container when the overlay is added to the map
-//   	overlay.onAdd = function() {
-//   		var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "stations");
-
-// 		// Draw each marker as a separate SVG element
-// 		overlay.draw = function() {
-// 			var projection = this.getProjection(),
-// 			padding = 10;
-
-// 			var marker = layer.selectAll("svg")
-// 			.data(d3.entries(data))
-// 			.each(transform) // update existing markers
-// 			.enter().append("svg")
-// 			.each(transform)
-// 			.attr("class", "marker")
-// 			.on("click", function(d) { console.log(d); });
-
-// 			// Add a circle.
-// 			marker.append("circle")
-// 			.attr("r", 10)
-// 			.attr("cx", padding)
-// 			.attr("cy", padding);
-
-// 			function transform(d) {
-// 				d = new google.maps.LatLng(d.value.Latitude, d.value.Longitude);
-// 				d = projection.fromLatLngToDivPixel(d);
-// 				return d3.select(this)
-// 				.style("left", (d.x - padding) + "px")
-// 				.style("top", (d.y - padding) + "px");
-// 			}
-// 		};
-// 	};
-
-//   // Put the overlay on the map
-//   overlay.setMap(map);
-
-// });
-
-// // Add the actual EMS locations on the map
-// d3.json("EMSStationsData.json", function(error, data) {
-// 	if (error) throw error;
-
-// 	var overlay = new google.maps.OverlayView();
-
-//   	// Add the container when the overlay is added to the map
-//   	overlay.onAdd = function() {
-//   		var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "stations1");
-
-// 		// Draw each marker as a separate SVG element
-// 		overlay.draw = function() {
-// 			var projection = this.getProjection(),
-// 			padding = 10;
-
-// 			var marker = layer.selectAll("svg")
-// 			.data(d3.entries(data))
-// 			.each(transform) // update existing markers
-// 			.enter().append("svg")
-// 			.each(transform)
-// 			.attr("class", "marker")
-// 			.on("click", function(d) { console.log(d); });
-
-// 			// Add a circle.
-// 			marker.append("circle")
-// 			.attr("r", 10)
-// 			.attr("cx", padding)
-// 			.attr("cy", padding);
-
-// 			function transform(d) {
-// 				d = new google.maps.LatLng(d.value.Latitude, d.value.Longitude);
-// 				d = projection.fromLatLngToDivPixel(d);
-// 				return d3.select(this)
-// 				.style("left", (d.x - padding) + "px")
-// 				.style("top", (d.y - padding) + "px");
-// 			}
-// 		};
-// 	};
-
-//  	// Put the overlay on the map
-//  	overlay.setMap(map);
-
-// });
 
 </script>

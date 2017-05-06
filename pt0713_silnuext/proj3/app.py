@@ -1,6 +1,7 @@
 import json
 from flask import Flask, Response, request, render_template, redirect, url_for
 import flask.ext.login as flask_lo
+import urllib.request
 
 app = Flask(__name__)
 
@@ -13,43 +14,49 @@ def home():
 
 # Interactive Map
 def get_crime_points():
-	crime_points = json.load(open('static/map_to_points.geojson', 'r'))
-	return crime_points
+	url = "http://datamechanics.io/data/pt0713_silnuext/proj3/static/map_to_points.geojson"
+	response = urllib.request.urlopen(url).read().decode("utf-8")
+	crimes = json.loads(response)['features']
+	return crimes
 
-def get_optimization_point():
-	optimization_point = json.load(open('static/optimization.geojson', 'r'))
-	return optimization_point
+def get_opti_point():
+	url = "http://datamechanics.io/data/pt0713_silnuext/proj3/static/optimization.geojson"
+	response = urllib.request.urlopen(url).read().decode("utf-8")
+	opt = json.loads(response)['features']
+	return opt
 
-def list_crime():
-	crimes = get_crimes()['features']
-	crimes_list = [s['properties']['crime'] for s in crimes]
-	return render_template("map.html", crimes=crimes_list)
+@app.route("/map", methods=["GET", "POST"])
+def map():
+	crimes = get_crime_points()
+	opt = get_opti_point()
 
-def one_optimization():
-	optimization = get_crimes()['features']
-	optimization_list = [s['properties']['crime'] for s in optimization]
-	return render_template("map.html", optimization = optimization_list)
+	if request.method == "GET":
+		return render_template('map.html', crimes=crimes, opt=opt)
+	else:
+		crime = request.form.get('crime')
+		optimal = request.form.get('opt')
+		if crime == "ALL":
+			return ender_template('map.html', crimes=crimes)
+		elif optimal == "ALL":
+			return ender_template('map.html', opt=opt)
+		else:
+			for c in crimes:
+				if c['properties']['crime location'] == crime:
+					crime_point = c
 
-def select_crime():
-	crime = request.form.get("crime")
-	routes = get_routes()['features']
-	selected_crime = []
-	for r in routes:
-		if r['properties']['crime'] == crime:
-			selected_crime.append(r)
-	print(selected_crime)
-	return render_template("map.html", route=selected_crime)
+			for o in opt:
+				if o['properties']['coordinates'] == optimal:
+					opt_point = o
 
-def select_optimization():
-	optimization = request.form.get("optimization")
-	routes = get_routes()['features']
-	selected_optimization = []
-	for r in routes:
-		if r['properties']['optimization'] == optimization:
-			selected_optimization.append(r)
-	print(selected_optimization)
-	return render_template("map.html", route=selected_optimization)
+			return render_template('map.html', crimes=select_crime, opt=select_opt)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Interactive Scatter Plot Graph
+@app.route("/relation", methods=["GET", "POST"])
+def relation():
+	return render_template('relation.html')
+
+
+if __name__ == '__namin__':
+	app.run(debug=True)
+		

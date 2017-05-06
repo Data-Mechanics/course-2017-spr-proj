@@ -49,12 +49,12 @@ rtree (requires libspatialindex; see below)
 busData.py
 
 #### To run transformations:
-1. transformation_one_bus.py
+1. python3 transformation_one_bus.py
   * finding the kmeans cost data and storing it in a csv
   * returning the ideal bus yards, their location, and the schools they service in the database
   * returning the current bus yards their location, and the schools they service in the database
 
-2. transformation_two_bus.py
+2. python3 transformation_two_bus.py
   * finding the averages distance (miles) of students in a .5 mile radius
   * finding the averages distance (miles) of a student and the 10 closest students 
 

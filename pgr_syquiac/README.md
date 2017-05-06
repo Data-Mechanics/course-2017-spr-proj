@@ -1,19 +1,19 @@
-# Do you live too far from a hospital? 
+# Do You Live Too Far From A Hospital? 
 
 Boston Univesity Department of Computer Science
 CS591 L1 Spring 2017 - Data Mechanics
 
 Professor Andrei Lapets
 
-By [Pauline Ramirez] (mailto: pgr@bu.edu) and [Carlos Syquia] (mailto: syquiac@bu.edu)
+By [Pauline Ramirez](mailto: pgr@bu.edu) and [Carlos Syquia](mailto: syquiac@bu.edu)
 
 ## Introduction
 For our project, we aimed to determine any correlations between certain medical issues and characteristics of Boston. Finding any statistically significant correlations could indicate what areas or characteristics of Boston should be invested in, whether it’s improving the city or making that feature more accessible. The main relationship we looked at were between one’s distance from their nearest hospital and the rate of yearly check ups. We also look at the relationship between obesity rate and the nearest swimming pool.
 
 ## Datasets
-The main dataset we used was the **[CDC500] (https://chronicdata.cdc.gov/500-Cities/500-Cities-Local-Data-for-Better-Health/6vp6-wxuq), which contains health data (health conditions and healthy beahviors) for the 500 largest cities in the US. This was provided by the Chronic Disease Center, containing data from 2013 and 2014. We exclusively use the data for Boston.
+The main dataset we used was the **[CDC500](https://chronicdata.cdc.gov/500-Cities/500-Cities-Local-Data-for-Better-Health/6vp6-wxuq), which contains health data (health conditions and healthy beahviors) for the 500 largest cities in the US. This was provided by the Chronic Disease Center, containing data from 2013 and 2014. We exclusively use the data for Boston.
 
-We also used datasets provided by the City of Boston, namely the  **[Hospital locations] (https://data.cityofboston.gov/Public-Health/Hospital-Locations/46f7-2snz) and the **[Year-Round Swimming Pools datasets] (https://data.cityofboston.gov/Public-Property/Year-Round-Swimming-Pools/rtqb-8pht/). We combined these datasets with the CDC500 in the following ways:
+We also used datasets provided by the City of Boston, namely the  **[Hospital locations](https://data.cityofboston.gov/Public-Health/Hospital-Locations/46f7-2snz) and the **[Year-Round Swimming Pools datasets](https://data.cityofboston.gov/Public-Property/Year-Round-Swimming-Pools/rtqb-8pht/). We combined these datasets with the CDC500 in the following ways:
 	- The first dataset (created by transformation0.py) is a dataset that has all records in the CDC500 dataset of people in Boston visiting their doctors and maps them to the hospital nearest to them. We suspect that the closer one lives to a hospital the more often they would go visit their doctor. A lack of check ups could lead to undiagnosed diseases/injury so based on this information we can see the areas in Boston where doctors need to be more accessible.
 	- The second dataset (created by transformation2.py) is a dataset that has the obesity rates of people in Boston and maps them to pools nearest to them. We want to see whether being close to either or both of these facilities reduce obesity rates, and could signal that there should be more of these facilities around.
 

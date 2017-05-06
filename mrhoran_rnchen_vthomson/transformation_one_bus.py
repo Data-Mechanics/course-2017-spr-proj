@@ -34,8 +34,7 @@ class transformation_one_bus(dml.Algorithm):
 
     contributor = 'mrhoran_rnchen'
 
-    reads = ['mrhoran_rnchen_vthomson.students',
-             'mrhoran_rnchen_vthomson.buses']
+    reads = ['mrhoran_rnchen_vthomson.students']
 
     writes = ['mrhoran_rnchen_vthomson.student_per_school',
               'mrhoran_rnchen_vthomson.buses_per_yard',
@@ -57,12 +56,10 @@ class transformation_one_bus(dml.Algorithm):
         X2 = project(X, lambda t: (t[0], 1))
 
         X3 = aggregate(X2, sum)
-
-        # 72 is the average # of buses we think we need
         
         students_per_school = project(select(product(X,X3), lambda t: t[0][0] == t[1][0]), lambda t: (t[0][0],(t[0][1], t[1][1])))
 
-        # I just want to get the average number of students per school for a bu_yard optimization graph
+        # I just want to get the average number of students per school 
         x = project(students_per_school, lambda t: t[1][1])
 
         averagenum_studentsperschool = 0
@@ -85,7 +82,6 @@ class transformation_one_bus(dml.Algorithm):
 ## FIND THE AVERAGE # CASE DISTANCE BETWEEN STUDENTS ** (MAYBE WORST CASE DISTANCE)
 
         student_locations = [(f, shapely.geometry.shape(f['geometry'])) for f in tqdm(geojson.loads(open('input_data/students-simulated.geojson').read())['features']) if f['geometry'] is not None]
-#http://datamechanics.io/data/_bps_transportation_challenge/buses.geojson
 
         if trial == True:
             student_locations = student_locations[:((int)(len(student_locations)/16))]
@@ -93,10 +89,7 @@ class transformation_one_bus(dml.Algorithm):
         student_data = geojson.load(open('input_data/students-simulated.geojson'))
 
 
-#         bus_locations = [(f, shapely.geometry.shape(f['geometry'])) for f in tqdm(geojson.loads(open('').read())['features']) if f['geometry'] is not None]
-
-
-	#fill tree
+	   #fill 3tree
         p = rtree.index.Property()
         student_tree = rtree.index.Index(properties=p)
         for i in tqdm(range(len(student_locations))):
@@ -109,7 +102,6 @@ class transformation_one_bus(dml.Algorithm):
         student_radius = []
         
         for i in tqdm(range(len(student_locations))):
-              #print(student_locations[i][0]['geometry']['coordinates'])
 
               sv = student_locations[i][0]['geometry']['coordinates']
               m = (sv[0][0],sv[0][1],sv[0][0],sv[0][1])
@@ -118,95 +110,17 @@ class transformation_one_bus(dml.Algorithm):
 
               d = [vincenty((m[0],m[1]),(c[0],c[1])).miles for c in n]
               d.sort()
-              student_radius.append([s for s in d if s < 0.5])
+              student_radius.append([s for s in d if s < 0.5])  #average # students in a .5 mile radius
  
-              avgs.append(np.sum([d[i] for i in range(min(10,len(d)))])/10)
+              avgs.append(np.sum([d[i] for i in range(min(10,len(d)))])/10) # average distance b/w 10 closest students 
               
  
-        #print(avgs[0])
         print("Average Distance to 10 nearest students of student 0: ") 
         print(avgs[0])
         print("Distances to students within a 0.5 mile radius: ")
         print(student_radius[0])
         print("Values for each student stored in avgs and student_radius")
 
-        #test
-        #hits = student_tree.nearest((-71.2,42.2),10,True)
-        #hits = [student_data[c] for c in hits]
-        #for t in hits:
-            #print(t.bbox)
-        #print(list(hits))
-
-
-        # bounds = (-70,-72,41,43)
-        
-        # hits = student_tree.intersection(bounds)
-        # print(hits)
-
-        A = project([x for x in repo.mrhoran_rnchen_vthomson.students.find({})], find_location_students)
-        """
-        average_distance_student = []
-	
-        for feature in tqdm(student_data['features']):
-            if 'geometry' in feature and 'coordinates' in feature['geometry']:
-                coordinates = feature['geometry']['coordinates']
-                if any([
-                    shape.contains(shapely.geometry.Point(lon, lat))
-                    for (lon, lat) in coordinates
-                    for (feature, shape) in [student_locations[i]
-                    for i in student_tree.nearest((lon,lat,lon,lat), 1)]
-                    ]):
-                    average_distance_student.append(feature)
-                    continue
-        """
-
-        # now we have start_time , (lat,long) for every student now we want to preform average to find average distance per school start time
-        # idea here is to see what conditions buses are like for differents start times
-        
-        # also want to keep track of the worst distance between a student (possibly)
-
-        """
-        b = select(product(A,A), lambda t: t[0][0][0] == t[1][0][0])
-
-        c = select(project(b, lambda t: (t[0][0], dist(t[0][1],t[1][1]))), lambda t: t[1] > 0.0)
-
-        d = project(b, lambda t: (t[0][0], 1))
-
-        g = aggregate(c, sum)
-
-        f = aggregate(d, sum)
-
-        average_distance_students = project(select(product(f,g), lambda t: (t[0][0] == t[1][0])), lambda t: (t[0][0], (t[1][1]/t[0][1])))
-        repo.dropCollection('average_distance_students')
-        repo.createCollection('average_distance_students')
-
-
-        # repo.mrhoran_rnchen_vthomson.student_per_school.insert(dict(average_distance_students))
-        
-    
-##########################
-
-        ## number of buses per yard
-        
-        Y = project([p for p in repo.mrhoran_rnchen_vthomson.buses.find({})], get_buses)
-
-        Y2 = project(Y, lambda t: (t[0], 1))
-
-        Y3 = aggregate(Y2, sum)
-
-        bus_per_school = project(select(product(Y,Y3), lambda t: t[0][0] == t[1][0]), lambda t: (t[0][0],(t[0][1], t[1][1])))
-
-        #print(bus_per_school[0])
-         
-        repo.dropCollection('buses_per_yard')
-        repo.createCollection('buses_per_yard')
-        
-        repo.mrhoran_rnchen_vthomson.buses_per_yard.insert(dict(bus_per_school))
-
-
-        repo.logout()
-
-        """
         endTime = datetime.datetime.now()
 
         return {"start":startTime, "end":endTime}
@@ -233,26 +147,13 @@ class transformation_one_bus(dml.Algorithm):
 
         this_script = doc.agent('dat:mrhoran_rnchen_vthomson#transformation_one_bus', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
 
-        resource1 = doc.entity('dat:_bps_transportation_challenge/buses.json', {'prov:label':'Bus Yard Aggregation', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
-
-        get_buses_per_yard = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
-
-        doc.wasAssociatedWith(get_buses_per_yard, this_script)
-
-        doc.usage(get_buses_per_yard, resource1, startTime, None,
-                  {prov.model.PROV_TYPE:'ont:Retrieval'
-                  #'ont:Query':'location, area, coordinates, zip_code' #?type=Animal+Found&$select=type,latitude,longitude,OPEN_DT'
-                  }
-                  )
-
-           # label section might be wrong
-        resource2 = doc.entity('dat:_bps_transportation_challenge/students.json', {'prov:label':'Student Aggregation', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
+        resource1 = doc.entity('dat:_bps_transportation_challenge/students.json', {'prov:label':'Student Aggregation', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
 
         get_student_per_school = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
 
         doc.wasAssociatedWith(get_student_per_school, this_script)
 
-        doc.usage(get_student_per_school, resource2, startTime, None,
+        doc.usage(get_student_per_school, resource1, startTime, None,
                   {prov.model.PROV_TYPE:'ont:Retrieval'
                   #'ont:Query':'location, area, coordinates, zip_code' #?type=Animal+Found&$select=type,latitude,longitude,OPEN_DT'
                   }
@@ -263,7 +164,7 @@ class transformation_one_bus(dml.Algorithm):
 
         doc.wasAssociatedWith(get_average_distance_students, this_script)
 
-        doc.usage(get_average_distance_students, resource2, startTime, None,
+        doc.usage(get_average_distance_students, resource1, startTime, None,
                   {prov.model.PROV_TYPE:'ont:Retrieval'
                   #'ont:Query':'location, area, coordinates, zip_code' #?type=Animal+Found&$select=type,latitude,longitude,OPEN_DT'
                   }
@@ -272,19 +173,13 @@ class transformation_one_bus(dml.Algorithm):
         student_per_school = doc.entity('dat:mrhoran_rnchen_vthomson#student_per_school', {prov.model.PROV_LABEL:'Students per school', prov.model.PROV_TYPE:'ont:DataSet','ont:Extension':'json'})
         doc.wasAttributedTo(student_per_school, this_script)
         doc.wasGeneratedBy(student_per_school, get_student_per_school, endTime)
-        doc.wasDerivedFrom(student_per_school, resource2, get_student_per_school, get_student_per_school, get_student_per_school)
-
-    
-        buses_per_yard = doc.entity('dat:mrhoran_rnchen_vthomson#buses_per_yard', {prov.model.PROV_LABEL:'Buses per yard', prov.model.PROV_TYPE:'ont:DataSet','ont:Extension':'json'})
-        doc.wasAttributedTo(buses_per_yard, this_script)
-        doc.wasGeneratedBy(buses_per_yard, get_buses_per_yard, endTime)
-        doc.wasDerivedFrom(buses_per_yard, resource1, get_buses_per_yard, get_buses_per_yard, get_buses_per_yard)   
+        doc.wasDerivedFrom(student_per_school, resource1, get_student_per_school, get_student_per_school, get_student_per_school)
 
 
         average_distance_students = doc.entity('dat:mrhoran_rnchen_vthomson#average_distance_students', {prov.model.PROV_LABEL:'Distance between students', prov.model.PROV_TYPE:'ont:DataSet','ont:Extension':'json'})
         doc.wasAttributedTo(average_distance_students, this_script)
         doc.wasGeneratedBy(average_distance_students, get_average_distance_students, endTime)
-        doc.wasDerivedFrom(average_distance_students, resource2, get_average_distance_students, get_average_distance_students, get_average_distance_students)       
+        doc.wasDerivedFrom(average_distance_students, resource1, get_average_distance_students, get_average_distance_students, get_average_distance_students)       
 
         repo.logout()
                   
@@ -326,18 +221,10 @@ def get_students(student): # want to return the coordinates of the towns in and 
         
     return((name, (student["School Longitude"], student["School Latitude"])))
 
-def get_buses(bus): # want to return the coordinates of the towns in and around Boston
-
-    lat = bus['Bus Yard Latitude']
-    lon = bus['Bus Yard Longitude']
-
-    name = bus['Bus Yard']
-
-    return((name,(lat,lon)))
 
 transformation_one_bus.execute()
 doc = transformation_one_bus.provenance()
-#print(doc.get_provn())
+print(doc.get_provn())
 #print(json.dumps(json.loads(doc.serialize()), indent=4))
 
 ### eof

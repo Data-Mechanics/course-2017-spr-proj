@@ -1,4 +1,5 @@
-# some kmeans shenanigans
+# Author: Megan Horan
+# Contributor: Ryan Chen
 
 import json
 import dml
@@ -13,18 +14,15 @@ import time
 import numpy as np
 import csv
 
-# this transformation will check how many comm gardens and food pantries there are for each area
-# we want to take (zipcode, #comm gardens) (zipcode, #food pantries) --> (area, #food pantries#comm gardens)
-# I think this is a selection and aggregation
-
 class transformation_two_bus(dml.Algorithm):
 
     contributor = 'mrhoran_rnchen_vthomson'
 
-    reads = ['mrhoran_rnchen_vthomson.schools']
+    reads = ['mrhoran_rnchen_vthomson.schools',
+            'mrhoran_rnchen_vthomson.buses']
 
-    writes = ['mrhoran_rnchen_vthomson.kmeans_school_hubs']
-
+    writes = ['mrhoran_rnchen_vthomson.kmeans_school_hubs_ideal',
+             'mrhoran_rnchen_vthomson.kmeans_school_hubs_current']
 
     @staticmethod
     def execute(trial = False):
@@ -40,12 +38,10 @@ class transformation_two_bus(dml.Algorithm):
         ## For this transformation we want to focus on using k means to look at the hubs of schools
         ## we are going to focus on the effects of different numbers of k and its effects on the means
 
-
-        ## getting coordinates of sc
+        # transforming the data to get the latitude and longitude of the schools
         S = project([x for x in repo.mrhoran_rnchen_vthomson.schools.find({})], get_school_locations)
-        #print(S)
-
         
+        # standard Kmeans algorithm
         def k_means(P,M):
             
             OLD = []
@@ -67,40 +63,40 @@ class transformation_two_bus(dml.Algorithm):
                 
                 return(sorted(M))
 
-        ## calculating the cost now
-
-        ## first we want to go through and see which mean is the closest, and keep that distance
-        ## store that in a big array
-
+        ## this costs function will go through all the points, find the closest mean to each point, and find the distance between them
+        ## it will construct an array with every point and the cost(vincety distance) to its closest mean
+        ## finally it returns the average cost and the standard deviation
+        
         def costs(S, M):
 
+            # initialize return array
             cost_array = [0]*(len(S))
             closest_k = 1000
-
-            #print(vincenty(newport_ri, cleveland_oh).miles)
         
             for j in range(len(S)):
                 closest_k = 1000
+                
+                # for each school go through evey mean and find the closest mean
                 for i in range(len(M)):
 
                     distance = (vincenty(S[j], M[i]).miles)
                 
+                    # if you found a closer mean update the closest_k variable
                     if (distance < closest_k):
                         
                         closest_k = distance
-                        
+                       
+                # update the array for reflect that points cost to their local mean
                 cost_array[j] = closest_k
 
-            # to find standard deviation for a graph
-           # for j in range(len(cost_array)):
-
+        
+            # here we calculate the standard deviation from all those costs
             standard_dev = np.std(cost_array)
-            #print(standard_dev)
                     
                 
             ## find the cost by adding up all the distances and diving it by the number of distances to get the average
-            ## cost value for each point.. ie how close do the means get and is there a drop off in terms of productivity
-           
+            ## cost value for each point.. ie how close do the means get to each point
+            
             overall_cost = 0
 
             for i in range(len(cost_array)):
@@ -109,22 +105,20 @@ class transformation_two_bus(dml.Algorithm):
 
             return([(overall_cost/len(cost_array)), standard_dev])
 
-        ## added function to make our map nicer
         
-        ## the closest mean array tells us which points match up to which mean: I want it to give a count so that
+        ## added function to make our map nicer
+        ## the closest mean array tells us which points match up to which mean: but I also want it to give a count so that
         ## when we go to graph cirles on a map, I want the size of the circle to reflect how may schools are serviced
         ## by that mean
         
         def close_mean_count(S, M):
             
             closest_mean = [0]*(len(S))
-            
             closest_k = 1000
-
-            #print(vincenty(newport_ri, cleveland_oh).miles)
         
             for j in range(len(S)):
                 closest_k = 1000
+                
                 for i in range(len(M)):
 
                     distance = (vincenty(S[j], M[i]).miles)
@@ -137,15 +131,15 @@ class transformation_two_bus(dml.Algorithm):
                 
             return(closest_mean)
 
-
-        # if trial is true then we want to do it on a small subset of the data
+        # for testing purposes:
+        
+        #if trial is true then we want to do it on a small subset of the data
         
         if(trial == True):
 
             ## running on a dataset half the size
             num_means =22
         
-
             # picking the number of means from a random selection from (1/4) of the data
 
             M = [None]*num_means;
@@ -156,6 +150,7 @@ class transformation_two_bus(dml.Algorithm):
                 val = S[x]
                 M[i] = val
 
+            # cutting the data set in half
             x = int(len(S)/2)
         
             P1 = [None]*x
@@ -164,22 +159,29 @@ class transformation_two_bus(dml.Algorithm):
             
                 P1[i] = S[i]
 
+           # find the means returned by kmeans
             mean = k_means(P1, M)
             
+            # find the cost
             cost = costs(P1, mean)
 
-            print("cost of " + str(num_means) +" is "+ str(cost))
-            print("here are the new means")
+            print("cost of " + str(num_means) +" is "+ str(cost[0]))
+            print("stdDev of " + str(num_means) +" is "+ str(cost[1]))
+            print("here are the ideal locations of the busyards")
             print(mean)
             return(mean)
            
 
-        ## otherwise just do things normally
+        ## if trial is set to false, just do things normally on the whole dataset
         else:
 
             #after running various test, cost of more means dropped off around here
+            
+################## section made for csv file functionality #######################################################################
             csv_row_cost = [None]*87
             csv_row_std =  [None]*87
+            
+            # this outer for loop will go through and test k-values in range 0-87 (the length of the schools dataset)
             
             for i in range(1, 87):
 
@@ -189,26 +191,30 @@ class transformation_two_bus(dml.Algorithm):
 
                 M = [None]*num_means
                 
-
                 for i in range(0, num_means):
 
                     x = random.randint(0, len(S)-1)
                     val = S[x]
                     M[i] = val
 
-                
+                # find the means for that k-value
                 mean = k_means(S, M)
                
-
-                # now we find the average cost and standard deviation between all the points in the dataset, S ,and the its means
+                # we want to save the means at the ideal k-value of 44
+                if(i == 44):
+                    
+                    mean_ideal = mean
+                    
+                # now we find the average cost and standard deviation between all the points in the dataset, S ,and the means found above
             
                 cost_combined = (costs(S, mean))
+                
                 # we want to update these arrays because will be outputed to a csv file for graph use
                 csv_row_cost[i] = cost_combined[0]
                 csv_row_std[i] = cost_combined[1]
 
             # writing to the csv file
-
+#
             with open("/Users/meganhoran/Desktop/cs591/kmeans_stats.csv", "w") as csv_file:
 
                 writer = csv.writer(csv_file, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -216,10 +222,13 @@ class transformation_two_bus(dml.Algorithm):
                 for i in range(86):
 
                     writer.writerow([csv_row_cost[i], csv_row_std[i], i])
+                    
+###################################################################################################################################
 
-            # fianlly, we want to insert the means into a dictionanry
+            # now we want to insert the ideal number of means and their locations into mongod 
+            # we know that the ideal number of means is roughly half the dataset, as seen from the graph produced from the csv
 
-            closest_mean = close_mean_count(S, mean)
+            closest_mean = close_mean_count(S, mean_ideal)
 
             closest_mean_2 = project(closest_mean, lambda t: ((t[0] ,t[1]), 1))
             
@@ -230,15 +239,41 @@ class transformation_two_bus(dml.Algorithm):
                 str_ = "bus_yard" + str(i)
                 closest_mean_3[i] = (str_, ((closest_mean_3[i][0][0],  closest_mean_3[i][0][1]), closest_mean_3[i][1]))
 
-            print("******")
-            print(closest_mean_3)
-            repo.dropCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs')
-            repo.createCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs')
+            
+            repo.dropCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs_ideal')
+            repo.createCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs_ideal')
 
             repo.mrhoran_rnchen_vthomson.kmeans_school_hubs.insert(dict(closest_mean_3))
 
-           # now we want to find how many schools there are for each mean
-           
+################# finally we want to insert the current number of means and their locations into mongod ###########################
+            
+            ## finding the current school locations
+            Y = project([p for p in repo.mrhoran_rnchen_vthomson.buses.find({})], get_buses)
+
+            Y2 = project(Y, lambda t: (t[1], 1))
+
+            Y3 = aggregate(Y2, sum)
+            
+            current_schools_locations = [None]*len(Y3)
+            
+            for i in range(len(Y3)):
+                current_schools_locations[i] = Y3[i][0]
+                
+            # now we want to find the closest schools to all those means and put them in a database!
+            current_closest_mean = close_mean_count(S, current_schools_locations)
+            current_closest_mean_2 = project(current_closest_mean, lambda t: ((t[0] ,t[1]), 1))
+            current_closest_mean_3 = aggregate(current_closest_mean_2, sum)
+            
+            
+            for i in range(len(current_closest_mean_3)):
+                str_ = "current_yard" + str(i)
+                current_closest_mean_3[i] = (str_, ((current_closest_mean_3[i][0][0],  current_closest_mean_3[i][0][1]), current_closest_mean_3[i][1]))
+                
+            repo.dropCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs_current')
+            repo.createCollection('mrhoran_rnchen_vthomson.kmeans_school_hubs_current')
+
+            repo.mrhoran_rnchen_vthomson.buses_per_yard.insert(dict(current_closest_mean_3))
+
             repo.logout()
 
             endTime = datetime.datetime.now()
@@ -266,7 +301,7 @@ class transformation_two_bus(dml.Algorithm):
 ##
         this_script = doc.agent('alg:mrhoran_rnchen_vthomson#transformation_two_bus', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
         
-        resource1 = doc.entity('dat:schools', {'prov:label':'Kmeans Schools', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
+        resource1 = doc.entity('dat:schools', {'prov:label':'Ideal Busyards', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
 
         get_kmeans_schools = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
 
@@ -276,14 +311,31 @@ class transformation_two_bus(dml.Algorithm):
                   {prov.model.PROV_TYPE:'ont:Retrieval'
                   }
                   )
-        kmeans = doc.entity('dat:mrhoran_rnchen#kmeans', {prov.model.PROV_LABEL:'Kmeans Schools', prov.model.PROV_TYPE:'ont:DataSet','ont:Extension':'json'})
+        kmeans = doc.entity('dat:mrhoran_rnchen#kmeans_school_hubs_ideal', {prov.model.PROV_LABEL:'Ideal Busyards', prov.model.PROV_TYPE:'ont:DataSet','ont:Extension':'json'})
         doc.wasAttributedTo(kmeans, this_script)
         doc.wasGeneratedBy(kmeans, get_kmeans_schools, endTime)
         doc.wasDerivedFrom(kmeans, resource1, get_kmeans_schools, get_kmeans_schools, get_kmeans_schools)
         repo.logout()
                   
+        resource2 = doc.entity('dat:buses', {'prov:label':'bus yards', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
+
+        get_current_schools = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
+
+        doc.wasAssociatedWith(get_current_schools, this_script)
+
+        doc.usage(get_current_schools, resource2, startTime, None,
+                  {prov.model.PROV_TYPE:'ont:Retrieval'
+                  }
+                  )
+        kmeans2 = doc.entity('dat:mrhoran_rnchen#kmeans_school_hubs_current', {prov.model.PROV_LABEL:'Current Busyards', prov.model.PROV_TYPE:'ont:DataSet','ont:Extension':'json'})
+        doc.wasAttributedTo(kmeans2, this_script)
+        doc.wasGeneratedBy(kmeans2, get_current_schools, endTime)
+        doc.wasDerivedFrom(kmeans2, resource2, get_current_schools, get_current_schools, get_current_schools)
+        repo.logout()
+                  
         return doc
         return ""
+    
 def dist(p, q):
     (x1,y1) = p
     (x2,y2) = q
@@ -321,14 +373,16 @@ def get_school_locations(schools):
     
     return((lat,lon))
         
-##def get_busyard_locations(bus):
-##
-##    lat = bus['Bus Yard Latitude']
-##    long = bus['Bus Yard Longitude']
-##    name =  bus['Bus Yard']
-##
-##    return((name, (lat,long)))
-    
+def get_buses(bus): # want to return the coordinates of bus yards and their name
+
+    lat = bus['Bus Yard Latitude']
+    lon = bus['Bus Yard Longitude']
+
+    name = bus['Bus Yard']
+
+    return((name,(lat,lon)))
+
+
 transformation_two_bus.execute()
 doc = transformation_two_bus.provenance()
 print(doc.get_provn())

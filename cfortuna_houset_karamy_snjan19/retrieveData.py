@@ -7,6 +7,7 @@ import uuid
 import csv
 import json
 import requests 
+import os
 
 class retrieveData(dml.Algorithm):
     contributor = 'cfortuna_houset_karamy_snjan19'
@@ -23,9 +24,11 @@ class retrieveData(dml.Algorithm):
         repo = client.repo
         repo.authenticate('cfortuna_houset_karamy_snjan19', 'cfortuna_houset_karamy_snjan19')
 
+        # Set up a directory for storing the JSON files
+        if not os.path.exists("visualizations/data"):
+            os.makedirs("visualizations/data")
+
         ###### Importing Datasets and putting them inside the mongoDB database #####
-
-
 
         # Boston Hospitals
         url = 'http://data.cityofboston.gov/resource/u6fv-m8v4.json'

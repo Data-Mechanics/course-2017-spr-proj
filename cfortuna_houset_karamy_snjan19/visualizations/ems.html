@@ -3,6 +3,13 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
 <style>
 
+	header {
+		color: black;
+		background-color: white;
+		clear: left;
+		text-align: center;
+	}
+
 	html, body, #map {
 		width: 100%;
 		height: 100%;
@@ -40,6 +47,9 @@
 	}
 
 </style>
+<header>
+   <p>Click on a red crash site to get the route of the closest optimal (green) and actual (blue) EMS station to the crash site.</p>
+</header>
 <div id="map"></div>
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyCGV5ENNMK_PsokKvQFIkM6XXEzhfh2eHU"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -124,7 +134,7 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 		 	overlay2.setMap(map);
 
 
-			var overlay1 = new google.maps.OverlayView();
+		 	var overlay1 = new google.maps.OverlayView();
 
 		  	// Add the container when the overlay is added to the map
 		  	overlay1.onAdd = function() {
@@ -164,7 +174,7 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 
 
 
-			var overlay = new google.maps.OverlayView();
+		 	var overlay = new google.maps.OverlayView();
 
 			// Calculates and plots the route from the closests EMS station to the crash site
 			function getRoute(endlat, endlong, opt, renderer, type) {
@@ -265,7 +275,7 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 						// 	}
 						// });
 
-				
+
 						// Query the route from Google Maps
 						var request = {
 							origin: minOrigin,
@@ -329,7 +339,7 @@ d3.json("data/CarCrashData.json", function(carCrashError, data) {
 
 		});
 
-	});
+});
 });
 
 // // Add the optimal EMS locations as markers on map

@@ -1,3 +1,5 @@
+![wechatimg516](https://cloud.githubusercontent.com/assets/20471307/25777740/6d8d7d08-32b4-11e7-9c79-e62233b63220.jpeg)
+
 # CS 591 Spring17 Project
 
 ## Group Members: [Xiaotong Niu](https://github.com/sylvia0801), [Po-Yu,Tseng](https://github.com/cybersoftintern)

@@ -1,9 +1,8 @@
-import json
-import dml
-import prov.model
 import datetime
 import uuid
-from bson.json_util import dumps
+
+import dml
+import prov.model
 
 '''
 Map Hubway Stations with their coordinates

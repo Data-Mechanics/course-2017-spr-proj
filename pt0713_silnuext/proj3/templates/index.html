@@ -66,5 +66,58 @@
     </script>
 
 <h1>This is the scatter plot graph of crime numbers and average property values distributed by zip codes we got from statistical analysis.</h1>
+    <script type="text/javascript" src="canvasjs.min.js"></script>
+    <script type="text/javascript">
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", 
+        {
+            title: {
+                text: "Crime Numbers & Average Property Values of Boston"
+            },
+            data: [
+            {
+                type: "scatter",
+                dataPoints: [
+                {x: 64, y: 683935.2188391133},
+                {x: 40, y: 2627400.075706595},
+                {x: 120, y: 532645.3523017045},
+                {x: 107, y: 2046179.1779603527},
+                {x: 71, y: 1445432.1369094232},
+                {x: 103, y: 602647.9295958279},
+                {x: 89, y: 366906.32237386267},
+                {x: 141, y: 1287103.747590808},
+                {x: 21, y: 31410701.51902174},
+                {x: 75, y: 1792803.8381484933},
+                {x: 59, y: 5136699.3948395215},
+                {x: 106, y: 1358019.7393273585},
+                {x: 34, y: 708641.7049488972},
+                {x: 25, y: 544859.4618909424},
+                {x: 69, y: 522627.02598838817},
+                {x: 161, y: 839495.2810673724},
+                {x: 48, y: 485106.7459294437},
+                {x: 2, y: 631413.0396825396},
+                {x: 11, y: 17258317.9716647},
+                {x: 22, y: 412463.62452931685},
+                {x: 4, y: 4131795.316067146},
+                {x: 19, y: 1066555.1528858626},
+                {x: 13, y: 11153126.43678161},
+                {x: 7, y: 28670420.8},
+                {x: 3, y: 536728.3738872403},
+                {x: 67, y: 373292.7974247642},
+                {x: 1, y: 619770.6225680934},
+                {x: 3, y: 11393970.04237288},
+                {x: 362, y: 1944810.701462886},
+                {x: 2, y: 415580.3367003367},
+                {x: 5, y: 1043639.3132169576},
+                {x: 6, y: 4190460.4583333335}
+                ]
+            }
+            ]
+        });
+        chart.render();
+    }
+    </script>
+    <div id="chartContainer" style="height: 600px; width: 900px"></div>
+
 </body>
 </html>

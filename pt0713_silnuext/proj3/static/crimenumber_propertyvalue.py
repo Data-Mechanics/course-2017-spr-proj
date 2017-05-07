@@ -15,12 +15,4 @@ def crimeNumber_price():
 
 crime_price = crimeNumber_price()
 
-dat = []
-for zipcode in crime_price:
-	dat += {'zipcode': zipcode, 
-			 'crime number': crime_price[zipcode][0],
-			 'property price average': crime_price[zipcode][1]
-			}
-
-file = json.load(open('plots.json'))
-file = json.dumps(data)
+print(crime_price)

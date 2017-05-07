@@ -58,7 +58,7 @@ To run index.html file, just open the file directory and drag it into the browse
 
 ## Reference
 K-Means Clustering Algorithm. **"Data Mechanics"**. [http://cs-people.bu.edu/lapets/591/s.php#2.2](http://cs-people.bu.edu/lapets/591/s.php#2.2)<br>
-Correlation Value and P-Value Calculator. **"Data Mechanics"**. [http://cs-people.bu.edu/lapets/591/s.php#4.4](http://cs-people.bu.edu/lapets/591/s.php#2.2)<br>
+Correlation Value and P-Value Calculator. **"Data Mechanics"**. [http://cs-people.bu.edu/lapets/591/s.php#4.4](http://cs-people.bu.edu/lapets/591/s.php#4.4)<br>
 
 ## Installation
 To set up MongoDB, follow the procedure in [Data-Mechanics/course-2017-spr-proj](https://github.com/Data-Mechanics/course-2017-spr-proj).

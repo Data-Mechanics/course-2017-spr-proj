@@ -107,5 +107,4 @@ class statisticsanalysis(dml.Algorithm):
 				  
 		return doc
 
-statisticsanalysis.execute()
 ## eof

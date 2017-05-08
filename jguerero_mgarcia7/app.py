@@ -144,9 +144,9 @@ def correlationjson(x, y):
 	return json.dumps(complete)
 
 #v = nbstats()
-v = other('income', 'obesity')
-print (v)
+# v = other('income', 'obesity')
+# print (v)
 
 
-# if __name__ == "__main__":
-# 	app_name.run(host='0.0.0.0',port=5000,debug=True)
+if __name__ == "__main__":
+	app_name.run(host='0.0.0.0',port=5000,debug=True)

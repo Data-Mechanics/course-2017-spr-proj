@@ -1,4 +1,7 @@
 import dml
+import prov.model
+import datetime
+import uuid
 
 from flask import Flask
 from flask import render_template
@@ -7,14 +10,71 @@ import json
 from bson import json_util
 from bson.json_util import dumps
 
-app = Flask(__name__)
+app_name = Flask(__name__)
 
-@app.route("/")
+class app(dml.Algorithm):
+	contributor = 'jguerero_mgarcia7'
+	reads = ['jguerero_mgarcia7.neighborhoodstatistics']
+	writes = []
+
+
+	@staticmethod
+	def execute(trial = False):
+		'''Retrieve some data sets (not using the API here for the sake of simplicity).'''
+		startTime = datetime.datetime.now()
+
+		app_name.run(host='0.0.0.0',port=5000,debug=True)
+
+		endTime = datetime.datetime.now()
+
+		return {"start":startTime, "end":endTime}
+
+	@staticmethod
+	def provenance(doc = prov.model.ProvDocument(), startTime = None, endTime = None):
+		'''
+			Create the provenance document describing everything happening
+			in this script. Each run of the script will generate a new
+			document describing that invocation event.
+			'''
+
+		# Set up the database connection.
+		client = dml.pymongo.MongoClient()
+		repo = client.repo
+		repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
+		doc.add_namespace('alg', 'http://datamechanics.io/algorithm/') # The scripts are in <folder>#<filename> format.
+		doc.add_namespace('dat', 'http://datamechanics.io/data/jguerero_mgarcia7') # The data sets are in <user>#<collection> format.
+		doc.add_namespace('ont', 'http://datamechanics.io/ontology#') # 'Extension', 'DataResource', 'DataSet', 'Retrieval', 'Query', or 'Computation'.
+		doc.add_namespace('log', 'http://datamechanics.io/log/') # The event log.
+
+		this_script = doc.agent('alg:jguerero_mgarcia7#app', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
+		
+		neighborhoodstatistics_resource = doc.entity('dat:neighborhoodstatistics', {'prov:label':'Neighborhood Statistics', prov.model.PROV_TYPE:'ont:DataSet'})
+
+
+		get_visualizations = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
+
+		doc.wasAssociatedWith(get_statistics, this_script)
+		doc.usage(get_statistics, neighborhoodstatistics_resource, startTime, None,
+				  {prov.model.PROV_TYPE:'ont:Computation'}
+				  )
+ 
+		app = doc.entity('dat:jguerero_mgarcia7#app', {prov.model.PROV_LABEL:'Visualization', prov.model.PROV_TYPE:'ont:DataSet'})
+		doc.wasAttributedTo(app, this_script)
+		doc.wasGeneratedBy(app, get_visualizations, endTime)
+		doc.wasDerivedFrom(app, neighborhoodstatistics_resource, get_visualizations, get_visualizations, get_visualizations)
+
+
+		repo.logout()
+				  
+		return doc
+
+
+@app_name.route("/")
 def index():
 	return render_template("index.html")
 
 
-@app.route("/nbjson")
+@app_name.route("/nbjson")
 def nbstats():
 	client = dml.pymongo.MongoClient()
 	repo = client.repo
@@ -53,4 +113,4 @@ def nbstats():
 
 
 if __name__ == "__main__":
-	app.run(host='0.0.0.0',port=5000,debug=True)
+	app_name.run(host='0.0.0.0',port=5000,debug=True)

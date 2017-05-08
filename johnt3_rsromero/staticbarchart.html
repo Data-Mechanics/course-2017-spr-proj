@@ -1,0 +1,99 @@
+<html>
+<head>
+  <title>Bar Chart</title>
+  <script src="http://d3js.org/d3.v2.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <script>
+  
+  var data = [
+    {month: 'Jan', D14: 79, A7: 274, B2: 2640, E13: 352, D4: 1104, E18: 248, C6: 545, B3:1845, E5:197, C11:1446, A1:1062},
+    {month: 'Feb', D14: 139, A7: 364, B2: 2302, E13: 344, D4: 1171, E18: 289, C6: 484, B3:1710, E5:187, C11:1426, A1:1121},
+    {month: 'Mar', D14: 135, A7: 701, B2: 2835, E13: 444, D4: 1412, E18: 255, C6: 610, B3:2253, E5:232, C11:1426, A1:1394},
+    {month: 'Apr', D14: 183, A7: 402, B2: 2984, E13: 429, D4: 1232, E18: 287, C6: 634, B3:1812, E5:218, C11:1372, A1:1481},
+    {month: 'May', D14: 189, A7: 342, B2: 3983, E13: 525, D4: 1450, E18: 322, C6: 833, B3:2153, E5:259, C11:1645, A1:1516},
+    {month: 'Jun', D14: 123, A7: 334, B2: 2470, E13: 396, D4: 1378, E18: 268, C6: 646, B3:1839, E5:205, C11:1173, A1:941},
+    {month: 'Jul', D14: 226, A7: 377, B2: 2960, E13: 505, D4: 1483, E18: 337, C6: 789, B3:2036, E5:252, C11:1462, A1:1101},
+    {month: 'Aug', D14: 107, A7: 347, B2: 2782, E13: 394, D4: 1211, E18: 294, C6: 607, B3:1946, E5:193, C11:1204, A1:1085},
+    {month: 'Sep', D14: 109, A7: 430, B2: 2949, E13: 430, D4: 1339, E18: 245, C6: 738, B3:1582, E5:176, C11:1608, A1:1258},
+    {month: 'Oct', D14: 135, A7: 350, B2: 2616, E13: 478, D4: 1336, E18: 216, C6: 703, B3:1549, E5:229, C11:1248, A1:941},
+    {month: 'Nov', D14: 104, A7: 251, B2: 2081, E13: 306, D4: 844, E18: 114, C6: 407, B3:1199, E5:139, C11:957, A1:554},
+    {month: 'Dec', D14: 91, A7: 236, B2: 2039, E13: 242, D4: 764, E18: 141, C6: 333, B3:1131, E5:188, C11:797, A1:595},
+    
+];
+ 
+var xData = ["D14","A7","B2","E13","D4","E18","C6","B3","E5","C11","A1"];
+ 
+var margin = {top: 20, right: 50, bottom: 30, left: 50},
+        width = 1000 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+ 
+var x = d3.scale.ordinal()
+        .rangeRoundBands([0, width], .35);
+ 
+var y = d3.scale.linear()
+        .rangeRound([height, 0]);
+ 
+var color = d3.scale.category20();
+ 
+var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+ 
+var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+ 
+var dataIntermediate = xData.map(function (c) {
+    return data.map(function (d) {
+        return {x: d.month, y: d[c]};
+    });
+});
+ 
+var dataStackLayout = d3.layout.stack()(dataIntermediate);
+ 
+x.domain(dataStackLayout[0].map(function (d) {
+    return d.x;
+}));
+ 
+y.domain([0,
+    d3.max(dataStackLayout[dataStackLayout.length - 1],
+            function (d) { return d.y0 + d.y;})
+    ])
+  .nice();
+ 
+var layer = svg.selectAll(".stack")
+        .data(dataStackLayout)
+        .enter().append("g")
+        .attr("class", "stack")
+        .style("fill", function (d, i) {
+            return color(i);
+        });
+ 
+layer.selectAll("rect")
+        .data(function (d) {
+            return d;
+        })
+        .enter().append("rect")
+        .attr("x", function (d) {
+            return x(d.x);
+        })
+        .attr("y", function (d) {
+            return y(d.y + d.y0);
+        })
+        .attr("height", function (d) {
+            return y(d.y0) - y(d.y + d.y0);
+        })
+        .attr("width", x.rangeBand());
+ 
+svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+  
+  </script>
+</body>
+</html>

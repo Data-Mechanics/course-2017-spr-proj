@@ -59,14 +59,14 @@
 
 
 		{% if allcorrelations %}
-		  <h4> This is the correlation coefficient and p-value between ALL datapoints in the dataset </h4>
+		  <h4> This is the correlation coefficient and p-value between all datapoints: </h4>
 		  <p>
 		  Correlation Coefficient: {{allcorrelations}} <br>
 		  P-value: {{pvalue}} <br>
 		  </p>
 		{% endif %}
 
-		<h4> Find the correlation coefficient and p-value for a specific distance from a hospital </h4>
+		<h4> Find the correlation coefficient and p-value for a specific distance from a hospital: </h4>
 
 		  <form method="post" enctype="multipart/form-data" action="/">
 		    <label for="distance">Enter Distance:</label>
@@ -76,19 +76,14 @@
 
 		{% if onecorrelation %}
 		<p> Here are the results: <br>
-		Distance of each data point from their nearest hospital: {{distance}} <br>
+		Distance: {{distance}} <br>
 		Correlation Coefficient: {{onecorrelation}} <br>
 		P-value: {{pvalue}}
 		</p>
 
 		{% endif %}
 
-
-
 	</div>
-
-
-
 
 	<script>
 	// Get hospital data

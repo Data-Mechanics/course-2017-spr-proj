@@ -298,7 +298,7 @@ class optimalEMSStations(dml.Algorithm):
 
         return doc
 
-optimalEMSStations.execute()
+# optimalEMSStations.execute()
 #doc = OptimalHospitals.provenance()
 #print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

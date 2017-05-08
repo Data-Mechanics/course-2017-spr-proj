@@ -133,7 +133,7 @@ class carCrashTimes(dml.Algorithm):
                   
         return doc
 
-carCrashTimes.execute()
+# carCrashTimes.execute()
 # doc = retrieveData.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

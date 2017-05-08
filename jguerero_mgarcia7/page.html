@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }  
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#correlation">CORRELATION</a></li>
+        <li><a href="#map">MAP</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="ny.jpg" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>The atmosphere in New York is lorem ipsum.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="chicago.jpg" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago - A night we won't forget.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="la.jpg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>LA</h3>
+          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (About Project Section) -->
+<div id="about" class="container text-center">
+  <h3>RELATIONSHIP BETWEEN OBESITY,</h3>
+  <h3>INCOME AND FOOD SOURCE</h3>
+  <p>With the known health benefits, many cities, restaurants and families are embracing natural and fresh foods. Boston in particular is adopting and diving into the farm-to-table culture. Boston is comprised of multiple neighborhoods. Some neighborhoods being more underdeveloped than others, have less access to food sources that offer unprocessed and non-GMO options. Even if these options are made available, families may not have the income to maintain a healthy lifestyle. Thus, making it much easier to purchase certain groceries out of convenience vs. nutrition facts. Our project seeks to explore the relationship between food accessibility, obesity, and income in Boston neighborhoods. We believe that we will find that a smaller income and a lack of nearby food sources in a neighborhood will correlate to a higher obesity percentage. In order to do this, we created a method to score each neighborhood based on how accessible their food sources are, and then we used this information to attempt to determine a correlation.</p>
+  <p></p>
+  <p> Each neighborhood was given a food accessibility score which was calculated using three metrics: the number of food sources that were within walking distance* per residence, the average distance to a food source per residence, the quality of the food source
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Obesity</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Guitarist and Lead Vocalist</p>
+        <p>Loves long walks on the beach</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Income</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Drummer</p>
+        <p>Loves drummin'</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Food Source</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Bass player</p>
+        <p>Loves math</p>
+        <p>Member since 2005</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Correlation Graphs Section) -->
+<div id="correlation" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">CORRELATION BETWEEN THE THREE</h3>
+    <p class="text-center">From the data collected from each of the neighborhoods in Boston, we calculated the correlation coefficients between the food accessibility score, the income, and % obesity per neighborhood. These values can be seen in the graphs below. <br> Using the dropdown menu on the slide, click which relationship to view </p>
+    <ul class="list-group">
+      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
+      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li> 
+      <li class="list-group-item">November <span class="badge">3</span></li> 
+    </ul>
+    
+    <div class="row text-center">
+      <script type="text/javascript">
+      window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer",
+        {
+          title:{
+            text: "Import Cost Impact on Business",      
+            fontFamily: "arial black",
+            fontColor: "DarkSlateGrey"
+          },
+                            animationEnabled: true,
+          axisX: {
+            title:"Ease of Doing Business(1 = most friendly)",
+            titleFontFamily: "arial"
+
+          },
+          axisY:{
+            title: "Import cost per container",
+            titleFontFamily: "arial",
+            valueFormatString:"0 USD",
+            titleFontSize: 12
+          },
+
+          data: [
+          {        
+            type: "scatter",  
+            toolTipContent: "<span style='\"'color: {color};'\"'><strong>{name}</strong></span> <br/> <strong>Cost/ container</strong> {y} $<br/> <strong>Ease of Business</strong> {x} ",
+            dataPoints: [
+
+            { x: 132, y: 1070,name:"India" },
+            { x: 126, y: 2275,name:"Brazil" },
+            { x: 100, y: 1265,name:"Greece" },
+            { x: 110, y: 755,name:"Egypt" },
+            { x: 120, y: 1800,name:"Russia" },
+            { x: 91, y: 545,name:"China" },    
+            { x: 87, y: 1245,name:"Italy" },
+            { x: 44, y: 1221,name:"Spain" },
+            { x: 21, y: 801,name:"Latvia" },
+            { x: 18, y: 435,name:"Malaysia" },
+            { x: 53, y: 1780,name:"Mexico" },
+            { x: 20, y: 970,name:"Japan" },
+            { x: 35, y: 1795,name:"South Africa" },
+            { x: 19, y: 937,name:"Germany" },
+            { x: 6, y: 729,name:"Norway" },
+            { x: 4, y: 1315,name:"USA" },
+            { x: 13, y: 1660,name:"Canada" },
+            { x: 26, y: 1540,name:"Switzerland" },
+            { x: 1, y: 439,name:"Singapore" },
+            { x: 164, y: 3650,name:"Iraq" },
+            { x: 148, y: 1318,name:"Algeria" },
+            { x: 142, y: 2805,name:"Bhutan" },
+            { x: 135, y: 2900,name:"Sudan" },
+            { x: 123, y: 3015,name:"Uganda" },
+            { x: 105, y: 705,name:"Pakistan" },
+            { x: 113, y: 180,name:"Argentina" },
+            { x: 102, y: 1750,name:"Paraguay"},
+            { x: 80, y: 1180,name:"Croatia" },
+            { x: 71, y: 1063,name:"Turkey" },
+            { x: 51, y: 1085,name:"Hungary" },
+            { x: 42, y: 2830,name:"Columbia" },
+            { x: 30, y: 899,name:"Portugal" },
+            { x: 12, y: 686,name:"Saudi Arabia" },
+            { x: 29, y: 1248,name:"France" },
+            { x: 7, y: 1045,name:"UK" },
+            { x: 16, y: 1715,name:"Georgia" },
+            { x: 9, y: 1674,name:"Iceland" }
+
+            ]
+          }
+          ]
+        });
+
+chart.render();
+}
+</script>
+      <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      <div class="btn-group" data-toggle="buttons">
+        <button type='checkbox' class="btn btn-default" aria-pressed="true">Obesity vs. Income</button>
+        <button type='checkbox' class="btn btn-default" >Food Score vs. Income</button>
+        <button type='checkbox' class="btn btn-default" >Food Score vs. Obesity</button>
+      </div>
+      <!-- data-toggle="modal" data-target="#myModal" -->
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (Map Visualization Section) -->
+<div id="map" class="container text-center" >
+  <h3>GRAPHICAL REPRESENTATION OF, OBESITY, INCOME, FOOD SOURCE PER NEIGHBORHOOD</h3>
+  <p>words words words words</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Obesity</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Guitarist and Lead Vocalist</p>
+        <p>Loves long walks on the beach</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Income</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Drummer</p>
+        <p>Loves drummin'</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Food Source</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Bass player</p>
+        <p>Loves math</p>
+        <p>Member since 2005</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="bg-1" >
+  <div class="container">
+    <h3 class="text-center">CONTACT</h3>
+    <p class="text-center"><em>This was a project done for CS591:Data Mechanics at Boston University. The authors of this project, Melissa Garcia and Jeraldin Guerrero, have graduated and thus continuation and expansion of this analysis of the relationship between these tree factors for the neighborhoods is Boston is determined by either them or Professor Lapets. Please refer to their github for further details on the project and source code. </em></p>
+    <p></p>
+    <p></p>
+    <a href="https://github.com/velvetbleurose/course-2017-spr-proj/tree/master/jguerero_mgarcia7">Github</a>
+
+    <div class="row">
+      <div class="col-md-4">
+        <p>Have any questions? Shoot us an email</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span>Boston, MA</p>
+        <p><span class="glyphicon glyphicon-phone"></span>Phone: 617-358-6692</p>
+        <p><span class="glyphicon glyphicon-envelope"></span>Email: hicadmin@bu.edu</p>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+        <br>
+        <div class="row">
+          <div class="col-md-12 form-group">
+            <button class="btn pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h3 class="text-center">ABOUT THE AUTHORS</h3>  
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#home">Melissa</a></li>
+      <li><a data-toggle="tab" href="#menu1">Jeraldin</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h2>Melissa Garcia</h2>
+        <p></p>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h2>Jeraldin Guerrero</h2>
+        
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="#demo" data-toggle="collapse">
+              <img src="jeraldin2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+            </a>
+            <div id="demo" class="collapse">
+              <p>Guitarist and Lead Vocalist</p>
+              <p>Loves long walks on the beach</p>
+              <p>Member since 1988</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <p>Jeraldin graduated from Boston University with a Bachelors of Science in Computer Engineering. She will be pursuing a career in Cybersecurity. She likes playing Ken Ken, watching endless amount of Youtube, staying up late reading too much manga, and spending too much money going out to eat. Here she shares with you her favorite poem. Shoutout to all who program in C and know the struggle. </p>
+            <p> There once was a young man named Alec </p>
+            <p> Who wanted a string, so he'd malloc </p>
+            <p> He'd cry out in glee. </p>
+            <p> "Oh! The bytes that I'll free!" </p>
+            <p> Segmentation Fault </p>
+          </div>
+        </div>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <h2>Peter Griffin, Bass player</h2>
+        <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
+

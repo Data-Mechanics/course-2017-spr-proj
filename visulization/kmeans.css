@@ -1,0 +1,167 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 700px;
+  width: 550px;
+  margin-right: 100px;
+  margin-top: 50px;
+  float: right;
+}
+/* Optional: Makes the sample page fill the window. */
+body {
+  border: none;
+  width: 1300px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+   /* give it dimensions */
+}
+
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+nav{
+  padding-top: 0;
+  margin-top: -18px;
+  height:50px;
+  position:relative;
+  background-color: black;
+}
+nav ul{
+  list-style-type: none;
+  width: 100%;
+}
+nav ul li{
+  float:left;
+  padding-top: 16px;
+  /*border-right: 4px solid white;*/
+  text-align: center;
+  padding-bottom:14px;
+  padding-left: 3%;
+  color:white;
+  font-family: sans-serif;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+}
+
+nav ul li a:hover{
+  font-weight: bold;
+}
+nav ul ul{
+  list-style-type: none;
+  display:none;
+  position:absolute;
+  width:12%;
+  top: 100%;
+  left: 11%;
+  background-color:#003366;
+  text-align: center;
+}
+
+nav ul ul li {
+  float:none;
+  color: white;
+  font-family: sans-serif;
+  padding-left: 0;
+  margin-left: -20px;
+  text-align: left;
+  border: none;
+}
+nav ul ul li a{
+  text-decoration:none;
+}
+nav ul ul li a:hover{
+  font-weight: bold;
+}
+nav ul li:hover > ul{
+  display:block;
+}
+nav ul > ul::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #003366;
+}
+
+#panel{
+  margin-left: 5%;
+  padding: 20px;
+  width: 500px;
+  float: left;
+}
+
+select{
+    display: block;
+    font-size: 16px;
+    width: 400px;
+    height: 40px;
+}
+
+#sbtn{
+  padding-left: 0;
+  margin-left: 0px;
+  margin-top: 0px;
+  height:30px;
+  width: 400px;
+  color: white;
+  background: #003366;
+  font-size: 16px;
+}
+
+#sbtn:focus{
+  outline: none;
+}
+
+#sbtn:hover{
+  cursor: pointer;
+}
+
+#right{
+  float:right;
+  border:2px solid #003366;
+  width: 500px;
+  overflow-y:auto;
+  height: 550px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+#right p{
+  line-height: 0px;
+}
+#z0,#z1,#z2,#z3,#z4,#z5,#z6{
+  display: none;
+}
+
+#z0 .zones,#z1 .zones,#z2 .zones,#z3 .zones,#z4 .zones,#z5 .zones,#z6 .zones{
+  font-weight: bold;
+  color: #003366;
+  font-size: 18px;
+}
+
+#back{
+  margin-top: 10px;
+  padding: 15px 200px;
+  border-radius: 5px;
+  color: white;
+  background: #003366;
+  text-decoration: none;
+}
+
+#last{
+  float: right;
+  position: absolute;
+  top:900px;
+  left:88px;
+  margin-bottom: 100px;
+}

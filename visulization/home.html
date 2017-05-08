@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boston Public School Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <nav>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li>Visualization
+    <ul>
+      <li><a href="map.html">Score Mechanism<a></li>
+      <li><a href="kmeans.html">Clustering<a></li>
+  </nav>
+  <h1> Welcome to Data Machemics Project About</h1>
+  <h2> Greater Boston Area Public School Accessiblity Analysis</h2>
+  <h3> Members: Wenjing Lyu, Zetian Wu, Guangxing Ren</h3>
+  <br>
+  <div>
+    <p>This project intends to evaluate the accessibilities of the public schools in Boston and thus provide improvement suggestions for public schools in different regions or help you choose the best public school based on your expectations.
+       There are 4 accessibilities index that we are taking into account - Police Stations, Markets, Gardens and Hospitals.
+       The defaut equation we use is:
+    </p>
+    <p id="function">
+      Score = 1* Garden+ 1* Market + 1.5 * Police Station + 1.5 * Hospital.
+    </p>
+    <p>
+       But you can custimize your preferene by clicking the score mechanism and you can choose weights from 1 to 3 for each component.
+       <br>
+       Then you will see the top 50 schools on map on the left side and also in the list on the right side.
+       Another function Clustering will help you decide the best school in specific regions. Your can first choose how specific your want to cluster the school:
+     </p>
+     <p id = "function2">
+       General (3 clusters), Medium (5 clusters), Detailed (7 clusters)
+     </p>
+     <p>
+     and then you can find the top schools in each cluster.
+    </p>
+    <P id="action">Now, try these functions by yourself!</P>
+  </div>
+  <div>
+  <br>
+  <a id="v1" href="map.html">Customized Socre System</a>
+  <a id="v2" href="kmeans.html">K-means Clustering</a>
+</div>

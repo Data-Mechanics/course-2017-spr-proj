@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+
+<title>BPS Funding and SAT Scores</title>
+
+<style>
+	body {
+	    position: absolute;
+	    font-family: "Proxima Nova", "Montserrat", sans-serif;
+	}
+	h1, h2{
+	    position: absolute;
+	    left: 10px;
+	    font-size: 1.3em;
+	    font-weight: 100;
+	    color: steelblue;
+	}
+	h2 {
+		position: absolute;
+		left: 200px;
+		font: 100 100px "Helvetica Neue";
+ 		color: #ddd;
+ 		font-weight: bold;
+	}
+
+	.label {
+	  fill: #777;
+	  font-size: 0.75em;
+	}
+
+	.school {
+	  stroke: steelblue;
+	}
+	.name {
+		position: absolute;
+		width: 200px;
+		height: 15px;
+		pointer-events: none;
+	}
+
+</style>
+
+
+<body>
+
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+
+
+	<h1>BPS Funding and SAT Scores</h1> 
+
+	<h2>2016</h2>
+	<svg class="chart"></svg>
+
+	<script>
+		var margin = {top: 80, right: 20, bottom: 30, left: 40},
+		    width = 960 - margin.left - margin.right,
+		    height = 560 - margin.top - margin.bottom;
+		 
+		var svg = d3.select(".chart")
+		    .attr("width", width + margin.left + margin.right)
+		    .attr("height", height + margin.top + margin.bottom)
+		  .append("g")
+		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		 
+		// setup x 
+		//var x = d3.scaleLinear().range([0, width]);
+		var x = d3.scaleLinear().range([0, width])
+		var xAxis = d3.axisBottom(x);
+		 
+		// setup y
+		var y = d3.scaleLinear().range([height, 0]);
+		var yAxis = d3.axisLeft(y);
+
+		d3.json("funding_sat.json", function(error, data) {
+			if (error) throw error;
+
+			  // format the data
+			console.log(data);
+			//console.log(data.SAT.2016);
+			data.forEach(function(d) {
+				d.funding = +(Number((d.Funding).replace(/[^0-9\.]+/g,"")));
+				d.sat = +d.SAT;
+			});
+
+  			x.domain([d3.min(data, function(d) {return d.funding})-1000000, d3.max(data, function(d) {return d.funding})]);
+  			y.domain([800, d3.max(data, function(d) { return d.sat; }) +200]);
+
+  			var color = d3.scaleOrdinal(d3.schemeCategory20b);
+
+			var name = d3.select("body").append("div")
+				.attr("class", "name")
+				.style("opacity", 0);
+
+  			svg.selectAll(".school")
+		      .data(data)
+		    .enter().append("circle")
+		      .attr("class", "school")
+		      .attr("r", 15)
+		      .attr("cx", function(d) { return x(d.funding); })
+		      .attr("cy", function(d) { return y(d.sat); })
+		      .style("fill", function(d) {
+					return color(Math.floor(Math.random() * 20) + 1);
+		      })
+		      /*.on("mouseover", function(d){
+				d3.select("h2").text(d.Name);
+				d3.select("h3").text("Funding: "+d.Funding)
+				d3.select("h4").text("Avg SAT: "+d.sat)
+				d3.select(this).attr("class","school");
+				})
+		      .on("mouseout", function(d){
+				d3.select("h2").text("");
+				d3.select("h3").text("");
+				d3.select("h4").text("");
+				d3.select(this).attr("class","school");
+				});*/
+				.on("mouseover", function(d) {
+			        name.transition()
+			           .duration(200)
+			           .style("opacity", .9);
+			        name.html(d.Name)
+			           .style("left", (d3.event.pageX + 5) + "px")
+			           .style("top", (d3.event.pageY - 28) + "px");
+			    })
+			    .on("mouseout", function(d) {
+			   	    name.transition()
+			           	.duration(500)
+			            .style("opacity", 0);
+			    });
+
+			// x-axis
+			svg.append("g")
+				.attr("transform", "translate(0," + height + ")")
+	     		.call(xAxis);
+
+	     	svg.append("text")
+			    .attr("class", "x label")
+			    .attr("text-anchor", "end")
+			    .attr("x", width)
+			    .attr("y", height - 6)
+			    .text("Funding");
+
+			// y-axis
+			svg.append("g")
+				.call(yAxis);
+
+			// Add a y-axis label.
+			svg.append("text")
+			    .attr("class", "y label")
+			    .attr("text-anchor", "end")
+			    .attr("y", 6)
+			    .attr("dy", ".75em")
+			    .attr("transform", "rotate(-90)")
+			    .text("Average SAT Score");
+
+			
+			
+
+
+		});
+
+	</script>
+</body>
+</html>

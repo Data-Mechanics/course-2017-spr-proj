@@ -77,13 +77,17 @@ This negative correlation between obesity and income, as well as food accessbili
 
 # Visualizations
 
-We created a web server in Python (using Flask) in order to interact with MongoDB and render the HTML pages.
+We created a web server in Python (using Flask) in order to interact with MongoDB and render the HTML pages. Below is a gif of the complete website which was created from a Bootstrap template. To run the website, start up the mongo server. Then run app.py, it will output where the website is hosted (It should be hosted on your locally to port 5000 but this could be different).
 
-The first visualization is a chloropleth map of Boston that shows Boston's neighborhoods shaded with the average value of either obesity, food accessibility score, average # of food sources within walking distance, and the average quality of those food sources within walking distance. Higher values correspond to a darker, more intense color. This map was created using d3.js (Javascript library). 
+![](https://github.com/velvetbleurose/course-2017-spr-proj/blob/master/jguerero_mgarcia7/website.gif)
+
+The first visualization is a chloropleth map of Boston that shows Boston's neighborhoods shaded with the average value of either obesity, food accessibility score, average # of food sources within walking distance, and the average quality of those food sources within walking distance. Higher values correspond to a darker, more intense color. If you hover over the neighborhood, the value will be displayed right below the title. This map was created using d3.js (Javascript library). 
 
 ![](https://github.com/velvetbleurose/course-2017-spr-proj/blob/master/jguerero_mgarcia7/visualization1.gif)
 
-The second visualization plots two variables against each other, and displays the corresponding correlation coefficient. This allows you to quickly visualize whether two variables have positive, negative, or no correlation. [INSERT HOW IT WAS CREATED]
+The second visualization plots two variables against each other, and displays the corresponding correlation coefficient. This allows you to quickly visualize whether two variables have positive, negative, or no correlation. To create this visualization, we created a chart using Canvas.js and plotted the points with the information from our database. You can hover over each point to get more information on the neighborhood and the relationship of interest.
+
+![](https://github.com/velvetbleurose/course-2017-spr-proj/blob/master/jguerero_mgarcia7/visualization2.gif)
 
 # Conclusion/Future Work
 

@@ -33,9 +33,9 @@ Next, we looked at what the average distance was to the closest food source per 
 
 The last metric we look at, this one taking a bit more computation, was the average quality of food sources in the neighborhood. There were a few options that we considered when deciding how this number was going to be calculated. The one that seemed to make the most sense was to rank each type of food source and give it a 'weight'. So, a farmer's market had a weight of 1, a supermarket had a weight of 2/3, and a cornerstore had a weight of 1/3. We ranked them based on the healthiness of the food source, as well as the variety of foods that one could buy.
 
-After finding these values for each house in the neighborhood, we calculated the mean of each metric (per house). After getting a matrix of the mean values, we converted each metric into z-scores, which standardizes the scores and allows each of the metrics to be compared. Then, we added them in order to create 1 final composite score for each neighborhood.
+After finding these values for each house in the neighborhood, we calculated the mean of each metric (per house). After getting a matrix of the mean values, we converted each metric into z-scores, which standardizes the scores and allows each of the metrics to be compared. Then, we added them and then scaled these resulting values from 0 to 100 in order to create 1 final composite score for each neighborhood.
 
-| Neighborhood                |   Avg # of Food Sources* |   Avg Distance To Closest Food Source (km) |   Quality of Food Sources* |   Composite Z-score |
+| Neighborhood                |   Avg # of Food Sources* |   Avg Distance To Closest Food Source (km) |   Quality of Food Sources* |   Score |
 |:----------------------------|-------------------------:|-------------------------------------------:|---------------------------:|--------------------:|
 | Financial District/Downtown |                     8.50 |                                       0.23 |                       0.39 |              100.00 |
 | Bay Village                 |                     2.00 |                                       0.19 |                       0.33 |               63.05 |
@@ -61,7 +61,7 @@ After finding these values for each house in the neighborhood, we calculated the
 
 \* *Within walking distance of a residence, which we defined to be < 1km*
 
-The composite Z-score is what we are considering our food accessibility score per neighborhood. This number is scaled between 0 and 100. A high score denotes that the food accessibility is better in that neighborhood compared to other neighborhoods in Boston.  In our case, the best neighborhood in regards to food accessibility belongs is Financial District/Downtown, whereas the worst is West Roxbury. 
+A high score denotes that the food accessibility is better in that neighborhood compared to other neighborhoods in Boston.  In our case, the best neighborhood in regards to food accessibility belongs is Financial District/Downtown, whereas the worst is West Roxbury. Considering that the next smallest score is 28.2 (Hyde Park), this suggests that there is a very large difference in food accessbility between West Roxbury and Financial District/Downtown. This could be due to the fact that Financial District/Downtown is a smaller area and thus more dense than West Roxbury. 
 
 ### Determining Correlation: Our Coefficient Correlation Array ###
 
@@ -73,18 +73,30 @@ The composite Z-score is what we are considering our food accessibility score pe
 
 Shown above is our coefficient correlation array for our three variables containing data from food score, income, and obesity. The correlation coefficient array shows that there is a relatively strong negative correlation between obesity and income, as well as between the food accessibility score and obesity. However, there doesn't seem to be any correlation between the food accessbility score and the income. 
 
+This negative correlation between obesity and income, as well as food accessbility and obesity are relationships that we expected to see when undertaking this project. 
+
+# Visualizations
+
+We created a web server in Python (using Flask) in order to interact with MongoDB and render the HTML pages.
+
+The first visualization is a chloropleth map of Boston that shows Boston's neighborhoods shaded with the average value of either obesity, food accessibility score, average # of food sources within walking distance, and the average quality of those food sources within walking distance. Higher values correspond to a darker, more intense color. This map was created using d3.js (Javascript library). 
+
+The second visualization plots two variables against each other, and displays the corresponding correlation coefficient. This allows you to quickly visualize whether two variables have positive, negative, or no correlation. [INSERT HOW IT WAS CREATED]
+
 # Conclusion/Future Work
 
 Based on data characterizing Boston’s neighborhoods, we can conclude that there is a definite relationship between income and food accessibility on incidence of obesity. In both cases, it was found that the higher the income and the higher the food score, the lower the obesity. This resonates with research being done that frame obesity as a social problem, and one that  can thus be fixed by improving the overall economic outlook of a neighborhood, as well as increasing food accessibility to better quality food sources. However, though the results looks promising, our sample size of 20 neighborhoods is too small to really allow us to make any meaningful conclusions about the relationship between food accessibility,  income, and obesity. In the future, we would look to extend this method of analysis to more cities and their neighborhoods.
 
+In addition, more analysis can be done on the food accessibility scoring method. Future researchers can come up with more metrics to score a neighborhood, and then decide using statistical analysis which metrics have the largest effect on the overall score and the largest effect on obesity. In addition, one can also alter the metrics already used in order to take into account the total area of the neighborhood, so that neighborhoods such as West Roxbury and Financial District/Downtown can be more easily compared.
+
 # Required libraries and tools
-The libraries pyshp, shapely, geopy, numpy, pickle, scipy, sklearn will need to be installed before the program can be executed. They can be installed with these pip3 commands:
+The libraries pyshp, shapely, geopy, numpy, pickle, scipy, sklearn will need to be installed before the program can be executed. They can be installed with these pip commands:
 ```
-pip3 install pyshp
-pip3 install shapely
-pip3 install geopy
-pip3 install numpy
-pip3 install pickle
-pip3 install scipy
-pip3 install sklearn
+pip install pyshp
+pip install shapely
+pip install geopy
+pip install numpy
+pip install pickle
+pip install scipy
+pip install sklearn
 ```

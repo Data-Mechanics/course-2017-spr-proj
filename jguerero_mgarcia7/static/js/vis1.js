@@ -59,7 +59,6 @@ function makeGraphs(error, nbjson) {
 
 	});
 
-
 };
 
 

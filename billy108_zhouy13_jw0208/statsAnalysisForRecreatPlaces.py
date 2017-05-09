@@ -73,9 +73,9 @@ class statsAnalysisForRecreatPlaces(dml.Algorithm):
             return len([c for c in corrs if abs(c) > c0]) / len(corrs)
 
         stats = []
-        stats.append({'_id': 'openSpaceAndpool', 'corr': corr(x, y), 'p value': p(x, y)})
-        stats.append({'_id': 'openSpaceAndHubway', 'corr': corr(x, z), 'p value': p(x, z)})
-        stats.append({'_id': 'poolAndHubway', 'corr': corr(y, z), 'p value': p(y, z)})
+        stats.append({'_id': 'openSpaceAndpool', 'corr': corr(x, y), 'p_value': p(x, y)})
+        stats.append({'_id': 'openSpaceAndHubway', 'corr': corr(x, z), 'p_value': p(x, z)})
+        stats.append({'_id': 'poolAndHubway', 'corr': corr(y, z), 'p_value': p(y, z)})
 
 
         repo.dropCollection('RecreatPlacesStats')
@@ -159,7 +159,7 @@ class statsAnalysisForRecreatPlaces(dml.Algorithm):
 
         return doc
 
-# statsAnalysisForRecreatPlaces.execute()
+statsAnalysisForRecreatPlaces.execute()
 # doc = statsAnalysisForRecreatPlaces.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

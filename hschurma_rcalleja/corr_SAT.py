@@ -131,7 +131,7 @@ class corr_SAT(dml.Algorithm):
         return doc
 
 
-corr_SAT.execute()
+#corr_SAT.execute()
 #doc = corr_SAT.provenance()
 
 

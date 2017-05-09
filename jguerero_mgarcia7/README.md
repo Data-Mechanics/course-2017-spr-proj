@@ -67,9 +67,9 @@ A high score denotes that the food accessibility is better in that neighborhood 
 
 |       | Food Score |   Income |   Obesity |
 |:----------------------------|-------------------------:|-------------------------------------------:|---------------------------:|
-|**Food Score** | 1.0         |   -0.0243795  |  -0.41433783  |                       
-|**Income** | -0.0243795  |   1.0         |  -0.54327576  |                       
-|**Obesity** | -0.41433783 |   -0.54327576 |  1.0          |
+|**Food Score** | 1.0         |   -0.0243  |  -0.466  |                       
+|**Income** | -0.0243  |   1.0         |  -0.543  |                       
+|**Obesity** | -0.466 |   -0.543|  1.0          |
 
 Shown above is our coefficient correlation array for our three variables containing data from food score, income, and obesity. The correlation coefficient array shows that there is a relatively strong negative correlation between obesity and income, as well as between the food accessibility score and obesity. However, there doesn't seem to be any correlation between the food accessbility score and the income. 
 

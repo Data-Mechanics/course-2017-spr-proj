@@ -81,6 +81,8 @@ We created a web server in Python (using Flask) in order to interact with MongoD
 
 The first visualization is a chloropleth map of Boston that shows Boston's neighborhoods shaded with the average value of either obesity, food accessibility score, average # of food sources within walking distance, and the average quality of those food sources within walking distance. Higher values correspond to a darker, more intense color. This map was created using d3.js (Javascript library). 
 
+![](https://github.com/velvetbleurose/course-2017-spr-proj/blob/master/jguerero_mgarcia7/visualization1.gif)
+
 The second visualization plots two variables against each other, and displays the corresponding correlation coefficient. This allows you to quickly visualize whether two variables have positive, negative, or no correlation. [INSERT HOW IT WAS CREATED]
 
 # Conclusion/Future Work

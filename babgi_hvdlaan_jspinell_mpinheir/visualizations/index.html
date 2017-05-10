@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <title>CS591:Data Mechanics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,body,h1,h3,h4 {font-family:"Lato", sans-serif}
+    .mySlides {display:none}
+    .w3-tag, .fa {cursor:pointer}
+    .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    a:link, a:visited {
+    background-color: #367bf4;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    
+    }
+    a:hover, a:active {
+    background-color:#7551f7;
+    }
+    p {  
+    text-indent: 2.0em;  
+    }
+    blockquote {  
+    text-indent: 4.0em;
+    text-align: center;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 150px;
+    margin-right: 150px;
+    } 
+  </style>
+  <body>
+
+    <!-- Content -->
+    <div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+
+      <div class="w3-panel">
+	<img src="external/bu_cs.jpg"  style="width:250px;">
+	<h1>CS591: Data Mechanics</h1>
+	<h2>Impact of SocioEconomic Factors on Rental Prices in Boston</h2>
+      </div>
+      <hr>
+      <!-- Slideshow -->
+      <div class="w3-container">
+	<iframe name=map1 id=map  height=500px width=1000px  frameborder=0 align=center src=file:external/folium_test.html>
+	  <p>Fuck you.</p>
+	</iframe>
+
+      </div>
+
+      <p class=nor align=center>
+	<a href=file:external/folium_test.html target=map1 >Rental Prices</a>
+	
+	<a href=file:external/folium_test_crime.html target=map1 >Crime Rate</a>
+
+	<a href=file:external/folium_test_grad.html target=map1 >Graduation Rate</a>
+
+	<a href=file:external/folium_test_age.html target=map1 >Average Age</a>
+	
+	<a href=file:external/stacked-bar.html target=map1 >Actual vs Predicted</a>
+
+      </p>
+      <hr>
+      <div class="w3-center w3-padding-64">
+	<span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Background</span>
+	<br>
+	<br>
+	<blockquote>In quick developing metropolitans it becomes harder to find an affordable and appropriate location to raise a family.
+	  Housing prices continue to increase and not every neighborhood is the right environment for a kid to grow up and prepare for
+	  a successful college career. This project aims to
+	  answer the question, “If a family with presumably one or two children who are preparing to go to college were to move to
+	  Boston, what would be the most ideal area to move to?” To rate the areas in Boston to answer the posed question, we obtained
+	  and scraped data from multiple online sources that included Boston and Cambridge housing rates, crime rates, population by age,
+	  corresponding neighborhoods to zip codes and education information.
+	</blockquote>
+      </div>
+      
+      <!-- Grid -->
+      <div class="w3-row w3-container">
+	<div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+	  <h3>Rental Prices</h3>
+	  <p>talk about it here</p>
+	</div>
+
+	<div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+	  <h3>Crime Rate</h3>
+	  <p>talk about it here</p> 
+	</div>
+
+	<div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+	  <h3>Graduation Rate</h3>
+	  
+	</div>
+
+	<div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+	  <h3>Average Age</h3>
+     	  
+	</div>
+      </div>
+
+      <hr>
+      <div class="w3-center w3-padding-64">
+	<span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16"> Methods </span>
+	<br>
+	<br>
+	<blockquote>  All of the datasets are organized by zip code, which allowed the creation of 3 datasets that found correlations
+	  between 2-bedroom apartment rates, crime rates, college graduation an population by age. To transform the data tiers were
+	  created of housing prices and mapped averages of crime data, graduation rates and populations of ages 15-19 for those
+	  respective areas. Initially, the housing prices were broken up into tiers for “average Rent 2 bedroom”, based on zipcodes.
+	  The crime score for Boston and Cambridge were normalized and assigned by tier. A similar approach was used for the graduation
+	  rate data. A MapReduce algorithm was used to average graduation rates per tier, to create education rates per tier. Finally,
+	  to indicate what the average age of the population of 15-19 year olds was another MapReduce was used and AgeByTier was created. 
+	</blockquote>
+	<blockquote>
+	  For the second part of the project statistical analysis was performed to check correlation between housing prices and crime
+	  rates, college graduation rates, and the age of the population.
+	</blockquote>
+	<img src="external/corr_graph.jpg"  style="width:500px;">
+	<blockquote>
+	  Lastly, Prices of houses in a given area were predicted; using linear regression values for graduation rates, age by population
+	  and crime rates. The results were compared with the value of the houses against the actual prices of the houses to determine
+	  whether or not the price reflected the value of the house. This data can be used to advise families that are looking into
+	  buying a house in Boston. The results tell whether or not the house they are looking at is a good buy for the asking price.
+	</blockquote>
+	<img src="external/lin_reg_grad_price.jpg"  style="width:400px;"> 
+	<blockquote>
+	  A limitation of the data, which simplified our job, but additionally is a restriction to the precise location of the house,
+	  is that all the data is organized by zip code. Within a single zip code, one can find very different looking 2 bedroom
+	  apartments, generalizing by zip code is thus a limitation. Furthermore, crime rate is similarly very generalized data.
+	  A family moving to Boston might be interested in violence on the streets, robbery, etc., crime that influences their
+	  child safety, rather than for example crime like fraud.  
+
+	</blockquote>
+	<img src="external/bar_graph.jpg"  style="width:700px;">
+      </div>
+
+     
+
+
+  </body>
+</html>

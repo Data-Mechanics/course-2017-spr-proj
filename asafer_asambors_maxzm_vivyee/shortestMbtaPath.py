@@ -122,8 +122,9 @@ class shortestMbtaPath(dml.Algorithm):
     def get_tuples(info, G):
         data = eval(info['obesity_locations']['obesity']['data_value'])
         time = info['min_travel_time']
+        population = info['obesity_locations']['obesity']['population2010']
 
-        return {'data_value': data, 'time': time}
+        return {'data_value': data, 'time': time, 'population': population}
 
 
     @staticmethod
@@ -271,4 +272,4 @@ class shortestMbtaPath(dml.Algorithm):
         return doc
 
 
-# shortestMbtaPath.execute()
+ #shortestMbtaPath.execute()

@@ -1,0 +1,162 @@
+<html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<head>
+    <title>Obesity and Healthy Locations Map</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename='neighborhoods.js') }}"></script>
+    <script src="{{ url_for('static', filename='obesity.js') }}"></script>
+    <script src="{{ url_for('static', filename='health.js') }}"></script>
+</head>
+
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+
+svg {
+    display: block;
+    margin: 0 auto;
+}
+.button {
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #606b82;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.button:hover {
+    background-color: #606b82;
+    color: white;
+}
+
+
+</style>
+<head>
+   <form action="/" type="POST">
+        <input style="position: absolute; margin-top:0%;" type="submit" class="button" value="Back" />
+    </form>
+<center><h1>Obesity and Health Locations in Boston</h1></center>
+</head>
+<body bgcolor="ffffff">
+
+<br> 
+<br>
+
+<div align="center">
+
+    <script>
+    // our code will go here
+    var width = 700,
+        height = 580;
+
+    var svg = d3.select( "body" )
+        .append( "svg" )
+        .attr( "width", width )
+        .attr( "height", height );
+
+    var tooltip = d3.select("body")
+        .append( "div" )
+        .style("position", "absolute")
+        .style("text-align", "center")
+        .style("height", "28px")
+        .style("font", "12px sans-serif")
+        .style("background", "lightsteelblue")
+        .style("border", "0px")
+        .style("border-radius", "8px")
+        .style("pointer-events", "none")
+        .style("opacity", "0")
+        .text("a simple tooltip");
+
+    var g = svg.append( "g" );
+
+    var albersProjection = d3.geo.albers()
+        .scale( 190000 )
+        .rotate( [71.057,0] )
+        .center( [0, 42.313] )
+        .translate( [width/2,height/2] );
+
+    var geoPath = d3.geo.path()
+        .projection( albersProjection )
+        .pointRadius( function(d) { if ("percentage" in d.properties) {return d.properties.percentage / 3.0;} else { return 4.5} });
+
+    g.selectAll( "path" )
+        .data( neighborhoods_json.features )
+        .enter()
+        .append( "path" )
+        .attr( "fill", "#606b82") //516182")g
+        .attr( "d", geoPath );
+
+    var obesity = svg.append( "g" );
+
+    obesity.selectAll("path")
+        .data(obesity_json.features)
+        .enter()
+        .append("path")
+        .attr( "fill", "#ffe66b" )
+        .attr( "stroke", "#000000" )
+        .attr("opacity", "0.5")
+        .attr( "d", geoPath )
+        .on("mouseover", function(d) {
+            d3.select(this).attr("opacity", "1.0");
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            tooltip.html(d.properties.percentage + "% obese<br/>" + "population: " + d.properties.population_size)
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px")
+                .style("width", "100px")
+        })
+        .on("mouseout", function(d) {
+            d3.select(this).attr("opacity", "0.7");
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
+
+    var health = svg.append( "g" );
+
+    health.selectAll( "path" )
+        .data( health_json.features )
+        .enter()
+        .append( "path" )
+        .attr( "fill", "#750075") 
+        .attr( "stroke", "#000000" )
+        .attr("opacity", "0.5")
+        .attr( "d", geoPath )
+        .on("mouseover", function(d) {
+            d3.select(this).attr("opacity", "1.0");
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            var healthy_type = "";
+            if (d.properties.type == "prog") {
+                healthy_type = "Healthy Program";
+            } else if (d.properties.type == "store") {
+                healthy_type = "Healthy Store";
+            } else {
+                healthy_type = "Urban Orchard";
+            }
+            tooltip.html(healthy_type)
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px")
+                .style("width", "60px");
+        })
+        .on("mouseout", function(d) {
+            d3.select(this).attr("opacity", "0.7");
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
+    </script>
+
+</div>
+</body>
+</html>

@@ -1,5 +1,14 @@
-# CS591 Project #2 Proposal
+# CS591 Project #3 Proposal
 #### Sean Zhang & Martin Yim
+
+## How to run visualizations
+  cd into visualizations folder
+  
+  python server.py
+  
+  Visit localhost:8000
+
+  #### please keep in mind that the Leaflet map visual may take some time (5-10 seconds) to load, as there are a lot of data points
 
 ## The problem
   We are interested in discovering the feasibility of living in Boston in terms of walk time, commute time, and property/assessed value. 

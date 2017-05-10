@@ -6,6 +6,8 @@ import datetime
 import uuid
 import method2
 import scipy.stats
+import csv
+import geoleaflet
 
 class process(dml.Algorithm):
     contributor = 'cici_fyl'
@@ -32,37 +34,49 @@ class process(dml.Algorithm):
 
         schooltemp= method2.project(schooldata,lambda t: t["geometry"]["coordinates"])
         schooltemp1= method2.project(schooltemp,lambda t: (t[0],t[1]))
-        schoolcoordinates= method2.select(schooltemp1, lambda t: abs(t[0])>0.0001 and abs(t[1])>0.0001)
+        schoolcoordinates1= method2.select(schooltemp1, lambda t: abs(t[0])>0.0001 and abs(t[1])>0.0001)
+
+        schoolcoordinates= method2.project(schoolcoordinates1,lambda t:(t[1],t[0]))
 
         propertytemp= method2.select(propertydata, lambda t: t["gross_tax"]!=0)
         propertytemp1= method2.project(propertytemp,lambda t: t["location"] if "location" in t else None)
         propertytemp2= method2.select(propertytemp1, lambda t: t!=None)
         propertytemp3= method2.project(propertytemp2,lambda t: method2.stringprocess(t))
         propertycoordinates= method2.select(propertytemp3, lambda t: abs(t[0])>0.0001 and abs(t[1])>0.0001)
+
+       
  
 
         restauranttemp= method2.project(restaurantdata,lambda t: t["location"]["coordinates"])
         restauranttemp1= method2.project(restauranttemp,lambda t: (t[0],t[1]))
-        restaurantcoordinates= method2.select(restauranttemp1,lambda t: abs(t[0])>0.0001 and abs(t[1])>0.0001)
+        restaurantcoordinates1= method2.select(restauranttemp1,lambda t: abs(t[0])>0.0001 and abs(t[1])>0.0001)
 
-        coordinates= method2.union(schoolcoordinates,propertycoordinates)
-        coordinates= method2.union(coordinates,restaurantcoordinates)
-        mean= [(-71.06105, 42.37257), (-71.05692, 42.32006), (-71.15852, 42.33942), (-71.10349060219235, 42.308928662468276)]
+        restaurantcoordinates= method2.project(restaurantcoordinates1,lambda t:(t[1],t[0]))
 
+        coordinates= method2.union(schoolcoordinates,restaurantcoordinates)
+
+        mean= [(42.25246, -71.11896), (42.3466, -71.14185), (42.35201, -71.13770), (42.37527867719902, -71.03389058362008)]
 
         if trial:
             coordinates= coordinates[0:200]
         result= method2.kmeans(mean,coordinates)
         print(result)
 
-        #calculate the distance between means and each property, find the shortest one. 
 
         propertydistancetemp= method2.project(propertytemp,lambda t: {"id":t["_id"],"address":t["full_address"],"distance":0,"coordinates":t["location"],"tax":int(t["gross_tax"])})
         propertydistancetemp1= method2.project(propertydistancetemp,lambda t: method2.stringprocess1(t))
-        propertydistance= method2.project(propertydistancetemp1,lambda t: method2.distance_to_mean(result,t))
+
+        propertydistancetemp2= method2.project(propertydistancetemp1,lambda t: method2.stringprocess2(t))
+        print(propertydistancetemp2)
+
+        propertycoor= method2.project(propertydistancetemp1,lambda t: [t["coordinates"][1],t["coordinates"][0],t["tax"]])
+        propertydistance= method2.project(propertydistancetemp2,lambda t: method2.distance_to_mean(result,t))
 
         property_tax= method2.project(propertydistance,lambda t: t["tax"])
         property_distance= method2.project(propertydistance,lambda t: t["distance"])
+
+        property_tax= method2.project(propertydistancetemp, lambda t: t["tax"])
+
 
         if trial:
             property_tax=property_tax[0:200]
@@ -72,6 +86,8 @@ class process(dml.Algorithm):
 
         correlation = method2.corr(property_tax,property_distance)
         p= method2.p(property_tax,property_distance,trial)
+
+
 
         print(correlation)
         print(p)
@@ -140,4 +156,6 @@ class process(dml.Algorithm):
         repo.logout()
                   
         return doc
+
+process.execute()
 

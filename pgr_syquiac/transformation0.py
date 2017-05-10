@@ -36,10 +36,14 @@ class transformation0(dml.Algorithm):
         locations = []
         print("Gathering all the hospitals in Boston...")
         # For each hospital, collect doctor visiting rates in the vicinity
+
+
         for i in bosHospitalsRepo.find():
             # Create an empty list of doctor visit rates
             i['doctorVisits'] = []
             locations.append(i)
+
+
 
         visits = []
         print("Collecting appropriate data from CDC data set...")
@@ -108,4 +112,4 @@ class transformation0(dml.Algorithm):
 
         return doc
 
-transformation0.execute()
+# transformation0.execute()

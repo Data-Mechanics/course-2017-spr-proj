@@ -51,7 +51,7 @@ class crimeStationStats(dml.Algorithm):
         repo.dropCollection('crimeStationStats')
         repo.createCollection('crimeStationStats')
 
-        with open('crimeStationStats.json', 'w') as file:
+        with open('./proj3/data/crimeStationStats.json', 'w') as file:
             json.dump(res, file, indent=4)
 
         repo['jgrishey.crimeStationStats'].insert(res)
@@ -101,8 +101,9 @@ class crimeStationStats(dml.Algorithm):
         repo.logout()
 
         return doc
-'''
+
 crimeStationStats.execute()
+'''
 doc = crimeStationStats.provenance()
 with open('crimeStationStatsProvenance.json', 'w') as file:
     json.dump(json.loads(doc.serialize()), file, indent=4)

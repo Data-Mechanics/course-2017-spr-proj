@@ -41,6 +41,9 @@ class getCrime(dml.Algorithm):
         for crime in crimes:
             repo['jgrishey.crime'].insert(crime)
 
+        with open('./proj3/data/crimes.json', 'w') as fp:
+            json.dump(crimes, fp)
+
         repo.logout()
 
         endTime = datetime.datetime.now()
@@ -83,8 +86,9 @@ class getCrime(dml.Algorithm):
         repo.logout()
 
         return doc
-'''
+
 getCrime.execute()
+'''
 doc = getCrime.provenance()
 with open('getCrimeProvenance.json', 'w') as file:
     json.dump(json.loads(doc.serialize()), file, indent=4)

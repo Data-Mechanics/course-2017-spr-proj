@@ -37,7 +37,7 @@ class kMeansCrime(dml.Algorithm):
 
         ''' K Means Algorithm '''
 
-        res = KMeans(n_clusters = 7, random_state = 4).fit(crimes)
+        res = KMeans(n_clusters = 11, random_state = 4).fit(crimes)
 
         centers = []
 
@@ -46,6 +46,7 @@ class kMeansCrime(dml.Algorithm):
         for center in res.cluster_centers_:
             centers.append({'_id': ID, 'lat': center[0], 'long': center[1]})
             ID += 1
+            print(center[0],",", center[1])
 
         repo.dropCollection("hospitalLocations")
         repo.createCollection("hospitalLocations")
@@ -94,4 +95,5 @@ class kMeansCrime(dml.Algorithm):
 
         return doc
 
+kMeansCrime.execute()
 ## eof

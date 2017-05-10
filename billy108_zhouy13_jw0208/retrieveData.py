@@ -13,7 +13,7 @@ class retrieveData(dml.Algorithm):
     reads = []
     writes = ['billy108_zhouy13_jw0208.seasonalSwimPools', 'billy108_zhouy13_jw0208.communityGardens',
               'billy108_zhouy13_jw0208.openSpaceCambridge', 'billy108_zhouy13_jw0208.waterplayCambridge',
-              'billy108_zhouy13_jw0208.openSpaceBoston', 'billy108_zhouy13_jw0208.commCenterPools'
+              'billy108_zhouy13_jw0208.openSpaceBoston', 'billy108_zhouy13_jw0208.commCenterPools',
               'billy108_zhouy13_jw0208.hubwayStations', 'billy108_zhouy13_jw0208.buildingPermits']
 
     @staticmethod
@@ -85,15 +85,16 @@ class retrieveData(dml.Algorithm):
         repo['billy108_zhouy13_jw0208.commCenterPools'].metadata({'complete': True})
         print(repo['billy108_zhouy13_jw0208.commCenterPools'].metadata())
 
-        # Get data of Boston's Hubway station
-        url = 'http://bostonopendata-boston.opendata.arcgis.com/datasets/ee7474e2a0aa45cbbdfe0b747a5eb032_0.geojson'
-        response = urllib.request.urlopen(url).read().decode("utf-8")
-        r = json.loads(response)
-        repo.dropCollection("hubwayStations")
-        repo.createCollection("hubwayStations")
-        repo['billy108_zhouy13_jw0208.hubwayStations'].insert_many(r['features'])
-        repo['billy108_zhouy13_jw0208.hubwayStations'].metadata({'complete': True})
-        print(repo['billy108_zhouy13_jw0208.hubwayStations'].metadata())
+        # # Get data of Boston's Hubway station
+        # url = 'http://bostonopendata-boston.opendata.arcgis.com/datasets/ee7474e2a0aa45cbbdfe0b747a5eb032_0.geojson'
+        # response = urllib.request.urlopen(url).read().decode("utf-8")
+        # r = json.loads(response)
+        # print(r)
+        # repo.dropCollection("hubwayStations")
+        # repo.createCollection("hubwayStations")
+        # repo['billy108_zhouy13_jw0208.hubwayStations'].insert_many(r['features'])
+        # repo['billy108_zhouy13_jw0208.hubwayStations'].metadata({'complete': True})
+        # print(repo['billy108_zhouy13_jw0208.hubwayStations'].metadata())
 
         # Get data of Boston's building
         client = sodapy.Socrata("data.cityofboston.gov", None)
@@ -279,6 +280,7 @@ class retrieveData(dml.Algorithm):
 
         return doc
 
+        response = urllib.request.urlopen(url).read().decode("utf-8")
 
 # retrieveData.execute()
 # doc = retrieveData.provenance()

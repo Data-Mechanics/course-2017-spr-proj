@@ -1,14 +1,13 @@
-
 import json
 import dml
 import prov.model
 import datetime
 import uuid
 
-class combineAll(dml.Algorithm):
+class allRecreationalPlacesBoston(dml.Algorithm):
 
     contributor = 'billy108_zhouy13_jw0208'
-    reads = ['billy108_zhouy13_jw0208.waterplayCambridge','billy108_zhouy13_jw0208.allOpenSpacesInBoston','billy108_zhouy13_jw0208.allPoolsInBoston']
+    reads = ['billy108_zhouy13_jw0208.numOfOpenSpaces','billy108_zhouy13_jw0208.numOfPools','billy108_zhouy13_jw0208.numOfHubwayPerNeigh']
     writes = ['billy108_zhouy13_jw0208.allRecreationalPlaces']
 
     @staticmethod
@@ -22,27 +21,27 @@ class combineAll(dml.Algorithm):
         repo.authenticate('billy108_zhouy13_jw0208', 'billy108_zhouy13_jw0208')
 
         # Get the collections
-        waterplayCambridge = repo['billy108_zhouy13_jw0208.waterplayCambridge']
-        allOpenSpacesBoston = repo['billy108_zhouy13_jw0208.allOpenSpacesInBoston']
-        allPoolsInBoston = repo['billy108_zhouy13_jw0208.allPoolsInBoston']
+        allHubwaysBoston = repo['billy108_zhouy13_jw0208.numOfHubwayPerNeigh']
+        allOpenSpacesBoston = repo['billy108_zhouy13_jw0208.numOfOpenSpaces']
+        allPoolsInBoston = repo['billy108_zhouy13_jw0208.numOfPools']
 
-        #Get names, neighborhood of all water play parks in Cambridge
+
         allRecreationalPlaces_list = []
-        for entry in waterplayCambridge.find():
+        for entry in allHubwaysBoston.find():
             allRecreationalPlaces_list.append(
-                {"name": entry['park'], 'neighborhood': 'cambridge'}
+                {"neighborhood": entry['_id'], 'numOfHubways': entry['value'].get('numOfHubway')}
             )
 
         #get names, neighborhood of all open spaces in Boston
         for entry in allOpenSpacesBoston.find():
             allRecreationalPlaces_list.append(
-                {"name": entry['name'], 'neighborhood': entry['neighborhood']}
+                {"neighborhood": entry['_id'], 'numOfOpenSpaces': entry['value'].get('numOfOpenSpace')}
             )
 
         #get names, neighborhood of all swimming pools in Boston
         for entry in allPoolsInBoston.find():
             allRecreationalPlaces_list.append(
-                {"name": entry['name'], 'neighborhood': entry['value'].get('neighberhood')}
+                {"neighborhood": entry['_id'], 'numOfPools':  entry['value'].get('numOfPool')}
             )
 
 
@@ -74,11 +73,11 @@ class combineAll(dml.Algorithm):
         doc.add_namespace('bod', 'http://bostonopendata-boston.opendata.arcgis.com/datasets/')
 
         # Agent
-        this_script = doc.agent('alg:billy108_zhouy13_jw0208#combineAll',
+        this_script = doc.agent('alg:billy108_zhouy13_jw0208#allRecreationalPlacesBoston',
                                 {prov.model.PROV_TYPE: prov.model.PROV['SoftwareAgent'], 'ont:Extension': 'py'})
 
         # Resources
-        resource_waterplayCambridge = doc.entity('dat:billy108_zhouy13_jw0208#waterplayCambridge',
+        resource_allHubwaysBoston = doc.entity('dat:billy108_zhouy13_jw0208#allHubwaysBoston',
                                                {'prov:label': 'Waterplay Parks in Cambridge',
                                                 prov.model.PROV_TYPE: 'ont:DataResource',
                                                 'ont:Extension': 'json'})
@@ -102,7 +101,7 @@ class combineAll(dml.Algorithm):
         doc.wasAssociatedWith(combine_allRecreationalPlaces, this_script)
 
         # Record which activity used which resource
-        doc.usage(combine_allRecreationalPlaces, resource_waterplayCambridge, startTime)
+        doc.usage(combine_allRecreationalPlaces, resource_allHubwaysBoston, startTime)
         doc.usage(combine_allRecreationalPlaces, resource_allOpenSpacesInBoston, startTime)
         doc.usage(combine_allRecreationalPlaces, resource_allPoolsInBoston, startTime)
 
@@ -113,7 +112,7 @@ class combineAll(dml.Algorithm):
 
         doc.wasAttributedTo(allRecreationalPlaces, this_script)
         doc.wasGeneratedBy(allRecreationalPlaces, combine_allRecreationalPlaces, endTime)
-        doc.wasDerivedFrom(allRecreationalPlaces, resource_waterplayCambridge, combine_allRecreationalPlaces,
+        doc.wasDerivedFrom(allRecreationalPlaces, resource_allHubwaysBoston, combine_allRecreationalPlaces,
                            combine_allRecreationalPlaces,
                            combine_allRecreationalPlaces)
         doc.wasDerivedFrom(allRecreationalPlaces, resource_allOpenSpacesInBoston, combine_allRecreationalPlaces,
@@ -128,7 +127,7 @@ class combineAll(dml.Algorithm):
         return doc
 
 
-# combineAll.execute()
-# doc = combineAll.provenance()
+# allRecreationalPlacesBoston.execute()
+# doc = allRecreationalPlacesBoston.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))

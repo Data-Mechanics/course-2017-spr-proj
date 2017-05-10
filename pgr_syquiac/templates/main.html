@@ -1,0 +1,215 @@
+<!-- Test page for visualizations -->
+
+<!-- Getting a map -->
+
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+	   integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+	   crossorigin=""/>
+	   <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css' rel='stylesheet' />
+
+	<link rel="stylesheet" href="static/stylesheets/filter.css"/>
+
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+	   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+	   crossorigin="">
+    </script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+	<script src="static/js/simpleheat.js"></script>
+	<script src="static/js/leaflet-heat.js"></script>
+	<script src="static/js/leaflet-easy-button.js"></script>
+	<script src="static/js/leaflet-tag-filter-button.js"></script>
+
+	<style>
+		#mapid {
+			height: 600px;
+			width: 800px;
+			float: right;
+		}
+
+
+		#correlations {
+			position:relative;
+			padding-top: 2;
+			padding-left: 20;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="main">
+		<h1>CS591 Final Project</h1>
+
+		<p> The map below contains markers for every hospital in Boston. There's also a heat map layer where red represents highest rates of people going to their yearly checkup, and blue represents the lowest rates. You can also click the filter icon to filter hospitals by their zip code, or use the second filter to filter the data points from the CDC by the number of people in that sample set. </p>
+		<div id="mapid"></div>
+
+	</div>
+
+	<div id="correlations">
+
+
+		{% if allcorrelations %}
+		  <h4> This is the correlation coefficient and p-value between all datapoints: </h4>
+		  <p>
+		  Correlation Coefficient: {{allcorrelations}} <br>
+		  P-value: {{pvalue}} <br>
+		  </p>
+		{% endif %}
+
+		<h4> Find the correlation coefficient and p-value for a specific distance from a hospital: </h4>
+
+		  <form method="post" enctype="multipart/form-data" action="/">
+		    <label for="distance">Enter Distance:</label>
+		    <input input type="number" name="distance" required='true' min='0.00' step='0.01'/><br />
+		    <input type="submit" value="Tell me!" />
+
+
+		{% if onecorrelation %}
+		<p> Here are the results: <br>
+		Distance: {{distance}} <br>
+		Correlation Coefficient: {{onecorrelation}} <br>
+		P-value: {{pvalue}}
+		</p>
+
+		{% endif %}
+
+	</div>
+
+	<script>
+	// Get hospital data
+	var data;
+	var hpoints = new L.LayerGroup(); // Hospital markers
+	var xmlhttp = new XMLHttpRequest();
+	var url = "static/data/hospitals.txt";
+	xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        	data = JSON.parse(this.response);
+        	// console.log(data.hospitals);
+
+        	for (var i = 0; i < data.hospitals.length; i++) {
+				marker = new L.marker([data.hospitals[i]["coordinates"][1],data.hospitals[i]["coordinates"][0]], {tags: [data.hospitals[i]["neighborhood"]]})
+					.bindPopup(data.hospitals[i]["name"])
+					.addTo(hpoints).on('click', onClick);
+			}
+    	}
+	};
+	xmlhttp.open("GET", url, true);
+	xmlhttp.setRequestHeader("Content-type", "application/json");
+
+	xmlhttp.send();
+
+	// Get CDC points data
+
+	var cdc;
+	var points = new L.LayerGroup(); // For the markers
+	var xmlhttp = new XMLHttpRequest();
+	var url = "static/data/cdc.txt";
+	xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    		cdc = JSON.parse(this.response);
+        	var data = [];
+        	for (var i = 0; i < cdc.points.length; i++) {
+        		data.push([cdc.points[i].coordinates[0], cdc.points[i].coordinates[1], cdc.points[i].data]);
+        		var marker = new L.marker([cdc.points[i].coordinates[0], cdc.points[i].coordinates[1]],
+        						{tags: [createTag(cdc.points[i].pop_count)]})
+        					  .bindPopup("Population count: " + cdc.points[i].pop_count + " <br> Checkup Rate: " + (cdc.points[i].data * 100) + "%")
+        					  .addTo(points);
+        	}
+
+
+        	var heat = L.heatLayer(data, {radius: 25, minOpacity: 0.5}).addTo(mymap);
+
+    	}
+	};
+	xmlhttp.open("GET", url, true);
+	xmlhttp.setRequestHeader("Content-type", "application/json");
+
+	xmlhttp.send();
+
+
+
+
+	// Tile layer and more layers
+	var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+	mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicGdyYW1pcmV6IiwiYSI6ImNqMXMxNzQzZzAwYTIycW82OG96YjJzYWoifQ.tburgSpoWVNh0CaI3dnLhQ';
+	
+	var greyscale = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution:mbAttr})
+	var streets = L.tileLayer(mbUrl, {id: 'mapbox.streets', attribution:mbAttr})
+
+	var mymap = L.map('mapid', {
+		center: [42.325, -71.09], 
+		zoom: 12, 
+		layers: [greyscale, hpoints] // Create map with default layers, showing greyscale and hospital points
+
+	});
+
+	var baseLayers = {
+		"Grayscale": greyscale,
+		"Streets": streets
+	}; // User can choose between greyscale and streets
+
+	// User can see points of the Boston hospitals or the CDC data points used in the heat map 
+	var overlays = {
+    		"CDC Data Points": points,
+    		"Boston Hospitals": hpoints
+	};
+
+	L.control.layers(baseLayers, overlays).addTo(mymap);
+
+	function onClick(e) {
+		mymap.panTo(e.target.getLatLng());
+
+	}
+
+
+    var neighborhoods = ['ROSLINDALE', 'DORCHESTER', 'CENTRAL', 'ROXBURY', 'ALLSTON/BRIGHTON', 'JAMAICA PLAIN', 'MATTAPAN', 'FENWAY/KENMORE', 'SOUTH END', 'WEST ROXBURY', 'none']
+
+    L.control.tagFilterButton({
+        data: neighborhoods,
+        icon: '<img src="static/images/filter.png">',
+        filterOnEveryClick: true
+    }).addTo(mymap);
+
+    // Filter data points by number of population in that point
+    var population_counts = ["<1000", "1000-2000", "2000-3000", "3000-4000", "4000-5000", "5000+"];
+
+    L.control.tagFilterButton({
+        data: population_counts,
+        icon: '<img src="static/images/filter.png">',
+        filterOnEveryClick: true
+    }).addTo(mymap);
+ 
+ 	// Add a function to filter data points
+ 	function createTag(pop_count) {
+ 		if (pop_count < 1000) {
+ 			return "<1000";
+ 		}
+ 		else if (pop_count < 2000) {
+ 			return "1000-2000";
+ 		}
+ 		else if (pop_count < 3000) {
+ 			return "2000-3000"
+ 		}
+ 		else if (pop_count < 4000) {
+ 			return "3000-4000"
+ 		}
+ 		else if (pop_count < 5000) {
+ 			return "4000-5000"
+ 		}
+ 		else {
+ 			return "5000+"
+ 		}
+ 	} 
+	</script>
+
+</body>

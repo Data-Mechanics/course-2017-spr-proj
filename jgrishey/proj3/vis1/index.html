@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.background {
+  fill: #eee;
+  pointer-events: all;
+}
+
+.map-layer {
+  fill: #fff;
+  stroke: #aaa;
+}
+
+.hospital-layer {
+    pointer-events: all;
+}
+
+.load-layer {
+    display: block;
+    z-index: 1000000;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.hosp-information {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+}
+
+</style>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+const width = 1800;
+const height = 1020;
+
+var distfn = function (x1, y1, x2, y2) {
+    return Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2);
+}
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+const projection = d3.geoMercator().center([-71.05, 42.3122]).scale(240000).translate([width / 2, height / 2]);
+
+const geoPath = d3.geoPath().projection(projection);
+
+svg.append('rect')
+  .attr('class', 'background')
+  .attr('width', width)
+  .attr('height', height);
+
+
+var g = svg.append('g');
+
+var mapLayer = g.append('g')
+  .classed('map-layer', true);
+
+var hospitalLayer = g.append('g')
+    .classed('hospital-layer', true);
+
+var crimeLayer = g.append('g')
+    .classed('crime-layer', true);
+
+var loadLayer = d3.select("body").append('g')
+    .classed('load-layer', true);
+
+var hospInfo = d3.select("body").append('g')
+    .classed('hosp-information', true)
+
+d3.json("data/boston.geojson", function(error, boston) {
+  if (error) return console.error(error);
+
+  mapLayer.selectAll('path')
+      .data(boston.features)
+      .enter().append('path')
+      .attr('d', geoPath)
+      .style('fill', "#fff")
+      .style("opacity", "0.8");
+});
+
+var selectHosp = function (h) {
+    var hosp = loadLayer.selectAll('div')
+        .selectAll('div')
+        .filter(function (d) {
+            return d[3] === h[3]
+        })
+
+    if (hosp.style("background-color") === "rgb(51, 122, 183)") {
+        loadLayer.selectAll('div').selectAll('div')
+            .style("background-color", "rgb(51, 122, 183)")
+        hosp.style("background-color", "red")
+    } else {
+        hosp.style("background-color", "rgb(51, 122, 183)")
+    }
+
+    hospInfo.selectAll('div').remove()
+
+    hospInfo.selectAll('div')
+    .data([h[3]]).enter()
+    .append('div')
+    .text(function (d) {
+        return d
+    })
+    .style('font-size', '16pt');
+};
+
+
+d3.json("data/hospitalsgeo.json", function (error, hospitals) {
+    if (error) return console.error(error);
+
+    var data = [];
+
+    for (var i = 0; i < hospitals.length; i++) {
+        data.push([hospitals[i].longitude, hospitals[i].latitude, hospitals[i].sqft, hospitals[i].name, 0]);
+        hospitals[i].bookings = 0;
+    }
+
+
+    hospitalLayer.selectAll('circle')
+        .data(data).enter()
+        .append('circle')
+        .attr('cx', function (d) {return projection(d)[0];})
+        .attr('cy', function (d) {return projection(d)[1];})
+        .attr('name', function(d) {return d[3];})
+        .attr('sqft', function(d) {return d[2];})
+        .attr('bookings', 0)
+        .attr('r', "5px")
+        .attr('fill', 'red')
+        .style("opacity", "1.0");
+
+    svg.selectAll('rect')
+        .data(data).enter()
+        .append('rect')
+        .attr('x', function (d) {return projection(d)[0]-5;})
+        .attr('y', function (d) {return projection(d)[1]-5;})
+        .attr('name', function(d) {return d[3];})
+        .attr('width', 10)
+        .attr('height', 10)
+        .attr('fill', 'transparent')
+        .style("opacity", "1.0")
+        .on('click', function (d) {
+            selectHosp(d)
+        });
+
+    d3.json("data/crimes.json", function (error, crimes) {
+        if (error) return console.error(error);
+
+        var data = [];
+
+        for (var i = 0; i < crimes.length; i++) {
+            data.push([crimes[i].long, crimes[i].lat])
+        }
+
+        crimeLayer.selectAll('circle')
+            .data(data).enter()
+            .append('circle')
+            .attr('cx', function (d) {return projection(d)[0];})
+            .attr('cy', function (d) {return projection(d)[1];})
+            .attr('r', "1px")
+            .attr('fill', 'blue')
+            .attr('opacity', '0.5');
+
+        crimeLayer.selectAll('circle').each( function (d) {
+            var curr = null;
+            var currDist = 100000;
+
+            hospitalLayer.selectAll('circle').each( function (e) {
+                var dist = distfn(d[1], d[0], Number(e[1]), Number(e[0]))
+
+                if (dist < currDist) {
+                    curr = e
+                    currDist = dist
+                }
+            })
+
+            curr[4] += 1;
+        })
+
+        loadLayer.selectAll('div')
+        .data(hospitalLayer.selectAll('circle').data()).enter()
+        .append('div')
+        .attr('class', 'progress')
+        .attr('style', 'width: 100px;')
+        .append('div')
+        .attr('class', 'progress-bar')
+        .attr('role', 'progressbar')
+        .attr('aria-valuenow', function(d) {return d[4] / (d[2] / 100) * 100})
+        .attr('aria-valuemin', 0)
+        .attr('aria-valuemax', 100)
+        .attr('style', function(d) {return "width: " + d[4] / (d[2] /100) * 100 + "%;"})
+        .attr('name', function(d) {return d[3]})
+    });
+});
+
+</script>

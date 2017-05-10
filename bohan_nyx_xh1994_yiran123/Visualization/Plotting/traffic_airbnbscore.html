@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+
+  div.tooltip {   
+    position: absolute;           
+    text-align: center;           
+    width: 180px;                  
+    height: 100px;                 
+    padding: 3px;             
+    font: 12px sans-serif;        
+    background: white;   
+    border: 0px;      
+    border-radius: 8px;           
+  }
+.xdomin{
+  position: absolute;
+  top:2px;
+  left:25px;
+}
+.ydomin{
+  position: absolute;
+  top:490px;
+  left:900px;
+}
+
+
+</style>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<p class="xdomin">Traffic Convenience</p>
+<p class="ydomin">Airbnb Score</p>
+
+<script>
+
+
+
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.scaleLinear()
+    .range([0, width]);
+
+var y = d3.scaleLinear()
+    .range([height, 0]);
+
+
+var div = d3.select("body")
+  .append("div")   
+  .attr("class", "tooltip")               
+  .style("opacity", 0)
+
+
+var color = d3.scaleOrdinal(d3.schemeCategory20b);
+
+var xAxis = d3.axisBottom(x);
+
+var yAxis = d3.axisLeft(y);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// d3.tsv("{{ url_for('untitled folder', filename='/data.tsv') }}", function(error, data) {
+d3.tsv("data4.tsv", function(error, data) {
+  if (error) throw error;
+
+  data.forEach(function(d) {
+    d.airbnbscore = +d.airbnbscore;
+    d.trafficconvinence = +d.trafficconvinence;
+  });
+
+  x.domain(d3.extent(data, function(d) { return d.airbnbscore; })).nice();
+  y.domain(d3.extent(data, function(d) { return d.trafficconvinence; })).nice();
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("x", width)
+      .attr("y", -6)
+      .style("text-anchor", "end")
+      .text("airbnbscore");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("trafficconvinence")
+
+  svg.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 3.5)
+      .attr("cx", function(d) { return x(d.airbnbscore); })
+      .attr("cy", function(d) { return y(d.trafficconvinence); })
+      .style("fill", function(d) { return color(); })
+      .on("mouseover", function(d) {      
+        div.transition()        
+          .duration(200)      
+          .style("opacity", .9);      
+          div.html(d.name + "</b><hr>" + "Airbnb Score: " + d.airbnbscore + "</b><hr>" + "Traffic Convenience: " +  d.trafficconvinence)  
+
+          .style("left", (d3.event.pageX) + "px")     
+          .style("top", (d3.event.pageY - 28) + "px");    
+        })   
+        // fade out tooltip on mouse out               
+        .on("mouseout", function(d) {       
+          div.transition()        
+          .duration(6000)      
+          .style("opacity", 0);   
+        });
+
+  var legend = svg.selectAll(".legend")
+      .data(color.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });
+
+
+});
+
+</script>
+
+
+ 
+</body>

@@ -1,0 +1,127 @@
+<html>
+<head>
+  <title>CS 591 Assessed Property Values</title>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <link rel= "stylesheet" href= "{{ url_for('static',filename='css/MarkerCluster.css') }}">
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="{{ url_for('static', filename='js/leaflet.markercluster.js') }}"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <style>
+    #map{ height: 100% }
+    .legend {
+      line-height: 18px;
+      color: #555;
+    }
+    .legend i {
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+    .info {
+      padding: 6px 8px;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div id="map"></div>
+ 
+  <script>
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  
+  function getColor(d) {
+    return d > 3000000 ? '#CE4A65' :
+           d > 2000000  ? '#E85C5E' :
+           d > 1000000  ? '#FA8067' :
+           d > 750000  ? '#FBAC74' :
+           d > 500000   ? '#FBC67F' :
+           d > 0   ? '#FBE19C' :
+                      '#f7f7f7';
+  }
+
+  // initialize the map
+  var map = L.map('map').setView([42.35, -71.08], 13);
+ 
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+    
+  $.getJSON("/neighborhoods",function(hoodData){
+    L.geoJson( hoodData, {
+      style: function(feature){
+        var fillColor,
+            density = feature.properties.density;
+        fillColor = getColor(density);
+        return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
+      },
+      onEachFeature: function( feature, layer ){
+        layer.bindPopup( "<strong>" + feature.properties.Name + "</strong><br/> $" + numberWithCommas(feature.properties.density) + " average cost for this neighborhood" )
+      }
+    }).addTo(map);
+  });
+  $.getJSON("/assessedProperty",function(data){
+      var houseIcon = L.icon({
+        iconUrl: 'https://cdn2.iconfinder.com/data/icons/pittogrammi/142/65-512.png',
+        iconSize: [60,50]
+      });
+      var properties = L.geoJson(data,{
+        pointToLayer: function(feature,latlng){
+          var marker = L.marker(latlng, {icon: houseIcon});
+          marker.bindPopup('Assessed property value: <br/> $' + numberWithCommas(feature.properties.av_total));
+          return marker;
+        }
+      });
+      var clusters = L.markerClusterGroup();
+      clusters.addLayer(properties);
+      map.addLayer(clusters);
+
+  });
+
+  // add legend first
+  var legend = L.control({position: 'bottomright'});
+
+  legend.onAdd = function (map) {
+
+      var div = L.DomUtil.create('div', 'info legend'),
+          grades = [0, 500000, 750000, 1000000, 2000000, 3000000],
+          labels = [];
+
+      // loop through our density intervals and generate a label with a colored square for each interval
+      for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+              '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+              grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+      }
+
+      return div;
+  };
+
+  legend.addTo(map);
+  
+  // add info second to be on top
+  var info = L.control({position: 'bottomright'});
+
+  info.onAdd = function (map) {
+      var div = L.DomUtil.create('div', 'info');
+      
+      div.innerHTML += '<h4>Total cost of properties</h4>';
+      return div;
+  };
+  info.addTo(map);
+
+  
+  </script>
+</body>
+</html>

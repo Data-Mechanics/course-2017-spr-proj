@@ -1,6 +1,6 @@
 The Problem:
 
-The main goal of our project is to use our datasets to provide a visualization on the living conditions of Boston based on the city’s 
+The main goal of our project is to use our datasets to provide a visualization on the living conditions of Boston based on the city's 
 crime reports and density of police stations.  
 The plan we want to execute to achieve the visualization we want will involve the usage of the Google Maps API which will allow us to pin-point the 
 specific locations of crime reports and the specific locations of police stations in city. 

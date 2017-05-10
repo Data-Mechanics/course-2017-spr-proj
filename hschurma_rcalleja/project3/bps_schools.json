@@ -1,0 +1,51 @@
+var bps_schools_json = {
+"type": "FeatureCollection", 
+
+"features": [
+
+{"properties": {"Name": "English High", "location": ["02132", ["42.30573856218439", "-71.10932737316955"]], "Funding": "$6,647,300"}, "geometry": {"coordinates": ["-71.10932737316955", "42.30573856218439"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Boston Latin School", "location": ["02132", ["42.33816811456097", "-71.10240259354396"]], "Funding": "$14,356,301"}, "geometry": {"coordinates": ["-71.10240259354396", "42.33816811456097"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Margarita Muniz Academy", "location": ["02132", ["42.30682674183987", "-71.1136441189102"]], "Funding": "$2,658,338"}, "geometry": {"coordinates": ["-71.1136441189102", "42.30682674183987"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Boston Arts Academy", "location": ["02132", ["42.34659811860869", "-71.09491375534215"]], "Funding": "$4,365,427"}, "geometry": {"coordinates": ["-71.09491375534215", "42.34659811860869"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Boston Latin Academy", "location": ["02132", ["42.31671029094184", "-71.08542339363078"]], "Funding": "$10,592,695"}, "geometry": {"coordinates": ["-71.08542339363078", "42.31671029094184"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Charlestown High", "location": ["02132", ["42.38043624993804", "-71.06079096324822"]], "Funding": "$9,187,526"}, "geometry": {"coordinates": ["-71.06079096324822", "42.38043624993804"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Brighton High", "location": ["02132", ["42.349661450095425", "-71.14414012892377"]], "Funding": "$8,315,620"}, "geometry": {"coordinates": ["-71.14414012892377", "42.349661450095425"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Excel High", "location": ["02132", ["42.33288010102865", "-71.04418947858738"]], "Funding": "$5,107,601"}, "geometry": {"coordinates": ["-71.04418947858738", "42.33288010102865"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "New Mission High", "location": ["02132", ["42.263092711554975", "-71.11734932567094"]], "Funding": "$2,596,346"}, "geometry": {"coordinates": ["-71.11734932567094", "42.263092711554975"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Kennedy Health Careers", "location": ["02132", ["42.3438499996779", "-71.08983000035408"]], "Funding": "$2,905,819"}, "geometry": {"coordinates": ["-71.08983000035408", "42.3438499996779"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Kennedy Health Careers", "location": ["02132", ["42.3438499996779", "-71.08983000035408"]], "Funding": "$2,905,819"}, "geometry": {"coordinates": ["-71.08983000035408", "42.3438499996779"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Urban Science Academy", "location": ["02132", ["42.27822999981481", "-71.15878999955868"]], "Funding": "$4,394,156"}, "geometry": {"coordinates": ["-71.15878999955868", "42.27822999981481"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Dorchester Academy", "location": ["02132", ["42.281020622561364", "-71.06963945065642"]], "Funding": "$1,710,457"}, "geometry": {"coordinates": ["-71.06963945065642", "42.281020622561364"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Boston Green Academy", "location": ["02132", ["42.33288010102865", "-71.04418947858738"]], "Funding": "$4,865,575"}, "geometry": {"coordinates": ["-71.04418947858738", "42.33288010102865"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "West Roxbury Academy", "location": ["02132", ["42.27822999981481", "-71.15878999955868"]], "Funding": "$4,919,836"}, "geometry": {"coordinates": ["-71.15878999955868", "42.27822999981481"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Greater Egleston High", "location": ["02132", ["42.31434028136342", "-71.09922606726064"]], "Funding": "$1,806,410"}, "geometry": {"coordinates": ["-71.09922606726064", "42.31434028136342"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "East Boston High", "location": ["02132", ["42.38061560446334", "-71.03415354807602"]], "Funding": "$12,806,901"}, "geometry": {"coordinates": ["-71.03415354807602", "42.38061560446334"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Fenway High", "location": ["02132", ["42.34659811860869", "-71.09491375534215"]], "Funding": "$3,162,029"}, "geometry": {"coordinates": ["-71.09491375534215", "42.34659811860869"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Quincy Upper School", "location": ["02132", ["42.34854790278255", "-71.06923626165974"]], "Funding": "$4,552,487"}, "geometry": {"coordinates": ["-71.06923626165974", "42.34854790278255"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Burke High", "location": ["02132", ["42.306592918112244", "-71.08185308517443"]], "Funding": "$4,523,705"}, "geometry": {"coordinates": ["-71.08185308517443", "42.306592918112244"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Community Academy Science & Health", "location": ["02132", ["42.25121266754792", "-71.1319812950876"]], "Funding": "$4,383,146"}, "geometry": {"coordinates": ["-71.1319812950876", "42.25121266754792"], "type": "Point"}, "type": "Feature"}, 
+
+{"properties": {"Name": "Madison Park High", "location": ["02132", ["42.33130553352856", "-71.09167804257322"]], "Funding": "$12,476,537"}, "geometry": {"coordinates": ["-71.09167804257322", "42.33130553352856"], "type": "Point"}, "type": "Feature"}
+
+]
+}

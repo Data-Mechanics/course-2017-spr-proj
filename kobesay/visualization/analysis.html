@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>analysis</title>
+    <script src="https://cdn.bootcss.com/echarts/3.5.3/echarts.common.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="pearsonr" style="width: 1000px;height:400px;"></div>
+    <div id="num_hospital" style="width: 500px;height:400px;"></div>
+    <div id="num_school" style="width: 500px;height:400px;"></div>
+    <div id="num_publicschool" style="width: 500px;height:400px;"></div>
+    <div id="num_nonpublicschool" style="width: 500px;height:400px;"></div>
+    <script type="text/javascript">
+        $.get("http://127.0.0.1:5000/app/api/v1/analysis/pearsonr", function(res){
+            var jsonobj = eval('('+res+')');
+            var x = ['income_nonpublicschool', 'income_publicschool', 'income_hospital', 'income_school']; 
+            var y = []; 
+            result = jsonobj[0]
+            y.push(jsonobj[0].income_nonpublicschool);
+            y.push(jsonobj[0].income_publicschool);
+            y.push(jsonobj[0].income_hospital);
+            y.push(jsonobj[0].income_school);
+            var myChart = echarts.init(document.getElementById('pearsonr'));
+            var option = {
+                title: {
+                    text: 'pearsonr'
+                },
+                tooltip: {},
+                legend: {
+                    data:['legend']
+                },
+                xAxis: {
+                    data: x
+                },
+                yAxis: {},
+                series: [{
+                    name: 'pearsonr',
+                    type: 'bar',
+                    data: y
+                }]
+            };
+            myChart.setOption(option);
+            
+        });
+        
+        $.get("http://127.0.0.1:5000/app/api/v1/analysis/ttest", function(res){
+            var jsonobj = eval('('+res+')');
+            var x = ['lower income', 'higher income']; 
+            for(var result in jsonobj){  
+                var y = [];
+                
+                y.push(jsonobj[result].lower_income);
+                y.push(jsonobj[result].higher_income);
+                var myChart = echarts.init(document.getElementById(jsonobj[result].type));
+                var option = {
+                    title: {
+                        text: 'Higher income vs lower income on ' + jsonobj[result].type
+                    },
+                    tooltip: {},
+                    legend: {
+                        data:['legend']
+                    },
+                    xAxis: {
+                        data: x
+                    },
+                    yAxis: {},
+                    series: [{
+                        name: 'number',
+                        type: 'bar',
+                        data: y
+                    }]
+                };
+                myChart.setOption(option);
+            }
+        });
+
+    </script>
+</body>
+</html>

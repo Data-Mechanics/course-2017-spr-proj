@@ -102,7 +102,7 @@ class retrievedatasets(dml.Algorithm):
         repo['bohan_nyx_xh1994_yiran123.airbnb_rating'].insert(r)
         
 
-        url_MBTA_Bus_stops = 'http://datamechanics.io/data/wuhaoyu_yiran123/MBTA_Bus_Stops.geojson'
+        url_MBTA_Bus_stops = 'http://datamechanics.io/data/bohan_xh1994/mbtajson.json'
         response_MBTA_Bus_stops = urllib.request.urlopen(url_MBTA_Bus_stops).read().decode("utf-8")
         r = json.loads(response_MBTA_Bus_stops)
         s = json.dumps(r, sort_keys=True, indent=2)
@@ -222,5 +222,5 @@ retrievedatasets.execute()
 doc = retrievedatasets.provenance()
 print(doc.get_provn())
 print(json.dumps(json.loads(doc.serialize()), indent=4))
-
+'''
 ## eof

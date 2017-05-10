@@ -57,6 +57,7 @@ class transformation3(dml.Algorithm):
         repo.dropCollection("restaurant_cleanness_level")
         repo.createCollection("restaurant_cleanness_level")
 
+        print("start tran3")
         for i in FoodAL:
             i_name = str(i['businessname'])
             total = 0
@@ -91,7 +92,6 @@ class transformation3(dml.Algorithm):
 
         #repo['bohan_nyx_xh1994_yiran123.Restaurants_safety'].insert_many(safety_level)
         repo.logout()
-        print(11111111111111)
 
         endTime = datetime.datetime.now()
 
@@ -146,8 +146,8 @@ class transformation3(dml.Algorithm):
         repo.logout()
                   
         return doc
-
-transformation3.execute()
+'''
 doc = transformation3.provenance()
 print(doc.get_provn())
 print(json.dumps(json.loads(doc.serialize()), indent=4))
+'''

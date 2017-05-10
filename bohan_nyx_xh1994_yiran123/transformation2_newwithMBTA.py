@@ -44,15 +44,16 @@ class transformation2_newwithMBTA(dml.Algorithm):
         repo = client.repo
         repo.authenticate('bohan_nyx_xh1994_yiran123', 'bohan_nyx_xh1994_yiran123')  
         MBTA_Bus_stops = repo.bohan_nyx_xh1994_yiran123.MBTA_Bus_stops.find()
-        stops = [c['features'] for c in MBTA_Bus_stops]
-        stops = stops[0]
+        #stops = [c['features'] for c in MBTA_Bus_stops]
+        stops = [c for c in MBTA_Bus_stops]
+        #stops = stops[0]
         #print(stops[1])
         airbnb_rating = repo.bohan_nyx_xh1994_yiran123.airbnb_rating.find()
         airbnbrate = [a for a in airbnb_rating]
         Entertainment_Licenses = repo.bohan_nyx_xh1994_yiran123.Entertainment_Licenses.find()
         entertainment = [b for b in Entertainment_Licenses]
 
-
+        print("start tran2")
         # print(crime[0]['location'])
         # print(FoodEI[0])
 
@@ -71,11 +72,15 @@ class transformation2_newwithMBTA(dml.Algorithm):
             numentertainment = 0
             #print(i['weekly_price'])
             for j in stops:
-                #print(j[1])
+                #print(j)
                 #print(20220020202020202020)
+                #print()
+
                 try:
                     #distance = geodistance(i['latitude'],i['longitude'],j[0]['geometry']['coordinates'][1],j[0]['geometry']['coordinates'][0])
-                    distance = vincenty((i['latitude'],i['longitude']), (j['geometry']['coordinates'][1], j['geometry']['coordinates'][0])).miles
+                    distance = vincenty((i['latitude'],i['longitude']), (j['latitude'], j['longitude'])).miles
+                    
+                
 
                     #print(distance)
                 except:
@@ -86,7 +91,7 @@ class transformation2_newwithMBTA(dml.Algorithm):
                 # except:
                 #     distance = 10.0
                 #setdis.append(distance)
-                if distance<=2.0:
+                if distance<=1.0:
                     stopsnum+=1
 
             #print(20202020202020202020202202020)
@@ -101,11 +106,11 @@ class transformation2_newwithMBTA(dml.Algorithm):
                     klat = 42
                     klong = -71
                 distance = geodistance(i['latitude'],i['longitude'],klat,klong)
-                if distance<=2.0:
+                if distance<=1.0:
 
                     numentertainment+=1
 
-            insertMaterial = {'longitude':i['longitude'], 'latitude':i['latitude'], 'review_scores_rating':i['review_scores_rating'], 'weekly_price':i['weekly_price'], 'name':i['name'], 'MBTA stops num within 2km':stopsnum, 'entertainment around number':numentertainment}
+            insertMaterial = {'longitude':i['longitude'], 'latitude':i['latitude'], 'review_scores_rating':i['review_scores_rating'], 'weekly_price':i['weekly_price'], 'name':i['name'], 'MBTA stops num within 1mile':stopsnum, 'entertainment around number':numentertainment}
             #insertMaterial = {'Businessname':i['businessname'], 'location':None, 'crime incidents number within amile':crime_incident_within_amile}
             
             repo['bohan_nyx_xh1994_yiran123.airbnb_rating_relation_with_MBTAstops_num_and_entertainment'].insert_one(insertMaterial)
@@ -174,7 +179,10 @@ class transformation2_newwithMBTA(dml.Algorithm):
                   
         return doc
 
-transformation2_newwithMBTA.execute()
+
+#transformation2_newwithMBTA.execute()
+'''
 doc = transformation2_newwithMBTA.provenance()
 print(doc.get_provn())
 print(json.dumps(json.loads(doc.serialize()), indent=4))
+'''

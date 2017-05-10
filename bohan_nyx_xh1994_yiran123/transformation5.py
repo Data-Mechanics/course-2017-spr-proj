@@ -29,6 +29,7 @@ class transformation5(dml.Algorithm):
 		repo.createCollection("restaurant_score_system")
 		
 
+		print("start tran5")
 		r_cleanness = []
 		for i in restaurant_correlation_distance_analysis_filtered:
 			#print(i)
@@ -123,5 +124,8 @@ class transformation5(dml.Algorithm):
 
 		repo.logout
 		return doc
-
-transformation5.execute()
+'''
+doc = transformation5.provenance()
+print(doc.get_provn())
+print(json.dumps(json.loads(doc.serialize()), indent=4))
+'''

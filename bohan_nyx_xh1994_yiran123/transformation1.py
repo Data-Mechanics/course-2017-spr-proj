@@ -58,6 +58,8 @@ class transformation1(dml.Algorithm):
         setdis = []
         #counter = 0
         #jcounter=0
+
+        print("start tran1")
         for i in AFoodL:
             #jcounter+=1
             crime_incident_within_akm = 0
@@ -146,8 +148,8 @@ class transformation1(dml.Algorithm):
         repo.logout()
                   
         return doc
-
-transformation1.execute()
+'''
 doc = transformation1.provenance()
 print(doc.get_provn())
 print(json.dumps(json.loads(doc.serialize()), indent=4))
+'''

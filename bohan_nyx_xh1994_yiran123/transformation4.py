@@ -73,6 +73,9 @@ class transformation4(dml.Algorithm):
 
         repo.dropCollection("restaurant_correlation_distance_analysis_filtered")
         repo.createCollection("restaurant_correlation_distance_analysis_filtered")
+
+
+        print("start tran4")
         if(crr_crime_clean >= 0.5):
             similarity = True
             #this is a moderate or a strong positive relation, we only keep one field, lets keep cleanness
@@ -100,7 +103,7 @@ class transformation4(dml.Algorithm):
         repo.createCollection('newairbnb_eliminated_version')
         airbnb_score_entertainment_MBTA = repo.bohan_nyx_xh1994_yiran123.airbnb_rating_relation_with_MBTAstops_num_and_entertainment.find()
         airbnb_score_enter_MB_list = [h for h in airbnb_score_entertainment_MBTA]
-        MBTAnum = [e['MBTA stops num within 2km'] for e in airbnb_score_enter_MB_list]
+        MBTAnum = [e['MBTA stops num within 1mile'] for e in airbnb_score_enter_MB_list]
         #rating = [f['review_scores_rating'] for f in airbnb_score_enter_MB_list]
         entertainnum = [g['entertainment around number'] for g in airbnb_score_enter_MB_list]
         MBTAnum = list(map(int, MBTAnum))
@@ -131,7 +134,7 @@ class transformation4(dml.Algorithm):
         if(keepentertain == True and keepMBTA == False):
             #print(3030303030)
             for i in airbnb_score_enter_MB_list:
-                inserM = {'airbnb name': i['name'], 'longitude': i['longitude'], 'latitude': i['latitude'], 'rating': i['review_scores_rating'], 'MBTA stops num within 2km': i['MBTA stops num within 2km']}
+                inserM = {'airbnb name': i['name'], 'longitude': i['longitude'], 'latitude': i['latitude'], 'rating': i['review_scores_rating'], 'MBTA stops num within 1mile': i['MBTA stops num within 1mile']}
                 repo['bohan_nyx_xh1994_yiran123.newairbnb_eliminated_version'].insert(inserM)
 
         else:
@@ -216,7 +219,8 @@ class transformation4(dml.Algorithm):
                   
         return doc
 
-transformation4.execute()
+'''
 doc = transformation4.provenance()
 print(doc.get_provn())
 print(json.dumps(json.loads(doc.serialize()), indent=4))
+'''

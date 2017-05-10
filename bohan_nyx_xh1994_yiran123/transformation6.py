@@ -55,6 +55,7 @@ class transformation6(dml.Algorithm):
     
         repo.dropCollection("Airbnb_surrounding_restauranScoreAVG")
         repo.createCollection("Airbnb_surrounding_restauranScoreAVG")
+        print("start tran6")
         #counter = 0
         #jcounter=0
         for i in airbnbrate:
@@ -149,7 +150,9 @@ class transformation6(dml.Algorithm):
                   
         return doc
 
-transformation6.execute()
+
+'''
 doc = transformation6.provenance()
 print(doc.get_provn())
 print(json.dumps(json.loads(doc.serialize()), indent=4))
+'''

@@ -162,9 +162,9 @@ class retrieve(dml.Algorithm):
                   
         return doc
 
-retrieve.execute()
-doc = retrieve.provenance()
-print(doc.get_provn())
-print(json.dumps(json.loads(doc.serialize()), indent=4))
+#retrieve.execute()
+#doc = retrieve.provenance()
+#print(doc.get_provn())
+#print(json.dumps(json.loads(doc.serialize()), indent=4))
 
 ## eof

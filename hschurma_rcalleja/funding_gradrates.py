@@ -147,7 +147,7 @@ class funding_gradrates(dml.Algorithm):
                   
         return doc
         
-funding_gradrates.execute()
+#funding_gradrates.execute()
 #doc = funding_gradrates.provenance()
 #print(doc.get_provn())
 #print(json.dumps(json.loads(doc.serialize()), indent=4))

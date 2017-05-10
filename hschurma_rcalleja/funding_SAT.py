@@ -154,6 +154,6 @@ class funding_SAT(dml.Algorithm):
         return doc
 
 
-funding_SAT.execute()
+#funding_SAT.execute()
 #doc = funding_SAT.provenance()'''
 

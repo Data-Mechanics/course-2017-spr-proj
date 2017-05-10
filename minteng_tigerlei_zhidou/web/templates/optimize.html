@@ -4,29 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
     <meta name="description" content="">
     <meta name="author" content="">
 
-
-    <!-- Custom styles for this template -->
-    <!-- <link href="/static/carousel.css" rel="stylesheet"> -->
     <link href="/static/style.css" rel="stylesheet">
   </head>
 
-  <body>
-    <header ><h1>Find the best office location</h1></header>
+  <body> 
+{% extends "base.html" %}
 
+{% block title %}Optimization{% endblock %}
+
+{% block body %}
+    
+    <!-- <header ><h1>Find the best office location</h1></header> -->
     <div class="con">
-
+        
     <div class="opt">
-      <p><a href="/">&#8592; Back</a></p>
-      <h2 style="color: black">Optimization</h2>
-      <p>Intro.......</p>
-      <p><strong>Input your ratings</strong></p>
-      
+
+      <br><br><br><br><br><br>
+      <h3 style="text-align: center;">Please select your personal desired ratings for each aspect:</h3>
+<br>
+        <p></p>
       <form class="ratings" action="/optimize-result/" method="GET">
-        <p>Select ratings for every factors, the rating is 1 - 5, the higher the better......</p>
+        <p></p>
         
         <p style="text-align: left;"><span style="color:red">Food</span>:
         <select class="select" name="Food" >
@@ -64,15 +66,20 @@
             <option>5</option>
         </select></p>
 
-        <input type="submit" value="Research">
+        <div class='button' style="clear:both;text-align: center;"> <input type="submit" value="Research" > </div>
       </form>
     </div>
+
+    <!-- Home Page Button -->
+    <a href="/" class="button">Home Page <i class="icon-chevron-right"></i></a>
     
     <div class="my-container">
-        <img src="../static/img/Boston.jpg">
+
+        <img src="/static/img/Boston.jpg">
     </div>
 
     </div>
 
-  </body>
+{% endblock %}
+<!--   </body>
 </html>

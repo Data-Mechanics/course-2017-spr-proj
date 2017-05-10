@@ -1,16 +1,8 @@
-import urllib.request
-import json
-# import dml
 import pymongo
-import prov.model
-import datetime 
-import uuid
-import time
+import datetime
+import os
 
 def get_result(f,t,s,r):
-	contributor = 'minteng_tigerlei_zhidou'
-	reads = ['minteng_tigerlei_zhidou.box_count']
-	writes = ['minteng_tigerlei_zhidou.optimization_result']
 	client = pymongo.MongoClient()
 	repo = client.repo
 	repo.authenticate('minteng_tigerlei_zhidou', 'minteng_tigerlei_zhidou')
@@ -40,30 +32,75 @@ def get_result(f,t,s,r):
 	res=[]    
 	a=repo['minteng_tigerlei_zhidou.box_count'].find()
 	for i in a:
-		grade=[i['grade']['transport'],i['grade']['food'],i['grade']['safety'],i['grade']['rent']]
-		if if_fitted(grade,[transport,food,safety,rent]):
+		grade1=[i['grade']['transport'],i['grade']['food'],i['grade']['safety'],i['grade']['rent']]
+		if if_fitted(grade1,[transport,food,safety,rent]):
 			temp=i
 			temp['rating']=sum(i['grade'].values())
 			res.append(temp)
 		else:
 			temp=i
-			temp['rating']=get_dist(grade,[transport,food,safety,rent])*-1
+			temp['rating']=get_dist(grade1,[transport,food,safety,rent])*-1
 			res.append(temp)
 
 
 	#return top fitted
 	result=sorted(res, key=lambda x: x['rating'], reverse=True)
+	top5 = result[0:5]
 
+	for i in range(5):
+		top5[i]['rank'] = i + 1
+
+	# get crime num
+	crimeCount=[]
+	crimeTotal=[]
+	max = 0
+	b=repo['minteng_tigerlei_zhidou.crimeCount'].find()
+	for i in b:
+		tempT = {}
+		tempT['label'] = i['area'] + "(" + str(i['_id']) + ")"
+		tempT['emp'] = sum(i['crimeNum'])
+		tempT['area'] = i['_id']
+		tempT['ind'] = "crimeNum"
+		max = tempT['emp'] if tempT['emp'] > max else max
+		crimeTotal.append(tempT)
+		for j in top5:
+			if (j['box'] == i['box']):
+				temp = {}
+				temp['crimeRatio'] = i['crimeRatio']
+				temp['bracket'] = j['rank']
+				temp['area'] = j['area']
+				crimeCount.append(temp)
+
+	output=sorted(crimeCount, key=lambda x: x['bracket'])
+
+	curpath = os.path.abspath(os.curdir)
+	
+	with open(os.path.join(curpath, 'static/top5.tsv'), 'w') as f:
+		f.write('year\tbracket\tcrimeRatio\n')
+		for i in range(48):
+			year = 2013 + i // 12
+			for block in output:
+				f.write(str(year) + '\t' + str(block['bracket']) + '\t' + str(block['crimeRatio'][i]) + '\n')
+
+	with open(os.path.join(curpath, 'static/top5Name.tsv'), 'w') as f:
+		f.write('1\t2\t3\t4\t5\n')
+		for block in output:
+			f.write(str(block['bracket']) + ': ' +block['area'] + '\t')
+
+	if not os.path.exists(os.path.join(curpath, 'static/crimeTotal.csv')):
+		with open(os.path.join(curpath, 'static/crimeTotal.csv'), 'w') as f:
+			f.write("area,label,ind,emp\n")
+			for i in crimeTotal:
+				f.write(str(i['area']) + ',' + i['label'] + ',' + i['ind'] + ',' + str(i['emp']) + '\n')
+				f.flush()
+			for i in crimeTotal:
+				f.write(str(i['area']) + ',' + i['label'] + ',' + "Difference with Max" + ',' + str(max - i['emp']) + '\n')
+				f.flush()
+
+	# for mapping
 	for i in result:
 		i['center']=[(i['box'][0][0]+i['box'][1][0])/2,(i['box'][0][1]+i['box'][1][1])/2]
 
-	# print('Top fitted areas:')
-	# top=5
-	# for i in range(top):
-	# 	print("Center:",result[i]['center'])
-	# 	print("Bound:",result[i]['box'])
-	# 	print("Area:",result[i]['area'],result[i]['postal_code'],"   Avg rent:",result[i]['avg_rent'])
-	# 	print("Grades:",result[i]['grade'],'\n')
 	for i in result:
 		i['leftdown']=[i['box'][0][0],i['box'][0][1]]
 		i['leftup']=[i['box'][0][0],i['box'][1][1]]

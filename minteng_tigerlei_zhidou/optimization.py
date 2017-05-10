@@ -58,13 +58,15 @@ class optimization(dml.Algorithm):
 
 		#return top fitted
 		result=sorted(res, key=lambda x: x['rating'], reverse=True)
+		for i in range(5):
+			result[i]['rank'] = i
 
-		print('Top fitted areas:')
-		top=5
-		for i in range(top):
-			print("Bound:",result[i]['box'])
-			print("Area:",result[i]['area'],result[i]['postal_code'],"   Avg rent:",result[i]['avg_rent'])
-			print("Grades:",result[i]['grade'],'\n')
+		# print('Top fitted areas:')
+		# top=5
+		# for i in range(top):
+		# 	print("Bound:",result[i]['box'])
+		# 	print("Area:",result[i]['area'],result[i]['postal_code'],"   Avg rent:",result[i]['avg_rent'])
+		# 	print("Grades:",result[i]['grade'],'\n')
 
 		repo.dropCollection("optimization_result")
 		repo.createCollection("optimization_result")

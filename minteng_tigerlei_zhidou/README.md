@@ -1,50 +1,177 @@
-# Project1
-### *by Minteng Xie, Zhi Dou*
+# Find the best living area in Boston and corresponding analysis
 
-## Narrative
+ *by Minteng Xie, Yue Lei, Zhi Dou*
 
-We want to find a best office location for a new company. The first factor we consider is the rent of the location, so we find the data of average rent for different cities in Greater-Boston. The second factor is convenient transportation, then we fetch the MBTA data, and we assume that the location will be more convenient if there are more stops around this location. The third factor is food, we think the location is better if there are many restaurants around it. Similarly, the fourth factor is safety, we do not want too many crimes appeared near the location. The last factor is salary, we may add some fuctions related to different types of jobs.
+>**IMPORTANT running instructions are at the end of README.md**
 
-## Datasets
+## 1. Introduction
+The City of Boston has performed a significant effort on collecting data over different services and other public information. The diversity of these publicly available datasets allows us to explore various areas in Boston. Particularly, in this project, we are focusing on building a website to help people find the best living area in Boston and provide corresponding analysis to their choices.
 
-1. [Average Rent](http://datamechanics.io/data/minteng_zhidou/rent.txt)
-2. [MBTA Stops](http://datamechanics.io/data/minteng_zhidou/stops.txt)
-3. [Food Data](https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq)
-4. [Safety(Crime 2015-2017)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-August-2015-To-Date-Source-/fqn4-4qap)
-5. [Salary 2015](https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2015/ah28-sywy)
-6. [Salary 2014](https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8)
-7. [Goolge Maps](https://www.google.com/maps)
+Since it is a really complex problem to define which area of Boston is most suitable for living, we simplify it by four main factors: `Rent`, `Transport`, `Food`, `Safety` and map them to ratings in 1~5. Through our website, users could customize the ratings of these four aspects based on their personal requirements so that they could find the ideal place of living.
 
-## Transformations
-1. In first transformations, we combine rent table with zipcode of accorsponding area. First we fetch longitude and latitude based on the name of area in rent table via google maps api and then using this location information as input to fetch zipcode also with the help of google maps api. Then combine location table with rent table and implement aggregation to get the final data set with rent and the zipcode.
+Besides, the interactive statistical analysis is provided. Users could either view the overall analysis of four aspects based on great Boston area or get a 4-year-long detailed crime analysis graph based on their possible targets, which could help them make better decisions. 
 
-To run this transformation:
-```python
-python3 rent.py
+## 2. Datasets
+
+- [Average Rent](http://datamechanics.io/data/minteng_zhidou/rent.txt)
+- [MBTA Stops](http://datamechanics.io/data/minteng_zhidou/stops.txt)
+- [Active Food Establishment Licenses](https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq)
+- [Crime Incidents In Boston(2012-2015)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-July-2012-August-2015-Sourc/7cdf-6fgx)
+- [Crime Incidents In Boston(2015-2017)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-August-2015-To-Date-Source-/fqn4-4qap)
+
+## 3. Preprocessing
+The preprocessing steps were performed based on relational data and map-reduce paradigm.
+- Combine rent data with the zip code of a corresponding area. To achieve that goal, we fetch longitude and latitude based on the name of the area in rent dataset via google maps API and then using this location information as input to fetch zip code also with the help of google maps API. Then we combine location information with rent data and implement aggregation to get the final data set with rent and the zip code. The data looks like as below:
+```json
+{ 
+    "avg_rent" : 2359, 
+    "area" : "Allston", 
+    "postal_code" : "02134" 
+}
 ```
-
-2. Project MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then implement union of three datasets into the second new dataset. After union, implement selection to remove data with invalid locations (for example, with longitude and latitude equal to 0).
-
-To run this transformation:
-```python
-python3 location.py
+- Projecting MBTA, Food and Safety data, besides the needed infomation, for the value of key "location", we add tags such that (location, "transport") for MBTA data, (location, "food") for Food data and (location, "crime") for Safety data. Then we create a union of three datasets into the second new dataset. After union operation, selection is used to to remove data with invalid locations (for example, with longitude and latitude equal to 0).
+```json
+{   
+    "address" : "1159 Washington", 
+    "location" : [ 42.272239, -71.068856 ], 
+    "type" : "food", 
+    "zip" : "02126", 
+    "businessname" : "SPUKIES PIZZA RESTAURANT", 
+    "city" : "Mattapan" 
+}
 ```
-
-3. After project the needed information, combine the two Salary data, then aggragate the dataset using the job title as the key, get the average salary for different jobs. The third new dataset contain the key: job title, values: average salary and other infomation such as company name, year and so on.
-
-To run this transformation:
-```python
-python3 salary.py
+- Postal code and area in the first dataset imply the location, thus taking location as key, via the help of google maps, we aggregate above two datasets. After that, selection is applied to get data in with in certain square then sum aggregation used to compute the total number of crime, food and transpotation in this area. Finally, based on certain function, project these sum to grade. 
+```json
+{
+    "postal_code" : "02136", 
+    "area" : "Hyde Park", 
+    "avg_rent" : 1597, 
+    "count" : { "crime" : 96, "transport" : 15, "food" : 14 },
+    "grade" : { "rent" : 3, "safety" : 4, "transport" : 1, "food" : 1 },
+    "box" : [ [ 42.22788, -71.1642177 ], [ 42.2450451, -71.1373224 ] ] 
+}
 ```
+- Then based on dataset "box_count", more analysis could be implied. Taking box attribute in "box_count" and selector, go throught crime dataset, a new dataset about monthly total number of crime each block could be built.
+```json
+{
+    "area" : "Dorchester", 
+    "box" : [ [ 42.2793753, -71.0835318 ], [ 42.2965404, -71.0566365 ] ],
+    "crimeNum":[ 396, 328, 380, ..., 497, 456, 393 ],
+    "crimeRatio" : [ 0.05765, 0.05664, ..., 0.05242]
+}
+```
+## 4. Methodologies 
 
-# Project 2
-### *by Minteng Xie, Yue Lei, Zhi Dou*
+### Optimization
+Given all the licensed restaurants/ crime incidents/ MBTA stops/ rent price in Boston area, We gonna find the best living area with maximizing **`#restaurant`**, **`#MBTA stops`** and minimize **`#crime incidents`** and **`rent price`**. 
 
-## 1.
-A new team is formed by Minteng Xie, Yue Lei and Zhi Dou. All scripts and files of project 2 is under new folder ```minteng_tigerlei_zhidou```. We modify part of ```location.py``` in project 1 and add a new transformation ```crime.py``` to retrieve and store new crime data into database. All ```.ipynb``` files are just used to plot and show graphs in case of running error inspected by ```execute.py```.
+We use GoogleMaps API to find the left bottom/ right top coordinates of Boston area. With these coordinates, we could build a big rectangle containing Boston area. Then we separate this rectangle into 10 x 10 grids. 
+
+![boston_grid](http://datamechanics.io/data/minteng_zhidou/Boston_grid.png)
+
+Removing those blank grids which don't belong to Boston area, we have 52 grids left. Each grid represents a possible target area which contains a potential place for living. Therefore, we could count the number of restaurant/ crime incidents/ MBTA stops(including buses and subway) in every grid and evaluate these numbers by mapping them into scores from 1-5(safety score is reversed by crime). And according to the center coordinate of this grid, google maps API could help us to find it belongs to which area(like Allston/ Back Bay/ Fenway/...). 
+
+![box_count](http://datamechanics.io/data/minteng_zhidou/map_with_label.png) 
+
+*(This graph was generated by Boston_Grid_Count.ipynb)*
+
+Then our database would search and find matched rent price, which also should be mapped into reversed scores from 1-5. Then we get the tuple of ratings(The higher the better) for each grid in the format of 
+```
+(transport, food, safety, rent) 
+```
+All these data would be stored in a new collection named ```box_count``` as follow.
+```json
+{   "_id" : 1, 
+    "avg_rent" : 1597, 
+    "box" : [ [ 42.22788, -71.1642177 ], [ 42.2450451, -71.1373224 ] ],
+    "postal_code" : "02136", 
+    "grade" : { "transport" : 1, "food" : 1, "safety" : 4, "rent" : 3 }, 
+    "area" : "Hyde Park", 
+    "count" : { "transport" : 15, "food" : 14, "crime" : 96 } }
+```
+User could customize rating due to their preference in website. It would search user's ratings requirement in database. If it finds results with every rating of `(transport, food, safety, rent)` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. Detailed algorithm could be found under `web/optimization_algorithm.py`
+
+
+### Statistical Analysis
+After finding an ideal area for a living place, we would like to dig deeper into those areas because this area might be the best choice for now, but it might change, with the variation of rental, crime, and transportations. So based on current data, we want to study on the trend of these factors, and for now, we mainly focus on crime in different blocks(grids). 
+
+Now let *X<sub>ij</sub>* as the number of crimes happens in block *i* in the year *j*. If *X<sub>ij</sub>* and *X<sub>i(j + 1)</sub>* are highly correlated, then we could claim the number of the crime of these two years in this block have the similar distribution. Thus if these random variables continuously related to each other, then we could use such correlation to predict the trend of the criminal events in this year.
+
+For each block(grid), we could count the number of crime incidents of each month in different years(2013- 2016). We build a matrix with **```year```** x  **```#blocks```** x **```#month```**(5 x 52 x 12). Then we calculate **correlation coefficient** to the degree these two variables linearly related. Since this linear property may happen coincidentally, we want to compute how much we could trust this result. Thus Hypothesis testing is applied. Assume the correlation coefficient is wrong, then by computing **p-value** to test our assumption. We find that for some blocks, these **correlation coefficients** are close to 0 and **p-values** are close to 1, which means for these blocks, their crime incidents in consistent years are not related. However, we have the ability to do the reasonable prediction for those blocks which have high **correlation coefficient** and low **p-value** year by year. 
+
+For example, block 42 -- Downtown```[ [ 42.348035700000004, -71.0566365 ], [ 42.365200800000004, -71.0297412 ] ]```(02109) has a good performance as follow:
+
+
+|     year      | correlation coefficient |      P-value      |
+|:-------------:|:-----------------------:|:-----------------:|
+|   2013-2014   |  0.782569291953         |  0.0026219859084  |
+|   2014-2015   |  0.796445834967         |  0.0019334569301  |
+|   2015-2016   |  0.928294156304         |  0.0000132251510  |
+
+
+From the graph below we could see the trend of block 42 in the consistent four years(2013-2016) are in the similar mode.
+
+![block42](http://datamechanics.io/data/minteng_zhidou/block42.png) 
+
+*(This graph is generated by fitting.ipynb)*
+
+Because this data of these four years have a strong linear relationship, and their P-value is very small, thus we should deny the assumption, which means there is a high probability that their criminal records have the same tendency through the entire year. Therefore, we fit all the data in four years to find a common pattern of block 42. Now assume, 2016-2017 could still maintain such strong linear relationship, and then we could use this fitting function to simulate the trend of the crime of block 42 in this year.
+
+![fitting](http://datamechanics.io/data/minteng_zhidou/fitting.png) 
+
+*(This graph is generated by fitting.ipynb)*
+
+## 5. Results 
+We use [Flask](http://flask.pocoo.org/docs/0.12/) and [MongoDB](https://www.mongodb.com/) to implement the web service. The homepage:
+![homepage](http://datamechanics.io/data/minteng_zhidou/web_pages/1_home.png) 
+
+The first new feature/component under `Optimization` part is to visualize the optimization problem in project2. 
+Users could select and choose their preferred grades for 4 attributes, the ratings are in 1 ~ 5, the higher the better:
+![input11](http://datamechanics.io/data/minteng_zhidou/web_pages/3_input11.png)
+
+Then, we could get the top fitted location results using the algorithms described in the above Methodologies:
+![table](http://datamechanics.io/data/minteng_zhidou/web_pages/5_table1.png)
+
+Users could view these areas on an interactive map with labeled blocks filled in different colors, which is created by [Leaflet](http://leafletjs.com/) :
+![map11](http://datamechanics.io/data/minteng_zhidou/web_pages/6_map1.png)
+
+Besides, crime analysis for those results is present by clicking on `Crime analysis` button. The user could get the crime ratio of the certain block in the total crime number for different month/year:
+![crime-analysis](http://datamechanics.io/data/minteng_zhidou/web_pages/7_crime-analysis.png)
+
+The second new feature/component is under `Statistical Analysis` part. We randomly choose 30 blocks and use [D3.js](https://d3js.org/) to show four grades for each block in a bar chart:
+![grades](http://datamechanics.io/data/minteng_zhidou/web_pages/9_grade1.png)
+
+To study the relationship between these four attributes, correlation coefficient and p-value were calculated based on these 30 random blocks:
+![values](http://datamechanics.io/data/minteng_zhidou/web_pages/10_four-nodes-cc.png)
+
+With these values, we visualize their relationship by setting four attributes as the nodes and the value of `(1-abs(Correlation Coefficient))*500` as the edge length, which means that if two attributes have higher Correlation Coefficient, they will be much closer than others:
+![4nodes](http://datamechanics.io/data/minteng_zhidou/web_pages/11_four-nodes-plot.png)
+As the graph shows above, it is quite obviously that "Transport" and "Safety" has high Correlation Coefficient
+
+At last, we do some more interesting things focus on predicting the potential development of each block, especially on crime. Assuming the number of the crime of one certain block within one month in the certain year as a random variable. To find out the relationship of such random variable with next year, correlation coefficients and P-values were computed: 
+![plots](http://datamechanics.io/data/minteng_zhidou/web_pages/12_cc-pvalue.png)
+
+As for `Project Link` part, it will direct to our GitHub folder.
+
+## 6. Future Work
+- Due to the limitation of the data resource, our analysis particular emphasize on crime part. For instance, we just got average rent price of last year so that we couldn't analyze more detailed information from that. In the future, the City of Boston may post more datasets publicly, which means more useful data will be collected. We plan to extend our factors deeper and richer to make our model more accurate. Traffic condition or accidents can be added as a supplement for parts of transportation. Besides, more influence factor will be counted such as entertainment, public facility and so on.
+- With sufficient data resources, way better analytical approaches can be applied in our project. Correlation coefficient and ratio have many limitations and deficiency in statistical analysis. We can do the factor analysis to figure out which of these factors are the most important. And time series analysis is a powerful tool to present the changes and trend of different factors. 
+
+## Reference
+[1] http://flask.pocoo.org/docs/0.12/
+
+[2] http://bl.ocks.org/juan-cb/ac731adaeadd3e855d26
+
+[3] https://bl.ocks.org/mbostock/4062045
+
+[4] http://bl.ocks.org/ndobie/878f34d2810058c5b821
+
+# Instructions
+
+All scripts and files are under folder `minteng_tigerlei_zhidou`. We modified `execute.py` into `initiate.py` so that it won't traverse subdirectory like `/web`, which contains all the scripts of running web server. `initiate.py` just takes the job of automatically retrieving data into MongoDB and does all transformations. So you just need to run it once and control web server mannully every time. All `.ipynb` files are just used to plot and show graphs in the case of running error inspected by `initial.py`.
 
 ### auth.json
-This project use app token from ```boston data portal``` and ```googlemaps geocoding API```. To retrieve data automatically, app token should be added into `auth.json` file as follow format:
+This project use app token from `Boston data portal` and `google maps geocoding API`. To retrieve data automatically, app token should be added into `auth.json` file as following the format:
 ```
 {
     "services": {
@@ -63,132 +190,60 @@ This project use app token from ```boston data portal``` and ```googlemaps geoco
 }
 ```
 
-## 2. Narrative & Problems
-### Problem 1: Optimization
-Following the idea of project 1, our goal is to find a best office location for a new company. Since a detailed coordinate is meaningless, we try to find a suitable area. Project 1 has helped us gather all the licensed restaurants/ crime incidents/ MBTA stops/ rent price in boston area. We gonna find the best area that maximize **```#restaurant```**, **```#MBTA stops```** and minimize **```#crime incidents```** and **```rent price```**. 
-
-We use googlemaps api to find the left bottom/ right top coordinates of boston area. With these coordinates, we could build a big rectangle containing boston area. Then we separate this rectangle into 10 x 10 grids(user could set this scale manually). 
-
-![boston_grid](http://datamechanics.io/data/minteng_zhidou/Boston_grid.png)
-
-Removing those blank grids which don't contain any useful data, we have 52 grids left. Each grid represents a possible target area which contains a suitable place for opening a company. Therefore, we could count the number of restaurant/ crime incidents/ MBTA stops(including buses and subway) in every grid and evaluate these numbers by mapping them into scores from 1-5. And according to the center coordinate of this grid, googlemaps api could help us to find it belongs to which area(like Allston/ Back Bay/ Fenway/...). 
-
-![box_count](http://datamechanics.io/data/minteng_zhidou/map_with_label.png) 
-
-*(This graph was generated by Boston_Grid_Count.ipynb)*
-
-Then our database would search and find matched rent price, which also should be mapped into reversed scores from 1-5. Then we get the tuple of ratings(The higher the better) for each grid in the format of 
-```
-(transport, food, safety, rent) 
-```
-All these data would be stored in a new collection named ```box_count```.
-
-User could customize rating due to their preference in ```optimization.py```. It would search user's ratings requirement in database. If it finds results with every rating of ```(transport, food, safety, rent)``` above requirement, return the result with maximal sum of these four ratings. Else it would return the result with minimal distance from the requirement ratings. 
-
-We provide an example that our algorithm rank all 52 grid area according to user's requirement of grades: **```(3, 4, 3, 4)```** and provide top choices as well as its bound coordinates, area name & zipcode, average rent and ratings.
-```
-Top fitted areas:
-Bound: [[42.2622102, -71.0835318], [42.2793753, -71.0566365]]
-Area: Mattapan 02126    Avg rent: 1403
-Grades: {'safety': 3, 'rent': 5, 'food': 4, 'transport': 4} 
-
-Bound: [[42.2622102, -71.1642177], [42.2793753, -71.1373224]]
-Area: West Roxbury 02132    Avg rent: 1476
-Grades: {'safety': 3, 'rent': 4, 'food': 4, 'transport': 3} 
-
-Bound: [[42.2793753, -71.0566365], [42.2965404, -71.0297412]]
-Area: Dorchester 02122    Avg rent: 1524
-Grades: {'safety': 2, 'rent': 4, 'food': 4, 'transport': 3} 
-
-Bound: [[42.2622102, -71.1373224], [42.2793753, -71.11042710000001]]
-Area: Roslindale 02131    Avg rent: 1685
-Grades: {'safety': 2, 'rent': 3, 'food': 4, 'transport': 3} 
-
-Bound: [[42.3137055, -71.1373224], [42.330870600000004, -71.11042710000001]]
-Area: Jamaica Plain 02130    Avg rent: 2214
-Grades: {'safety': 3, 'rent': 3, 'food': 5, 'transport': 2} 
-```
-
-Assuming ```rent.py```, ```location.py```, ```salary.py```, ```crime.py```(retrieve and transformations procedure) has been run.
-
-To solve this optimization problem, first run the ```box_count.py```:
-```python
-python3 box_count.py
-```
-And then run ```optimization.py```:
-```python
-python3 optimization.py
-```
-Remember to uncomment the last lines in the file:
-```python
-# <filename>.execute()
-```
-
-### Problem 2: Statistical Analysis
-After finding ideal area for a new company, we would like to dig deeper into those areas, because this area might be the best choice for now, but it might change, with the variation of rental, crime and transportations. So based on current data, we want to study on the trend of these factors, and for now we mainly focus on crime in different blocks(grids). A new dataset [Safety(Crime 2012-2015)](https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports-July-2012-August-2015-Sourc/7cdf-6fgx) has been added.
-
-Now let *X<sub>ij</sub>* as the the number of crimes happens in block *i* in year *j*. If *X<sub>ij</sub>* and *X<sub>i(j + 1)</sub>* are highly correlated, then we could claim the number of crimes of these two year in this block have similar distribution. Thus if these random variables continuously related to each other, then we could use such correlation to predict the trend of the criminal events in this year.
-
-For each block(grid), we could count the number of crime incidents of each month in different years(2013- 2016). We build a matrix with **```year```** x  **```#blocks```** x **```#month```**(5 x 52 x 12). Then we calculate **correlation coefficient** and **p-value** for each block so that we could compare them in consistent years. We find that for some blocks, these **correlation coefficient** are close to 0 and **p-value** are close to 1, which means for these blocks, their crime incidents in consistent years are not related. However, we have the ability to do reasonable prediction for those blocks which have high **correlation coefficient** and low **p-value** year by year. 
-
-For example, block 27```[[42.34893792999999, -71.0586156], [42.36623191999999, -71.0144498]]```(02109) has a good performance as follow: 
-
-|     year      | correlation coefficient |       p value       |
-|:-------------:|:-----------------------:|:-------------------:|
-|   2012-2013   |  0.764868546433         |  0.000643432484115  |
-|   2013-2014   |  0.836472540464         |  0.003345903249322  |
-|   2014-2015   |  0.735134468067         |  0.006447586595446  |
-|   2015-2016   |  0.882368732529         |  0.001234912479238  |
-
-From the graph below we could see the trend of block 27 in the consistent four years(2013-2016) are in similar mode.
-
-![block27](http://datamechanics.io/data/minteng_zhidou/Block27.png) 
-
-*(This graph is generated by fitting.ipynb)*
-
-Because this data of these four year have strong linear relationship, there is a high probability that their criminal records have the same tendency through the entire year. Therefore, we fit all the data in four year to find a common pattern of block 27. Now assume, 2016-2017 could still maintain such strong linear relationship, and then we could use this fitting funtion to simulate the trend of crime of block 27 in this year.
-
-![fitting](http://datamechanics.io/data/minteng_zhidou/fitting.png) 
-
-*(This graph is generated by fitting.ipynb)*
-
-To solve this analysis problem, first run the ```crime.py```:
-```python
-python3 crime.py
-```
-And then run ```crimeAnalysis.py```:
-```python
-python3 crimeAnalysis.py
-```
-Remember to uncomment the last lines in the file:
-```python
-# <filename>.execute()
-```
-
-## 3.a 
-### Provenance information
-All provenance information could be seen in ```provenance.html``` after running:
-```python
-python3 execute.py minteng_tigerlei_zhidou
-```
-
-## 3.b 
 ### Trial mode
-In trial mode, the algorithm would complete its execution very quickly (in at most a few seconds) by operating on a very small portion of the input data set(s). All retreieve and transformation are limited to 500 records.
+This project provides a trial mode to complete data retrieve and transformations very quickly (in at most a few seconds) by operating on a very small portion of the input data set(s). All retrieve requests and transformations are limited to 500 records.
 
-Remember to uncomment last few lines of the file
-```python
-# if 'trial' in sys.argv:
-#     <filename>.execute(True)
-# else:
-#     <filename>.execute()
+Locate to project folder with:
+```shell
+cd minteng_tigerlei_zhidou
 ```
+
 To run trial mode on all files:
 ```python
-python3 execute.py --trial
+python3 initial.py --trial
 ```
 
-To run trial mode on separate files:
+To run trial mode on seperate files, remember to uncomment last few lines of the file
+```python
+if 'trial' in sys.argv:
+     <filename>.execute(True)
+else:
+     <filename>.execute()
+```
+Then run it with :
 ```python
 python3 <filename>.py --trial
+```
+
+### Prepare Database
+First, make sure `mongod` process is running on your machine. 
+
+Locate to project folder with:
+```shell
+cd minteng_tigerlei_zhidou
+```
+
+Then run the following command:
+```python
+python3 initiate.py 
+```
+
+### Start Web Server
+Locate to web service folder with:
+```shell
+cd minteng_tigerlei_zhidou/web
+```
+Then run the following command:
+```python
+python3 web.py
+```
+To view the website, open a browser on your machine and type: 
+```sh
+127.0.0.1:5000
+``` 
+
+### Provenance Information
+All provenance information could be seen in ```provenance.html``` after running:
+```python
+python3 initiate.py 
 ```

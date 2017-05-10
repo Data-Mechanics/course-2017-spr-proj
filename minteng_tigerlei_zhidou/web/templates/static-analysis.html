@@ -1,18 +1,961 @@
 {% extends "base.html" %}
 
-{% block title %}Static Analysis{% endblock %}
+{% block title %}Statistical Analysis{% endblock %}
 
 {% block body %}
+<link href="/static/chart2.css" rel="stylesheet">
 
-  <section>
-    <div>
-    <p><a href="/">&#8592; Back</a></p>
-    <h2 style="color: black">Statical Analysis</h2>
+<br>
+<h2 style="color: black">Statistical Analysis</h2>
 
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: auto;
+  height: 550px;
+  position: relative;
+}
+svg {
+    width: 100%;
+    height: 100%;
+    position: relative;
 
+}
+text{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.tengtoolTip {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+    z-index: 10;
+}
+.legend {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 60%;
+}
+rect {
+    stroke-width: 2;
+}
+text {
+  font: 10px sans-serif;
+}
+.axis text {
+  font: 10px sans-serif;
+}
+.axis path{
+  fill: none;
+  stroke: #000;
+}
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.axis .tick line {
+  stroke-width: 1;
+  stroke: rgba(0, 0, 0, 0.2);
+}
+.axisHorizontal path{
+  fill: none;
+}
+.axisHorizontal line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.axisHorizontal .tick line {
+  stroke-width: 1;
+  stroke: rgba(0, 0, 0, 0.2);
+}
+.tengbar {
+  fill: steelblue;
+  fill-opacity: .9;
+}
+.x.axis path {
+  display: none;
+}
+</style>
 
+<body>
+<hr>
+<p style="text-align: left;width: 70%;margin-left: 15%;">In this graph, 30 blocks were randomly choosed to present the grades of 4 attributes (Tansport/ Safety/ Rent/ Food) that we were interested in.</p>
 
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
+<script>
+var margin = {top: (parseInt(d3.select('body').style('width'), 9)/20), right: (parseInt(d3.select('body').style('width'), 10)/20), bottom: 50, left: (parseInt(d3.select('body').style('width'), 10)/20)},
+    width = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right,
+    height = parseInt(d3.select('body').style('height'), 10) - margin.top - margin.bottom;
+var x0 = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+var x1 = d3.scale.ordinal();
+var y = d3.scale.linear()
+    .range([height, 0]);
+var colorRange = d3.scale.category20();
+var color = d3.scale.ordinal()
+    .range(colorRange.range());
+var xAxis = d3.svg.axis()
+    .scale(x0)
+    .orient("bottom");
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickFormat(d3.format(".2s"));
+var divTooltip = d3.select("body").append("div").attr("class", "tengtoolTip");
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+dataset = [
+{label:"B1", "Tansport":1, "Safety":4, "Rent":3, "Food":1},
+{label:"B2", "Tansport":2, "Safety":3, "Rent":3, "Food":1},
+{label:"B3", "Tansport":1, "Safety":5, "Rent":4, "Food":1},
+{label:"B4", "Tansport":2, "Safety":3, "Rent":4, "Food":2},
+{label:"B5", "Tansport":5, "Safety":2, "Rent":3, "Food":1},
+{label:"B6", "Tansport":1, "Safety":5, "Rent":5, "Food":2},
+{label:"B7", "Tansport":2, "Safety":4, "Rent":4, "Food":2},
+{label:"B8", "Tansport":3, "Safety":3, "Rent":4, "Food":4},
+{label:"B9", "Tansport":3, "Safety":2, "Rent":3, "Food":4},
+{label:"B10", "Tansport":4, "Safety":1, "Rent":5, "Food":3},
+{label:"B11", "Tansport":4, "Safety":3, "Rent":5, "Food":4},
+{label:"B12", "Tansport":3, "Safety":5, "Rent":4, "Food":2},
+{label:"B13", "Tansport":3, "Safety":4, "Rent":4, "Food":2},
+{label:"B14", "Tansport":5, "Safety":3, "Rent":4, "Food":2},
+{label:"B15", "Tansport":5, "Safety":2, "Rent":3, "Food":2},
+{label:"B16", "Tansport":3, "Safety":1, "Rent":4, "Food":4},
+{label:"B17", "Tansport":5, "Safety":1, "Rent":4, "Food":1},
+{label:"B18", "Tansport":3, "Safety":2, "Rent":4, "Food":4},
+{label:"B19", "Tansport":2, "Safety":3, "Rent":3, "Food":2},
+{label:"B20", "Tansport":4, "Safety":1, "Rent":3, "Food":5},
+{label:"B21", "Tansport":5, "Safety":1, "Rent":4, "Food":3},
+{label:"B22", "Tansport":2, "Safety":3, "Rent":3, "Food":5},
+{label:"B23", "Tansport":1, "Safety":5, "Rent":1, "Food":2},
+{label:"B24", "Tansport":4, "Safety":2, "Rent":1, "Food":1},
+{label:"B25", "Tansport":5, "Safety":1, "Rent":1, "Food":5},
+{label:"B26", "Tansport":5, "Safety":1, "Rent":1, "Food":4},
+{label:"B27", "Tansport":1, "Safety":4, "Rent":1, "Food":3},
+{label:"B28", "Tansport":3, "Safety":4, "Rent":1, "Food":3},
+{label:"B29", "Tansport":5, "Safety":2, "Rent":1, "Food":3},
+{label:"B30", "Tansport":4, "Safety":2, "Rent":1, "Food":5},
+{label:"", "Tansport":0, "Safety":0, "Rent":0, "Food":0},
+{label:"", "Tansport":0, "Safety":0, "Rent":0, "Food":0},
+];
+var options = d3.keys(dataset[0]).filter(function(key) { return key !== "label"; });
+dataset.forEach(function(d) {
+    d.valores = options.map(function(name) { return {name: name, value: +d[name]}; });
+});
+x0.domain(dataset.map(function(d) { return d.label; }));
+x1.domain(options).rangeRoundBands([0, x0.rangeBand()]);
+y.domain([0, d3.max(dataset, function(d) { return d3.max(d.valores, function(d) { return d.value; }); })]);
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis)
+    .append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 6)
+    .attr("dy", ".71em")
+    .style("text-anchor", "end")
+    .text("Grades");
+var bar = svg.selectAll(".tengbar")
+    .data(dataset)
+    .enter().append("g")
+    .attr("class", "rect")
+    .attr("transform", function(d) { return "translate(" + x0(d.label) + ",0)"; });
+bar.selectAll("rect")
+    .data(function(d) { return d.valores; })
+    .enter().append("rect")
+    .attr("width", x1.rangeBand())
+    .attr("x", function(d) { return x1(d.name); })
+    .attr("y", function(d) { return y(d.value); })
+    .attr("value", function(d){return d.name;})
+    .attr("height", function(d) { return height - y(d.value); })
+    .style("fill", function(d) { return color(d.name); });
+
+bar.on("mousemove", function(d){
+    divTooltip.style("left", d3.event.pageX+10+"px");
+    divTooltip.style("top", d3.event.pageY-25+"px");
+    divTooltip.style("display", "inline-block");
+    var x = d3.event.pageX, y = d3.event.pageY
+    var elements = document.querySelectorAll(':hover');
+    l = elements.length
+    l = l-1
+    elementData = elements[l].__data__
+    divTooltip.html((d.label)+"<br>"+elementData.name+":<br>"+elementData.value);
+});
+
+bar.on("mouseout", function(d){
+    divTooltip.style("display", "none");
+});
+var legend = svg.selectAll(".legend")
+    .data(options.slice())
+    .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+legend.append("rect")
+    .attr("x", width - 18)
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", color);
+legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(function(d) { return d; });
+    
+</script>
+<hr>
+<p style="text-align: left;width: 70%;margin-left: 15%;">To study on the relationship between these four attributes, correlation coefficient and p-value were calculated based on these 30 random blocks</p>
+<br>
+<table cellpadding="10" align="center" border="6">
+<tr><th>Value Pair</th><th>Correlation Coefficient</th><th>p-value</th></tr>
+
+<tr><td>Transport - Food</td><td>0.18443133126957592</td><td>0.24835610469426553</td></tr>
+<tr><td>Transport - Rent</td><td>-0.063998564292522625</td><td>0.69097976291973018</td></tr>
+<tr><td>Transport - Safety</td><td>-0.76594432658403122</td><td>0.00000000537058223953</td></tr>
+<tr><td>Food - Rent</td><td>-0.22292437540342935</td><td>0.16122291338006584</td></tr>
+<tr><td>Food - Safety</td><td>-0.35851557322730288</td><td>0.021350190751979622</td></tr>
+<tr><td>Rent - Safety</td><td>0.0086379042630240748</td><td>0.9572538186779973</td></tr>
+
+</table>  
+<br>
+<br>
+<p style="text-align: left;width: 70%;margin-left: 15%;">With these values, we visualize their relationship by setting four attributes as the nodes and the value of (1-abs(Correlation Coefficient))*500 as the edge length, which means that if two attributes have higher Correlation Coefficient, they will be much closer than others.</p>
+<div class='tt' style="margin-left: auto; margin-right: auto; width: 70%;">
+<script type="text/javascript">
+    var w = 1000;
+    var h = 550;
+    var linkDistance=200;
+    var colors = d3.scale.category10();
+    var dataset = {
+    nodes: [
+    {name: "Transport"},
+    {name: "Food"},
+    {name: "Rent"},
+    {name: "Safety"},
+    ],
+    edges: [
+    {source: 0, target: 1, value:600-225,text: ""},
+    {source: 0, target: 2, value:600-104,text: ""},
+    {source: 0, target: 3, value:600-520,text: "High CC"},
+    {source: 1, target: 2, value:600-263,text: ""},
+    {source: 1, target: 3, value:600-388,text: ""},
+    {source: 2, target: 3, value:600-60,text: ""},
+    ]
+    };
+
+    var margin = {top: 10, right: 100, bottom: 100, left: 100};
+    var svg = d3.select(".tt").append("svg").attr({"width":w,"height":h}).attr("align","center")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var force = d3.layout.force()
+        .nodes(dataset.nodes)
+        .links(dataset.edges)
+        .size([w,h])
+        // .linkDistance([linkDistance])
+        .linkDistance(function(d) { return  d.value; }) 
+        .charge([-500])
+        .theta(0.1)
+        .gravity(0.05)
+        .start();
+    var edges = svg.selectAll("line")
+      .data(dataset.edges)
+      .enter()
+      .append("line")
+      .attr("id",function(d,i) {return 'edge'+i})
+      // .attr('marker-end','url(#arrowhead)')
+      .style("stroke","#ccc")
+      .style("pointer-events", "none");
+    
+    var nodes = svg.selectAll("circle")
+      .data(dataset.nodes)
+      .enter()
+      .append("circle")
+      .attr({"r":15})
+      .style("fill",function(d,i){return colors(i);})
+      .call(force.drag)
+    var nodelabels = svg.selectAll(".nodelabel") 
+       .data(dataset.nodes)
+       .enter()
+       .append("text")
+       .attr({"x":function(d){return d.x;},
+              "y":function(d){return d.y;},
+              "class":"nodelabel",
+              "stroke":"black"})
+       .text(function(d){return d.name;});
+    var edgepaths = svg.selectAll(".edgepath")
+        .data(dataset.edges)
+        .enter()
+        .append('path')
+        .attr({'d': function(d) {return 'M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y},
+               'class':'edgepath',
+               'fill-opacity':0,
+               'stroke-opacity':0,
+               'fill':'blue',
+               'stroke':'red',
+               'id':function(d,i) {return 'edgepath'+i}})
+        .style("pointer-events", "none");
+    var edgelabels = svg.selectAll(".edgelabel")
+        .data(dataset.edges)
+        .enter()
+        .append('text')
+        .style("pointer-events", "none")
+        .attr({'class':'edgelabel',
+               'id':function(d,i){return 'edgelabel'+i},
+               'dx':30,
+               'dy':30,
+               'font-size':20,
+               'fill':'#aaa'});
+    edgelabels.append('textPath')
+        .attr('xlink:href',function(d,i) {return '#edgepath'+i})
+        .style("pointer-events", "none")
+        .text(function(d,i){return d.text});
+    svg.append('defs').append('marker')
+        .attr({'id':'arrowhead',
+               'viewBox':'-0 -5 10 10',
+               'refX':25,
+               'refY':0,
+               //'markerUnits':'strokeWidth',
+               'orient':'auto',
+               'markerWidth':10,
+               'markerHeight':10,
+               'xoverflow':'visible'})
+        .append('svg:path')
+            .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+            .attr('fill', '#ccc')
+            .attr('stroke','#ccc');
+    force.on("tick", function(){
+        edges.attr({"x1": function(d){return d.source.x;},
+                    "y1": function(d){return d.source.y;},
+                    "x2": function(d){return d.target.x;},
+                    "y2": function(d){return d.target.y;}
+        });
+        nodes.attr({"cx":function(d){return d.x;},
+                    "cy":function(d){return d.y;}
+        });
+        nodelabels.attr("x", function(d) { return d.x; }) 
+                  .attr("y", function(d) { return d.y; });
+        edgepaths.attr('d', function(d) { var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
+                                           //console.log(d)
+                                           return path});       
+        edgelabels.attr('transform',function(d,i){
+            if (d.target.x<d.source.x){
+                bbox = this.getBBox();
+                rx = bbox.x+bbox.width/2;
+                ry = bbox.y+bbox.height/2;
+                return 'rotate(180 '+rx+' '+ry+')';
+                }
+            else {
+                return 'rotate(0)';
+                }
+        });
+    });
+
+</script>
+</div>
+<p style="text-align: left;width: 70%;margin-left: 15%;">As the graph shows above, it is quite obviously that "Transport" and "Safety" has high Correlation Coefficient</p>
+<hr>
+<p style="text-align: left;width: 70%;margin-left: 15%;">More interesting things focus on predicting the potential development of each block, especially on crime. Assuming the number of crime of one certain block within one month in certain year as random variable. To find out the relationship of such random variable with next year, coorelation coeffients and P-value were computed</p>
+<div align="center">
+    <form>
+        <span style="color:dimgrey" id="title">Statistic Analysis: </span><select id="geo" style="width:200px;">
+            <option value='1'>Hyde Park(1)</option>
+            <option value='2'>Hyde Park(2)</option>
+            <option value='3'>West Roxbury(3)</option>
+            <option value='4'>West Roxbury(4)</option>
+            <option value='5'>Hyde Park(5)</option>
+            <option value='6'>Mattapan(6)</option>
+            <option value='7'>West Roxbury(7)</option>
+            <option value='8'>West Roxbury(8)</option>
+            <option value='9'>Hyde Park(9)</option>
+            <option value='10'>Mattapan(10)</option>
+            <option value='11'>Mattapan(11)</option>
+            <option value='12'>Dorchester(12)</option>
+            <option value='13'>West Roxbury(13)</option>
+            <option value='14'>West Roxbury(14)</option>
+            <option value='15'>Roslindale(15)</option>
+            <option value='16'>Dorchester(16)</option>
+            <option value='17'>Dorchester(17)</option>
+            <option value='18'>Dorchester(18)</option>
+            <option disabled value='19'>Block19</option>
+            <option disabled value='20'>Block20</option>
+            <option value='21'>Jamaica Plain(21)</option>
+            <option value='22'>Roxbury(22)</option>
+            <option value='23'>Dorchester(23)</option>
+            <option disabled value='24'>Block24</option>
+            <option value='25'>Jamaica Plain(25)</option>
+            <option disabled value='26'>Block26</option>
+            <option disabled value='27'>Block27</option>
+            <option disabled value='28'>Block28</option>
+            <option disabled value='29'>Block29</option>
+            <option value='30'>Brighton(30)</option>
+            <option value='31'>Brighton(31)</option>
+            <option disabled value='32'>Block32</option>
+            <option disabled value='33'>Block33</option>
+            <option value='34'>South End(34)</option>
+            <option value='35'>South Boston(35)</option>
+            <option value='36'>South Boston(36)</option>
+            <option value='37'>Brighton(37)</option>
+            <option value='38'>Brighton(38)</option>
+            <option value='39'>Allston(39)</option>
+            <option value='40'>Fenway/Kenmore(40)</option>
+            <option disabled value='41'>Block41</option>
+            <option value='42'>Downtown(42)</option>
+            <option value='43'>East Boston(43)</option>
+            <option disabled value='44'>Block44</option>
+            <option value='45'>Charlestown(45)</option>
+            <option value='46'>East Boston(46)</option>
+            <option value='47'>East Boston(47)</option>
+            <option value='48'>East Boston(48)</option>
+            <option value='49'>Charlestown(49)</option>
+            <option value='50'>East Boston(50)</option>
+            <option value='51'>East Boston(51)</option>
+            <option value='52'>East Boston(52)</option>
+        </select>
+    </form>
+    <div id="wrap" style="max-width:960px;">
+        <div id="pie-chart" style="float: left; width:510px;margin:0;"></div>
+        <div id="graph" style="float: left; width:450px;margin:0;"></div>
+        <span class="prepaired" style='color:grey;font-size:0.625em;'>Used template provided by: Nathan Dobie for UNM Bureau of Business and Economic Research</span>
+        <br />
     </div>
-  </section>
+
+    <script type="text/javascript">
+
+        d3.select(self.frameElement).attr("height", "480px")
+
+        var div = d3.select("body").append("div").attr("class", "toolTip");
+
+        var w = 510;
+        var h = 390;
+        var r = 130;
+        var ir = 78;
+        var textOffset = 24;
+        var tweenDuration = 1050;
+
+        //OBJECTS TO BE POPULATED WITH DATA LATER
+        var lines, valueLabels, nameLabels;
+        var pieData = [];
+        var oldPieData = [];
+        var filteredPieData = [];
+
+        //D3 helper function to populate pie slice parameters from array data
+        var donut = d3.layout.pie().value(function (d) {
+            return d.emp;
+        }).sort(null);
+
+        ////D3 helper function to create colors from an ordinal scale
+        //var color = d3.scale.category20c();
+        var color = d3.scale.ordinal()
+            .range(['#6baed6', '#aaa']);
+
+        //D3 helper function to draw arcs, populates parameter "d" in path object
+        var arc = d3.svg.arc()
+          .startAngle(function (d) { return d.startAngle; })
+          .endAngle(function (d) { return d.endAngle; })
+          .innerRadius(ir)
+          .outerRadius(r);
+
+        function formatMoney(num) {
+            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+        };
+
+        var vis = d3.select("#pie-chart").append("svg:svg")
+          .attr("width", w)
+          .attr("height", h);
+
+        //GROUP FOR ARCS/PATHS
+        var arc_group = vis.append("svg:g")
+          .attr("class", "arc")
+          .attr("transform", "translate(" + (w / 2) + "," + (h / 2) + ")");
+
+        //GROUP FOR LABELS
+        var label_group = vis.append("svg:g")
+          .attr("class", "label_group")
+          .attr("transform", "translate(" + (w / 2) + "," + (h / 2) + ")");
+
+        //GROUP FOR CENTER TEXT
+        var center_group = vis.append("svg:g")
+          .attr("class", "center_group")
+          .attr("transform", "translate(" + (w / 2) + "," + (h / 2) + ")");
+
+        //WHITE CIRCLE BEHIND LABELS
+        var whiteCircle = center_group.append("svg:circle")
+          .attr("fill", "white")
+          .attr("r", ir);
+
+        function type(d) {
+            d.emp = +d.emp;
+            return d;
+        };
+
+        d3.csv("/static/crimeTotal.csv", type, function (error, dataI) {
+            d3.selectAll("#geo")
+               .on("change", update);
+
+            function update() {
+                dataI.value = dataI.emp;
+                var I = document.getElementById('geo').selectedIndex
+                    , select = document.getElementById('geo')[I].value;
+
+                data = dataI.filter(function (d) { return d.area == select; });
+
+                oldPieData = filteredPieData;
+                pieData = donut(data);
+                var sliceProportion = 0; //size of this slice
+                filteredPieData = pieData.filter(filterData);
+
+                function filterData(element, index, array) {
+                    element.emp = data[index].emp;
+                    element.ind = data[index].ind;
+                    element.label = data[index].label;
+                    sliceProportion += element.emp;
+                    return (element.emp >= 0)
+                }
+
+                //DRAW ARC PATHS
+                paths = arc_group.selectAll("path").data(filteredPieData);
+                paths.enter().append("svg:path")
+                  .attr("stroke", "white")
+                  .attr("stroke-width", 0.5)
+                  .attr("fill", function (d, i) { return color(i); })
+                  .transition()
+                    .duration(tweenDuration)
+                    .attrTween("d", pieTween);
+                paths
+                  .transition()
+                    .duration(tweenDuration)
+                    .attrTween("d", pieTween);
+                paths.exit()
+                  .transition()
+                    .duration(tweenDuration)
+                    .attrTween("d", removePieTween)
+                  .remove();
+
+                paths.on("mousemove", function (d) {
+                    div.style("left", d3.event.pageX + 10 + "px");
+                    div.style("top", d3.event.pageY - 25 + "px");
+                    div.style("display", "inline-block");
+                    if (d.ind == "crimeNum") {
+                      div.html((d.ind) + " of " + d.label + ': ' + (formatMoney(d.emp)));}
+                    else {
+                      div.html((d.ind) + ': ' + (formatMoney(d.emp)));
+                    }
+                });
+
+                paths.on("mouseout", function (d) {
+                    div.style("display", "none");
+                });
+
+                //DRAW TICK MARK LINES FOR LABELS
+                lines = label_group.selectAll("line").data(filteredPieData);
+                lines.enter().append("svg:line")
+                  .attr("x1", 0)
+                  .attr("x2", 0)
+                  .attr("y1", -r - 3)
+                  .attr("y2", -r - 15)
+                  .attr("stroke", "gray")
+                  .attr("transform", function (d) {
+                      return "rotate(" + (d.startAngle + d.endAngle) / 2 * (180 / Math.PI) + ")";
+                  });
+                lines.transition()
+                  .duration(tweenDuration)
+                  .attr("transform", function (d) {
+                      return "rotate(" + (d.startAngle + d.endAngle) / 2 * (180 / Math.PI) + ")";
+                  });
+                lines.exit().remove();
+
+                //DRAW LABELS WITH PERCENTAGE VALUES
+                valueLabels = label_group.selectAll("text.value").data(filteredPieData)
+                  .attr("dy", function (d) {
+                      if ((d.startAngle + d.endAngle) / 2 > Math.PI / 2 && (d.startAngle + d.endAngle) / 2 < Math.PI * 1.5) {
+                          return 5;
+                      } else {
+                          return -7;
+                      }
+                  })
+                  .attr("text-anchor", function (d) {
+                      if ((d.startAngle + d.endAngle) / 2 < Math.PI) {
+                          return "beginning";
+                      } else {
+                          return "end";
+                      }
+                  })
+                  .text(function (d) {
+                      var percentage = (d.value / sliceProportion) * 100;
+                      return percentage.toFixed(1) + "%";
+                  });
+
+                valueLabels.enter().append("svg:text")
+                  .attr("class", "value")
+                  .attr("transform", function (d) {
+                      return "translate(" + Math.cos(((d.startAngle + d.endAngle - Math.PI) / 2)) * (r + textOffset) + "," + Math.sin((d.startAngle + d.endAngle - Math.PI) / 2) * (r + textOffset) + ")";
+                  })
+                  .attr("dy", function (d) {
+                      if ((d.startAngle + d.endAngle) / 2 > Math.PI / 2 && (d.startAngle + d.endAngle) / 2 < Math.PI * 1.5) {
+                          return 5;
+                      } else {
+                          return -7;
+                      }
+                  })
+                  .attr("text-anchor", function (d) {
+                      if ((d.startAngle + d.endAngle) / 2 < Math.PI) {
+                          return "beginning";
+                      } else {
+                          return "end";
+                      }
+                  }).text(function (d) {
+                      var percentage = (d.value / sliceProportion) * 100;
+                      return percentage.toFixed(1) + "%";
+                  });
+
+                valueLabels.transition().duration(tweenDuration).attrTween("transform", textTween);
+
+                valueLabels.exit().remove();
+
+                //DRAW LABELS WITH ENTITY NAMES
+                nameLabels = label_group.selectAll("text.units").data(filteredPieData)
+                  .attr("dy", function (d) {
+                      if ((d.startAngle + d.endAngle) / 2 > Math.PI / 2 && (d.startAngle + d.endAngle) / 2 < Math.PI * 1.5) {
+                          return 17;
+                      } else {
+                          return 5;
+                      }
+                  })
+                  .attr("text-anchor", function (d) {
+                      if ((d.startAngle + d.endAngle) / 2 < Math.PI) {
+                          return "beginning";
+                      } else {
+                          return "end";
+                      }
+                  }).text(function (d) {
+                      return d.ind;
+                  });
+
+                nameLabels.enter().append("svg:text")
+                  .attr("class", "units")
+                  .attr("transform", function (d) {
+                      return "translate(" + Math.cos(((d.startAngle + d.endAngle - Math.PI) / 2)) * (r + textOffset) + "," + Math.sin((d.startAngle + d.endAngle - Math.PI) / 2) * (r + textOffset) + ")";
+                  })
+                  .attr("dy", function (d) {
+                      if ((d.startAngle + d.endAngle) / 2 > Math.PI / 2 && (d.startAngle + d.endAngle) / 2 < Math.PI * 1.5) {
+                          return 17;
+                      } else {
+                          return 5;
+                      }
+                  })
+                  .attr("text-anchor", function (d) {
+                      if ((d.startAngle + d.endAngle) / 2 < Math.PI) {
+                          return "beginning";
+                      } else {
+                          return "end";
+                      }
+                  }).text(function (d) {
+                      return d.ind;
+                  });
+
+                nameLabels.transition().duration(tweenDuration).attrTween("transform", textTween);
+
+                nameLabels.exit().remove();
+                updateBars(); //Notice the bar update gets called here and later, this actually works to create the neat into animation that only occurs on page load, easier than righting a custom delay function
+            }
+
+            // Interpolate the arcs in data space.
+            function pieTween(d, i) {
+                var s0;
+                var e0;
+                if (oldPieData[i]) {
+                    s0 = oldPieData[i].startAngle;
+                    e0 = oldPieData[i].endAngle;
+                } else if (!(oldPieData[i]) && oldPieData[i - 1]) {
+                    s0 = oldPieData[i - 1].endAngle;
+                    e0 = oldPieData[i - 1].endAngle;
+                } else if (!(oldPieData[i - 1]) && oldPieData.length > 0) {
+                    s0 = oldPieData[oldPieData.length - 1].endAngle;
+                    e0 = oldPieData[oldPieData.length - 1].endAngle;
+                } else {
+                    s0 = 0;
+                    e0 = 0;
+                }
+                var i = d3.interpolate({ startAngle: s0, endAngle: e0 }, { startAngle: d.startAngle, endAngle: d.endAngle });
+                return function (t) {
+                    var b = i(t);
+                    return arc(b);
+                };
+            }
+
+            function removePieTween(d, i) {
+                s0 = 2 * Math.PI;
+                e0 = 2 * Math.PI;
+                var i = d3.interpolate({ startAngle: d.startAngle, endAngle: d.endAngle }, { startAngle: s0, endAngle: e0 });
+                return function (t) {
+                    var b = i(t);
+                    return arc(b);
+                };
+            }
+
+            function textTween(d, i) {
+                var a;
+                if (oldPieData[i]) {
+                    a = (oldPieData[i].startAngle + oldPieData[i].endAngle - Math.PI) / 2;
+                } else if (!(oldPieData[i]) && oldPieData[i - 1]) {
+                    a = (oldPieData[i - 1].startAngle + oldPieData[i - 1].endAngle - Math.PI) / 2;
+                } else if (!(oldPieData[i - 1]) && oldPieData.length > 0) {
+                    a = (oldPieData[oldPieData.length - 1].startAngle + oldPieData[oldPieData.length - 1].endAngle - Math.PI) / 2;
+                } else {
+                    a = 0;
+                }
+                var b = (d.startAngle + d.endAngle - Math.PI) / 2;
+
+                var fn = d3.interpolateNumber(a, b);
+                return function (t) {
+                    var val = fn(t);
+                    return "translate(" + Math.cos(val) * (r + textOffset) + "," + Math.sin(val) * (r + textOffset) + ")";
+                };
+            }
+            update();//calls the above code to run,
+        });
+
+        //Start the bar graph code
+
+        var margin = { top: 10, right: 40, bottom: 20, left: 50 },
+            width = 450 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+        var x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .2);
+
+        var y = d3.scale.linear()
+            .range([height, 0]);
+
+        var y2 = d3.scale.linear()
+            .range([height, 0]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .ticks(5);
+
+        var y2Axis = d3.svg.axis()
+            .scale(y2)
+            .orient("right")
+            .ticks(4, "%");
+
+        var svg = d3.select("#graph").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var line = d3.svg.line()
+            .x(function (d) { return x2(d.periodyear); })
+            .y(function (d) { return y2(d.changeemp); });
+
+        function roundToOne(num) {//Ensures numbers always display the given number of digits after the decimal
+            return +(Math.round(num + "e+1") + "e-1");
+        };
+
+        updateBars();
+
+        function updateBars() {
+            d3.csv("/static/corAndP.csv", type, function (error, data) {
+                if (error) throw error;
+
+                var I = document.getElementById('geo').selectedIndex
+                    , select = document.getElementById('geo')[I].value
+                    , data = data.filter(function (d) { return d.area == select })
+                    , min = (d3.min(data, function (d) { return d.avgemp; }) - (.2 * d3.mean(data, function (d) { return d.avgemp; })))
+                    , min2 = 1.2 * d3.min(data, function (d) { return d.changeemp; })
+                    , max2 = 1.2 * d3.max(data, function (d) { return d.changeemp; })
+
+                if (min < 1) {//sets axis automatically, but uses zero if the min would be close to 0 anyway
+                    var min = 0
+                };
+                if (min2 >= 0) {
+                    var min2 = -.01
+                };
+                if (max2 <= 0) {
+                    var max2 = .01
+                };
+                //Tufte would be proud of this, if he ever saw it. The economic data
+                //of y/y change in employment can take on negitive values, thus we need to
+                // ensure the axis always include negitive and positive values
+
+                x.domain(data.map(function (d) { return d.periodyear; }));
+                y2.domain([min2, max2]);
+                y.domain([min, ((d3.max(data, function (d) { return d.avgemp / 100; }) * 100) + (.11 * d3.mean(data, function (d) { return d.avgemp; })))]);
+                //Sets the domain based on the average, making the max .11 times the average greater than the max value, for asthetics only essentually
+
+                if (svg.selectAll(".x.axis")[0].length < 1) {//This stuff only occurs the first time the code is looped through, not subsiquent calls
+                    svg.append("g")
+                        .attr("class", "x axis")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(xAxis);
+
+                    svg.append('g')
+                        .attr("class", "y axisL")
+                        .call(yAxis)
+                      .append("text")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", 4)
+                        .attr("dy", ".71em")
+                        .style("text-anchor", "end")
+                        .text("correlation coefficien");
+
+                    svg.append("g")
+                        .attr("class", "y axisR")
+                        .call(y2Axis)
+                        .attr("transform", "translate(" + width + ",0)")
+                      .append("text")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", -11)
+                        .attr("dy", ".71em")
+                        .style("text-anchor", "end")
+                        .text("P Value");
+
+                    svg.selectAll(".bar")
+                        .data(data)
+                      .enter()
+                        .append("rect")
+                        .attr("class", "bar")
+                        .attr("x", function (d) { return x(d.periodyear); })
+                        .attr("width", x.rangeBand())
+                        .attr("y", function (d) { return y(10e-6); })
+                        .attr("height", function (d) { return y(10e-6) })
+                      .transition()
+                        .duration(1050)
+                        .attr("y", function (d) { return y(d.avgemp); })
+                        .attr("height", function (d) { return height - y(d.avgemp); });
+
+                    svg.selectAll(".chartLine")
+                        .data(data)
+                      .enter()
+                        .append("rect")
+                        .attr("class", "chartLine")
+                        .attr("transform", "translate(" + 20 + ",0)")
+                        .attr("width", x.rangeBand() - 40)
+                        .attr("x", function (d) { return x(d.periodyear); })
+                        .attr("y", function (d) { return d3.min(data, function (d) { return y2(d.changeemp); }) })
+                        .attr("height", function (d) { return 1 })
+                      .transition()
+                        .duration(1050)
+                        .attr("y", function (d) { return y2(d.changeemp); });
+
+                    svg.selectAll(".chartLineText")
+                        .data(data)
+                      .enter()
+                        .append('text')
+                        .attr("class", "chartLineText")
+                        .style("color", "#000")
+                        .style("text-anchor", "middle")
+                        .attr("transform", "translate(" + 30 + ",-2)")
+                        .attr("x", function (d) { return x(d.periodyear); })
+                        .attr("y", function (d) { return d3.min(data, function (d) { return y2(d.changeemp); }) })
+                        .text(function (d) { return roundToOne(d.changeemp * 100) + "%" })
+                      .transition()
+                        .duration(1050)
+                        .attr("y", function (d) { return y2(d.changeemp); });
+
+                    svg.selectAll(".barText")
+                        .data(data)
+                      .enter()
+                        .append("text")
+                        .attr("class", "barText")
+                        .attr("text-anchor", "middle")
+                        .attr("transform", "translate(" + x.rangeBand() / 2 + ",-3)")
+                        .attr("x", function (d) { return x(d.periodyear); })
+                        .text(function (d) { return formatMoney(+d.avgemp) })
+                        .attr("y", function (d) { return y(d.avgemp) - 10; });
+
+                } else {//This is what is called when the code is called to update by a change in the drop downs.
+                    svg.selectAll(".y.axisL").transition().duration(1500).call(yAxis);
+                    svg.selectAll(".y.axisR").transition().duration(1500).call(y2Axis);
+
+                    svg.selectAll(".chartLineText").
+                        data(data)
+                        .transition()
+                        .duration(1500)
+                        .attr("y", function (d) { return y2(d.changeemp); })
+                        .text(function (d) { return roundToOne(d.changeemp * 100) + "%" });
+
+                    svg.selectAll(".chartLine")
+                        .data(data)
+                    .transition()
+                        .duration(1500)
+                        .attr("y", function (d) { return y2(d.changeemp); });
+
+                    svg.selectAll(".bar")
+                        .data(data)
+                    .transition()
+                        .duration(1500)
+                        .delay(function (d) { return 100 + (d.periodyear - 2013) * 100 })
+                        .attr("y", function (d) { return y(d.avgemp); })
+                        .attr("height", function (d) { return height - y(d.avgemp); });
+
+                    svg.selectAll(".barText")
+                        .data(data)
+                        .transition()
+                        .duration(500)
+                        .attr("y", function (d) { return y(d.avgemp); })
+                        .text(function (d) { return formatMoney(+d.avgemp) });
+                };
+
+                d3.selectAll(".bar")
+                .on("mouseover", function (d) {
+                    d3.selectAll(".barText").transition()
+                        .duration(500)
+                        .delay(80)
+                        //This makes the text lables mostly prevent overlap, it's not perfect, but solves more cases than it breaks, and the values are generally always visable
+                        .attr("y", function (d) { if (Math.abs(y2(d.changeemp) - y(d.avgemp)) < 10) { if (y(d.avgemp) - 10 - (y2(d.changeemp)) >= 2) { return y(d.avgemp) - 10 } else { return y(d.avgemp) + 15 } } else { return y(d.avgemp) } })
+                        .style("visibility", "visible");
+                })
+                .on("mouseout", function (d) {
+                    d3.selectAll(".barText").transition()
+                        .duration(500)
+                        .delay(150)
+                        .attr("y", function (d) { return y(d.avgemp) - 10; })
+                        .style("visibility", "hidden");
+                })
+            });
+
+            function type(d) {
+                d.periodyear = +d.periodyear;
+                d.changeemp = +d.changeemp;
+                d.avgemp = +d.avgemp;
+                return d;
+            }
+        };
+    </script>
+</div>
+
+</body>
+
+
+        <!-- Home Page Button -->
+ <a href="/" class="button">Home Page <i class="icon-chevron-right"></i></a>
+<br>
+<br>
+<br>
+<br>
+<br>
 {% endblock %}

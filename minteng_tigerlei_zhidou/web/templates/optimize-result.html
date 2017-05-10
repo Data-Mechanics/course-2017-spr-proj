@@ -4,30 +4,64 @@
 
 {% block body %}
   <section>
-    <div>
-      <p><a href="/optimize/">&#8592; Back</a></p>
-      <h2 style="color: black">Optimization Results</h2>
-      <h2>Inputs</h2>
-      <p>Your input ratings are: </p>
-      <table border="6">
+    <div class="opt-res">
+      <form class="res">
+<br><br>
+      <h3 style="text-align: center;"><strong>Your requirements of each aspect:</strong></h3>
+      <p></p>
+      <table border="6" align="center">
         <tr><th>Food</th><th>Transport</th><th>Safety</th><th>Rent</th></tr>
         <tr><td>{{f}}</td><td>{{t}}</td><td>{{s}}</td><td>{{r}}</td></tr>
       </table>      
+<br>
+      <h3 style="text-align: center;"><strong>Top fitted areas:</strong></h3>
 
-      <h2>Results</h2>
-      <p>If we find results with every rating of (food, transport, safety, rent) above the requirement, return the result with maximal sum of these four ratings. Else we would return the result with minimal distance from the requirement ratings.</p>
-      <p><strong>Top fitted areas:</strong></p>
-      <table border="6">
-        <tr><th>Center</th><th>Area</th><th>Zipcode</th><th>Avg Rent</th><th>Grades</th></tr>
-        {% for rr in res %}
-        <tr><td>{{rr.center}}</td><td>{{rr.area}}</td><td>{{rr.postal_code}}</td><td>{{rr.avg_rent}}</td><td>{{rr.grade}}</td></tr>
-        {% endfor %}
-      </table>  
+      <p></p>
 
-      <h2>Map</h2>
-      <p>We use Leaflet to plot those top resluts in map</p>
-      <p><a href="/map/" target="_blank" >&#8594; Check!</a></p>
+    <div id= "mytable"></div> 
+    <!-- draw table with star symbol -->
+    <script type="text/javascript">
+    
+      var data = {{data|safe}}
+      var html = "<table border = 6  align='center'>";
+      html+= "<tr><th>Area</th><th>Zipcode</th><th>Food</th><th>Transport</th><th>Safety</th><th>Rent</th></tr>"
+      for (var i = 0; i < data.length; i++){
+          html+="<tr><td>"+data[i].area+"</td><td>"+data[i].postal_code+"</td>";
+          for (var j = 0; j < data[i].grade.length; j++){
+              html+="<td>";
+              for (var k = 0; k < data[i]['grade'][j]; k++){
+                  html+='&#9733'               
+              }
+              html+="</td>";         
+          }
+          html+="</tr>";
+      }
+      for (var i = 0; i<data; i++){
+        html+='&#9733'
+      }
+      html+="</table>";
+      document.getElementById("mytable").innerHTML = html;
+
+    </script>  
+
+    </form>
+
+<div id="outer">
+    <div class="inner"><a href="/map/" target="_blank" class="button">View them on map<i class="icon-chevron-right"></i></a></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="inner"><a href="/crimePercentage/" class="button">Crime analysis<i class="icon-chevron-right"></i></a></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="inner"><a href="/optimize/" class="button">Back to ratings<i class="icon-chevron-right"></i></a></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="inner"><a href="/" class="button">Home Page<i class="icon-chevron-right"></i></a></div> 
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
     </div>
+    <div class="my-container">
+        <img src="/static/img/Boston.jpg">
+    </div>
+
   </section>
 
 

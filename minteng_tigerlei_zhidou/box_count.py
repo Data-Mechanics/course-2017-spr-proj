@@ -162,6 +162,10 @@ class box_count(dml.Algorithm):
             elif i['grade']['rent']==5:
                 i['grade']['rent']=1
         
+
+        for box, i in zip(result, range(len(result))):
+            box['_id'] = i + 1
+
         repo.dropCollection("box_count")
         repo.createCollection("box_count")
         repo['minteng_tigerlei_zhidou.box_count'].insert_many(result)

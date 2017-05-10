@@ -9,12 +9,13 @@ import uuid
 import numpy as np
 from collections import defaultdict
 import pickle
+from sklearn.preprocessing import minmax_scale
 
 
 class calcfoodacc(dml.Algorithm):
-	contributor = 'cxiao_jchew1_jguerero_mgarcia7'
-	reads = ['cxiao_jchew1_jguerero_mgarcia7.foodsources', 'cxiao_jchew1_jguerero_mgarcia7.masteraddress', 'cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics']
-	writes = ['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics']
+	contributor = 'jguerero_mgarcia7'
+	reads = ['jguerero_mgarcia7.foodsources', 'jguerero_mgarcia7.masteraddress', 'jguerero_mgarcia7.neighborhoodstatistics']
+	writes = ['jguerero_mgarcia7.neighborhoodstatistics']
 
 	@staticmethod
 	def execute(trial = False):
@@ -24,15 +25,15 @@ class calcfoodacc(dml.Algorithm):
 		# Set up the database connection
 		client = dml.pymongo.MongoClient()
 		repo = client.repo
-		repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+		repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 
 		# Data cursors
 		if trial == 'False':
-			foodsources_data_cursor = repo['cxiao_jchew1_jguerero_mgarcia7.foodsources'].find()
-			add_data_cursor = repo['cxiao_jchew1_jguerero_mgarcia7.masteraddress'].find()
+			foodsources_data_cursor = repo['jguerero_mgarcia7.foodsources'].find()
+			add_data_cursor = repo['jguerero_mgarcia7.masteraddress'].find()
 		else:
-			foodsources_data_cursor = repo['cxiao_jchew1_jguerero_mgarcia7.foodsources'].find().limit(200)
-			add_data_cursor = repo['cxiao_jchew1_jguerero_mgarcia7.masteraddress'].find().limit(800)
+			foodsources_data_cursor = repo['jguerero_mgarcia7.foodsources'].find().limit(200)
+			add_data_cursor = repo['jguerero_mgarcia7.masteraddress'].find().limit(800)
 
 		fs_per_nb = defaultdict(list)
 		add_per_nb = defaultdict(list)
@@ -51,9 +52,9 @@ class calcfoodacc(dml.Algorithm):
 		'''
 
 
-		def createDistanceMatrix(address,food):
-			empty = [0] * len(food)
-			mat = np.array([empty]*len(address), dtype=float)
+		def createDistanceMatrix(address,food):	#row = addresses, #length = food
+			empty = [0] * len(food)	#make an array of size of all the foods
+			mat = np.array([empty]*len(address), dtype=float)	#make a metrix of address * food
 			address = np.array(address)
 			food = np.array(food)
 
@@ -73,9 +74,11 @@ class calcfoodacc(dml.Algorithm):
 				mat[:,idx] = np.apply_along_axis(distanceKm, 0, fs, address)
 			return mat
 
-		def createMetricsMatrix(address, food, distance): #metrics = rows and then columns is food
-			empty = [0.000] * len(address)
-			mat = np.array([empty]*3)
+		def createMetricsMatrix(address, food, distance): #metrics = rows and then columns = address
+			empty = [0.000] * len(address)	#array of length address
+			mat = np.array([empty]*3)	#matrix of metrics * address
+
+		#	print (mat)
 
 			e = [0] * 3
 			m = np.array([e]*len(address))
@@ -85,9 +88,12 @@ class calcfoodacc(dml.Algorithm):
 			fm = 0
 			sm = 0
 			cs = 0
+
 			#walking distance metric 
-			for row in range(len(distance)):
-				for i in range(len(distance[row])):
+
+			for row in range(len(distance)):	#i in row of distance = addresses
+				total = 0
+				for i in range(len(distance[row])): #i in column of distance = food source
 					if distance[row][i] < 1.0: 
 						total += 1
 						if food[i][2] == 'Farmers Market':
@@ -98,10 +104,13 @@ class calcfoodacc(dml.Algorithm):
 							m[row][2] += 1
 						
 				mat[0][row] = total
+			#print (mat)
 
 			#distance of closest
 			for row in range(len(distance)):
 				mat[1][row] = min(distance[row])
+
+			#print (mat)
 
 			#quality of food source
 			t = len(food)	
@@ -113,14 +122,13 @@ class calcfoodacc(dml.Algorithm):
 
 		# Get the average metric score per neighborhood
 		nbs = list(set(fs_per_nb.keys()).intersection(set(add_per_nb.keys())))
-		print(nbs)
 
 		avg_metrics = np.zeros((len(nbs), 3), dtype=np.float64)
 
 		for idx,nb in enumerate(nbs):
 			distanceMat = createDistanceMatrix(add_per_nb[nb], fs_per_nb[nb])
 			metricMatrix = createMetricsMatrix(add_per_nb[nb], fs_per_nb[nb], distanceMat)
-			avg_metrics[idx] = np.mean(metricMatrix,axis=1, dtype=np.float64)
+			avg_metrics[idx] = np.mean(metricMatrix,axis=1, dtype=np.float64).T
 
 		# Compute the z-scores for each metric (to standardize)
 		def computeZscore(arr):
@@ -130,30 +138,39 @@ class calcfoodacc(dml.Algorithm):
 
 		zscore_metrics = np.apply_along_axis(computeZscore,axis=0,arr=avg_metrics)
 
-		# Compute a composite score for each neighborhood
+		# Compute a composite score for each neighborhood and scale them to be between 0 and 100
 		weights = np.array([1,-1,1]) # Weight = 1 if it's a good thing to have a high value, -1 otherwise
 		scores = np.sum(weights*zscore_metrics,axis=1)
+		scores = minmax_scale(scores,feature_range=(0,100))
 
 		newd = {"Neighborhoods":nbs, "Scores":scores, "Zscore_metrics":zscore_metrics, "Avg_metrics":avg_metrics}
 		pickle.dump(newd, open('info.p','wb'))
 
 		# Create list of tuples that can be used to update a dictionary
 		info = dict([(nb,score) for nb, score in zip(nbs,scores)])
-		print(nbs)
-		print(info)
+
+		tups = [info.update({nb: (arr[0],arr[1],arr[2],s)}) for nb,arr,s in zip(nbs,avg_metrics,scores)]
+
 
 		# Insert food accessbility score in the repo
-		nstats = repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].find()
+		nstats = repo['jguerero_mgarcia7.neighborhoodstatistics'].find()
 		nstats = [row for row in nstats]
 		for item in nstats:
 			nb = item['Neighborhood']
-			item['FoodScore'] = info.get(nb)
+			try:
+				nb_tups = info.get(nb)
+				item['FoodScore'] = nb_tups[3]
+				item['avg_num_food'] = nb_tups[0]
+				item['dist_closest'] = nb_tups[1]
+				item['quality_food'] = nb_tups[2] 
+			except:
+				continue
 
 		repo.dropCollection("neighborhoodstatistics")
 		repo.createCollection("neighborhoodstatistics")
-		repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].insert_many(nstats)
-		repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].metadata({'complete':True})
-		print(repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].metadata())
+		repo['jguerero_mgarcia7.neighborhoodstatistics'].insert_many(nstats)
+		repo['jguerero_mgarcia7.neighborhoodstatistics'].metadata({'complete':True})
+		print(repo['jguerero_mgarcia7.neighborhoodstatistics'].metadata())
 
 		repo.logout()
 		endTime = datetime.datetime.now()
@@ -171,13 +188,13 @@ class calcfoodacc(dml.Algorithm):
 		# Set up the database connection.
 		client = dml.pymongo.MongoClient()
 		repo = client.repo
-		repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+		repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 		doc.add_namespace('alg', 'http://datamechanics.io/algorithm/') # The scripts are in <folder>#<filename> format.
 		doc.add_namespace('dat', 'http://datamechanics.io/data/jguerero_mgarcia7') # The data sets are in <user>#<collection> format.
 		doc.add_namespace('ont', 'http://datamechanics.io/ontology#') # 'Extension', 'DataResource', 'DataSet', 'Retrieval', 'Query', or 'Computation'.
 		doc.add_namespace('log', 'http://datamechanics.io/log/') # The event log.
 
-		this_script = doc.agent('alg:cxiao_jchew1_jguerero_mgarcia7#calcfoodacc', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
+		this_script = doc.agent('alg:jguerero_mgarcia7#calcfoodacc', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
 		
 		foodsources_resource = doc.entity('dat:foodsources', {'prov:label':'Food Sources', prov.model.PROV_TYPE:'ont:DataSet'})
 		masteraddresses_resource = doc.entity('dat:masteraddresses', {'prov:label':'Master Addresses', prov.model.PROV_TYPE:'ont:DataSet'})
@@ -194,7 +211,7 @@ class calcfoodacc(dml.Algorithm):
 		  )
  
 		'''
-		foodsources = doc.entity('dat:cxiao_jchew1_jguerero_mgarcia7#calcfoodacc', {prov.model.PROV_LABEL:'Sources of food per neighborhood', prov.model.PROV_TYPE:'ont:DataSet'})
+		foodsources = doc.entity('dat:jguerero_mgarcia7#calcfoodacc', {prov.model.PROV_LABEL:'Sources of food per neighborhood', prov.model.PROV_TYPE:'ont:DataSet'})
 		doc.wasAttributedTo(foodsources, this_script)
 		doc.wasGeneratedBy(foodsources, computeScore, endTime)
 		doc.wasDerivedFrom(foodsources, supermarkets_resource, computeScore, computeScore, computeScore)
@@ -238,6 +255,5 @@ def distanceKm(pt,add):
     return c * r
 
 	
-
 calcfoodacc.execute()
 ## eof

@@ -12,9 +12,9 @@ from collections import defaultdict
 #d = []
 
 class population(dml.Algorithm):
-    contributor = 'cxiao_jchew1_jguerero_mgarcia7'
-    reads = ['cxiao_jchew1_jguerero_mgarcia7.neighborhoods']
-    writes = ['cxiao_jchew1_jguerero_mgarcia7.population']
+    contributor = 'jguerero_mgarcia7'
+    reads = ['jguerero_mgarcia7.neighborhoods']
+    writes = ['jguerero_mgarcia7.population']
 
     @staticmethod
     def execute(trial = False):
@@ -24,7 +24,7 @@ class population(dml.Algorithm):
         # Set up the database connection.
         client = dml.pymongo.MongoClient()
         repo = client.repo
-        repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+        repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 
  
         url = 'http://datamechanics.io/data/jguerero_mgarcia7/censusincomedata.json'
@@ -34,9 +34,9 @@ class population(dml.Algorithm):
 
         repo.dropCollection("population")
         repo.createCollection("population")
-        repo['cxiao_jchew1_jguerero_mgarcia7.population'].insert_many(r)
-        repo['cxiao_jchew1_jguerero_mgarcia7.population'].metadata({'complete':True})
-        print(repo['cxiao_jchew1_jguerero_mgarcia7.population'].metadata())
+        repo['jguerero_mgarcia7.population'].insert_many(r)
+        repo['jguerero_mgarcia7.population'].metadata({'complete':True})
+        print(repo['jguerero_mgarcia7.population'].metadata())
 
         repo.logout()
 
@@ -58,7 +58,7 @@ class population(dml.Algorithm):
         # Set up the database connection.
         client = dml.pymongo.MongoClient()
         repo = client.repo
-        repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+        repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 
         doc.add_namespace('alg', 'http://datamechanics.io/algorithm/') # The scripts are in <folder>#<filename> format.
         doc.add_namespace('dat', 'http://datamechanics.io/data/') # The data sets are in <user>#<collection> format.
@@ -66,14 +66,14 @@ class population(dml.Algorithm):
         doc.add_namespace('log', 'http://datamechanics.io/log/') # The event log.
         doc.add_namespace('cda', 'http://www.city-data.com/nbmaps/neigh-Boston-Massachusetts.html')
 
-        this_script = doc.agent('alg:cxiao_jchew1_jguerero_mgarcia7#population', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
+        this_script = doc.agent('alg:jguerero_mgarcia7#population', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
         resource = doc.entity('cda:all', {'prov:label':'Boston Massachusetts Demographics', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'html'})
         get_population = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
         doc.wasAssociatedWith(get_population, this_script)
         doc.usage(get_population, resource, startTime, None,
                   {prov.model.PROV_TYPE:'ont:Retrieval'}
                   )
-        population = doc.entity('dat:cxiao_jchew1_jguerero_mgarcia7#population', {prov.model.PROV_LABEL:'Boston Demographics', prov.model.PROV_TYPE:'ont:DataSet'})
+        population = doc.entity('dat:jguerero_mgarcia7#population', {prov.model.PROV_LABEL:'Boston Demographics', prov.model.PROV_TYPE:'ont:DataSet'})
         doc.wasAttributedTo(population, this_script)
         doc.wasGeneratedBy(population, get_population, endTime)
         doc.wasDerivedFrom(population, resource, get_population, get_population, get_population)

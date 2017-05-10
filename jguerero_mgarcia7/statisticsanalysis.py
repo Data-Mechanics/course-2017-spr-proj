@@ -13,8 +13,8 @@ from sklearn import linear_model
 
 
 class statisticsanalysis(dml.Algorithm):
-	contributor = 'cxiao_jchew1_jguerero_mgarcia7'
-	reads = ['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics']
+	contributor = 'jguerero_mgarcia7'
+	reads = ['jguerero_mgarcia7.neighborhoodstatistics']
 	writes = []
 
 	@staticmethod
@@ -25,10 +25,10 @@ class statisticsanalysis(dml.Algorithm):
 		# Set up the database connection
 		client = dml.pymongo.MongoClient()
 		repo = client.repo
-		repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+		repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 
 		# Data cursor
-		nstats = repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoodstatistics'].find()
+		nstats = repo['jguerero_mgarcia7.neighborhoodstatistics'].find()
 
 		foodscores = []
 		income = []
@@ -47,15 +47,16 @@ class statisticsanalysis(dml.Algorithm):
 			if x is None:
 				idx_to_delete = idx
 
-		n = np.delete(observations,(3),axis=1)
+		n = np.delete(observations,(idx_to_delete),axis=1)
+
 
 		# linear regression
 		n = n.astype(float)
+
+		print(np.corrcoef(n))
+
 		x = n[:2,:].T
 		y = n[2,:].T
-
-		print(x.shape)
-		print(y.shape)
 
 		clf = linear_model.LinearRegression()
 		clf.fit(x,y)
@@ -78,13 +79,13 @@ class statisticsanalysis(dml.Algorithm):
 		# Set up the database connection.
 		client = dml.pymongo.MongoClient()
 		repo = client.repo
-		repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+		repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 		doc.add_namespace('alg', 'http://datamechanics.io/algorithm/') # The scripts are in <folder>#<filename> format.
 		doc.add_namespace('dat', 'http://datamechanics.io/data/jguerero_mgarcia7') # The data sets are in <user>#<collection> format.
 		doc.add_namespace('ont', 'http://datamechanics.io/ontology#') # 'Extension', 'DataResource', 'DataSet', 'Retrieval', 'Query', or 'Computation'.
 		doc.add_namespace('log', 'http://datamechanics.io/log/') # The event log.
 
-		this_script = doc.agent('alg:cxiao_jchew1_jguerero_mgarcia7#statisticsanalysis', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
+		this_script = doc.agent('alg:jguerero_mgarcia7#statisticsanalysis', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
 		
 		neighborhoodstatistics_resource = doc.entity('dat:neighborhoodstatistics', {'prov:label':'Neighborhood Statistics', prov.model.PROV_TYPE:'ont:DataSet'})
 
@@ -96,7 +97,7 @@ class statisticsanalysis(dml.Algorithm):
 				  {prov.model.PROV_TYPE:'ont:Computation'}
 				  )
  
-		statisticsanalysis = doc.entity('dat:cxiao_jchew1_jguerero_mgarcia7#statisticsanalysis', {prov.model.PROV_LABEL:'Neighborhood statistical analysis', prov.model.PROV_TYPE:'ont:DataSet'})
+		statisticsanalysis = doc.entity('dat:jguerero_mgarcia7#statisticsanalysis', {prov.model.PROV_LABEL:'Neighborhood statistical analysis', prov.model.PROV_TYPE:'ont:DataSet'})
 		doc.wasAttributedTo(statisticsanalysis, this_script)
 		doc.wasGeneratedBy(statisticsanalysis, get_statistics, endTime)
 		doc.wasDerivedFrom(statisticsanalysis, neighborhoodstatistics_resource, get_statistics, get_statistics, get_statistics)
@@ -106,7 +107,4 @@ class statisticsanalysis(dml.Algorithm):
 				  
 		return doc
 
-	
-
-statisticsanalysis.execute()
 ## eof

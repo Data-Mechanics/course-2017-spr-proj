@@ -8,9 +8,9 @@ import uuid
 from shapely.geometry import shape, Point
 
 class masteraddress(dml.Algorithm):
-    contributor = 'cxiao_jchew1_jguerero_mgarcia7'
-    reads = ['cxiao_jchew1_jguerero_mgarcia7.neighborhoods']
-    writes = ['cxiao_jchew1_jguerero_mgarcia7.masteraddress']
+    contributor = 'jguerero_mgarcia7'
+    reads = ['jguerero_mgarcia7.neighborhoods']
+    writes = ['jguerero_mgarcia7.masteraddress']
 
     @staticmethod
     def execute(trial = False):
@@ -19,7 +19,7 @@ class masteraddress(dml.Algorithm):
         # Set up the database connection.
         client = dml.pymongo.MongoClient()
         repo = client.repo
-        repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+        repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
 
         # Download json
 
@@ -38,7 +38,7 @@ class masteraddress(dml.Algorithm):
         residential_add = select(r, lambda d: d.get('land_usage') in residential_codes)
 
         # For each food source, standardize the neighborhoods by looking at the latitude and longitude and finding out what neighborhood it fits into
-        neighborhoods = repo['cxiao_jchew1_jguerero_mgarcia7.neighborhoods']
+        neighborhoods = repo['jguerero_mgarcia7.neighborhoods']
 
         # Create shapeobjects for each neighborhood
         neighborhood_shapes = {n['name']:shape(n['the_geom']) for n in neighborhoods.find({})}
@@ -60,9 +60,9 @@ class masteraddress(dml.Algorithm):
 
         repo.dropCollection("masteraddress")
         repo.createCollection("masteraddress")
-        repo['cxiao_jchew1_jguerero_mgarcia7.masteraddress'].insert_many(residential_add)
-        repo['cxiao_jchew1_jguerero_mgarcia7.masteraddress'].metadata({'complete':True})
-        print(repo['cxiao_jchew1_jguerero_mgarcia7.masteraddress'].metadata())
+        repo['jguerero_mgarcia7.masteraddress'].insert_many(residential_add)
+        repo['jguerero_mgarcia7.masteraddress'].metadata({'complete':True})
+        print(repo['jguerero_mgarcia7.masteraddress'].metadata())
 
         repo.logout()
 
@@ -81,14 +81,14 @@ class masteraddress(dml.Algorithm):
         # Set up the database connection.
         client = dml.pymongo.MongoClient()
         repo = client.repo
-        repo.authenticate('cxiao_jchew1_jguerero_mgarcia7', 'cxiao_jchew1_jguerero_mgarcia7')
+        repo.authenticate('jguerero_mgarcia7', 'jguerero_mgarcia7')
         doc.add_namespace('alg', 'http://datamechanics.io/algorithm/') # The scripts are in <folder>#<filename> format.
         doc.add_namespace('dat', 'http://datamechanics.io/data/') # The data sets are in <user>#<collection> format.
         doc.add_namespace('ont', 'http://datamechanics.io/ontology#') # 'Extension', 'DataResource', 'DataSet', 'Retrieval', 'Query', or 'Computation'.
         doc.add_namespace('log', 'http://datamechanics.io/log/') # The event log.
         doc.add_namespace('bdp', 'https://data.cityofboston.gov/resource/')
 
-        this_script = doc.agent('alg:cxiao_jchew1_jguerero_mgarcia7#masteraddress', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
+        this_script = doc.agent('alg:jguerero_mgarcia7#masteraddress', {prov.model.PROV_TYPE:prov.model.PROV['SoftwareAgent'], 'ont:Extension':'py'})
         resource = doc.entity('bdp:je5q-tbjf', {'prov:label':'Master Address List', prov.model.PROV_TYPE:'ont:DataResource', 'ont:Extension':'json'})
         get_masteraddress = doc.activity('log:uuid'+str(uuid.uuid4()), startTime, endTime)
         doc.wasAssociatedWith(get_masteraddress, this_script)
@@ -97,7 +97,7 @@ class masteraddress(dml.Algorithm):
                   )
 
 
-        masteraddress = doc.entity('dat:cxiao_jchew1_jguerero_mgarcia7#masteraddress', {prov.model.PROV_LABEL:'Master Address List', prov.model.PROV_TYPE:'ont:DataSet'})
+        masteraddress = doc.entity('dat:jguerero_mgarcia7#masteraddress', {prov.model.PROV_LABEL:'Master Address List', prov.model.PROV_TYPE:'ont:DataSet'})
         doc.wasAttributedTo(masteraddress, this_script)
         doc.wasGeneratedBy(masteraddress, get_masteraddress, endTime)
         doc.wasDerivedFrom(masteraddress, resource, get_masteraddress, get_masteraddress, get_masteraddress)

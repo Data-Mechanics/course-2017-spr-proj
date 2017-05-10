@@ -47,6 +47,7 @@ In the first transformation, we run K-Means on the neighborhoods, using the cent
 ### Transformation #5 (Calculating Safe Point)
 In the second transformation, we take the locations from the first transformation and attempt to find safe points outside of the floodzone. We iterate over the means from the first transformation, the proposed safe points. Because we converted the floodzone into a multi-polygon, we check the proposed safe points by comparing each of the points to each of the polygons that make up the floodzone. If the mean is already safe, i.e not in the flood zone, we do nothing. If it is in the floodzone, we perform a calculation to find the closet point from that mean to the safe zone. 
 
-
+## Visualizations
+To view the visualizations in the project directory, navigate to /Visualizations/ and from a shell run `python -m http.server`
 
 

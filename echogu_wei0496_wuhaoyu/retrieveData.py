@@ -1,6 +1,3 @@
-# retrieveData.py
-# retrieve raw data of Boston Public Schools Challenge
-
 import urllib.request
 import json
 import dml
@@ -167,5 +164,3 @@ class retrieveData(dml.Algorithm):
 # doc = retrieveData.provenance()
 # print(doc.get_provn())
 # print(json.dumps(json.loads(doc.serialize()), indent=4))
-
-## eof

@@ -1,10 +1,6 @@
 # CS 591 Spring17 Project
 
-## Group Members:
-
-Xiaotong Niu, U23671100, silnuext
-
-Po-Yu,Tseng,  U26897855, pt0713
+### Group Members: [Xiaotong Niu](https://github.com/sylvia0801), [Po-Yu,Tseng](https://github.com/cybersoftintern)
 
 ## Datasets we use
 
@@ -26,26 +22,58 @@ From MassData:
 
 FLD Complaints: https://data.mass.gov/dataset/FLD-Complaints/c5kv-hee8
 
-## Project 1
+## The Impact of Crime on Property Values
 
-### Short narrative of How our datasets are going to be used and What our project will be focus on
+### Introduction
+For most people nowadays, the most pressing demand is to improve their living standards. In a crowded city like Boston, one of the main factors that influence people’s decision on choosing residential properties is the amount of crime incidents that had happened in their respective area. For this project, we attempt to analyze the relationship between property prices in 2015 and the number of crime incidents that had happened in 2015 in the Boston area.
+We use Relational Paradigm to extract certain data from City of Boston Data Portal: Property Assessment 2015 and Crime Incident Reports. First, we assume higher property price will lead to lower number of crime incidents. To test our assumption, we use statistical analysis to find if the correlation value between the two is negative, and how strongly they are correlated; we also look at the p-value to check the accuracy of our correlation value. Secondly, we use k-means technique to find the most optimized point where the property is the safest, which indicates that the frequency of crime incidents happened around that point is the smallest.
+Overall, we implement two techniques: statistical analysis and optimization(k-means) to study the relationship between the 2015 property price and the number of crime incidents in Boston area.
 
-We are interested in “Boston crime incidents” in relation to “property values”, “police districts”, and “fair labor division complaints”. Our main dataset will be Crime Incident Reports and we have come out three assumptions: First, there will be less crime incidents when “the total assessed value of property” rises. To do so, we look at data from Property Assessments from year 2014 and 2015 and compare if there are any correlations between the total assessed value for property and the number of crime incidents. Second, we assume that there will be less crime incidents within police districts. To do so, we look at the “district” column from Police Districts and check the proportion that the number of the districts where the crime incident equals to police district out of the total number of crimes. Last but not least, while there are many researches indicate that unemployment causes crime, we want to look that whether employees’ happiness also affects crime rate. We assume that there will be less crime rate when Fair Labor Division receives less complaints because people are happier and will not tend to behave silly. In this case, we compare data of FLD Complaints in Year 2015 in Boston area.
+#### Algorithms and Relational Paradigms Overview
+![relation_paradigm](https://github.com/sylvia0801/course-2017-spr-proj/blob/master/pt0713_silnuext/proj3/images/relation_paradigm.jpeg)
 
-### Non-trivial transformations we implemented
+### Statistical Analysis
+As for the statistical analysis, we want to find the correlation between property price and number of crime incidents; we expected that the higher property price will lead to lower number of crime incidents. We first use the definition of r-tree and polygon to correspond “property15_price_coordination_float” to “zip_to_coor,” compute the number of properties and the average price of properties in each zip code, and the result shows all the zip codes along with its corresponding average property price in Boston area. 
+Second, we also use the same definition we mentioned earlier to correspond “crime_15coordination” to “zip_to_coor,” compute how many crime incidents happened within each zip code, and the result will show all the zip codes along with its corresponding number of crime incidents. Finally, we find the correlation between the average price of properties and the amount of crime incidents. The number we got is: -0.246.
 
-(property_crime) The first non-trivial transformation we do is combining "Crime Incident Reports" with "Property Assessments" of 2014 and 2015, and we use projection to get columns of "av_total" and "location" from Property Assessments into property14_price_coordination and property15_price_coordination. We then extract the column of "location" from Crime Incident Reports into crime_14coordination and crime_15coordination, and see if there exists any relation between them. 
+#### Visualization of Statistical Analysis
+##### Scatter Plot Graph of Crime Numbers and Average Property Values of the City of Boston
+![scatter_plot](https://github.com/sylvia0801/course-2017-spr-proj/blob/master/pt0713_silnuext/proj3/images/scatter_plot.png)
 
-(police_crime) Second, we combine Police Districts and Crime Incident Reports and use projection to get the single "DISTRICT" column from Police Districts and "reptdistrict" from Crime Incident Reports to calculate the proportion mentioned earlier. 
 
-(fld_crime) Finally, we combine Crime Incident Reports and FLD Complaints, then use projection to extract columns of "business city == Boston" and "date received" within Jan-Aug of 2015 from FLD Complaints, and also use projection to get "year == 15" and "month <= 8" from Crime Incident Reports and find the correlation of Jan-Feb, Mar-Apr, May-Jun, Jul-Aug between the columns we use.
+### Optimization
+For the k-means section, we want to find the most optimized point where the property is the safest (farthest from crime incidents). To do so, we input “crime_15coordination” to our k-means function and find the most optimized coordinate. Then we correspond the coordinate back to polygon and claim the zip code we get is the area where people can obtain property that is the safest. The zip code we obtained is “02119”.
 
-## Project 2
+#### Visualization of Optimization
+##### Map of Crime Points Happened in the City of Boston
+![crime_points](https://github.com/sylvia0801/course-2017-spr-proj/blob/master/pt0713_silnuext/proj3/images/crime_points.png)
+##### Map of the Safest Point we got by K-Means Algorithm in the City of Boston
+![opt_point](https://github.com/sylvia0801/course-2017-spr-proj/blob/master/pt0713_silnuext/proj3/images/opt_point.png)
 
-### What we are doing in Project 2: Statistical Analysis and Optimization
+### Conclusion and Future Works
+In conclusion, the correlation value, -0.246 shows that property value and crime incident are indeed negatively related (an inverse relationship) which matches our assumption. However, | (-0.246) | also shows that they are weakly related, and the p- value we obtained is very high. Moving forward with this project, we should consider factors such as population density, school districts and police districts more thoroughly since they are also contributors to crime rates. Further, due to time constraint, we were only able to run the small portion of our crime data, which might outcome the unideal correlation and p value. Thus, we assume by running more data in the future, we will be able to obtain a better correlation and p value.
 
-For project2, we want to study more comprehensively about the relationship between the 2015 property price and the number of crime incidents in Boston area. To do so, we will implement two techniques: statistical analysis and optimization(k-means). 
+## Usage
+To run index.html file, just open the file directory and drag it into the browser.
 
-For the statistical analysis, we want to find the correlation between property price and number of crime incident, and we are expecting that higher property price will lead to lower number of crime incidents. We first use r- tree and polygon to correspond “property14_price_coordination_float” to “zip_to_coor”, compute the average price in each zip code, and the result shows all the zip codes along with its corresponding average property price in Boston area. Second, we also use r-tree and polygon to correspond “crime_15coordination” to “zip_to_coor”, compute how many crime incidents within each zip code, and the result will show all the zip codes along with its corresponding number of crime incidents. Finally, we find the correlation between the average price and property price, and we expect the result will be a negative value.
+## Reference
+K-Means Clustering Algorithm. **"Data Mechanics"**. [http://cs-people.bu.edu/lapets/591/s.php#2.2](http://cs-people.bu.edu/lapets/591/s.php#2.2)<br>
+Correlation Value and P-Value Calculator. **"Data Mechanics"**. [http://cs-people.bu.edu/lapets/591/s.php#4.4](http://cs-people.bu.edu/lapets/591/s.php#4.4)<br>
 
-For the k-means, we want to find the most optimized point where the property is the cheapest at the same time, safest (farthest from the crime incidents). To do so, we input “crime_15coordination” to our k_means function and find the most optimized coordinate. And we correspond the coordinate back to polygon and we claim the zip code we get is the area where people can obtain property that is the cheapest while safest.
+## Installation
+To set up MongoDB, follow the procedure in [Data-Mechanics/course-2017-spr-proj](https://github.com/Data-Mechanics/course-2017-spr-proj).
+
+To install all dependencies:
+```
+python3 -m pip install --upgrade --no-cache-dir -r requirements.txt
+```
+To execute the script:
+```
+python3 execute.py pt0713_silnuext
+```
+To execute the script in trial mode:
+```
+python3 execute.py pt0713_silnuext --trial
+```
+
+
